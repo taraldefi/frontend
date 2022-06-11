@@ -1,5 +1,8 @@
 import React from "react";
-function Progress({ progress }) {
+interface Props { 
+  progress: number
+}
+function Progress({ progress }:Props) {
   const [style, setStyle] = React.useState({});
 
   setTimeout(() => {
@@ -13,7 +16,7 @@ function Progress({ progress }) {
 
   return (
     <div>
-      <span>Overall Progress:{progress}%</span>
+      <span>Overall Progress: {progress}%</span>
       <div className="progress">
         <div className="progress-done" style={style}></div>
       </div>

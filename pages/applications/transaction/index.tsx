@@ -1,6 +1,6 @@
 import React from "react";
-import DashBoardLayout from "../../../components/dashboardlayout";
-import SortBarNav from "../../../components/sortBar";
+import DashBoardLayout from "@components/dashboardlayout";
+import SortBarNav from "@components/sortBar";
 export default function Transaction() {
   return (
     <DashBoardLayout>
@@ -38,7 +38,7 @@ export default function Transaction() {
               className="inputs"
               placeholder="Tax number..."
             ></input>
-            <span>Euler Hemes'DN-NO</span>
+            <span>Euler Hemes&apos;DN-NO</span>
             <input
               type="text"
               className="inputs"
@@ -93,16 +93,16 @@ export default function Transaction() {
                 <path
                   d="M7.5 9.16666L10 11.6667L18.3333 3.33333"
                   stroke="#0BD7A4"
-                  stroke-width="1.66667"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="1.66667"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
                 <path
                   d="M17.5 10V15.8333C17.5 16.2754 17.3244 16.6993 17.0118 17.0118C16.6993 17.3244 16.2754 17.5 15.8333 17.5H4.16667C3.72464 17.5 3.30072 17.3244 2.98816 17.0118C2.67559 16.6993 2.5 16.2754 2.5 15.8333V4.16667C2.5 3.72464 2.67559 3.30072 2.98816 2.98816C3.30072 2.67559 3.72464 2.5 4.16667 2.5H13.3333"
                   stroke="#0BD7A4"
-                  stroke-width="1.66667"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="1.66667"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
               <span>External Rating</span>

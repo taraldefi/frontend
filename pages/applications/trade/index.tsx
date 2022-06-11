@@ -1,15 +1,15 @@
 import React from "react";
-import DashBoardLayout from "../../../components/dashboardlayout";
-function Status() {
+import DashBoardLayout from "@components/dashboardlayout";
+function Summary() {
   return (
     <>
       <DashBoardLayout>
         <div className="rightContent">
-          <div className="dummy">status page</div>
+          <div className="dummy">trade page</div>
         </div>
       </DashBoardLayout>
     </>
   );
 }
 
-export default Status;
+export default Summary;

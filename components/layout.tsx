@@ -2,7 +2,11 @@ import React from "react";
 import Topbar from "./topBar";
 import TopBarNav from "./topBarNavigation";
 
-const Layout = ({ children }) => {
+interface LayoutProps {
+  children: React.ReactNode;
+}
+
+const Layout = ({ children }: LayoutProps) => {
   return (
     <div className="tabs">
       <Topbar />

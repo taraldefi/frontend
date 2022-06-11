@@ -3,9 +3,11 @@ import Link from "next/link";
 import { SortbarData } from "./data";
 function SortBarNav() {
   const [selectedId, setSelectedId] = React.useState(1);
-  function handleSelect(index) {
+
+  function handleSelect(index:number) {
     setSelectedId(index);
   }
+  
   return (
     <div className="sortBox">
       {SortbarData.map((item, index) => {

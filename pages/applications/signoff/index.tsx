@@ -1,15 +1,15 @@
 import React from "react";
-import DashBoardLayout from "../../../components/dashboardlayout";
-function Summary() {
+import DashBoardLayout from "@components/dashboardlayout";
+function SignOff() {
   return (
     <>
       <DashBoardLayout>
         <div className="rightContent">
-          <div className="dummy">trade page</div>
+          <div className="dummy">signoff page</div>
         </div>
       </DashBoardLayout>
     </>
   );
 }
 
-export default Summary;
+export default SignOff;

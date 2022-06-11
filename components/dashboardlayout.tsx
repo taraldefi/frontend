@@ -1,7 +1,13 @@
 import React from "react";
 import LeftMenu from "./leftMenu";
 import Layout from "./layout";
-const DashBoardLayout = ({ children }) => {
+
+interface LayoutProps {
+  children: React.ReactNode;
+}
+
+
+const DashBoardLayout = ({ children }:LayoutProps) => {
   return (
     <Layout>
       <LeftMenu></LeftMenu>
