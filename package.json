@@ -13,7 +13,6 @@
     "format": "prettier --write .",
     "test-all": "npm run check-format && npm run check-lint && npm run check-types && npm run build",
     "prepare": "husky install"
-    
   },
   "husky": {
     "hooks": {
@@ -39,5 +38,4 @@
     "eslint-config-next": "12.1.6",
     "husky": "^8.0.0"
   }
-  
 }
