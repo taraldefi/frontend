@@ -4,10 +4,10 @@ import { SortbarData } from "./data";
 function SortBarNav() {
   const [selectedId, setSelectedId] = React.useState(1);
 
-  function handleSelect(index:number) {
+  function handleSelect(index: number) {
     setSelectedId(index);
   }
-  
+
   return (
     <div className="sortBox">
       {SortbarData.map((item, index) => {

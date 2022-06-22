@@ -5,8 +5,7 @@ interface LayoutProps {
   children: React.ReactNode;
 }
 
-
-const Application = ({ children }:LayoutProps) => {
+const Application = ({ children }: LayoutProps) => {
   return <DashBoardLayout>{children}</DashBoardLayout>;
 };
 

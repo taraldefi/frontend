@@ -6,8 +6,7 @@ interface LayoutProps {
   children: React.ReactNode;
 }
 
-
-const DashBoardLayout = ({ children }:LayoutProps) => {
+const DashBoardLayout = ({ children }: LayoutProps) => {
   return (
     <Layout>
       <LeftMenu></LeftMenu>

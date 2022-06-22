@@ -3,7 +3,7 @@ import { PortalIcons } from "../icons";
 import { TopbarIconsData } from "./data";
 const Topbar = () => {
   const [selectedId, setSelectedId] = React.useState<number>();
-  function handleSelect(index:number) {
+  function handleSelect(index: number) {
     setSelectedId(index);
   }
   return (

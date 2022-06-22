@@ -1,8 +1,8 @@
 import React from "react";
-interface Props { 
-  progress: number
+interface Props {
+  progress: number;
 }
-function Progress({ progress }:Props) {
+function Progress({ progress }: Props) {
   const [style, setStyle] = React.useState({});
 
   setTimeout(() => {

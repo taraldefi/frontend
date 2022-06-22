@@ -1,5 +1,5 @@
 import React from "react";
-interface Props { 
+interface Props {
   selected: boolean;
   icon: string;
 }
@@ -394,9 +394,8 @@ function PortalIcons({ selected, icon }: Props): JSX.Element {
             strokeLinejoin="round"
           />
         </svg>
-      )
-     
+      );
   }
-};
+}
 
 export { PortalIcons };
