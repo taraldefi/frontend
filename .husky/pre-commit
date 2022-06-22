@@ -25,4 +25,4 @@ npm run check-types ||
 )
 
 # If everything passes... Now we can commit
-echo '✅✅✅✅ Commit Passed ✅✅✅✅'
+echo '✅ Commit Passed ✅'
