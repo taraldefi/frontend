@@ -5,3 +5,5 @@ npx --no -- commitlint --edit || (
      echo '❌ Commit Message lint failed ❌ Make the changes required above.'
     false;
 )
+# If everything passes... Now we can commit
+echo '✅ Commit Passed ✅'
