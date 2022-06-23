@@ -1,5 +1,5 @@
 import React from "react";
-import LeftMenu from "./leftMenu";
+import LeftMenu from "../leftMenu";
 import Layout from "./layout";
 
 interface LayoutProps {

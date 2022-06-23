@@ -1,27 +1,44 @@
-import React from "react";
-import Link from "next/link";
-import { SortbarData } from "./data";
-function SortBarNav() {
+import React, { useEffect } from "react";
+import { SortBarItem } from "types/";
+import { useRouter } from "next/router";
+
+interface Prop {
+  data: Array<SortBarItem>;
+  width: string;
+}
+
+export default function SortBarNav({ data, width }: Prop) {
+  const router = useRouter();
   const [selectedId, setSelectedId] = React.useState(1);
 
   function handleSelect(index: number) {
     setSelectedId(index);
   }
 
+  useEffect(() => {
+    function setWidth(width: string) {
+      document.documentElement.style.setProperty("--sortbar-width", width);
+    }
+    setWidth(width);
+  }, []);
+
   return (
     <div className="sortBox">
-      {SortbarData.map((item, index) => {
+      {data.map((item: SortBarItem, index: number) => {
         return (
           <div
             className="sortitem"
-            onClick={() => {
-              handleSelect(item.id);
+            onClick={(e) => {
+              e.preventDefault();
+              router.push(item.path);
             }}
             key={index}
           >
             <span
               className={
-                selectedId === item.id ? "sortBoxItem selected" : "sortBoxItem"
+                router.asPath === item.path
+                  ? "SortBarItem selected"
+                  : "SortBarItem"
               }
             >
               {item.title}
@@ -32,5 +49,3 @@ function SortBarNav() {
     </div>
   );
 }
-
-export default SortBarNav;
