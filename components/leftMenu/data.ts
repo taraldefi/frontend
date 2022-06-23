@@ -12,7 +12,7 @@ export const SidebarData = [
   {
     id: 3,
     title: "Transaction",
-    path: "/applications/transaction",
+    path: "/applications/transaction/supplier",
   },
   {
     id: 4,

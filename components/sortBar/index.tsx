@@ -9,18 +9,14 @@ interface Prop {
 
 export default function SortBarNav({ data, width }: Prop) {
   const router = useRouter();
-  const [selectedId, setSelectedId] = React.useState(1);
-
-  function handleSelect(index: number) {
-    setSelectedId(index);
-  }
 
   useEffect(() => {
-    function setWidth(width: string) {
-      document.documentElement.style.setProperty("--sortbar-width", width);
-    }
-    setWidth(width);
-  }, []);
+    document.documentElement.style.setProperty("--sortbar-width", width);
+    console.log(
+      document.documentElement.style.getPropertyValue("--sortbar-width")
+    );
+    console.log("width---->", width);
+  }, [width]);
 
   return (
     <div className="sortBox">

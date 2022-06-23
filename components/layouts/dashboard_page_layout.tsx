@@ -5,11 +5,13 @@ import { SortBarItem } from "types";
 
 interface DashBoardPageLayoutProps {
   children: React.ReactNode;
-  sortbarData: Array<SortBarItem>;
+  sortBarData: Array<SortBarItem>;
+  sortBarWidth: string;
 }
 export default function DashBoardPageLayout({
   children,
-  sortbarData,
+  sortBarData,
+  sortBarWidth,
 }: DashBoardPageLayoutProps) {
   return (
     <DashBoardLayout>
@@ -17,7 +19,7 @@ export default function DashBoardPageLayout({
         <div className="titleBox">
           <span id="bodyTitle">[Exporter] - [Importer] - [Date] </span>
           <div className="background">
-            <SortBarNav width="400px" data={sortbarData}></SortBarNav>
+            <SortBarNav width={sortBarWidth} data={sortBarData}></SortBarNav>
           </div>
         </div>
         {children}
