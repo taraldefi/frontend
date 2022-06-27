@@ -18,7 +18,16 @@ const Table = () => {
             <span>{item.Process}</span>
             <div className="imageContainer">
               {TableData[index].user.map((item, index) => {
-                return <Image className="images" src={item} key={index} alt="" width="32%" height="32%"  ></Image>;
+                return (
+                  <Image
+                    className="images"
+                    src={item}
+                    key={index}
+                    alt=""
+                    width="32%"
+                    height="32%"
+                  ></Image>
+                );
               })}
             </div>
             <ProgressBar progress={item.Progress} />
