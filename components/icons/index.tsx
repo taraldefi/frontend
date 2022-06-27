@@ -376,7 +376,6 @@ function PortalIcons({ selected, icon }: Props): JSX.Element {
           height="20"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-
         >
           <g
             clipPath="url(#a)"
@@ -401,7 +400,6 @@ function PortalIcons({ selected, icon }: Props): JSX.Element {
           height="20"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-
         >
           <path
             d="M15.833 4.167 4.167 15.834M14.583 16.667a2.083 2.083 0 1 0 0-4.167 2.083 2.083 0 0 0 0 4.167ZM5.417 7.5a2.083 2.083 0 1 0 0-4.167 2.083 2.083 0 0 0 0 4.167Z"

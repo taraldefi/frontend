@@ -1,0 +1,34 @@
+import React from "react";
+import { TableData } from "./data";
+import ProgressBar from "./progressBar";
+import Image from "next/Image";
+const Table = () => {
+  return (
+    <div className="table">
+      <div className="tableTitles">
+        <span>Process</span>
+        <span>User</span>
+        <span>Progress</span>
+        <span>Status</span>
+        <span>Date</span>
+      </div>
+      {TableData.map((item, index) => {
+        return (
+          <div className="tabelContent" key={index}>
+            <span>{item.Process}</span>
+            <div className="imageContainer">
+              {TableData[index].user.map((item, index) => {
+                return <Image src={item} key={index} alt=""></Image>;
+              })}
+            </div>
+            <ProgressBar progress={item.Progress} />
+            <div className="tableStatus">{item.Status}</div>
+            <div className="date">{item.Date}</div>
+          </div>
+        );
+      })}
+    </div>
+  );
+};
+
+export default Table;
