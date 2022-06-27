@@ -32,7 +32,7 @@ export default function SortBarNav({ data, width }: Prop) {
           >
             <span
               className={
-                router.asPath === item.path
+                item.path == router.asPath
                   ? "SortBarItem selected"
                   : "SortBarItem"
               }

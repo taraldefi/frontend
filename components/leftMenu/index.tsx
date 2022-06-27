@@ -22,9 +22,9 @@ export default function LeftMenu() {
             >
               <PortalIcons
                 icon={item.title}
-                selected={router.asPath === item.path}
+                selected={item.path == router.asPath}
               />
-              <span className={router.asPath === item.path ? "selected" : ""}>
+              <span className={item.path == router.asPath ? "selected" : ""}>
                 {item.title}
               </span>
             </div>
