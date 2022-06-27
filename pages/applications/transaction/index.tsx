@@ -1,6 +1,7 @@
 import React from "react";
-import DashBoardLayout from "@components/dashboardlayout";
+import DashBoardLayout from "@components/layouts/dashboard_layout";
 import SortBarNav from "@components/sortBar";
+import { SortbarData } from "@pages/applications/transaction/data";
 export default function Transaction() {
   return (
     <DashBoardLayout>
@@ -8,7 +9,7 @@ export default function Transaction() {
         <div className="titleBox">
           <span id="bodyTitle">[Exporter] - [Importer] - [Date] </span>
           <div className="background">
-            <SortBarNav></SortBarNav>
+            <SortBarNav width="366px" data={SortbarData}></SortBarNav>
           </div>
         </div>
         <div className="inputBox">

@@ -2,6 +2,30 @@
   font-family: inter;
   src: url(/assets/font/Inter.ttf);
 }
+:root {
+  --sortbar-width: 366px;
+  --progress-color: #003c6e;
+}
+.progress {
+  margin-top: 5px;
+  background-color: rgba(5, 17, 19, 0.2);
+  border-radius: 5px;
+  height: 10px;
+  width: 177px;
+}
+
+.progress-done {
+  background: var(--progress-color);
+  border-radius: 20px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 0;
+  opacity: 0;
+  transition: 1s ease 0.3s;
+}
 
 .tab {
   width: 100%;
@@ -79,7 +103,7 @@
   }
   .background {
     background-color: #fff;
-    width: 366px;
+    width: var(--sortbar-width);
     height: 37px;
     border-radius: 8px;
     display: flex;
@@ -89,16 +113,19 @@
     .sortBox {
       display: flex;
       justify-content: space-between;
-      width: 358px;
+      width: var(--sortbar-width);
       font-size: 14px;
-      .sortBoxItem {
+      font-family: inter;
+      padding-left: 3px;
+      padding-right: 3px;
+      .SortBarItem {
         cursor: pointer;
         padding: 6px;
         border-radius: 5px;
       }
       .selected {
-        background-color: #ecfdf5;
-        color: #10b981;
+        background-color: #0d8489;
+        color: white;
         // padding: 7px;
       }
     }

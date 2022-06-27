@@ -2,7 +2,7 @@ import React from "react";
 import { SidebarData } from "./data";
 import { PortalIcons } from "../icons";
 import { useRouter } from "next/router";
-import Progress from "./progressbar";
+import Progress from "../widgets/progressbar";
 
 export default function LeftMenu() {
   const router = useRouter();
@@ -22,9 +22,9 @@ export default function LeftMenu() {
             >
               <PortalIcons
                 icon={item.title}
-                selected={router.asPath === item.path}
+                selected={item.path == router.asPath}
               />
-              <span className={router.asPath === item.path ? "selected" : ""}>
+              <span className={item.path == router.asPath ? "selected" : ""}>
                 {item.title}
               </span>
             </div>
@@ -32,7 +32,7 @@ export default function LeftMenu() {
         })}
       </div>
       <div className="progressBox">
-        <Progress progress={27} />
+        <Progress progress={27} color={"#003C6E"} showText={true} />
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 import React from "react";
 import { TableData } from "./data";
-import ProgressBar from "./progressBar";
+import ProgressBar from "@components/widgets/progressbar";
 import Image from "next/Image";
 const Table = () => {
   return (
@@ -30,7 +30,11 @@ const Table = () => {
                 );
               })}
             </div>
-            <ProgressBar progress={item.Progress} />
+            <ProgressBar
+              progress={item.Progress}
+              color={"#04C1DE"}
+              showText={false}
+            />
             <div className="tableStatus">{item.Status}</div>
             <div className="date">{item.Date}</div>
           </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import DashBoardLayout from "@components/dashboardlayout";
+import DashBoardLayout from "@components/layouts/dashboard_layout";
 
 interface LayoutProps {
   children: React.ReactNode;
