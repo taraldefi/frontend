@@ -1,3 +1,10 @@
+export const TableTitle=[
+  {
+    StatusTitle: [
+      "Process", "Users", "Progress", "Status", "Date"
+    ]
+  },
+]
 export const TableData = [
   {
     Process: "Application review",

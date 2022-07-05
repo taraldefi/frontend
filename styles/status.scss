@@ -17,13 +17,35 @@
       align-items: center;
       height: 42px;
 
-      span {
-        margin-left: 24px;
-        margin-right: 85px;
-        font-size: 12px;
-        color: #475569;
-        font-weight: bold;
-        font-family: "inter";
+      .statusTitle {
+        width: 1103px;
+        display: flex;
+        flex-direction: row;
+
+        .statusTitleItems {
+          width: 1103px;
+          margin-left: 24px;
+          margin-right: 85px;
+          font-size: 12px;
+          color: #475569;
+          font-weight: bold;
+          font-family: "inter";
+          letter-spacing: 1px;
+        }
+
+        :nth-child(2) {
+          margin-left: 320px;
+        }
+
+        :nth-child(3) {
+          margin-left: 70px;
+        }
+        :nth-child(4) {
+          margin-left: 75px;
+        }
+        :nth-child(5) {
+          margin-left: -20px;
+        }
       }
     }
 
@@ -35,11 +57,14 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      span {
+
+      .processTab {
         font-size: 14px;
         font-weight: bold;
         margin-left: 24px;
+        width: 400px;
       }
+
       .tableStatus {
         width: 66px;
         height: 25px;
@@ -49,24 +74,33 @@
         font-size: 14px;
         color: #059669;
       }
+
       .imageContainer {
         :nth-child(1) {
           left: 12px;
         }
+
         :nth-child(3) {
           right: 12px;
         }
+
         :nth-child(4) {
           right: 24px;
         }
+
         :nth-child(5) {
           right: 36px;
         }
+
         .images {
           border-radius: 50%;
           // border: 1px solid #ffffff;
           position: relative;
         }
+      }
+
+      .date {
+        margin-right: 26px;
       }
     }
   }
