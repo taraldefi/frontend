@@ -1,7 +1,7 @@
 import React from "react";
 import { TableData, TableTitle } from "./data";
 import ProgressBar from "@components/widgets/progressbar";
-import Image from "next/Image";
+import Image from "next/image";
 const Table = () => {
   return (
     <div className="table">
@@ -11,7 +11,9 @@ const Table = () => {
             <div className="statusTitle">
               {TableTitle[index].StatusTitle.map((item, index) => {
                 return (
-                  <div key={index} className="statusTitleItems">{item}</div>
+                  <div key={index} className="statusTitleItems">
+                    {item}
+                  </div>
                 );
               })}
             </div>
