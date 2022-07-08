@@ -8,7 +8,7 @@ const Table = () => {
       <div className="tableTitles">
         {TableTitle.map((item, index) => {
           return (
-            <div className="statusTitle">
+            <div className="statusTitle" key={index}>
               {TableTitle[index].StatusTitle.map((item, index) => {
                 return (
                   <div key={index} className="statusTitleItems">
