@@ -1,3 +1,7 @@
+:root {
+  --bg-color: 366px;
+  --color: #003c6e;
+}
 .rightContent {
   .titleBox {
     font-weight: bold;
@@ -66,13 +70,15 @@
       }
 
       .tableStatus {
-        width: 66px;
-        height: 25px;
-        background-color: #d1fae5;
+        width: auto;
+        height: auto;
         border-radius: 50px;
         text-align: center;
         font-size: 14px;
-        color: #059669;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
       }
 
       .imageContainer {
