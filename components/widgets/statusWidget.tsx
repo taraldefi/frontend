@@ -24,7 +24,7 @@ function StatusWidget({ type }: Props) {
   const [style, setStyle] = useState({});
   useEffect(() => {
     switch (type.toLowerCase()) {
-      case "change":
+      case "change" || "not sent":
         setStyle({
           opacity: 1,
           backgroundColor: colorHash.change.bgcolor,

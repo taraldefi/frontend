@@ -7,19 +7,11 @@ interface Props {
 function Progress({ progress, color, showText }: Props) {
   const [style, setStyle] = React.useState({});
 
-  useEffect(() => {
-    console.log(color);
-    document.documentElement.style.setProperty("--progress-color", color);
-    console.log(
-      "Color set -->",
-      document.documentElement.style.getPropertyValue("--progress-color")
-    );
-  }, [color]);
-
   setTimeout(() => {
     const newStyle = {
       opacity: 1,
       width: `${progress}%`,
+      backgroundColor: color,
     };
 
     setStyle(newStyle);
