@@ -3,11 +3,11 @@ interface Props {
   title: string;
   onClick: (event: React.MouseEvent<HTMLElement>) => void;
 }
-export default function Button({ title, onClick }: Props) {
+export default function SecondButton({ title, onClick }: Props) {
   return (
     <div>
-      <button className="btn" onClick={onClick}>
-        {title}
+      <button className="btn_secondary" onClick={onClick}>
+        <span>{title}</span>
       </button>
     </div>
   );

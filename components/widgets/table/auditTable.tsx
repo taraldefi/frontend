@@ -1,5 +1,5 @@
 import React from "react";
-import ProgressBar from "@components/widgets/progressbar";
+import ProgressBar from "@components/widgets/progressBar";
 import Image from "next/image";
 import { auditTableDataType } from "types/widget_table";
 import StatusWidget from "../statusWidget";
