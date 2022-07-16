@@ -5,6 +5,7 @@ import "@styles/leftMenu.scss";
 import "@styles/summary.scss";
 import "@styles/status.scss";
 import "@styles/button.scss";
+import "@styles/fileUpload.scss";
 import type { AppProps } from "next/app";
 
 function MyApp({ Component, pageProps }: AppProps) {
