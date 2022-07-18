@@ -4,8 +4,8 @@ interface Props {
   icon: string;
 }
 function PortalIcons({ selected, icon }: Props): JSX.Element {
-  switch (icon) {
-    case "Summary":
+  switch (icon.toLowerCase()) {
+    case "summary":
       return (
         <svg
           width="24"
@@ -30,7 +30,7 @@ function PortalIcons({ selected, icon }: Props): JSX.Element {
           />
         </svg>
       );
-    case "Status":
+    case "status":
       return (
         <svg
           width="24"
@@ -48,7 +48,7 @@ function PortalIcons({ selected, icon }: Props): JSX.Element {
           />
         </svg>
       );
-    case "Transaction":
+    case "transaction":
       return (
         <svg
           width="24"
@@ -80,7 +80,7 @@ function PortalIcons({ selected, icon }: Props): JSX.Element {
           />
         </svg>
       );
-    case "Financial":
+    case "financial":
       return (
         <svg
           width="24"
@@ -105,7 +105,7 @@ function PortalIcons({ selected, icon }: Props): JSX.Element {
           />
         </svg>
       );
-    case "External Reports":
+    case "external reports":
       return (
         <svg
           width="24"
@@ -151,7 +151,7 @@ function PortalIcons({ selected, icon }: Props): JSX.Element {
           />
         </svg>
       );
-    case "Compliance":
+    case "compliance":
       return (
         <svg
           width="24"
@@ -176,7 +176,7 @@ function PortalIcons({ selected, icon }: Props): JSX.Element {
           />
         </svg>
       );
-    case "Research & Sentiment":
+    case "research & sentiment":
       return (
         <svg
           width="24"
@@ -201,7 +201,7 @@ function PortalIcons({ selected, icon }: Props): JSX.Element {
           />
         </svg>
       );
-    case "Cover":
+    case "cover":
       return (
         <svg
           width="24"
@@ -219,7 +219,7 @@ function PortalIcons({ selected, icon }: Props): JSX.Element {
           />
         </svg>
       );
-    case "Trade Documents":
+    case "trade documents":
       return (
         <svg
           width="24"
@@ -237,7 +237,7 @@ function PortalIcons({ selected, icon }: Props): JSX.Element {
           />
         </svg>
       );
-    case "Rating":
+    case "rating":
       return (
         <svg
           width="24"
@@ -269,7 +269,7 @@ function PortalIcons({ selected, icon }: Props): JSX.Element {
           />
         </svg>
       );
-    case "Sign Off":
+    case "sign off":
       return (
         <svg
           width="24"
@@ -410,7 +410,7 @@ function PortalIcons({ selected, icon }: Props): JSX.Element {
           />
         </svg>
       );
-    case "checkBox":
+    case "checkbox":
       return (
         <svg
           width="20"
@@ -430,6 +430,159 @@ function PortalIcons({ selected, icon }: Props): JSX.Element {
             d="M17.5 10V15.8333C17.5 16.2754 17.3244 16.6993 17.0118 17.0118C16.6993 17.3244 16.2754 17.5 15.8333 17.5H4.16667C3.72464 17.5 3.30072 17.3244 2.98816 17.0118C2.67559 16.6993 2.5 16.2754 2.5 15.8333V4.16667C2.5 3.72464 2.67559 3.30072 2.98816 2.98816C3.30072 2.67559 3.72464 2.5 4.16667 2.5H13.3333"
             stroke={selected ? "#0BD7A4" : "#CBD5E1"}
             strokeWidth="1.66667"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      );
+    case "add":
+      return (
+        <svg
+          width="14"
+          height="14"
+          viewBox="0 0 14 14"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M7 2.9165V11.0832"
+            stroke="#ECFDF5"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M2.91667 7H11.0833"
+            stroke="#ECFDF5"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      );
+    case "upload":
+      return (
+        <svg
+          width="15"
+          height="14"
+          viewBox="0 0 15 14"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12.75 8.75V11.0833C12.75 11.3928 12.6271 11.6895 12.4083 11.9083C12.1895 12.1271 11.8928 12.25 11.5833 12.25H3.41667C3.10725 12.25 2.8105 12.1271 2.59171 11.9083C2.37292 11.6895 2.25 11.3928 2.25 11.0833V8.75"
+            stroke="#ECFDF5"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M10.4167 4.66667L7.50001 1.75L4.58334 4.66667"
+            stroke="#ECFDF5"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M7.5 1.75V8.75"
+            stroke="#ECFDF5"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      );
+    case "view":
+      return (
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+            stroke="#64748B"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M21 21L16.65 16.65"
+            stroke="#64748B"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M11 8V14"
+            stroke="#64748B"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M8 11H14"
+            stroke="#64748B"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      );
+    case "download":
+      return (
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M21 15V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V15"
+            stroke="#64748B"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M7 10L12 15L17 10"
+            stroke="#64748B"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M12 15V3"
+            stroke="#64748B"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      );
+    case "delete":
+      return (
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M3 6H5H21"
+            stroke="#F87171"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M8 6V4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2H14C14.5304 2 15.0391 2.21071 15.4142 2.58579C15.7893 2.96086 16 3.46957 16 4V6M19 6V20C19 20.5304 18.7893 21.0391 18.4142 21.4142C18.0391 21.7893 17.5304 22 17 22H7C6.46957 22 5.96086 21.7893 5.58579 21.4142C5.21071 21.0391 5 20.5304 5 20V6H19Z"
+            stroke="#F87171"
+            strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
           />

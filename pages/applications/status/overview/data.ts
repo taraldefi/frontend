@@ -1,85 +1,80 @@
-export const TableTitle = [
-  {
-    StatusTitle: ["Process", "Users", "Progress", "Status", "Date"],
-  },
-];
 export const TableData = [
   {
-    Process: "Application review",
-    user: [
+    process: "Application review",
+    users: [
       "/assets/images/1.png",
       "/assets/images/2.png",
       "/assets/images/3.png",
       "/assets/images/4.png",
       "/assets/images/5.png",
     ],
-    Progress: 27,
-    Status: "Active",
-    Date: "19.10.2019",
+    progress: 27,
+    status: "Active",
+    date: "19.10.2019",
   },
   {
-    Process: "Credit assessment",
-    user: [
+    process: "Credit assessment",
+    users: [
       "/assets/images/1.png",
       "/assets/images/2.png",
       "/assets/images/3.png",
       "/assets/images/4.png",
       "/assets/images/5.png",
     ],
-    Progress: 27,
-    Status: "Active",
-    Date: "19.10.2019",
+    progress: 27,
+    status: "Active",
+    date: "19.10.2019",
   },
   {
-    Process: "KYC",
-    user: [
+    process: "KYC",
+    users: [
       "/assets/images/1.png",
       "/assets/images/2.png",
       "/assets/images/3.png",
       "/assets/images/4.png",
       "/assets/images/5.png",
     ],
-    Progress: 27,
-    Status: "Active",
-    Date: "19.10.2019",
+    progress: 27,
+    status: "Active",
+    date: "19.10.2019",
   },
   {
-    Process: "Account opened",
-    user: [
+    process: "Account opened",
+    users: [
       "/assets/images/1.png",
       "/assets/images/2.png",
       "/assets/images/3.png",
       "/assets/images/4.png",
       "/assets/images/5.png",
     ],
-    Progress: 27,
-    Status: "Active",
-    Date: "19.10.2019",
+    progress: 27,
+    status: "Active",
+    date: "19.10.2019",
   },
   {
-    Process: "Transaction documents review",
-    user: [
+    process: "Transaction documents review",
+    users: [
       "/assets/images/1.png",
       "/assets/images/2.png",
       "/assets/images/3.png",
       "/assets/images/4.png",
       "/assets/images/5.png",
     ],
-    Progress: 27,
-    Status: "Active",
-    Date: "19.10.2019",
+    progress: 27,
+    status: "Active",
+    date: "19.10.2019",
   },
   {
-    Process: "Disbursement of loan facility",
-    user: [
+    process: "Disbursement of loan facility",
+    users: [
       "/assets/images/1.png",
       "/assets/images/2.png",
       "/assets/images/3.png",
       "/assets/images/4.png",
       "/assets/images/5.png",
     ],
-    Progress: 27,
-    Status: "Active",
-    Date: "19.10.2019",
+    progress: 27,
+    status: "Active",
+    date: "19.10.2019",
   },
 ];

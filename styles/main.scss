@@ -4,7 +4,6 @@
 }
 :root {
   --sortbar-width: 366px;
-  --progress-color: #003c6e;
 }
 .progress {
   margin-top: 5px;
@@ -15,7 +14,6 @@
 }
 
 .progress-done {
-  background: var(--progress-color);
   border-radius: 20px;
   color: #fff;
   display: flex;

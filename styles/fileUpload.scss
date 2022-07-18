@@ -1,0 +1,62 @@
+.item_container {
+  background-color: #ffffff;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 10px;
+  height: 216px;
+  border: #e2e8f0 solid 1px;
+  width: 216px;
+}
+
+.file-card {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background-color: #0d85895d;
+  width: 216px;
+  height: 216px;
+
+  .file-inputs {
+    position: relative;
+    margin-bottom: 1.5em;
+
+    input {
+      position: relative;
+      text-align: right;
+      opacity: 0;
+      z-index: 2;
+      cursor: pointer;
+      height: 46px;
+      max-width: 200px;
+    }
+
+    button {
+      position: absolute;
+      top: 25%;
+      left: 25%;
+      cursor: pointer;
+    }
+  }
+}
+
+.upload_container {
+  gap: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-auto-flow: column;
+  margin: 0 0 1rem 0;
+  div {
+    cursor: pointer;
+  }
+}
