@@ -2,9 +2,6 @@
   font-family: inter;
   src: url(/assets/font/Inter.ttf);
 }
-:root {
-  --sortbar-width: 366px;
-}
 .progress {
   margin-top: 5px;
   background-color: rgba(5, 17, 19, 0.2);
@@ -12,7 +9,33 @@
   height: 10px;
   width: 177px;
 }
+.pdfviewer_header {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 9999;
 
+  .header {
+    display: flex;
+    padding: 1rem;
+    justify-content: space-between;
+    .text {
+      font-family: inter;
+      font-size: 15px;
+      font-weight: 600;
+    }
+    .zoom_container {
+      gap: 10px;
+      align-items: center;
+      display: flex;
+    }
+  }
+}
 .progress-done {
   border-radius: 20px;
   color: #fff;
@@ -101,7 +124,6 @@
   }
   .background {
     background-color: #fff;
-    width: var(--sortbar-width);
     height: 37px;
     border-radius: 8px;
     display: flex;
@@ -110,8 +132,9 @@
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     .sortBox {
       display: flex;
+      gap: 15px;
       justify-content: space-between;
-      width: var(--sortbar-width);
+      width: fit-content;
       font-size: 14px;
       font-family: inter;
       padding-left: 3px;

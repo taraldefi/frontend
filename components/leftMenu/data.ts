@@ -45,7 +45,7 @@ export const SidebarData = [
     id: 8,
     title: "Cover",
     name: "cover",
-    path: "/applications/cover",
+    path: "/applications/cover/approval",
   },
   {
     id: 9,

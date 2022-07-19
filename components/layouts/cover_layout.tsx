@@ -1,12 +1,12 @@
 import React from "react";
-import { SortbarData } from "@pages/applications/external/data";
+import { SortbarData } from "@pages/applications/cover/data";
 import DashBoardPageLayout from "@components/layouts/dashboard_page_layout";
 
 interface ReportLayoutProps {
   children: React.ReactNode;
   documentCount: number;
 }
-export default function ReportLayout({
+export default function CoverLayout({
   children,
   documentCount,
 }: ReportLayoutProps) {

@@ -7,7 +7,7 @@ interface StatusLayoutProps {
 }
 export default function StatusLayout({ children }: StatusLayoutProps) {
   return (
-    <DashBoardPageLayout sortBarData={SortbarData} sortBarWidth={"450px"}>
+    <DashBoardPageLayout sortBarData={SortbarData}>
       {children}
     </DashBoardPageLayout>
   );

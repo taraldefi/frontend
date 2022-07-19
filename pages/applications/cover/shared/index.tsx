@@ -1,17 +1,16 @@
-import * as React from "react";
-import DashBoardLayout from "@components/layouts/dashboard_layout";
+import ReportLayout from "@components/layouts/cover_layout";
 import FileUpload from "@components/widgets/FileUpload";
 import FileList from "@components/widgets/FileList";
-const Cover: React.FC<{}> = () => {
+import React from "react";
+export default function SharedInfo() {
   const [files, setFiles] = React.useState([]);
 
   const removeFile = (filename: string) => {
     setFiles(files.filter((file: any) => file.name !== filename));
   };
-
   return (
-    <DashBoardLayout>
-      <div className="rightContent">
+    <ReportLayout documentCount={files.length}>
+      <div className="main_container">
         <div className="upload_container">
           <FileList files={files} removeFile={removeFile} />
           <FileUpload
@@ -21,8 +20,6 @@ const Cover: React.FC<{}> = () => {
           />
         </div>
       </div>
-    </DashBoardLayout>
+    </ReportLayout>
   );
-};
-
-export default Cover;
+}

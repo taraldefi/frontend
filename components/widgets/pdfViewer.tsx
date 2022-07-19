@@ -1,66 +1,86 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Viewer } from "@react-pdf-viewer/core";
+import {
+  RenderCurrentScaleProps,
+  RenderZoomInProps,
+  RenderZoomOutProps,
+  zoomPlugin,
+} from "@react-pdf-viewer/zoom";
 import "@react-pdf-viewer/core/lib/styles/index.css";
+import Button from "./button";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCirclePlus,
+  faCircleMinus,
+  faXmarkCircle,
+} from "@fortawesome/free-solid-svg-icons";
 
 interface ModalProps {
+  fileName: string;
   fileUrl: string;
   shown: any;
   setShown: any;
 }
 
-const Modal: React.FC<ModalProps> = ({ fileUrl, shown, setShown }) => {
+const Modal: React.FC<ModalProps> = ({
+  fileName,
+  fileUrl,
+  shown,
+  setShown,
+}) => {
+  const zoomPluginInstance = zoomPlugin();
+  const { CurrentScale, ZoomIn, ZoomOut } = zoomPluginInstance;
   const modalBody = () => (
-    <div
-      style={{
-        backgroundColor: "#fff",
-        flexDirection: "column",
-
-        /* Fixed position */
-        left: 0,
-        position: "fixed",
-        top: 0,
-
-        /* Take full size */
-        height: "100%",
-        width: "100%",
-
-        /* Displayed on top of other elements */
-        zIndex: 9999,
-      }}
-    >
-      <div
-        style={{
-          alignItems: "center",
-          backgroundColor: "#000",
-          color: "#fff",
-          display: "flex",
-          padding: ".5rem",
-        }}
-      >
-        <div style={{ marginRight: "auto" }}>sample-file-name.pdf</div>
-        <button
-          style={{
-            backgroundColor: "#357edd",
-            border: "none",
-            borderRadius: "4px",
-            color: "#ffffff",
-            cursor: "pointer",
-            padding: "8px",
-          }}
-          onClick={() => setShown(false)}
-        >
-          Close
-        </button>
+    <div className="pdfviewer_header">
+      <div className="header">
+        <div className="text">{fileName}</div>
+        <div className="zoom_container">
+          <div>
+            <ZoomOut>
+              {(props: RenderZoomOutProps) => (
+                <div>
+                  <FontAwesomeIcon
+                    size="2x"
+                    color="#0d8489"
+                    onClick={props.onClick}
+                    icon={faCircleMinus}
+                  />
+                </div>
+              )}
+            </ZoomOut>
+          </div>
+          <div>
+            <CurrentScale>
+              {(props: RenderCurrentScaleProps) => (
+                <span className="text">{`${Math.round(
+                  props.scale * 100
+                )}%`}</span>
+              )}
+            </CurrentScale>
+          </div>
+          <div>
+            <ZoomIn>
+              {(props: RenderZoomInProps) => (
+                <FontAwesomeIcon
+                  size="2x"
+                  color="#0d8489"
+                  onClick={props.onClick}
+                  icon={faCirclePlus}
+                />
+              )}
+            </ZoomIn>
+          </div>
+        </div>
+        <div>
+          <Button title={"Close"} onClick={() => setShown(false)} />
+        </div>
       </div>
-      <div
-        style={{
-          flexGrow: 1,
-          overflow: "auto",
-        }}
-      >
-        <Viewer fileUrl={fileUrl} />
-      </div>
+      <Viewer
+        plugins={[zoomPluginInstance]}
+        defaultScale={1}
+        fileUrl={fileUrl}
+      />
     </div>
   );
 

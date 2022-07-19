@@ -16,7 +16,9 @@ const FileItem = ({ file, deleteFile }: any) => {
             <PortalIcons selected={false} icon={"view"}></PortalIcons>
           </div>
           <div>
-            <PortalIcons selected={false} icon={"download"}></PortalIcons>
+            <a href={file.url} download>
+              <PortalIcons selected={false} icon={"download"}></PortalIcons>
+            </a>
           </div>
           {file.isUploading ? (
             <FontAwesomeIcon
@@ -35,7 +37,12 @@ const FileItem = ({ file, deleteFile }: any) => {
           )}
         </div>
 
-        <Modal fileUrl={file.url} shown={shown} setShown={setShown}></Modal>
+        <Modal
+          fileName={file.name}
+          fileUrl={file.url}
+          shown={shown}
+          setShown={setShown}
+        ></Modal>
       </div>
     </>
   );
