@@ -8,7 +8,7 @@ interface Props {
 }
 export const AuditTable = ({ TableData }: Props) => {
   return (
-    <div className="table">
+    <div className="tableAudit">
       <div className="tableTitles">
         <div className="statusTitle">
           {["Action", "User", "Activity", "Date"].map((item, index) => {
@@ -30,12 +30,18 @@ export const AuditTable = ({ TableData }: Props) => {
                 src={item.user.avatar}
                 key={index}
                 alt=""
-                width="32%"
-                height="32%"
+                width="35%"
+                height="35%"
               ></Image>
+              <div className="nameContainer">
+                <span>{item.user.name}</span>
+                <span>{item.user.email}</span>
+              </div>
             </div>
 
-            <StatusWidget type={item.activity}></StatusWidget>
+            <div className="activity">
+              <StatusWidget type={item.activity}></StatusWidget>
+            </div>
 
             <div className="date">{item.date}</div>
           </div>

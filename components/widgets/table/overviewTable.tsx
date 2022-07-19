@@ -8,7 +8,7 @@ interface Props {
 }
 export const OverviewTable = ({ TableData }: Props) => {
   return (
-    <div className="table">
+    <div className="tableOverview">
       <div className="tableTitles">
         <div className="statusTitle">
           {["Process", "Users", "Progress", "Status", "Date"].map(

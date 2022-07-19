@@ -2,13 +2,14 @@
   --bg-color: 366px;
   --color: #003c6e;
 }
+
 .rightContent {
   .titleBox {
     font-weight: bold;
     font-size: 20px;
   }
 
-  .table {
+  .tableOverview {
     margin-top: 40px;
     width: 1103px;
     height: 469px;
@@ -44,9 +45,11 @@
         :nth-child(3) {
           margin-left: 70px;
         }
+
         :nth-child(4) {
           margin-left: 75px;
         }
+
         :nth-child(5) {
           margin-left: -20px;
         }
@@ -54,7 +57,6 @@
     }
 
     .tabelContent {
-      width: 1103px;
       height: 70px;
       background-color: #ffffff;
       border-top: 1px solid #e2e8f0;
@@ -108,6 +110,145 @@
       .date {
         margin-right: 26px;
       }
+    }
+  }
+
+  .tableAudit {
+    margin-top: 40px;
+    width: 1103px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+
+    .tableTitles {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 42px;
+
+      .statusTitle {
+        // width: 1103px;
+        display: flex;
+        flex-direction: row;
+
+
+        .statusTitleItems {
+          align-items: center;
+          display: flex;
+          font-size: 12px;
+          color: #475569;
+          font-weight: bold;
+          font-family: "inter";
+          letter-spacing: 1px;
+
+        }
+
+        :nth-child(1) {
+          width: 511px;
+          height: 42px;
+          padding-left:24px;
+        }
+
+        :nth-child(2) {
+          width: 332px;
+          height: 42px;
+        }
+
+        :nth-child(3) {
+          width: 140px;
+          height: 42px;
+        }
+
+        :nth-child(4) {
+          width: 120px;
+          height: 42px;
+        }
+      }
+    }
+
+    .tabelContent {
+      height: 70px;
+      background-color: #ffffff;
+      border-top: 1px solid #e2e8f0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+
+      :nth-child(2) {
+        width: 332px;
+        height: 70px;
+        align-items: center;
+        display: flex;
+        // padding-left: 44px;;
+      }
+
+      :nth-child(4) {
+        width: 120px;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bolder;
+        padding-right: 32px;
+      }
+
+      .processTab {
+        font-size: 14px;
+        font-weight: bold;
+        padding-left: 24px;
+        width: 511px;
+      }
+
+      .tableStatus {
+        width: auto;
+        height: auto;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 14px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+      }
+
+      .imageContainer {
+        .images {
+          border-radius: 50%;
+          // border: 1px solid #ffffff;
+          position: relative;
+        }
+        .nameContainer{
+          display:flex;
+          flex-direction: column;
+          width: 242px;
+          height:35px;
+          align-items:flex-start;
+          margin-left: 12px;
+          :nth-child(1){
+            font-weight: bolder;
+            font-size:14px;
+          }
+          :nth-child(2){
+            color: #64748B;
+            font-size:12px;
+          }
+        }
+        
+      }
+
+      .activity {
+        width: 140px;
+        height: 70px;
+        display: flex;
+        align-items: center;
+
+        :nth-child(1) {
+          height: min-content;
+          width: min-content;
+        }
+      }
+
+      
     }
   }
 }
