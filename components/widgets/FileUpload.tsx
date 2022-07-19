@@ -29,7 +29,7 @@ const FileUpload = ({ files, setFiles, removeFile }: any) => {
     <>
       <div className="file-card">
         <div className="file-inputs">
-          <input type="file" onChange={uploadHandler} />
+          <input type="file" accept=".pdf" onChange={uploadHandler} />
           <ButtonIcon
             title={"Upload"}
             icon={"upload"}

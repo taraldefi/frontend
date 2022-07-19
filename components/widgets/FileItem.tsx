@@ -34,6 +34,7 @@ const FileItem = ({ file, deleteFile }: any) => {
             </div>
           )}
         </div>
+
         <Modal fileUrl={file.url} shown={shown} setShown={setShown}></Modal>
       </div>
     </>
