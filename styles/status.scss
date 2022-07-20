@@ -10,6 +10,7 @@
   }
 
   .tableOverview {
+    contain: content;
     margin-top: 40px;
     width: 1103px;
     height: 469px;
@@ -57,7 +58,7 @@
     }
 
     .tabelContent {
-      height: 70px;
+      height: 71px;
       background-color: #ffffff;
       border-top: 1px solid #e2e8f0;
       display: flex;
@@ -114,6 +115,7 @@
   }
 
   .tableAudit {
+    contain: content;
     margin-top: 40px;
     width: 1103px;
     border-radius: 8px;
@@ -242,6 +244,252 @@
           height: min-content;
           width: min-content;
         }
+      }
+    }
+  }
+
+  .taskBox {
+    margin-bottom: 16px;
+    margin-top: 40px;
+    width: 1103px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bolder;
+      color: #64748b;
+      font-size: 14px;
+    }
+  }
+
+  .tableTask {
+    contain: content;
+    width: 1103px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    transition: all 2s ease;
+
+    &.active {
+      height: 250px;
+    }
+
+    .tableTitles {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 42px;
+
+      .statusTitle {
+        // width: 1103px;
+        display: flex;
+        flex-direction: row;
+
+        .statusTitleItems {
+          align-items: center;
+          display: flex;
+          font-size: 12px;
+          color: #475569;
+          font-weight: bold;
+          font-family: "inter";
+          letter-spacing: 1px;
+        }
+
+        :nth-child(1) {
+          width: 220px;
+          height: 42px;
+          padding-left: 24px;
+        }
+
+        :nth-child(2) {
+          width: 523px;
+          height: 42px;
+          padding-left: 24px;
+        }
+
+        :nth-child(3) {
+          width: 220px;
+          height: 42px;
+          padding-left: 24px;
+        }
+
+        :nth-child(4) {
+          width: 120px;
+          height: 42px;
+          padding-left: 24px;
+        }
+      }
+    }
+
+    .tabelContent {
+      height: 70px;
+      background-color: #ffffff;
+      border-top: 1px solid #e2e8f0;
+      display: flex;
+      align-items: center;
+
+      #assignee {
+        padding-left: 20px;
+      }
+
+      .assigneeContainer {
+        width: 220px;
+        height: 70px;
+        display: flex;
+        align-items: center;
+
+        .nameContainer {
+          font-weight: bolder;
+          padding-left: 12px;
+          font-size: 14px;
+        }
+      }
+
+      .taskList {
+        padding-left: 24px;
+        display: flex;
+        justify-content: center;
+        width: 523px;
+        height: 70px;
+        display: flex;
+        flex-direction: column;
+
+        :nth-child(1) {
+          font-weight: bolder;
+          font-size: 14px;
+        }
+
+        :nth-child(2) {
+          font-size: 13px;
+          color: #475569;
+        }
+      }
+
+      #assignor {
+        padding-left: 24px;
+      }
+
+      .date {
+        width: 120px;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        padding-left: 24px;
+        font-weight: bolder;
+      }
+    }
+  }
+
+  .tableTeams {
+    contain: content;
+    width: 1103px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    transition: all 2s ease;
+
+    &.active {
+      height: 250px;
+    }
+
+    .tableTitles {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 42px;
+
+      .statusTitle {
+        // width: 1103px;
+        display: flex;
+        flex-direction: row;
+
+        .statusTitleItems {
+          align-items: center;
+          display: flex;
+          font-size: 12px;
+          color: #475569;
+          font-weight: bold;
+          font-family: "inter";
+          letter-spacing: 1px;
+        }
+
+        :nth-child(1) {
+          width: 220px;
+          height: 42px;
+          padding-left: 24px;
+        }
+
+        :nth-child(2) {
+          width: 180px;
+          height: 42px;
+          padding-left: 24px;
+        }
+
+        :nth-child(3) {
+          width: 533px;
+          height: 42px;
+          padding-left: 24px;
+        }
+
+        :nth-child(4) {
+          width: 170px;
+          height: 42px;
+          padding-left: 24px;
+        }
+      }
+    }
+
+    .tabelContent {
+      height: 70px;
+      background-color: #ffffff;
+      border-top: 1px solid #e2e8f0;
+      display: flex;
+      align-items: center;
+
+      #member {
+        padding-left: 24px;
+      }
+
+      .memberContainer {
+        width: 220px;
+        height: 70px;
+        display: flex;
+        align-items: center;
+
+        .nameContainer {
+          font-weight: bolder;
+          padding-left: 12px;
+          font-size: 14px;
+        }
+      }
+
+      .department {
+        padding-left: 30px;
+        width: 200px;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+      }
+
+      .lastaction {
+        padding-left: 20px;
+        width: 533px;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+      }
+
+      .date {
+        width: 190px;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        padding-left: 44px;
+        font-weight: bold;
       }
     }
   }
