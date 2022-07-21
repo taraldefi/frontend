@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Viewer } from "@react-pdf-viewer/core";
+import { Viewer, Worker } from "@react-pdf-viewer/core";
 import {
   RenderCurrentScaleProps,
   RenderZoomInProps,
@@ -10,11 +10,7 @@ import {
 import "@react-pdf-viewer/core/lib/styles/index.css";
 import Button from "./button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCirclePlus,
-  faCircleMinus,
-  faXmarkCircle,
-} from "@fortawesome/free-solid-svg-icons";
+import { faCirclePlus, faCircleMinus } from "@fortawesome/free-solid-svg-icons";
 
 interface ModalProps {
   fileName: string;
@@ -76,11 +72,13 @@ const Modal: React.FC<ModalProps> = ({
           <Button title={"Close"} onClick={() => setShown(false)} />
         </div>
       </div>
-      <Viewer
-        plugins={[zoomPluginInstance]}
-        defaultScale={1}
-        fileUrl={fileUrl}
-      />
+      <Worker workerUrl="https://unpkg.com/pdfjs-dist@2.14.305/build/pdf.worker.min.js">
+        <Viewer
+          plugins={[zoomPluginInstance]}
+          defaultScale={1}
+          fileUrl={fileUrl}
+        />
+      </Worker>
     </div>
   );
 

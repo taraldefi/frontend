@@ -13,9 +13,9 @@ export const TeamTable = ({ TableData, value }: Props) => {
   return (
     <>
       <div className="taskBox">
-        <span>TASKS ({value})</span>
+        <span>TEAM ({value})</span>
         <SecondButton
-          title="View All Tasks"
+          title="View All Members"
           onClick={() => setToggle(!toggle)}
         ></SecondButton>
       </div>

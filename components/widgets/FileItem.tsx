@@ -1,5 +1,5 @@
 import React from "react";
-import DisplayThumbnail from "./pdfThumbnail";
+import { DisplayThumbnail } from "./pdfThumbnail";
 import { PortalIcons } from "@components/icons";
 import Modal from "./pdfViewer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -10,7 +10,10 @@ const FileItem = ({ file, deleteFile }: any) => {
   return (
     <>
       <div className="item_container" key={file.name}>
-        <DisplayThumbnail fileUrl={file.url} pageIndex={0}></DisplayThumbnail>
+        <DisplayThumbnail
+          fileUrl={file.url}
+          config={{ name: file.name }}
+        ></DisplayThumbnail>
         <div className="grid">
           <div onClick={() => setShown(true)}>
             <PortalIcons selected={false} icon={"view"}></PortalIcons>
