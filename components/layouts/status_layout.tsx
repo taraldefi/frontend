@@ -4,10 +4,11 @@ import DashBoardPageLayout from "@components/layouts/dashboard_page_layout";
 
 interface StatusLayoutProps {
   children: React.ReactNode;
+  showexport:boolean;
 }
-export default function StatusLayout({ children }: StatusLayoutProps) {
+export default function StatusLayout({ children,showexport }: StatusLayoutProps) {
   return (
-    <DashBoardPageLayout sortBarData={SortbarData} sortBarWidth={"450px"}>
+    <DashBoardPageLayout showexport={showexport} sortBarData={SortbarData} sortBarWidth={"450px"}>
       {children}
     </DashBoardPageLayout>
   );

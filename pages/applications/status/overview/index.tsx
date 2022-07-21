@@ -3,7 +3,7 @@ import { OverviewTable } from "@components/widgets/table";
 import { TableData } from "./data";
 export default function Overview() {
   return (
-    <StatusLayout>
+    <StatusLayout  showexport={true}>
       <OverviewTable TableData={TableData} />
     </StatusLayout>
   );

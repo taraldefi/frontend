@@ -1,11 +1,13 @@
+import Activity from "@components/activity/activity";
+import { ActivityData } from "@components/activity/data";
 import StatusLayout from "@components/layouts/status_layout";
 import Button from "@components/widgets/button";
 import SecondButton from "@components/widgets/buttonSecondary";
 import ButtonIcon from "@components/widgets/buttonWithIcon";
 export default function CustomerComms() {
   return (
-    <StatusLayout>
-      <Button title="New Task" onClick={() => console.log("clicked")}></Button>
+    <StatusLayout showexport={false}>
+      {/* <Button title="New Task" onClick={() => console.log("clicked")}></Button>
       <br />
       <SecondButton
         title="View All Tasks"
@@ -23,7 +25,8 @@ export default function CustomerComms() {
       ></SecondButton>
       <br />
       <ButtonIcon icon="add" title="Add" onClick={() => {}}></ButtonIcon> <br />
-      <ButtonIcon icon="upload" title="Upload" onClick={() => {}}></ButtonIcon>
+      <ButtonIcon icon="upload" title="Upload" onClick={() => {}}></ButtonIcon> */}
+      <Activity ActivityData={ActivityData}/>
     </StatusLayout>
   );
 }

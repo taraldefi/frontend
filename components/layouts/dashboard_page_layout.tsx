@@ -2,22 +2,30 @@ import React from "react";
 import DashBoardLayout from "@components/layouts/dashboard_layout";
 import SortBarNav from "@components/sortBar";
 import { SortBarItem } from "types";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faArrowLeft} from "@fortawesome/free-solid-svg-icons"
 
 interface DashBoardPageLayoutProps {
   children: React.ReactNode;
   sortBarData: Array<SortBarItem>;
   sortBarWidth: string;
+  showexport: boolean;
 }
 export default function DashBoardPageLayout({
   children,
   sortBarData,
   sortBarWidth,
+  showexport
 }: DashBoardPageLayoutProps) {
   return (
     <DashBoardLayout>
       <div className="rightContent">
         <div className="titleBox">
-          <span id="bodyTitle">[Exporter] - [Importer] - [Date] </span>
+          {showexport ? <span id="bodyTitle">[Exporter] - [Importer] - [Date] </span> :
+            <div className="messageBox">
+              <FontAwesomeIcon color="#94A3B8" icon={faArrowLeft} /> 
+              <span>Messages</span>
+            </div>}
           <div className="background">
             <SortBarNav width={sortBarWidth} data={sortBarData}></SortBarNav>
           </div>
