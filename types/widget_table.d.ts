@@ -38,3 +38,9 @@ export interface teamTableDataType {
   lastAction: string;
   dateOfAction: string;
 }
+export interface companyTableDataType {
+  persons: string;
+  details: string;
+  source: string;
+  status: boolean;
+}

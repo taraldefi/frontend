@@ -26,7 +26,7 @@ export default function CustomerComms() {
       <br />
       <ButtonIcon icon="add" title="Add" onClick={() => {}}></ButtonIcon> <br />
       <ButtonIcon icon="upload" title="Upload" onClick={() => {}}></ButtonIcon> */}
-      <Activity ActivityData={ActivityData}/>
+      <Activity ActivityData={ActivityData} />
     </StatusLayout>
   );
 }

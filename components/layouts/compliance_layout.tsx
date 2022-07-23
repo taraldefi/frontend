@@ -1,20 +1,20 @@
 import React from "react";
-import { SortbarData } from "@pages/applications/status/data";
+import { SortbarData } from "@pages/applications/compliance/data";
 import DashBoardPageLayout from "@components/layouts/dashboard_page_layout";
 
-interface StatusLayoutProps {
+interface ComplianceLayoutProps {
   children: React.ReactNode;
   showexport: boolean;
 }
-export default function StatusLayout({
+export default function ComplianceLayout({
   children,
   showexport,
-}: StatusLayoutProps) {
+}: ComplianceLayoutProps) {
   return (
     <DashBoardPageLayout
       showexport={showexport}
       sortBarData={SortbarData}
-      sortBarWidth={"450px"}
+      sortBarWidth={"400px"}
     >
       {children}
     </DashBoardPageLayout>

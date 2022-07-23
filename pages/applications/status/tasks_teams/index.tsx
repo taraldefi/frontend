@@ -7,7 +7,7 @@ export default function TaskTeam() {
   var x: number = Object.keys(TaskData).length;
   var y: number = Object.keys(TeamData).length;
   return (
-    <StatusLayout  showexport={true}>
+    <StatusLayout showexport={true}>
       <TaskTable TableData={TaskData} value={x} />
       <TeamTable TableData={TeamData} value={y} />
     </StatusLayout>

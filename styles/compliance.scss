@@ -1,0 +1,126 @@
+.title{
+    color: #64748B;
+    position: relative;
+    top: 30px;
+    font-weight: bold;
+
+}
+.tabelCompliance {
+    contain: content;
+    margin-top: 40px;
+    width: 1103px;
+    height: 469px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+
+    .tableTitles {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 42px;
+
+        .statusTitle {
+            width: 1103px;
+            display: flex;
+            flex-direction: row;
+
+            .statusTitleItems {
+                font-size: 12px;
+                color: #475569;
+                font-weight: bold;
+                font-family: "inter";
+                letter-spacing: 1px;
+                display: flex;
+                align-items: center;
+                left: 24px;
+                position: relative;
+            }
+
+            :nth-child(1) {
+                width: 190px;
+                height: 42px;
+
+            }
+
+            :nth-child(2) {
+                width: 460px;
+                height: 42px;
+            }
+
+            :nth-child(3) {
+                width: 292px;
+                height: 42px;
+            }
+
+            :nth-child(4) {
+                width: 160px;
+                height: 42px;
+            }
+        }
+    }
+
+    .tabelContent {
+        height: 71px;
+        background-color: #ffffff;
+        border-top: 1px solid #e2e8f0;
+        display: flex;
+        align-items: center;
+        
+        :nth-child(1) {
+            width: 188px;
+            display: flex;
+            align-items: center;
+            left: 24px;
+            position: relative;
+            font-weight: bold;
+            font-size: 14px;
+            contain: content;
+        }
+
+        :nth-child(2) {
+            width: 460px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            left: 24px;
+            position: relative;
+            font-size: 13px;
+            color: #475569c2;
+        }
+
+        :nth-child(3) {
+            width: 292px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            left: 24px;
+            position: relative;
+            font-weight: bold;
+            font-size: 14px;
+            color: #000;
+            text-decoration: none;
+            .icon{
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        :nth-child(4) {
+            width: 160px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            margin-left: -28px;
+            .svgIcon{
+                width:110px;
+            }
+            .selected{
+                color: #000
+            }
+            .notSelected{
+                color: #CBD5E1
+            }
+            
+        }
+    }
+}
