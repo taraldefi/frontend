@@ -7,7 +7,7 @@ import { TableData } from "./data";
 function Company() {
   return (
     <ComplianceLayout showexport={true}>
-      <CompanyTable TableData={TableData}/>
+      <CompanyTable TableData={TableData} />
     </ComplianceLayout>
   );
 }

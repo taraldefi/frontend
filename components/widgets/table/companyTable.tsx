@@ -6,41 +6,53 @@ import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { PortalIcons } from "@components/icons";
 
 interface Props {
-    TableData: companyTableDataType[];
+  TableData: companyTableDataType[];
 }
 export const CompanyTable = ({ TableData }: Props) => {
-    return (
-        <>
-            <div className="title">BUSINESS DETAILS</div><div className="tabelCompliance">
-                <div className="tableTitles">
-                    <div className="statusTitle">
-                        {["Persons", "Details", "Source", "Status"].map(
-                            (item, index) => {
-                                return (
-                                    <div key={index} className="statusTitleItems">
-                                        {item}
-                                    </div>
-                                );
-                            }
-                        )}
-                    </div>
+  return (
+    <>
+      <div className="title">BUSINESS DETAILS</div>
+      <div className="tabelCompliance">
+        <div className="tableTitles">
+          <div className="statusTitle">
+            {["Persons", "Details", "Source", "Status"].map((item, index) => {
+              return (
+                <div key={index} className="statusTitleItems">
+                  {item}
                 </div>
-                {TableData.map((item, index) => {
-                    return (
-                        <div className="tabelContent" key={index}>
-                            <div className="personsTab">{item.persons}</div>
-                            <div className="detailsTab">{item.details}</div>
-                            <a href={item.source} className="sourceTab">{item.source}<FontAwesomeIcon
-                                icon={faArrowUpRightFromSquare}
-                                className="icon" />
-                            </a>
-                            <div className="statusTab">
-                                {item.status ? <div className="svgIcon"><PortalIcons selected={true} icon={"compliance"} /><span className="selected">Verified</span></div> : <div className="svgIcon"><PortalIcons selected={false} icon={"checkbox"} /><span className="notSelected">Verified</span></div>}
-                            </div>
-                        </div>
-                    );
-                })}
+              );
+            })}
+          </div>
+        </div>
+        {TableData.map((item, index) => {
+          return (
+            <div className="tabelContent" key={index}>
+              <div className="personsTab">{item.persons}</div>
+              <div className="detailsTab">{item.details}</div>
+              <a href={item.source} className="sourceTab">
+                {item.source}
+                <FontAwesomeIcon
+                  icon={faArrowUpRightFromSquare}
+                  className="icon"
+                />
+              </a>
+              <div className="statusTab">
+                {item.status ? (
+                  <div className="svgIcon">
+                    <PortalIcons selected={true} icon={"compliance"} />
+                    <span className="selected">Verified</span>
+                  </div>
+                ) : (
+                  <div className="svgIcon">
+                    <PortalIcons selected={false} icon={"checkbox"} />
+                    <span className="notSelected">Verified</span>
+                  </div>
+                )}
+              </div>
             </div>
-        </>
-    );
+          );
+        })}
+      </div>
+    </>
+  );
 };

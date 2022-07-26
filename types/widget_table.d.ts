@@ -44,3 +44,8 @@ export interface companyTableDataType {
   source: string;
   status: boolean;
 }
+export interface screeningTableDataType{
+  persons: string;
+  Hit: string;
+  Source: string;
+}
