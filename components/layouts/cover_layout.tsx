@@ -1,17 +1,18 @@
 import React from "react";
-import { SortbarData } from "@pages/applications/cover/data";
 import DashBoardPageLayout from "@components/layouts/dashboard_page_layout";
 
 interface ReportLayoutProps {
   children: React.ReactNode;
   documentCount: number;
+  sortbarData: any;
 }
-export default function CoverLayout({
+export default function ReportLayout({
   children,
   documentCount,
+  sortbarData,
 }: ReportLayoutProps) {
   return (
-    <DashBoardPageLayout sortBarData={SortbarData}>
+    <DashBoardPageLayout sortBarData={sortbarData}>
       <div className="main_container">
         <span className="subheading">{documentCount} Documents</span>
         {children}

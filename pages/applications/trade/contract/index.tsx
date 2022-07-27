@@ -1,14 +1,15 @@
 import ReportLayout from "@components/layouts/cover_layout";
 import FileUpload from "@components/widgets/FileUpload";
-import { SortbarData } from "../data";
 import FileList from "@components/widgets/FileList";
 import React from "react";
-export default function Approval() {
+import { SortbarData } from "../data";
+export default function Contract() {
   const [files, setFiles] = React.useState([]);
 
   const removeFile = (filename: string) => {
     setFiles(files.filter((file: any) => file.name !== filename));
   };
+
   return (
     <ReportLayout documentCount={files.length} sortbarData={SortbarData}>
       <div className="main_container">

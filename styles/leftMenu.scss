@@ -5,6 +5,12 @@
   .selected {
     font-weight: 600;
     font-size: 15px;
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
   }
   .items {
     width: 177px;
@@ -19,17 +25,8 @@
     border-right: 1px solid #e2e8f000;
     .item:hover {
       cursor: pointer;
-      -moz-transform: scale(1.1);
-      -webkit-transform: scale(1.1);
-      -o-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-      -webkit-transform: scale(1.1);
-      transform: scale(1.1);
-
-      -webkit-transition: transform 0.2s ease-in-out;
-      -moz-transition: transform 0.2s ease-in-out;
-      -ms-transition: transform 0.2s ease-in-out;
     }
+
     .item {
       display: flex;
       text-decoration: none;

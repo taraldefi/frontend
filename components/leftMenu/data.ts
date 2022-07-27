@@ -51,7 +51,7 @@ export const SidebarData = [
     id: 9,
     title: "Trade Documents",
     name: "trade",
-    path: "/applications/trade",
+    path: "/applications/trade/contract",
   },
   {
     id: 10,
