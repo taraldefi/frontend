@@ -9,7 +9,7 @@ export default function Transaction() {
         <div className="titleBox">
           <span id="bodyTitle">[Exporter] - [Importer] - [Date] </span>
           <div className="background">
-            <SortBarNav width="366px" data={SortbarData}></SortBarNav>
+            <SortBarNav data={SortbarData}></SortBarNav>
           </div>
         </div>
         <div className="inputBox">

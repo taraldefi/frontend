@@ -11,11 +11,7 @@ export default function ResearchLayout({
   showexport,
 }: researchLayoutProps) {
   return (
-    <DashBoardPageLayout
-      showexport={showexport}
-      sortBarData={SortbarData}
-      sortBarWidth={"190px"}
-    >
+    <DashBoardPageLayout showexport={showexport} sortBarData={SortbarData}>
       {children}
     </DashBoardPageLayout>
   );

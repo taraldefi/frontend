@@ -6,7 +6,24 @@ import Progress from "../widgets/progressBar";
 
 export default function LeftMenu() {
   const router = useRouter();
+  function checkActive(item: any) {
+    const result = router.asPath.split("/").map((element) => element.trim());
+    const match = result.find((element) => {
+      if (element == item.name.toLowerCase()) {
+        return true;
+      }
+    });
 
+    if (item.path == router.asPath) {
+      return true;
+    } else if (item.name == "summary" && router.asPath == "/") {
+      return true;
+    } else if (match) {
+      return true;
+    } else {
+      return false;
+    }
+  }
   return (
     <div className="leftMenu">
       <div className="items">
@@ -20,11 +37,8 @@ export default function LeftMenu() {
               key={index}
               className="item"
             >
-              <PortalIcons
-                icon={item.title}
-                selected={item.path == router.asPath}
-              />
-              <span className={item.path == router.asPath ? "selected" : ""}>
+              <PortalIcons icon={item.title} selected={checkActive(item)} />
+              <span className={checkActive(item) ? "selected" : ""}>
                 {item.title}
               </span>
             </div>

@@ -1,37 +1,40 @@
 import React, { useState } from "react";
-import DashBoardLayout from "@components/layouts/dashboard_layout";
 import ComplianceLayout from "@components/layouts/compliance_layout";
 import ButtonIcon from "@components/widgets/buttonWithIcon";
-import { TaskTable } from "@components/widgets/table/taskTable";
 import { TableData } from "./data";
 import { PersonsTable } from "@components/widgets/table/personsTable";
+import { tableFormPerson } from "types/form";
+import { useForm } from "react-hook-form";
+
 function Company() {
   var x: number = Object.keys(TableData).length;
-  const [personFields, setPersonFields] = useState();
-  const [fields, setFields] = useState();
-  const handleAdd = () => {
-    // setFields([setPersonFields, ...fields,]);
-    // setPersonFields("")
-  };
+  const [fields, setFields] = useState<tableFormPerson[]>(TableData);
+  const { register, handleSubmit, reset } = useForm<tableFormPerson>();
+  const onSubmit = handleSubmit((data) => {
+    setFields([data!, ...fields]);
+    reset();
+  });
+
   return (
     <ComplianceLayout showexport={true}>
       <div className="personsTable">
         <div className="persons">
           <span className="title">ADD NEW</span>
-          <div className="complianceAddBox">
+          <form onSubmit={onSubmit} className="complianceAddBox" action="">
             <div className="name">
               <span>Person Name</span>
+
               <input
-                value={personFields}
+                {...register("name")}
                 placeholder="Name..."
                 type="text"
                 className="inputs"
-                // onChange={(e) => setPersonFields(e.target.value)}
               />
             </div>
             <div className="email">
               <span>Email</span>
               <input
+                {...register("email")}
                 placeholder="Email..."
                 type="email"
                 className="inputs"
@@ -40,6 +43,7 @@ function Company() {
             <div className="position">
               <span>Position</span>
               <input
+                {...register("position")}
                 placeholder="Position or role..."
                 type="text"
                 className="inputs"
@@ -48,31 +52,33 @@ function Company() {
             <div className="verificationStatus">
               <span>Verification status</span>
               <div className="verificationBox">
-                <input type="checkBox" className="check"></input>
+                <input
+                  {...register("isSent")}
+                  type="checkBox"
+                  className="check"
+                ></input>
                 <span>Sent</span>
               </div>
             </div>
             <div className="statusVerification">
               <span>Status verification</span>
               <div className="verificationBox">
-                <input type="checkBox" className="check"></input>
+                <input
+                  {...register("isDone")}
+                  type="checkBox"
+                  className="check"
+                ></input>
                 <span>Done</span>
               </div>
             </div>
             <div className="buttonContainer">
-              <ButtonIcon
-                icon="add"
-                title="Add"
-                onClick={() => {
-                  handleAdd;
-                }}
-              ></ButtonIcon>
+              <ButtonIcon icon="add" title="Add"></ButtonIcon>
             </div>
-          </div>
+          </form>
         </div>
       </div>
       <div className="table">
-        <PersonsTable TableData={TableData} value={x} />
+        <PersonsTable TableData={fields} value={x} />
       </div>
     </ComplianceLayout>
   );

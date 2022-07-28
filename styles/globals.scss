@@ -1,14 +1,25 @@
 body {
   padding: 0;
+  background-color: #f8fafc;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
+
 * {
+  
   box-sizing: border-box;
 }
+
 ::-webkit-scrollbar {
   display: none;
+}
+
+.topbarFix {
+  position: fixed;
+  background-color: #fff;
+  width: 100%;
+  z-index: 1;
 }
 
 .tab {
@@ -16,10 +27,12 @@ body {
   height: 134px;
   background-color: rgb(255, 255, 255);
 }
+
 .mainBody {
   display: flex;
   background-color: #f8fafc;
 }
+
 .monitoring {
   width: 100vw;
   height: calc(100vh - 140px);
@@ -27,6 +40,7 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 .closed {
   width: 100vw;
   height: calc(100vh - 140px);
@@ -34,6 +48,7 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 .tasks {
   width: 100vw;
   height: calc(100vh - 140px);
@@ -41,10 +56,15 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 .dummy {
   width: calc(100vw - 290px);
   height: calc(100vh - 230px);
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.object {
+  max-width: 200px;
 }

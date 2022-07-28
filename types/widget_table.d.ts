@@ -49,19 +49,19 @@ export interface screeningTableDataType {
   Hit: string;
   Source: string;
 }
-export interface personsDataType {
-  Persons: personUser;
-  Email: string;
-  Position: string;
-  VerificationStatus: boolean;
-  StatusVerificatoin: boolean;
-}
+// export interface personsDataType {
+//   Persons: personUser;
+//   Email: string;
+//   Position: string;
+//   VerificationStatus: boolean;
+//   StatusVerificatoin: boolean;
+// }
 interface personUser {
   user: string;
   name: string;
 }
 export interface researchTableDataType {
-  persons: personUser;
+  name: string;
   Hit: string;
   Source: string;
 }

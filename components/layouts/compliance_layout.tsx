@@ -11,11 +11,7 @@ export default function ComplianceLayout({
   showexport,
 }: ComplianceLayoutProps) {
   return (
-    <DashBoardPageLayout
-      showexport={showexport}
-      sortBarData={SortbarData}
-      sortBarWidth={"400px"}
-    >
+    <DashBoardPageLayout showexport={showexport} sortBarData={SortbarData}>
       {children}
     </DashBoardPageLayout>
   );

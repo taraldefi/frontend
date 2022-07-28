@@ -1,11 +1,11 @@
 import React from "react";
 import Image from "next/image";
-import { personsDataType, taskTableDataType } from "types/widget_table";
+import { tableFormPerson } from "types/form";
 import SecondButton from "../buttonSecondary";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEllipsis } from "@fortawesome/free-solid-svg-icons";
 interface Props {
-  TableData: personsDataType[];
+  TableData: tableFormPerson[];
   value: number;
 }
 export const PersonsTable = ({ TableData, value }: Props) => {
@@ -39,31 +39,31 @@ export const PersonsTable = ({ TableData, value }: Props) => {
               <div className="personsContainer" id="assignee">
                 <Image
                   className="images"
-                  src={item.Persons.user}
+                  src="/assets/images/18.png"
                   key={index}
                   alt=""
                   width="35%"
                   height="35%"
                 ></Image>
                 <div className="nameContainer">
-                  <span>{item.Persons.name}</span>
+                  <span>{item.name}</span>
                 </div>
               </div>
               <div className="emailContainer">
-                <span>{item.Email}</span>
+                <span>{item.email}</span>
               </div>
               <div className="positionContainer" id="assignor">
-                <span>{item.Position}</span>
+                <span>{item.position}</span>
               </div>
               <div className="sv">
-                {item.StatusVerificatoin ? (
+                {item.isSent ? (
                   <div className="sent">Sent</div>
                 ) : (
                   <div className="notSent">Not Sent</div>
                 )}
               </div>
               <div className="vs">
-                {item.VerificationStatus ? (
+                {item.isDone ? (
                   <div className="notDone">Completed</div>
                 ) : (
                   <div className="complete">Not Done</div>
@@ -79,6 +79,3 @@ export const PersonsTable = ({ TableData, value }: Props) => {
     </>
   );
 };
-function useState(arg0: string): [any, any] {
-  throw new Error("Function not implemented.");
-}

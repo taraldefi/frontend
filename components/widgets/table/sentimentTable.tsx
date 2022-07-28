@@ -1,16 +1,11 @@
 import React from "react";
-import Image from "next/image";
-import {
-  personsDataType,
-  sentimentsTableDataType,
-  taskTableDataType,
-} from "types/widget_table";
-import SecondButton from "../buttonSecondary";
+import Image from "next/image";import SecondButton from "../buttonSecondary";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowUpRightFromSquare,
   faEllipsis,
 } from "@fortawesome/free-solid-svg-icons";
+import { sentimentsTableDataType } from "types/widget_table";
 interface Props {
   TableData: sentimentsTableDataType[];
   value: number;
@@ -60,6 +55,3 @@ export const SentimentsTable = ({ TableData, value }: Props) => {
     </div>
   );
 };
-function useState(arg0: string): [any, any] {
-  throw new Error("Function not implemented.");
-}

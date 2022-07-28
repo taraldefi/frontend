@@ -4,15 +4,10 @@ import { useRouter } from "next/router";
 
 interface Prop {
   data: Array<SortBarItem>;
-  width: string;
 }
 
-export default function SortBarNav({ data, width }: Prop) {
+export default function SortBarNav({ data }: Prop) {
   const router = useRouter();
-
-  useEffect(() => {
-    document.documentElement.style.setProperty("--sortbar-width", width);
-  }, [width]);
 
   return (
     <div className="sortBox">

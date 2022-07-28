@@ -16,7 +16,6 @@ export const ResearchTable = ({ TableData }: Props) => {
     <>
       <div className="researchTitle">
         OUTLETS
-        <ButtonIcon icon="add" title="Add" onClick={() => {}}></ButtonIcon>
       </div>
       <div className="tabelResearch">
         <div className="tableTitles">
@@ -36,14 +35,14 @@ export const ResearchTable = ({ TableData }: Props) => {
               <div className="personsContainer" id="assignee">
                 <Image
                   className="images"
-                  src={item.persons.user}
+                  src="/assets/images/18.png"
                   key={index}
                   alt=""
                   width="25%"
                   height="25%"
                 ></Image>
                 <div className="nameContainer">
-                  <span>{item.persons.name}</span>
+                  <span>{item.name}</span>
                 </div>
               </div>
               <div className="hitTab">{item.Hit}</div>

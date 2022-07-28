@@ -1,18 +1,17 @@
-import * as React from "react";
-import DashBoardLayout from "@components/layouts/dashboard_layout";
+import ReportLayout from "@components/layouts/cover_layout";
 import FileUpload from "@components/widgets/FileUpload";
 import FileList from "@components/widgets/FileList";
-const Cover: React.FC<{}> = () => {
-  const [url, setUrl] = React.useState("");
+import React from "react";
+import { SortbarData } from "../data";
+export default function Shipping() {
   const [files, setFiles] = React.useState([]);
 
   const removeFile = (filename: string) => {
     setFiles(files.filter((file: any) => file.name !== filename));
   };
-
   return (
-    <DashBoardLayout>
-      <div className="rightContent">
+    <ReportLayout documentCount={files.length} sortbarData={SortbarData}>
+      <div className="main_container">
         <div className="upload_container">
           <FileList files={files} removeFile={removeFile} />
           <FileUpload
@@ -22,8 +21,6 @@ const Cover: React.FC<{}> = () => {
           />
         </div>
       </div>
-    </DashBoardLayout>
+    </ReportLayout>
   );
-};
-
-export default Cover;
+}

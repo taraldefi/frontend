@@ -18,7 +18,6 @@ export const ScreeningTable = ({ TableData }: Props) => {
     <>
       <div className="screeningtitle">
         OUTLETS
-        <ButtonIcon icon="add" title="Add" onClick={() => {}}></ButtonIcon>
       </div>
       <div className="tabelComplianceScreening">
         <div className="tableTitles">

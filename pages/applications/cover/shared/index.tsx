@@ -1,16 +1,16 @@
-import React from "react";
-import DashBoardLayout from "@components/layouts/dashboard_layout";
-import ComplianceLayout from "@components/layouts/compliance_layout";
+import ReportLayout from "@components/layouts/cover_layout";
 import FileUpload from "@components/widgets/FileUpload";
 import FileList from "@components/widgets/FileList";
-function Company() {
+import React from "react";
+import { SortbarData } from "../data";
+export default function SharedInfo() {
   const [files, setFiles] = React.useState([]);
 
   const removeFile = (filename: string) => {
     setFiles(files.filter((file: any) => file.name !== filename));
   };
   return (
-    <ComplianceLayout showexport={true}>
+    <ReportLayout documentCount={files.length} sortbarData={SortbarData}>
       <div className="main_container">
         <div className="upload_container">
           <FileList files={files} removeFile={removeFile} />
@@ -21,8 +21,6 @@ function Company() {
           />
         </div>
       </div>
-    </ComplianceLayout>
+    </ReportLayout>
   );
 }
-
-export default Company;

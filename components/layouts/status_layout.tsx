@@ -11,11 +11,7 @@ export default function StatusLayout({
   showexport,
 }: StatusLayoutProps) {
   return (
-    <DashBoardPageLayout
-      showexport={showexport}
-      sortBarData={SortbarData}
-      sortBarWidth={"450px"}
-    >
+    <DashBoardPageLayout showexport={showexport} sortBarData={SortbarData}>
       {children}
     </DashBoardPageLayout>
   );

@@ -8,13 +8,11 @@ import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 interface DashBoardPageLayoutProps {
   children: React.ReactNode;
   sortBarData: Array<SortBarItem>;
-  sortBarWidth: string;
   showexport: boolean;
 }
 export default function DashBoardPageLayout({
   children,
   sortBarData,
-  sortBarWidth,
   showexport,
 }: DashBoardPageLayoutProps) {
   return (
@@ -30,7 +28,7 @@ export default function DashBoardPageLayout({
             </div>
           )}
           <div className="background">
-            <SortBarNav width={sortBarWidth} data={sortBarData}></SortBarNav>
+            <SortBarNav data={sortBarData} width={""}></SortBarNav>
           </div>
         </div>
         {children}
