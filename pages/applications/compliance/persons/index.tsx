@@ -12,7 +12,7 @@ function Company() {
   const handleAdd = () => {
     // setFields([setPersonFields, ...fields,]);
     // setPersonFields("")
-  }
+  };
   return (
     <ComplianceLayout showexport={true}>
       <div className="personsTable">
@@ -31,11 +31,19 @@ function Company() {
             </div>
             <div className="email">
               <span>Email</span>
-              <input placeholder="Email..." type="email" className="inputs"></input>
+              <input
+                placeholder="Email..."
+                type="email"
+                className="inputs"
+              ></input>
             </div>
             <div className="position">
               <span>Position</span>
-              <input placeholder="Position or role..." type="text" className="inputs"></input>
+              <input
+                placeholder="Position or role..."
+                type="text"
+                className="inputs"
+              ></input>
             </div>
             <div className="verificationStatus">
               <span>Verification status</span>
@@ -52,7 +60,13 @@ function Company() {
               </div>
             </div>
             <div className="buttonContainer">
-              <ButtonIcon icon="add" title="Add" onClick={() => { handleAdd }}></ButtonIcon>
+              <ButtonIcon
+                icon="add"
+                title="Add"
+                onClick={() => {
+                  handleAdd;
+                }}
+              ></ButtonIcon>
             </div>
           </div>
         </div>
@@ -65,7 +79,3 @@ function Company() {
 }
 
 export default Company;
-
-
-
-

@@ -259,7 +259,7 @@
   .persons {
     .title {
       font-size: 14px;
-      color: #64748B;
+      color: #64748b;
       margin-top: -20px;
     }
 
@@ -280,7 +280,6 @@
         ::placeholder {
           color: #94a3b8;
           opacity: 1;
-          
         }
 
         :-ms-input-placeholder {
@@ -296,7 +295,7 @@
         }
 
         .inputs {
-          border: 1px solid #CBD5E1;
+          border: 1px solid #cbd5e1;
           width: 200px;
           height: 44px;
           border-radius: 4px;
@@ -306,7 +305,7 @@
         height: 71px;
         display: flex;
         flex-direction: column;
-        justify-content:space-between;
+        justify-content: space-between;
       }
 
       .email {
@@ -328,7 +327,7 @@
         }
 
         .inputs {
-          border: 1px solid #CBD5E1;
+          border: 1px solid #cbd5e1;
           width: 200px;
           height: 44px;
           border-radius: 4px;
@@ -338,7 +337,7 @@
         height: 71px;
         display: flex;
         flex-direction: column;
-        justify-content:space-between;
+        justify-content: space-between;
       }
 
       .position {
@@ -360,7 +359,7 @@
         }
 
         .inputs {
-          border: 1px solid #CBD5E1;
+          border: 1px solid #cbd5e1;
           width: 200px;
           height: 44px;
           border-radius: 4px;
@@ -370,7 +369,7 @@
         height: 71px;
         display: flex;
         flex-direction: column;
-        justify-content:space-between;
+        justify-content: space-between;
       }
 
       .verificationStatus {
@@ -426,12 +425,9 @@
         align-items: center;
         margin-top: 13px;
         justify-content: center;
-
-
       }
     }
   }
-
 }
 
 .table {
@@ -514,7 +510,7 @@
         flex-direction: row;
         align-items: center;
         padding-left: 24px;
-        :nth-child(1){
+        :nth-child(1) {
           padding-left: 12px;
         }
       }
@@ -549,7 +545,7 @@
           width: 55px;
           height: 25px;
           border-radius: 50px;
-          background-color: #D1FAE5;
+          background-color: #d1fae5;
           color: #059669;
           text-align: center;
         }
@@ -558,8 +554,8 @@
           width: 83px;
           height: 25px;
           border-radius: 50px;
-          background-color: #FEE2E2;
-          color: #EF4444;
+          background-color: #fee2e2;
+          color: #ef4444;
           text-align: center;
         }
       }
@@ -576,8 +572,8 @@
           width: 87px;
           height: 25px;
           border-radius: 50px;
-          background-color: #FEF3C7;
-          color: #F59E0B;
+          background-color: #fef3c7;
+          color: #f59e0b;
           text-align: center;
         }
 
@@ -585,11 +581,10 @@
           width: 97px;
           height: 25px;
           border-radius: 50px;
-          background-color: #10B981;
-          color: #ECFDF5;
+          background-color: #10b981;
+          color: #ecfdf5;
           text-align: center;
         }
-
       }
 
       .OptionsContainer {
@@ -599,8 +594,6 @@
         flex-direction: row;
         align-items: center;
         padding-left: 24px;
-
-
       }
     }
   }

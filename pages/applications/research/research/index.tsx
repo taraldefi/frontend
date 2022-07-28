@@ -6,7 +6,7 @@ import { ResearchTable } from "@components/widgets/table/researchTabel";
 function Research() {
   return (
     <>
-      <ResearchLayout showexport={true} >
+      <ResearchLayout showexport={true}>
         <ResearchTable TableData={TableData}></ResearchTable>
       </ResearchLayout>
     </>

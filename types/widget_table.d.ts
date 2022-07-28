@@ -53,8 +53,8 @@ export interface personsDataType {
   Persons: personUser;
   Email: string;
   Position: string;
-  VerificationStatus:boolean
-  StatusVerificatoin:boolean
+  VerificationStatus: boolean;
+  StatusVerificatoin: boolean;
 }
 interface personUser {
   user: string;
@@ -65,3 +65,9 @@ export interface researchTableDataType {
   Hit: string;
   Source: string;
 }
+export interface sentimentsTableDataType {
+  person: string;
+  hit: string;
+  source: string;
+}
+
