@@ -12,7 +12,7 @@ export default function ReportLayout({
   sortbarData,
 }: ReportLayoutProps) {
   return (
-    <DashBoardPageLayout sortBarData={sortbarData}>
+    <DashBoardPageLayout showexport={true} sortBarData={sortbarData}>
       <div className="main_container">
         <span className="subheading">{documentCount} Documents</span>
         {children}

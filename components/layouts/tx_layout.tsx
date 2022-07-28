@@ -7,7 +7,7 @@ interface StatusLayoutProps {
 }
 export default function TxLayout({ children }: StatusLayoutProps) {
   return (
-    <DashBoardPageLayout sortBarData={SortbarData}>
+    <DashBoardPageLayout sortBarData={SortbarData} showexport={true}>
       {children}
     </DashBoardPageLayout>
   );

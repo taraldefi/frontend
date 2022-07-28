@@ -1,15 +1,15 @@
 import React from "react";
-import { SortbarData } from "@pages/applications/status/data";
+import { SortbarData } from "@pages/applications/research/data";
 import DashBoardPageLayout from "@components/layouts/dashboard_page_layout";
 
-interface StatusLayoutProps {
+interface researchLayoutProps {
   children: React.ReactNode;
   showexport: boolean;
 }
-export default function StatusLayout({
+export default function ResearchLayout({
   children,
   showexport,
-}: StatusLayoutProps) {
+}: researchLayoutProps) {
   return (
     <DashBoardPageLayout showexport={showexport} sortBarData={SortbarData}>
       {children}

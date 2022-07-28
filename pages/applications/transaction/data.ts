@@ -7,16 +7,16 @@ export const SortbarData = [
   {
     id: 2,
     title: "Buyer",
-    path: "/",
+    path: "/applications/transaction/buyer",
   },
   {
     id: 3,
     title: "Transactions",
-    path: "/",
+    path: "/applications/transaction/transactions",
   },
   {
     id: 4,
     title: "Financing",
-    path: "/",
+    path: "/applications/transaction/financing",
   },
 ];
