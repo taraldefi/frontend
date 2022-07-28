@@ -41,7 +41,7 @@ function Research() {
             </div>
           </div>
         </div>
-        <SentimentsTable TableData={TableData} value={0}/>
+        <SentimentsTable TableData={TableData} value={0} />
       </ResearchLayout>
     </>
   );

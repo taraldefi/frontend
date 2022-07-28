@@ -70,4 +70,3 @@ export interface sentimentsTableDataType {
   hit: string;
   source: string;
 }
-
