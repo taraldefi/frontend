@@ -23,6 +23,7 @@
   "dependencies": {
     "@commitlint/cli": "^17.0.2",
     "@commitlint/config-conventional": "^17.0.2",
+    "@fortawesome/fontawesome-svg-core": "^6.1.2",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@react-pdf-viewer/core": "^3.6.0",
@@ -37,6 +38,7 @@
     "prettier": "^2.7.1",
     "react": "18.1.0",
     "react-dom": "18.1.0",
+    "react-hook-form": "^7.33.1",
     "react-pdf-thumbnail": "^0.1.0",
     "react-router-dom": "^6.3.0",
     "sass": "^1.52.2",

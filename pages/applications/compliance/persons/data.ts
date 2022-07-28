@@ -1,42 +1,31 @@
-export const TableData = [
+import { tableFormPerson } from "types/form";
+export const TableData: tableFormPerson[] = [
   {
-    Persons: {
-      user: "/assets/images/1.png",
-      name: "Cameron Williamson",
-    },
-    Email: "Email@company.com",
-    Position: "Marketing Specialist",
-    VerificationStatus: false,
-    StatusVerificatoin: true,
+    name: "Cameron Williamson",
+    email: "Email@company.com",
+    position: "Marketing Specialist",
+    isSent: false,
+    isDone: true,
   },
   {
-    Persons: {
-      user: "/assets/images/1.png",
-      name: "Cameron Williamson",
-    },
-    Email: "Email@company.com",
-    Position: "Public Representative",
-    VerificationStatus: true,
-    StatusVerificatoin: true,
+    name: "Cameron Williamson",
+    email: "Email@company.com",
+    position: "Public Representative",
+    isSent: true,
+    isDone: true,
   },
   {
-    Persons: {
-      user: "/assets/images/1.png",
-      name: "Cameron Williamson",
-    },
-    Email: "Email@company.com",
-    Position: "Public Representative",
-    VerificationStatus: true,
-    StatusVerificatoin: false,
+    name: "Cameron Williamson",
+    email: "Email@company.com",
+    position: "Public Representative",
+    isSent: true,
+    isDone: false,
   },
   {
-    Persons: {
-      user: "/assets/images/1.png",
-      name: "Cameron Williamson",
-    },
-    Email: "Email@company.com",
-    Position: "Marketing Specialist",
-    VerificationStatus: false,
-    StatusVerificatoin: true,
+    name: "Cameron Williamson",
+    email: "Email@company.com",
+    position: "Marketing Specialist",
+    isSent: false,
+    isDone: true,
   },
 ];
