@@ -1,7 +1,5 @@
-import React from "react"; import {
-    companyTableDataType,
-    screeningTableDataType,
-} from "types/widget_table";
+import React from "react"; import { researchTableDataType } from "types/widget_table";
+import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faArrowUpRightFromSquare,
@@ -10,16 +8,16 @@ import {
 import ButtonIcon from "../buttonWithIcon";
 
 interface Props {
-    TableData: screeningTableDataType[];
+    TableData: researchTableDataType[];
 }
-export const ScreeningTable = ({ TableData }: Props) => {
+export const ResearchTable = ({ TableData }: Props) => {
     return (
         <>
-            <div className="screeningtitle">
+            <div className="researchTitle">
                 OUTLETS
                 <ButtonIcon icon="add" title="Add" onClick={() => { }}></ButtonIcon>
             </div>
-            <div className="tabelComplianceScreening">
+            <div className="tabelResearch">
                 <div className="tableTitles">
                     <div className="statusTitle">
                         {["Persons", "Hit", "Source", "Options"].map((item, index) => {
@@ -34,7 +32,19 @@ export const ScreeningTable = ({ TableData }: Props) => {
                 {TableData.map((item, index) => {
                     return (
                         <div className="tabelContent" key={index}>
-                            <div className="personsTab">{item.persons}</div>
+                            <div className="personsContainer" id="assignee">
+                                <Image
+                                    className="images"
+                                    src={item.persons.user}
+                                    key={index}
+                                    alt=""
+                                    width="25%"
+                                    height="25%"
+                                ></Image>
+                                <div className="nameContainer">
+                                    <span>{item.persons.name}</span>
+                                </div>
+                            </div>
                             <div className="hitTab">{item.Hit}</div>
                             <a href={item.Source} className="sourceTab">
                                 {item.Source}

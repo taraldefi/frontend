@@ -32,7 +32,7 @@ export const SidebarData = [
   {
     id: 7,
     title: "Research & Sentiment",
-    path: "/applications/research",
+    path: "/applications/research/research",
   },
   {
     id: 8,
