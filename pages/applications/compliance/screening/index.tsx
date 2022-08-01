@@ -16,44 +16,45 @@ function Company() {
   });
   return (
     <ComplianceLayout showexport={true}>
-      <div className="persons">
-        <span className="title">ADD NEW</span>
-        <form onSubmit={onSubmit} action="" className="complianceAddBox">
-          <div className="name">
-            <span>Person</span>
-            <input
-              {...register("persons")}
-              placeholder="Name..."
-              type="text"
-              className="inputs" />
-          </div>
-          <div className="email">
-            <span>Hit</span>
-            <input
-              {...register("Hit")}
-              placeholder="Hit..."
-              type="text"
-              className="inputs"
-            ></input>
-          </div>
-          <div className="position">
-            <span>Source</span>
-            <input
-              {...register("Source")}
-              placeholder="Add link..."
-              type="text"
-              className="inputs"
-            ></input>
-          </div>
+      <div className="personsTable">
+        <div className="persons">
+          <span className="title">ADD NEW</span>
+          <form onSubmit={onSubmit} action="" className="complianceAddBox">
+            <div className="name">
+              <span>Person</span>
+              <input
+                {...register("persons")}
+                placeholder="Name..."
+                type="text"
+                className="inputs"
+              />
+            </div>
+            <div className="hit">
+              <span>Hit</span>
+              <input
+                {...register("Hit")}
+                placeholder="Hit..."
+                type="text"
+                className="inputs"
+              ></input>
+            </div>
+            <div className="position">
+              <span>Source</span>
+              <input
+                {...register("Source")}
+                placeholder="Add link..."
+                type="text"
+                className="inputs"
+              ></input>
+            </div>
 
-          <div className="buttonContainer">
-            <ButtonIcon
-              icon="add"
-              title="Add"
-            ></ButtonIcon>
-          </div>
-        </form>
+            <div className="buttonContainer">
+              <ButtonIcon icon="add" title="Add"></ButtonIcon>
+            </div>
+          </form>
+        </div>
       </div>
+
       <ScreeningTable TableData={fields}></ScreeningTable>
     </ComplianceLayout>
   );

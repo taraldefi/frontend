@@ -28,7 +28,7 @@ export default function DashBoardPageLayout({
             </div>
           )}
           <div className="background">
-            <SortBarNav data={sortBarData} width={""}></SortBarNav>
+            <SortBarNav data={sortBarData}></SortBarNav>
           </div>
         </div>
         {children}
