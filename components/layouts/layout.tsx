@@ -10,8 +10,8 @@ const Layout = ({ children }: LayoutProps) => {
   return (
     <div className="tabs">
       <div className="topbarFix">
-      <Topbar />
-      <TopBarNav />
+        <Topbar />
+        <TopBarNav />
       </div>
       <div className="mainBody">{children}</div>
     </div>

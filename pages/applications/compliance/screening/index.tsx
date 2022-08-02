@@ -25,7 +25,8 @@ function Company() {
               {...register("persons")}
               placeholder="Name..."
               type="text"
-              className="inputs" />
+              className="inputs"
+            />
           </div>
           <div className="email">
             <span>Hit</span>
@@ -47,10 +48,7 @@ function Company() {
           </div>
 
           <div className="buttonContainer">
-            <ButtonIcon
-              icon="add"
-              title="Add"
-            ></ButtonIcon>
+            <ButtonIcon icon="add" title="Add"></ButtonIcon>
           </div>
         </form>
       </div>

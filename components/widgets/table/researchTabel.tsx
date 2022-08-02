@@ -14,9 +14,7 @@ interface Props {
 export const ResearchTable = ({ TableData }: Props) => {
   return (
     <>
-      <div className="researchTitle">
-        OUTLETS
-      </div>
+      <div className="researchTitle">OUTLETS</div>
       <div className="tabelResearch">
         <div className="tableTitles">
           <div className="statusTitle">

@@ -85,7 +85,6 @@
 }
 
 .mainBody {
-  
   display: flex;
   background-color: #f8fafc;
 }
@@ -116,7 +115,7 @@
   display: flex;
   position: relative;
   left: 250px;
-  top:150px;
+  top: 150px;
   flex-direction: column;
   width: 1250px;
   .messageBox {
@@ -144,7 +143,7 @@
     justify-content: center;
     position: relative;
     z-index: 1;
-    right:30px;
+    right: 30px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     .sortBox {
       display: flex;

@@ -22,16 +22,17 @@ function Research() {
           <form onSubmit={onSubmit} action="" className="complianceAddBox">
             <div className="name">
               <span>Person</span>
-              <input 
-              {...register("person")}
-              placeholder="Name..." 
-              type="text" 
-              className="inputs" />
+              <input
+                {...register("person")}
+                placeholder="Name..."
+                type="text"
+                className="inputs"
+              />
             </div>
             <div className="email">
               <span>Hit</span>
               <input
-              {...register("hit")}
+                {...register("hit")}
                 placeholder="Hit..."
                 type="text"
                 className="inputs"
@@ -40,7 +41,7 @@ function Research() {
             <div className="position">
               <span>Source</span>
               <input
-              {...register("source")}
+                {...register("source")}
                 placeholder="Add link..."
                 type="text"
                 className="inputs"
@@ -48,10 +49,7 @@ function Research() {
             </div>
 
             <div className="buttonContainer">
-              <ButtonIcon
-                icon="add"
-                title="Add"
-              ></ButtonIcon>
+              <ButtonIcon icon="add" title="Add"></ButtonIcon>
             </div>
           </form>
         </div>

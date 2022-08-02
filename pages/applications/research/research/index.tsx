@@ -26,7 +26,8 @@ function Research() {
                 {...register("name")}
                 placeholder="Name..."
                 type="text"
-                className="inputs" />
+                className="inputs"
+              />
             </div>
             <div className="email">
               <span>Hit</span>
@@ -48,10 +49,7 @@ function Research() {
             </div>
 
             <div className="buttonContainer">
-              <ButtonIcon
-                icon="add"
-                title="Add"
-              ></ButtonIcon>
+              <ButtonIcon icon="add" title="Add"></ButtonIcon>
             </div>
           </form>
         </div>
