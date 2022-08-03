@@ -63,25 +63,49 @@ export default function TransactionBuyer() {
         <div className="sectorInfo">
           <span>SECTOR INFO</span>
           <span>Industry</span>
-          <input type="text" className="inputs" placeholder="Select industry..."></input>
+          <input
+            type="text"
+            className="inputs"
+            placeholder="Select industry..."
+          ></input>
           <div className="line">
             <span></span>
           </div>
           <form className="companyType">
             <span>Company Type</span>
             <div className="content">
-              <input type="radio" id="Public" name="fav_language" value="Public" />
+              <input
+                type="radio"
+                id="Public"
+                name="fav_language"
+                value="Public"
+              />
               <label htmlFor="html">Public</label>
-              <input type="radio" id="Private" name="fav_language" value="Private" />
+              <input
+                type="radio"
+                id="Private"
+                name="fav_language"
+                value="Private"
+              />
               <label htmlFor="css">Private</label>
             </div>
           </form>
           <form className="companyStatus">
             <span>Company Status</span>
             <div className="content">
-              <input type="radio" id="Private" name="fav_language" value="Subsidiary" />
+              <input
+                type="radio"
+                id="Private"
+                name="fav_language"
+                value="Subsidiary"
+              />
               <label htmlFor="Private">Subsidiary</label>
-              <input type="radio" id="Independent" name="fav_language" value="Independent" />
+              <input
+                type="radio"
+                id="Independent"
+                name="fav_language"
+                value="Independent"
+              />
               <label htmlFor="Independent">Independent</label>
             </div>
           </form>
