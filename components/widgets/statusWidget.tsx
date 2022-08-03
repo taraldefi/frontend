@@ -1,6 +1,8 @@
-import React, { useEffect, useState } from "react";
+import { PortalIcons } from "@components/icons";
+import React, { ReactElement, useEffect, useState } from "react";
 interface Props {
   type: string;
+  icon?: string;
 }
 const colorHash = {
   active: {
@@ -20,10 +22,25 @@ const colorHash = {
     color: "#ECFDF5",
   },
 };
-function StatusWidget({ type }: Props) {
+function StatusWidget({ type, icon }: Props) {
   const [style, setStyle] = useState({});
+  const iType = type;
   useEffect(() => {
-    switch (type.toLowerCase()) {
+    switch (iType.toLowerCase()) {
+      case "up":
+        setStyle({
+          opacity: 1,
+          backgroundColor: colorHash.active.bgcolor,
+          color: colorHash.active.color,
+        });
+        break;
+      case "down":
+        setStyle({
+          opacity: 1,
+          backgroundColor: colorHash.change.bgcolor,
+          color: colorHash.change.color,
+        });
+        break;
       case "change" || "not sent":
         setStyle({
           opacity: 1,
@@ -57,10 +74,9 @@ function StatusWidget({ type }: Props) {
   }, [type]);
 
   return (
-    <div>
-      <div className="tableStatus" style={style}>
-        {type}
-      </div>
+    <div className="tableStatus" style={style}>
+      {icon && <PortalIcons selected={false} icon={icon} />}
+      {type}
     </div>
   );
 }

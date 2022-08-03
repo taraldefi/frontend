@@ -1,0 +1,110 @@
+@font-face {
+  font-family: inter;
+  src: url(/assets/font/Inter.ttf);
+}
+.rating {
+  .title {
+    color: #64748b;
+    position: relative;
+    top: 30px;
+    font-weight: bold;
+  }
+
+  .tableQuantitative {
+    margin-top: 40px;
+    width: auto;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+
+    .tableTitles {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 42px;
+
+      .statusTitle {
+        width: 1103px;
+        display: flex;
+        flex-direction: row;
+
+        .statusTitleItems {
+          font-size: 12px;
+          color: #475569;
+          font-weight: bold;
+          font-family: "inter";
+          letter-spacing: 1px;
+          display: flex;
+          align-items: center;
+          left: 24px;
+          position: relative;
+        }
+
+        :nth-child(1) {
+          width: 360px;
+          height: 42px;
+        }
+
+        :nth-child(2) {
+          width: 180px;
+          height: 42px;
+        }
+
+        :nth-child(3) {
+          width: 133px;
+          height: 42px;
+        }
+
+        :nth-child(4) {
+          width: 429px;
+          height: 42px;
+        }
+      }
+    }
+
+    .tabelContent {
+      height: 71px;
+      border-top: 1px solid #e2e8f0;
+      display: flex;
+      align-items: center;
+
+      :nth-child(1) {
+        width: 360px;
+        display: flex;
+        align-items: center;
+        margin-left: 24px;
+
+        font-weight: bold;
+        font-size: 14px;
+      }
+
+      :nth-child(2) {
+        width: 180px;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        left: 24px;
+
+        font-size: 13px;
+        color: #475569c2;
+      }
+
+      :nth-child(3) {
+        :nth-child(1) {
+          width: 60px;
+          display: flex;
+          flex-direction: row;
+          justify-content: start;
+          position: relative;
+        }
+      }
+
+      :nth-child(4) {
+        width: 429px;
+        height: 70px;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}

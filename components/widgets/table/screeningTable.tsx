@@ -16,9 +16,7 @@ interface Props {
 export const ScreeningTable = ({ TableData }: Props) => {
   return (
     <>
-      <div className="screeningtitle">
-        OUTLETS
-      </div>
+      <div className="screeningtitle">OUTLETS</div>
       <div className="tabelComplianceScreening">
         <div className="tableTitles">
           <div className="statusTitle">
