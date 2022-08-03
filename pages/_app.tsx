@@ -9,6 +9,7 @@ import "@styles/fileUpload.scss";
 import "@styles/activity.scss";
 import "@styles/compliance.scss";
 import "@styles/research.scss";
+import "@styles/transactions.scss";
 import type { AppProps } from "next/app";
 
 function MyApp({ Component, pageProps }: AppProps) {

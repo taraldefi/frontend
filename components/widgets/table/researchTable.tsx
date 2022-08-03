@@ -51,7 +51,7 @@ export const ResearchTable = ({ TableData }: Props) => {
                   className="icon"
                 />
               </a>
-              <div className="OptionsTab">
+              <div className="OptionsContainer">
                 <FontAwesomeIcon icon={faEllipsis} className="iconx" />
               </div>
             </div>

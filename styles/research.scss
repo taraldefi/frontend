@@ -12,7 +12,7 @@
 .tabelResearch {
   contain: content;
   margin-top: 40px;
-  width: 1103px;
+  width: 100%;
   border-radius: 8px;
   border: 1px solid #e2e8f0;
 
@@ -58,6 +58,7 @@
       :nth-child(4) {
         width: 100px;
         height: 42px;
+        padding-left: 20px;
       }
     }
   }
@@ -115,18 +116,13 @@
       }
     }
 
-    .OptionsTab {
+    .OptionsContainer {
       width: 100px;
       height: 70px;
       display: flex;
+      flex-direction: row;
       align-items: center;
-      margin-left: -27px;
-
-      .iconx {
-        margin-left: 32px;
-        font-size: 19px;
-        color: #64748b;
-      }
+      padding-left: 28px;
     }
   }
 }
@@ -139,7 +135,7 @@
   }
 
   margin-top: 30px;
-  width: 1104px;
+  width: 100%;
   height: 110px;
   display: flex;
   justify-content: space-between;
@@ -168,7 +164,6 @@
       ::placeholder {
         color: #94a3b8;
         opacity: 1;
-        padding-left: 8px;
       }
 
       :-ms-input-placeholder {
@@ -234,7 +229,6 @@
       ::placeholder {
         color: #94a3b8;
         opacity: 1;
-        padding-left: 8px;
       }
 
       :-ms-input-placeholder {
@@ -264,7 +258,7 @@
 .sentimentsTable {
   .tablePersons {
     contain: content;
-    width: 1103px;
+    width: 100%;
     border-radius: 8px;
     border: 1px solid #e2e8f0;
     transition: all 2s ease;
@@ -310,7 +304,7 @@
         :nth-child(4) {
           width: 100px;
           height: 42px;
-          padding-left: 24px;
+          padding-left: 48px;
         }
       }
     }
@@ -371,7 +365,7 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        padding-left: 27px;
+        padding-left: 48px;
       }
     }
   }

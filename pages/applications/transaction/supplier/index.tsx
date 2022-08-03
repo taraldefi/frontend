@@ -2,7 +2,7 @@ import TxLayout from "@components/layouts/tx_layout";
 export default function TransactionSupplier() {
   return (
     <TxLayout>
-      <div className="inputBox">
+      <div className="supplier">
         <div className="companyDetails">
           <span>COMPANY DETAILS</span>
           <span>Company Name</span>
