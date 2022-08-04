@@ -57,7 +57,7 @@ export const SidebarData = [
     id: 10,
     title: "Rating",
     name: "rating",
-    path: "/applications/rating",
+    path: "/applications/rating/quantitative",
   },
   {
     id: 11,

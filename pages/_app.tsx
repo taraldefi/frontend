@@ -9,6 +9,8 @@ import "@styles/fileUpload.scss";
 import "@styles/activity.scss";
 import "@styles/compliance.scss";
 import "@styles/research.scss";
+import "@styles/slider.scss";
+import "@styles/rating.scss";
 import "@styles/transactions.scss";
 import type { AppProps } from "next/app";
 

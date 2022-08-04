@@ -70,3 +70,9 @@ export interface sentimentsTableDataType {
   hit: string;
   source: string;
 }
+export interface quantitativeTableDataType {
+  factor: string;
+  value: string;
+  status: boolean;
+  metric: number;
+}
