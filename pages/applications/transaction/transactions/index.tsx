@@ -33,7 +33,6 @@ export default function Transactiontx() {
             placeholder="Goods/Services..."
           ></input>
           <textarea
-            
             className="inputs"
             placeholder="Services description..."
           ></textarea>
