@@ -18,9 +18,7 @@ export default function Transactiontx() {
           ></input>
         </div>
       </div>
-      <div className="goodsAndServices">
-        
-      </div>
+      <div className="goodsAndServices"></div>
     </TxLayout>
   );
 }
