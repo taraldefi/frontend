@@ -15,7 +15,7 @@ export const SentimentsTable = ({ TableData, value }: Props) => {
   return (
     <div className="sentimentsTable">
       <div className="taskBox">
-        <span>({value}) Persons</span>
+        <span>({value}) PERSONS</span>
       </div>
       <div className={"tablePersons"}>
         <div className="tableTitles">

@@ -42,7 +42,7 @@
       }
 
       :nth-child(1) {
-        width: 190px;
+        width: 210px;
         height: 42px;
       }
 
@@ -72,7 +72,7 @@
     align-items: center;
 
     :nth-child(1) {
-      width: 188px;
+      width: 208px;
       display: flex;
       align-items: center;
       left: 24px;
@@ -83,7 +83,7 @@
     }
 
     :nth-child(2) {
-      width: 460px;
+      width: 450px;
       height: 70px;
       display: flex;
       align-items: center;
@@ -94,7 +94,7 @@
     }
 
     :nth-child(3) {
-      width: 292px;
+      width: 282px;
       height: 70px;
       display: flex;
       align-items: center;
@@ -463,6 +463,9 @@
 }
 
 .table {
+  * {
+    font-size: 14px;
+  }
   .tablePersons {
     contain: content;
     width: 100%;
@@ -574,6 +577,9 @@
         padding-left: 24px;
 
         .sent {
+          display: flex;
+          align-items: center;
+          justify-content: center;
           width: 55px;
           height: 25px;
           border-radius: 50px;
@@ -583,6 +589,9 @@
         }
 
         .notSent {
+          display: flex;
+          align-items: center;
+          justify-content: center;
           width: 83px;
           height: 25px;
           border-radius: 50px;
@@ -600,7 +609,10 @@
         align-items: center;
         padding-left: 24px;
 
-        .notDone {
+        .complete {
+          display: flex;
+          align-items: center;
+          justify-content: center;
           width: 87px;
           height: 25px;
           border-radius: 50px;
@@ -609,7 +621,10 @@
           text-align: center;
         }
 
-        .complete {
+        .notDone {
+          display: flex;
+          align-items: center;
+          justify-content: center;
           width: 97px;
           height: 25px;
           border-radius: 50px;

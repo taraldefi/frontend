@@ -44,7 +44,7 @@ export const CompanyTable = ({ TableData }: Props) => {
                   </div>
                 ) : (
                   <div className="svgIcon">
-                    <PortalIcons selected={false} icon={"checkbox"} />
+                    <PortalIcons selected={false} icon={"unchecked"} />
                     <span className="notSelected">Verified</span>
                   </div>
                 )}

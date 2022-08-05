@@ -152,6 +152,10 @@
   }
 
   .background {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 3px;
+    padding-right: 3px;
     background-color: #fff;
     height: 37px;
     border-radius: 8px;
@@ -161,7 +165,7 @@
 
     z-index: 0;
     right: 30px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    box-shadow: rgba(0, 0, 0, 0.148) 0px 4px 12px;
 
     .sortBox {
       display: flex;
