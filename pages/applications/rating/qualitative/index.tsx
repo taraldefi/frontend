@@ -11,23 +11,23 @@ export default function QunatitativePage() {
       <div className="qualitative">
         <div className="firstCol">
           <span>FINANCIAL STATEMENT NOTES</span>
-          <span>Company Name</span>
+          <span>One-Off charges</span>
           <input
             type="text"
             className="inputs"
-            placeholder="Company Name..."
+            placeholder="Charge Amount..."
           ></input>
-          <span>Date Established</span>
-          <input
-            type="date"
-            className="inputs"
-            placeholder="Date Established..."
-          ></input>
-          <span>No.of Employees</span>
+          <span>Adj. to Financial Instruments Valuation</span>
           <input
             type="text"
             className="inputs"
-            placeholder="Number of employees..."
+            placeholder="Percentage..."
+          ></input>
+          <span>Preferred Stock / Convertible Debt</span>
+          <input
+            type="text"
+            className="inputs"
+            placeholder="Stock Types..."
           ></input>
         </div>
         <div className="secondCol">

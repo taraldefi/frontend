@@ -76,3 +76,12 @@ export interface quantitativeTableDataType {
   status: boolean;
   metric: number;
 }
+interface Info {
+  DownPayment: number,
+  PrimncipalRepayment: number,
+  InterestPayment: number,
+  
+}
+interface TableVal {
+  perValue: { [key: string]: Info };
+}
