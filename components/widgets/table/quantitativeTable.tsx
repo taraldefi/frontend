@@ -34,11 +34,15 @@ export const QuantitativeTable = ({ TableData }: Props) => {
               <div className="valueTab">{item.value}</div>
 
               <div className="statusTab">
-              <StatusWidget type={"Up"} icon={"up"}></StatusWidget>
+                {item.status ? (
+                  <StatusWidget type={"Up"} icon={"up"}></StatusWidget>
+                ) : (
+                  <StatusWidget type={"Down"} icon={"down"}></StatusWidget>
+                )}
               </div>
 
               <div className="metricTab">
-                <MetricRange value={40}></MetricRange>
+                <MetricRange value={item.metric}></MetricRange>
               </div>
             </div>
           );
