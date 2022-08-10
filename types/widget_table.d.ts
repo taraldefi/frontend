@@ -77,10 +77,9 @@ export interface quantitativeTableDataType {
   metric: number;
 }
 interface Info {
-  DownPayment: number,
-  PrimncipalRepayment: number,
-  InterestPayment: number,
-  
+  DownPayment: number;
+  PrimncipalRepayment: number;
+  InterestPayment: number;
 }
 interface TableVal {
   perValue: { [key: string]: Info };
