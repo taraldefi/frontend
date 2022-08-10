@@ -76,11 +76,31 @@ export interface quantitativeTableDataType {
   status: boolean;
   metric: number;
 }
-interface Info {
-  DownPayment: number;
-  PrimncipalRepayment: number;
-  InterestPayment: number;
+
+export interface info {
+  [key: string];
+  downpayment: number;
+  principalrepayment: number;
+  interestpayment: number;
 }
-interface TableVal {
-  perValue: { [key: string]: Info };
+export interface tableVal {
+  [key: string]: info;
+}
+interface financialInfoProfitLoss {
+  [key: number];
+  revenue: number;
+  cogs: number;
+  grossProfit: number;
+  distributionCosts: number;
+  AdministrativeCosts: number;
+  otherIncome: number;
+  OperatingProfit: number;
+  financeCosts: number;
+  profitBeforeIncomeTax: number;
+  incomeTaxExpense: number;
+  profitForThePeriod: number;
+  file: string; //file hash for the pdf file
+}
+export interface profitLossTableType {
+  [key: number]: financialInfoProfitLoss;
 }

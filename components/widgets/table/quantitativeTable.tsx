@@ -29,7 +29,7 @@ export const QuantitativeTable = ({ TableData }: Props) => {
 
         {TableData.map((item, index) => {
           return (
-            <div className="tabelContent" key={index}>
+            <div className="tableContent" key={index}>
               <div className="factorTab">{item.factor}</div>
               <div className="valueTab">{item.value}</div>
 

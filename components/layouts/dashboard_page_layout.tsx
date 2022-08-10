@@ -17,20 +17,22 @@ export default function DashBoardPageLayout({
 }: DashBoardPageLayoutProps) {
   return (
     <DashBoardLayout>
-      <div className="rightContent">
-        <div className="titleBox">
-          {showexport ? (
-            <span id="bodyTitle">[Exporter] - [Importer] - [Date] </span>
-          ) : (
-            <div className="messageBox">
-              <FontAwesomeIcon color="#94A3B8" icon={faArrowLeft} />
-              <span>Messages</span>
+      <div className="sortBackground">
+          <div className="titleBox">
+            {showexport ? (
+              <span id="bodyTitle">[Exporter] - [Importer] - [Date] </span>
+            ) : (
+              <div className="messageBox">
+                <FontAwesomeIcon color="#94A3B8" icon={faArrowLeft} />
+                <span>Messages</span>
+              </div>
+            )}
+            <div className="background">
+              <SortBarNav data={sortBarData} width={""}></SortBarNav>
             </div>
-          )}
-          <div className="background">
-            <SortBarNav data={sortBarData} width={""}></SortBarNav>
           </div>
         </div>
+      <div className="rightContent">
         {children}
       </div>
     </DashBoardLayout>

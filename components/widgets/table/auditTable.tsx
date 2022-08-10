@@ -22,7 +22,7 @@ export const AuditTable = ({ TableData }: Props) => {
       </div>
       {TableData.map((item, index) => {
         return (
-          <div className="tabelContent" key={index}>
+          <div className="tableContent" key={index}>
             <div className="processTab">{item.action}</div>
             <div className="imageContainer">
               <Image

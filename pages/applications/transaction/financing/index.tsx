@@ -40,7 +40,8 @@ export default function Transactionfinancing() {
         </div>
         <div className="tableContainer">
           <span>TIME LINE</span>
-          {/* <TxFinanceTable TableData={TableData}></TxFinanceTable> */}
+
+          <TxFinanceTable TableData={TableData}></TxFinanceTable>
         </div>
       </div>
     </TxLayout>
