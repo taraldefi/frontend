@@ -31,66 +31,59 @@ export default function QunatitativePage() {
           ></input>
         </div>
         <div className="secondCol">
-          <span>Postcode</span>
+          <span>Information Quality</span>
+          <select className="inputs" placeholder="select..."></select>
+          <span>Capital Leases</span>
           <input
             type="text"
             className="inputs"
-            placeholder="Percentage..."
+            placeholder="Number of capital leases..."
           ></input>
-          <span>Postcode</span>
-          <input
-            type="text"
-            className="inputs"
-            placeholder="Percentage..."
-          ></input>
-          <span>Postcode</span>
-          <input
-            type="text"
-            className="inputs"
-            placeholder="Percentage..."
-          ></input>
+          <span>Options/Warrents</span>
+          <select className="inputs" placeholder="Percentage..."></select>
         </div>
         <div className="thirdCol">
-          <span>Turnover(EURm)</span>
+          <span>Minority interests investment</span>
           <input
             className="inputs"
             type="text"
-            placeholder="Turnover amount..."
+            placeholder="Percentage..."
           ></input>
-          <span>Balance Sheet Total(EURm)</span>
+          <span>Operating Leases</span>
           <input
             className="inputs"
             type="text"
             placeholder="Total amount..."
           ></input>
-          <span>Balance Sheet Total(EURm)</span>
+          <span>Tax</span>
           <input
             className="inputs"
             type="text"
-            placeholder="Total amount..."
+            placeholder="percentage..."
           ></input>
         </div>
         <div className="rating">
           <div className="header">
             <span>MANAGEMENT ASSESSMENT</span>
           </div>
+
           <div className="inputs">
             <input
               type="text"
               className="input"
               placeholder="Rating..."
             ></input>
-            <span>Rating Agency</span>
+            <span>University Degrees</span>
             <input
               type="text"
               className="input"
-              placeholder="Agency name..."
+              placeholder="Degree..."
             ></input>
-            <span>Date of the rating</span>
+            <span>Advanced Degrees</span>
             <input
-              type="date"
+              type="text"
               className="input"
-              placeholder="Rating..."
+              placeholder="Degree..."
             ></input>
           </div>
         </div>
