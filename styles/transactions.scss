@@ -603,13 +603,13 @@
 
 .financing {
   span {
-    color: #64748B;
+    color: #64748b;
     font-weight: 800;
   }
 
   * {
     font-size: 14px;
-    color: #475569
+    color: #475569;
   }
 
   .financingContainer {
@@ -645,7 +645,7 @@
           }
         }
 
-        gap:16px;
+        gap: 16px;
         flex: 1;
         display: flex;
         flex-direction: column;
@@ -664,7 +664,7 @@
           }
         }
 
-        gap:16px;
+        gap: 16px;
         flex: 1;
         display: flex;
         flex-direction: column;
@@ -686,8 +686,11 @@
 
   .tableContainer {
     padding-top: 40px;
+    padding-bottom: 40px;
+    width: min-content;
+
     .txFinance {
-      margin-top :16px; 
+      margin-top: 16px;
       contain: content;
       width: 100%;
       border-radius: 8px;
@@ -712,7 +715,6 @@
             font-weight: bold;
             font-family: "inter";
             letter-spacing: 1px;
-
           }
 
           :nth-child(1) {
@@ -769,7 +771,102 @@
             padding-left: 48px;
           }
         }
+
+      }
+
+      .tableJoint {
+        display: flex;
+
+        .contentBox {
+          display: flex;
+          flex-direction: column;
+
+          .titleColumn {
+            display: flex;
+            flex-direction: column;
+
+            .columnContent {
+              color: #000;
+              font-weight: bold;
+              border-top: 1px solid #e2e8f0;
+              background-color: #fff;
+              padding: 26.5px 47px 26.5px 24px;
+            }
+          }
+        }
+
+        .tableContent {
+
+          .rowContent {
+            display: flex;
+
+            * {
+              :nth-child(3) {
+                :nth-child(1) {
+
+                  color: #94A3B8;
+                }
+              }
+
+              :nth-child(4) {
+                :nth-child(1) {
+
+                  color: #94A3B8;
+                }
+              }
+            }
+
+            .columnItems {
+              .contentTitle {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 42px;
+                padding: 12px 31px 12px 24px;
+                width: max-content;
+                font-weight: bold;
+                color: #475569;
+                font-size: 14px;
+              }
+
+
+              .items {
+                .iconx {
+                  color: #000 !important;
+                  font-size: 16.7px;
+                }
+
+                // color:#000;
+                flex-direction: row;
+                font-weight: bold;
+                align-items: center;
+                justify-content: center;
+                margin: 0px;
+                height: min-content;
+                border-top: 1px solid #e2e8f0;
+                border-right: 0px;
+                background-color: #fff;
+                padding: 26.5px 27px 26.5px 24px;
+
+              }
+            }
+          }
+        }
       }
     }
   }
+}
+
+#euro {
+  display: flex;
+  gap: 3px;
+
+  svg {
+    font-size: 14px;
+    position: relative;
+    top: 1px;
+  }
+}
+textarea{
+  resize: none;
 }

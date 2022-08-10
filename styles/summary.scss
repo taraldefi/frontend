@@ -4,6 +4,7 @@
   position: relative;
   top: 130px;
   left: 255px;
+
   .titleBox {
     span {
       font-weight: bold;
@@ -14,7 +15,7 @@
   .inputBox {
     display: flex;
     margin-top: 40px;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 1080px;
 
     .transaction {
@@ -31,14 +32,11 @@
         font-weight: bold;
         color: #64748b;
       }
-      .portalIcon {
-        position: relative;
-        top: 50px;
-        left: 199px;
-        margin-top: -37px;
-      }
+
+      
 
       .inputs {
+        
         font-family: inter;
         padding: 10px;
         width: 225px;
@@ -129,6 +127,7 @@
         color: #475569;
         font-size: 14px;
       }
+
       select {
         font-family: inter;
         padding: 10px;
@@ -259,10 +258,34 @@
           font-size: 14px;
           margin-top: 24px;
         }
+
         svg {
           margin-top: 24px;
         }
       }
     }
   }
+}
+
+#dollar {
+  background-image: url(/assets/svg/dollar.svg);
+  background-repeat: no-repeat;
+  background-position: 195px;
+}
+#percentage {
+  background-image: url(/assets/svg/percentage.svg);
+  background-repeat: no-repeat;
+  background-position: 195px;
+}
+#calendar {
+  z-index: 99;
+  background-image: url(/assets/svg/calendar.svg);
+  background-repeat: no-repeat;
+  background-position: 193px 10px;
+  
+}
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    -webkit-appearance: none;
 }

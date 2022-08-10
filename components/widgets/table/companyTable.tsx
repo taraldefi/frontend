@@ -12,7 +12,7 @@ export const CompanyTable = ({ TableData }: Props) => {
   return (
     <>
       <div className="title">BUSINESS DETAILS</div>
-      <div className="tabelCompliance">
+      <div className="tableCompliance">
         <div className="tableTitles">
           <div className="statusTitle">
             {["Persons", "Details", "Source", "Status"].map((item, index) => {
@@ -26,7 +26,7 @@ export const CompanyTable = ({ TableData }: Props) => {
         </div>
         {TableData.map((item, index) => {
           return (
-            <div className="tabelContent" key={index}>
+            <div className="tableContent" key={index}>
               <div className="personsTab">{item.persons}</div>
               <div className="detailsTab">{item.details}</div>
               <a href={item.source} className="sourceTab">

@@ -15,7 +15,7 @@ export const ResearchTable = ({ TableData }: Props) => {
   return (
     <>
       <div className="researchTitle">OUTLETS</div>
-      <div className="tabelResearch">
+      <div className="tableResearch">
         <div className="tableTitles">
           <div className="statusTitle">
             {["Persons", "Hit", "Source", "Options"].map((item, index) => {
@@ -29,7 +29,7 @@ export const ResearchTable = ({ TableData }: Props) => {
         </div>
         {TableData.map((item, index) => {
           return (
-            <div className="tabelContent" key={index}>
+            <div className="tableContent" key={index}>
               <div className="personsContainer" id="assignee">
                 <Image
                   className="images"

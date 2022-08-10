@@ -1,46 +1,50 @@
 export const TableData = {
-
-    perValue: {
-        orderEntity: {
-            downpayment: 100000,
-            principalRepayment: 0,
-            interestsPayment: 0,
-        },
-        Shipment: {
-            downpayment: 0,
-            principalRepayment: 0,
-            interestsPayment: 0,
-        },
-        Month3: {
-            downpayment: 0,
-            principalRepayment: 34167,
-            interestsPayment: 4040,
-        },
-        Month6: {
-            downpayment: 0,
-            principalRepayment: 34167,
-            interestsPayment: 3703,
-        },
-        Month9: {
-            downpayment: 0,
-            principalRepayment: 34167,
-            interestsPayment: 3367,
-        },
-        Month12: {
-            downpayment: 0,
-            principalRepayment: 34167,
-            interestsPayment: 3030,
-        },
-        Month15: {
-            downpayment: 0,
-            principalRepayment: 34167,
-            interestsPayment: 2693,
-        },
-        Month18: {
-            downpayment: 0,
-            principalRepayment: 34167,
-            interestsPayment: 2357,
-        },
-
-    }
-}
+  "orderentity": {
+    "downpayment": 100000,
+    "principalrepayment": 0,
+    "interestpayment": 0,
+    "total":100000,
+   },
+   "shipment": {
+    "downpayment": 0,
+    "principalrepayment": 0,
+    "interestpayment": 0,
+    "total":0,
+   },
+   "month 3": {
+    "downpayment": 0,
+    "principalrepayment": 34167,
+    "interestpayment": 4040,
+    "total":38207,
+   },
+   "month 6": {
+    "downpayment": 0,
+    "principalrepayment": 34167,
+    "interestpayment": 3703,
+    "total":37870,
+   },
+   "month 9": {
+    "downpayment": 0,
+    "principalrepayment": 34167,
+    "interestpayment": 3367,
+    "total":37533,
+   },
+   "month 12": {
+    "downpayment": 0,
+    "principalrepayment": 34167,
+    "interestpayment":  3030,
+    "total":37197,
+   },
+   "month 15": {
+    "downpayment": 0,
+    "principalrepayment": 34167,
+    "interestpayment": 2693,
+    "total":36860,
+   },
+   "month 18": {
+    "downpayment": 0,
+    "principalrepayment": 34167,
+    "interestpayment": 2357,
+    "total":36523,
+   }
+};

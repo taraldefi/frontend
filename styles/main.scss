@@ -121,16 +121,83 @@
   }
 }
 
+.sortBackground {
+  z-index: 99;
+  align-items: center;
+  position: fixed;
+  display: flex;
+  top: 124px;
+  height: 100px;
+  left: 290px;
+  background-color: #f8fafc;
+}
+
+.titleBox {
+  z-index: 99;
+  display: flex;
+  justify-content: space-between;
+  width: 157vh;
+
+  #bodyTitle {
+    font-size: 20px;
+    text-align: center;
+    align-items: center;
+    font-weight: bold;
+    display: flex;
+  }
+}
+
+.background {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: #fff;
+  height: 37px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 0;
+  right: 30px;
+  box-shadow: rgba(0, 0, 0, 0.148) 0px 4px 12px;
+
+  .sortBox {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    width: fit-content;
+    font-size: 14px;
+    font-family: inter;
+    padding-left: 3px;
+    padding-right: 3px;
+
+    .SortBarItem {
+      cursor: pointer;
+      padding: 6px;
+      border-radius: 5px;
+    }
+
+    .selected {
+      background-color: #0d8489;
+      color: white;
+      // padding: 7px;
+    }
+  }
+}
 .rightContent {
   background-color: #f8fafc;
-  padding: 40px;
+  padding-top: 66px;
+  padding-right: 40px;
   padding-left: 40px;
   display: flex;
   position: relative;
   left: 250px;
-  top: 150px;
+  top: 132px;
   flex-direction: column;
   width: 1250px;
+
 
   .messageBox {
     width: 130px;
@@ -141,55 +208,7 @@
     justify-content: space-between;
   }
 
-  .titleBox {
-    display: flex;
-    justify-content: space-between;
 
-    #bodyTitle {
-      font-size: 20px;
-      font-weight: bold;
-    }
-  }
-
-  .background {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    padding-left: 3px;
-    padding-right: 3px;
-    background-color: #fff;
-    height: 37px;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    z-index: 0;
-    right: 30px;
-    box-shadow: rgba(0, 0, 0, 0.148) 0px 4px 12px;
-
-    .sortBox {
-      display: flex;
-      gap: 15px;
-      justify-content: space-between;
-      width: fit-content;
-      font-size: 14px;
-      font-family: inter;
-      padding-left: 3px;
-      padding-right: 3px;
-
-      .SortBarItem {
-        cursor: pointer;
-        padding: 6px;
-        border-radius: 5px;
-      }
-
-      .selected {
-        background-color: #0d8489;
-        color: white;
-        // padding: 7px;
-      }
-    }
-  }
 }
 
 .subheading {

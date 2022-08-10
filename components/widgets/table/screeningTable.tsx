@@ -17,7 +17,7 @@ export const ScreeningTable = ({ TableData }: Props) => {
   return (
     <>
       <div className="screeningtitle">OUTLETS</div>
-      <div className="tabelComplianceScreening">
+      <div className="tableComplianceScreening">
         <div className="tableTitles">
           <div className="statusTitle">
             {["Persons", "Hit", "Source", "Options"].map((item, index) => {
@@ -31,7 +31,7 @@ export const ScreeningTable = ({ TableData }: Props) => {
         </div>
         {TableData.map((item, index) => {
           return (
-            <div className="tabelContent" key={index}>
+            <div className="tableContent" key={index}>
               <div className="personsTab">{item.persons}</div>
               <div className="hitTab">{item.Hit}</div>
               <a href={item.Source} className="sourceTab">

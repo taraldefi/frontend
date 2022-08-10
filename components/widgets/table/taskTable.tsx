@@ -34,7 +34,7 @@ export const TaskTable = ({ TableData, value }: Props) => {
         </div>
         {TableData.map((item, index) => {
           return (
-            <div className="tabelContent" key={index}>
+            <div className="tableContent" key={index}>
               <div className="assigneeContainer" id="assignee">
                 <Image
                   className="images"

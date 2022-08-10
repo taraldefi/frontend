@@ -35,7 +35,7 @@ export const PersonsTable = ({ TableData, value }: Props) => {
         </div>
         {TableData.map((item, index) => {
           return (
-            <div className="tabelContent" key={index}>
+            <div className="tableContent" key={index}>
               <div className="personsContainer" id="assignee">
                 <Image
                   className="images"
