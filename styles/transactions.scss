@@ -392,7 +392,7 @@
           accent-color: #0d8489;
         }
 
-        input[type="radio"]:checked~label {
+        input[type="radio"]:checked ~ label {
           color: #0f172a;
         }
       }
@@ -424,7 +424,7 @@
           accent-color: #0d8489;
         }
 
-        input[type="radio"]:checked~label {
+        input[type="radio"]:checked ~ label {
           color: #0f172a;
         }
       }
@@ -771,7 +771,6 @@
             padding-left: 48px;
           }
         }
-
       }
 
       .tableJoint {
@@ -796,22 +795,19 @@
         }
 
         .tableContent {
-
           .rowContent {
             display: flex;
 
             * {
               :nth-child(3) {
                 :nth-child(1) {
-
-                  color: #94A3B8;
+                  color: #94a3b8;
                 }
               }
 
               :nth-child(4) {
                 :nth-child(1) {
-
-                  color: #94A3B8;
+                  color: #94a3b8;
                 }
               }
             }
@@ -828,7 +824,6 @@
                 color: #475569;
                 font-size: 14px;
               }
-
 
               .items {
                 .iconx {
@@ -847,7 +842,6 @@
                 border-right: 0px;
                 background-color: #fff;
                 padding: 26.5px 27px 26.5px 24px;
-
               }
             }
           }
@@ -867,6 +861,6 @@
     top: 1px;
   }
 }
-textarea{
+textarea {
   resize: none;
 }

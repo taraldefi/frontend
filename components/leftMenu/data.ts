@@ -21,7 +21,7 @@ export const SidebarData = [
     id: 4,
     title: "Financial",
     name: "financial",
-    path: "/applications/financial",
+    path: "/applications/financial/profit",
   },
   {
     id: 5,
