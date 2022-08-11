@@ -1,11 +1,11 @@
 export const TableData = {
-  "orderentity": {
+  orderentity: {
     downpayment: 100000,
     principalrepayment: 0,
     interestpayment: 0,
     total: 100000,
   },
-  "shipment": {
+  shipment: {
     downpayment: 0,
     principalrepayment: 0,
     interestpayment: 0,
