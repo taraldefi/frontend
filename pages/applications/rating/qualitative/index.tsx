@@ -21,6 +21,7 @@ export default function QunatitativePage() {
           <input
             type="text"
             className="inputs"
+            id="percentage"
             placeholder="Percentage..."
           ></input>
           <span>Preferred Stock / Convertible Debt</span>
@@ -47,6 +48,7 @@ export default function QunatitativePage() {
           <input
             className="inputs"
             type="text"
+            id="percentage"
             placeholder="Percentage..."
           ></input>
           <span>Operating Leases</span>
@@ -59,6 +61,7 @@ export default function QunatitativePage() {
           <input
             className="inputs"
             type="text"
+            id="percentage"
             placeholder="percentage..."
           ></input>
         </div>
@@ -68,9 +71,11 @@ export default function QunatitativePage() {
           </div>
 
           <div className="inputs">
+            <span>Previous Employment</span>
             <input
               type="text"
               className="input"
+              id="star"
               placeholder="Rating..."
             ></input>
             <span>University Degrees</span>
