@@ -9,18 +9,24 @@ interface DashBoardPageLayoutProps {
   children: React.ReactNode;
   sortBarData: Array<SortBarItem>;
   showexport: boolean;
+  exporter:string;
+  importer:string;
+  date: string;
 }
 export default function DashBoardPageLayout({
   children,
   sortBarData,
   showexport,
+  exporter,
+  importer,
+  date,
 }: DashBoardPageLayoutProps) {
   return (
     <DashBoardLayout>
       <div className="sortBackground">
         <div className="titleBox">
           {showexport ? (
-            <span id="bodyTitle">[Exporter] - [Importer] - [Date] </span>
+            <span id="bodyTitle"> {exporter} - {importer} - {date} </span>
           ) : (
             <div className="messageBox">
               <FontAwesomeIcon color="#94A3B8" icon={faArrowLeft} />

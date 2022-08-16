@@ -1,12 +1,14 @@
 .researchTitle {
   color: #64748b;
   position: relative;
-  top: 30px;
+  top: 25px;
   font-weight: bold;
+  font-size: 14px;
   display: flex;
   flex-direction: row;
   width: 1103px;
   justify-content: space-between;
+  
 }
 
 .tableResearch {
@@ -64,7 +66,7 @@
   }
 
   .tableContent {
-    height: 71px;
+    height: 70px;
     background-color: #ffffff;
     border-top: 1px solid #e2e8f0;
     display: flex;
@@ -95,7 +97,7 @@
       align-items: center;
       font-size: 13px;
       color: #475569c2;
-      padding-left: 3px;
+      padding-left: 4px;
     }
 
     .sourceTab {
@@ -113,7 +115,8 @@
       .icon {
         width: 20px;
         height: 20px;
-        margin-left: 10px;
+        margin-left: 12px;
+        color: #0D8489;
       }
     }
 
@@ -259,7 +262,7 @@
 .sentimentsTable {
   .taskBox {
     margin-bottom: 16px;
-    margin-top: 23px;
+    margin-top: 24px;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -313,7 +316,7 @@
         :nth-child(4) {
           width: 100px;
           height: 42px;
-          padding-left: 48px;
+          padding-left: 44px;
         }
       }
     }
@@ -326,7 +329,7 @@
       align-items: center;
 
       .personsContainer {
-        width: 220px;
+        width: 240px;
         height: 70px;
         display: flex;
         flex-direction: row;
@@ -344,7 +347,8 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        padding-left: 24px;
+        padding-left: 4px;
+        color: #475569c2;
         font-size: 13px;
       }
 
@@ -354,9 +358,9 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        padding-left: 64px;
+        padding-left: 45px;
         font-weight: bold;
-        font-size: 14px;
+        font-size: 13px;
         color: #000;
         text-decoration: none;
 
@@ -364,7 +368,7 @@
           margin-left: 12px;
           width: 20px;
           height: 20px;
-          color: #000;
+          color: #0D8489;
         }
       }
 
@@ -374,7 +378,7 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        padding-left: 48px;
+        padding-left: 28px;
       }
     }
   }

@@ -1,9 +1,15 @@
+.summaryMain{
+  .background{
+    display: none;
+  }
+
 .summaryBody {
   padding-left: 30px;
   padding-top: 40px;
   position: relative;
-  top: 130px;
-  left: 255px;
+  top: -60px;
+  z-index: 999;
+  
 
   .titleBox {
     span {
@@ -284,4 +290,5 @@ input[type="date"]::-webkit-inner-spin-button,
 input[type="date"]::-webkit-calendar-picker-indicator {
   opacity: 0;
   -webkit-appearance: none;
+}
 }
