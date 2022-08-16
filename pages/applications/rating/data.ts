@@ -6,7 +6,7 @@ export const SortbarData = [
   },
   {
     id: 2,
-    title: "Quantitative",
+    title: "Qualitative",
     path: "/applications/rating/qualitative",
   },
 ];
