@@ -13,7 +13,13 @@ export default function CRSLayout({
   sortBarData,
 }: CRSLayoutProps) {
   return (
-    <DashBoardPageLayout showexport={showexport} sortBarData={sortBarData} exporter={""} importer={""} date={""}>
+    <DashBoardPageLayout
+      showexport={showexport}
+      sortBarData={sortBarData}
+      exporter={""}
+      importer={""}
+      date={""}
+    >
       {children}
     </DashBoardPageLayout>
   );

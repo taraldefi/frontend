@@ -11,7 +11,13 @@ export default function StatusLayout({
   showexport,
 }: StatusLayoutProps) {
   return (
-    <DashBoardPageLayout showexport={showexport} sortBarData={SortbarData} exporter={""} importer={""} date={""}>
+    <DashBoardPageLayout
+      showexport={showexport}
+      sortBarData={SortbarData}
+      exporter={""}
+      importer={""}
+      date={""}
+    >
       {children}
     </DashBoardPageLayout>
   );
