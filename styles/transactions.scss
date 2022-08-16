@@ -392,7 +392,7 @@
           accent-color: #0d8489;
         }
 
-        input[type="radio"]:checked~label {
+        input[type="radio"]:checked ~ label {
           color: #0f172a;
         }
       }
@@ -424,7 +424,7 @@
           accent-color: #0d8489;
         }
 
-        input[type="radio"]:checked~label {
+        input[type="radio"]:checked ~ label {
           color: #0f172a;
         }
       }
@@ -598,7 +598,6 @@
     :nth-child(4) {
       color: #475569;
     }
-
   }
 }
 
@@ -865,5 +864,4 @@
 
 textarea {
   resize: none;
-
 }
