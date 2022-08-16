@@ -13,6 +13,7 @@ import "@styles/slider.scss";
 import "@styles/rating.scss";
 import "@styles/transactions.scss";
 import "@styles/financials.scss";
+import "@styles/signoff.scss";
 import type { AppProps } from "next/app";
 
 function MyApp({ Component, pageProps }: AppProps) {
