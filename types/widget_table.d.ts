@@ -76,6 +76,7 @@ export interface quantitativeTableDataType {
   status: boolean;
   metric: number;
 }
+
 export interface info {
   [key: string];
   downpayment: number;
@@ -134,4 +135,11 @@ interface financialInfoCashFLow {
 }
 export interface cashFlowTableType {
   [key: string]: financialInfoCashFLow;
+}
+
+export interface signOffTableType {
+  user: auditUser;
+  position: string;
+  status1: boolean;
+  status2: boolean;
 }

@@ -1,13 +1,13 @@
 import React from "react";
-import DashBoardLayout from "@components/layouts/dashboard_layout";
+import { TableData } from "./sign_off_data";
+import SignOffLayout from "@components/layouts/signOffLayout";
+import { SignOffTable } from "@components/widgets/table/signOffTable";
 function SignOff() {
   return (
     <>
-      <DashBoardLayout>
-        <div className="rightContent">
-          <div className="dummy">signoff page</div>
-        </div>
-      </DashBoardLayout>
+      <SignOffLayout showexport={true}>
+        <SignOffTable TableData={TableData} />
+      </SignOffLayout>
     </>
   );
 }

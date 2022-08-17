@@ -1,0 +1,142 @@
+.entityContainer {
+    background-color: #fff;
+    width: 100%;
+    height: max-content;
+    position: relative;
+    top: 126px;
+    padding-left: 140px;
+    padding-right: 140px;
+    padding-top: 40px;
+
+    .entity {
+        display: grid;
+        grid-template-columns: auto auto auto;
+
+        .entityWrapper {
+            display: flex;
+            flex-direction: column;
+            padding: 20px 0px 20px 16px;
+            width: fit-content;
+            height: fit-content;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            margin-right: 24px;
+            margin-bottom: 24px;
+
+            &.active {
+                box-shadow: 3px 18px 36px 1px rgba(100, 116, 139, 0.42);
+                -webkit-box-shadow: 3px 18px 36px 1px rgba(100, 116, 139, 0.42);
+                -moz-box-shadow: 3px 18px 36px 1px rgba(100, 116, 139, 0.42);
+            }
+
+            .entityTopContent {
+                display: flex;
+                padding-bottom: 16px;
+                border-bottom: 1px solid #e2e8f0;
+                width: max-content;
+
+                .entityImageContainer {
+                    width: 80px;
+                    height: 80px;
+                    contain: content;
+                    border: 1px solid #18529e;
+                    border-radius: 16px;
+                }
+
+                .entityTitleBox {
+                    gap: 5px;
+                    padding: 16px 45px 16px 18px;
+                    display: flex;
+                    flex-direction: column;
+
+                    :nth-child(1) {
+                        font-style: Work Sans;
+                        font-size: 24px;
+                        color: #003C6E;
+                        font-weight: bold;
+                    }
+
+                    :nth-child(2) {
+                        font-style: Work Sans;
+                        font-size: 10px;
+                        color: #64748B;
+                        font-weight: bold;
+                    }
+                }
+
+                .modal {
+                    
+                    &.active {
+                        width: 148px;
+                        height: 192px;
+                        background-color: #fff;
+                        position: absolute;
+                        z-index: 99;
+                        border-radius: 16px;
+                        box-shadow: 3px 18px 36px 1px rgba(100, 116, 139, 0.42);
+                        -webkit-box-shadow: 3px 18px 36px 1px rgba(100, 116, 139, 0.42);
+                        -moz-box-shadow: 3px 18px 36px 1px rgba(100, 116, 139, 0.42);
+                    }
+                    .modalMenue{
+                        display:flex;
+                        flex-direction:column;
+                        justify-content:space-around;
+                        padding: 24px;
+                        gap:20px;
+                        :nth-child(1){
+                            display: flex;
+                            gap: 13px;
+                            align-items:center;
+                        }
+                        :nth-child(2){
+                            display: flex;
+                            gap: 16px;
+                            align-items:center;
+                        }
+                        :nth-child(4){
+                            display: flex;
+                            gap: 15px;
+                            align-items:center;
+                        }
+                        :nth-child(3){
+                            width: 100%;
+                            height: 1px;
+                            background-color: rgba(13, 132, 137, 0.3);
+                        }
+                    }
+                }
+            }
+
+            .bottomContent {
+                :nth-child(3) {
+                    padding-right: 15px;
+                }
+
+                display: flex;
+                flex-direction: row;
+
+                * {
+
+                    display: flex;
+                    gap: 4px;
+                    flex-direction: column;
+                    padding: 16px 40px 0px 0px;
+
+                    :nth-child(1) {
+                        font-weight: 900;
+                        color: #64748B;
+                        font-size: 10px;
+                        padding: 0px;
+                    }
+
+                    :nth-child(2) {
+                        font-weight: 900;
+                        color: #003C6E;
+                        font-size: 16px;
+                        padding: 0px;
+                    }
+                }
+            }
+        }
+    }
+}

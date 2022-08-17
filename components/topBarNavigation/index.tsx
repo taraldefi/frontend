@@ -2,6 +2,10 @@ import React from "react";
 import { useRouter } from "next/router";
 import { TopbarData } from "./data";
 import { match } from "assert";
+import ButtonIcon from "@components/widgets/buttonWithIcon";
+import ButtonWithIcon from "@components/widgets/buttonWithIcon";
+import SecondButton from "@components/widgets/buttonSecondary";
+import Button from "@components/widgets/button";
 function TopBarNav() {
   const router = useRouter();
   const matchPath = (item: any) => {
@@ -21,7 +25,12 @@ function TopBarNav() {
   };
   return (
     <div className="topbarLower">
-      <div className="contents">
+      {router.asPath == "/users/admin" ? <div className="entityContent">
+        <input type="text" placeholder="Search by name or number..." className="inputs"></input>
+        <Button title={"New Entity"} onClick={function (): void {
+          throw new Error("Function not implemented.");
+        }} />
+      </div> : <div className="contents">
         {TopbarData.map((item, index) => {
           return (
             <div
@@ -39,7 +48,7 @@ function TopBarNav() {
             </div>
           );
         })}
-      </div>
+      </div>}
     </div>
   );
 }
