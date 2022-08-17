@@ -25,30 +25,41 @@ function TopBarNav() {
   };
   return (
     <div className="topbarLower">
-      {router.asPath == "/users/admin" ? <div className="entityContent">
-        <input type="text" placeholder="Search by name or number..." className="inputs"></input>
-        <Button title={"New Entity"} onClick={function (): void {
-          throw new Error("Function not implemented.");
-        }} />
-      </div> : <div className="contents">
-        {TopbarData.map((item, index) => {
-          return (
-            <div
-              onClick={(e) => {
-                e.preventDefault();
-                router.push(item.path);
-              }}
-              key={index}
-            >
-              <span
-                className={matchPath(item) ? "content selected" : "content"}
+      {router.asPath == "/users/admin" ? (
+        <div className="entityContent">
+          <input
+            type="text"
+            placeholder="Search by name or number..."
+            className="inputs"
+          ></input>
+          <Button
+            title={"New Entity"}
+            onClick={function (): void {
+              throw new Error("Function not implemented.");
+            }}
+          />
+        </div>
+      ) : (
+        <div className="contents">
+          {TopbarData.map((item, index) => {
+            return (
+              <div
+                onClick={(e) => {
+                  e.preventDefault();
+                  router.push(item.path);
+                }}
+                key={index}
               >
-                {item.title}
-              </span>
-            </div>
-          );
-        })}
-      </div>}
+                <span
+                  className={matchPath(item) ? "content selected" : "content"}
+                >
+                  {item.title}
+                </span>
+              </div>
+            );
+          })}
+        </div>
+      )}
     </div>
   );
 }

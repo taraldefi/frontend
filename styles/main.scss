@@ -63,11 +63,11 @@
     align-items: center;
     justify-content: space-between;
     padding: 40px;
-    padding-top: 15px !important; 
-    .logoContainer{
+    padding-top: 15px !important;
+    .logoContainer {
       display: flex;
       align-items: center;
-      justify-content:center;
+      justify-content: center;
       gap: 10px;
     }
 
@@ -87,12 +87,12 @@
 .topbarLower {
   padding: 16px;
   border-top: 1px solid #e2e8f065;
-  .entityContent{
+  .entityContent {
     float: right;
     display: flex;
     gap: 20px;
     padding-right: 25px;
-    .inputs{
+    .inputs {
       width: 300px !important;
       height: 35px !important;
       background-image: url(/assets/svg/search.svg);
@@ -100,13 +100,12 @@
       background-position: 95%;
       border-radius: 5px !important;
     }
-    :nth-child(2){
-      :nth-child(1){
+    :nth-child(2) {
+      :nth-child(1) {
         border-radius: 3px;
-        border-color: #81CFDB;
+        border-color: #81cfdb;
         color: #fff;
         // background: #81CFDB;
-        
       }
     }
   }

@@ -269,7 +269,6 @@
     }
   }
 
-
   #dollar {
     background-image: url(/assets/svg/dollar.svg);
     background-repeat: no-repeat;
@@ -291,7 +290,6 @@
     opacity: 0;
     -webkit-appearance: none;
   }
-
 }
 #star {
   background-image: url(/assets/svg/star.svg);
@@ -318,5 +316,4 @@ input[type="date"]::-webkit-inner-spin-button,
 input[type="date"]::-webkit-calendar-picker-indicator {
   opacity: 0;
   -webkit-appearance: none;
-
 }

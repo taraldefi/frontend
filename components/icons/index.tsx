@@ -7,22 +7,70 @@ function PortalIcons({ selected, icon }: Props): JSX.Element {
   switch (icon.toLowerCase()) {
     case "delete":
       return (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M3 6H5H21" stroke="#FF5353" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-          <path d="M8 6V4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2H14C14.5304 2 15.0391 2.21071 15.4142 2.58579C15.7893 2.96086 16 3.46957 16 4V6M19 6V20C19 20.5304 18.7893 21.0391 18.4142 21.4142C18.0391 21.7893 17.5304 22 17 22H7C6.46957 22 5.96086 21.7893 5.58579 21.4142C5.21071 21.0391 5 20.5304 5 20V6H19Z" stroke="#FF5353" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M3 6H5H21"
+            stroke="#FF5353"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M8 6V4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2H14C14.5304 2 15.0391 2.21071 15.4142 2.58579C15.7893 2.96086 16 3.46957 16 4V6M19 6V20C19 20.5304 18.7893 21.0391 18.4142 21.4142C18.0391 21.7893 17.5304 22 17 22H7C6.46957 22 5.96086 21.7893 5.58579 21.4142C5.21071 21.0391 5 20.5304 5 20V6H19Z"
+            stroke="#FF5353"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
         </svg>
       );
     case "pen":
       return (
-        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M16 2.00006C16.2626 1.73741 16.5744 1.52907 16.9176 1.38693C17.2608 1.24479 17.6286 1.17163 18 1.17163C18.3714 1.17163 18.7392 1.24479 19.0824 1.38693C19.4256 1.52907 19.7374 1.73741 20 2.00006C20.2626 2.2627 20.471 2.57451 20.6131 2.91767C20.7553 3.26083 20.8284 3.62862 20.8284 4.00006C20.8284 4.37149 20.7553 4.73929 20.6131 5.08245C20.471 5.42561 20.2626 5.73741 20 6.00006L6.5 19.5001L1 21.0001L2.5 15.5001L16 2.00006Z" stroke="#003C6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <svg
+          width="22"
+          height="22"
+          viewBox="0 0 22 22"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M16 2.00006C16.2626 1.73741 16.5744 1.52907 16.9176 1.38693C17.2608 1.24479 17.6286 1.17163 18 1.17163C18.3714 1.17163 18.7392 1.24479 19.0824 1.38693C19.4256 1.52907 19.7374 1.73741 20 2.00006C20.2626 2.2627 20.471 2.57451 20.6131 2.91767C20.7553 3.26083 20.8284 3.62862 20.8284 4.00006C20.8284 4.37149 20.7553 4.73929 20.6131 5.08245C20.471 5.42561 20.2626 5.73741 20 6.00006L6.5 19.5001L1 21.0001L2.5 15.5001L16 2.00006Z"
+            stroke="#003C6E"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
         </svg>
       );
     case "eye":
       return (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M1 12C1 12 5 4 12 4C19 4 23 12 23 12C23 12 19 20 12 20C5 20 1 12 1 12Z" stroke="#003C6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-          <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="#003C6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M1 12C1 12 5 4 12 4C19 4 23 12 23 12C23 12 19 20 12 20C5 20 1 12 1 12Z"
+            stroke="#003C6E"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z"
+            stroke="#003C6E"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
         </svg>
       );
     case "summary":

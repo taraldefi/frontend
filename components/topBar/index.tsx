@@ -15,7 +15,6 @@ const Topbar = () => {
             <Image
               className="images"
               src="/assets/images/logo.png"
-
               alt=""
               width="40%"
               height="40%"
