@@ -24,9 +24,8 @@ const colorHash = {
 };
 function StatusWidget({ type, icon }: Props) {
   const [style, setStyle] = useState({});
-  const iType = type;
   useEffect(() => {
-    switch (iType.toLowerCase()) {
+    switch (type.toLowerCase()) {
       case "up":
         setStyle({
           opacity: 1,

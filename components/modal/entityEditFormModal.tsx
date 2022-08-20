@@ -7,7 +7,7 @@ type Props = {
   modal: Boolean;
   setModal: React.Dispatch<React.SetStateAction<boolean>>;
 };
-function FormModal({ modal, setModal }: Props) {
+function FormEditModal({ modal, setModal }: Props) {
   return (
     <div className={"formModal " + (modal && "active")}>
       {modal && (
@@ -21,9 +21,9 @@ function FormModal({ modal, setModal }: Props) {
             <FontAwesomeIcon icon={faClose}></FontAwesomeIcon>
           </div>
           <div className="header">
-            Add New Entity
+            Edit &quot;Entity Name&quot;
             <span className="subtitle">
-              Fill the form below to add a new entity to the list of entities.
+              Edit entity info and properties from the form below.
             </span>
           </div>
           <div className="form">
@@ -92,8 +92,8 @@ function FormModal({ modal, setModal }: Props) {
               </div>
             </div>
             <div>
-              <button className="button" onClick={() => {}}>
-                Create Entity
+              <button className="buttonEdit" onClick={() => {}}>
+                Save Changes
               </button>
             </div>
           </div>
@@ -103,4 +103,4 @@ function FormModal({ modal, setModal }: Props) {
   );
 }
 
-export default FormModal;
+export default FormEditModal;

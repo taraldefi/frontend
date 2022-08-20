@@ -312,6 +312,18 @@
   background-repeat: no-repeat;
   background-position: 95%;
 }
+#upload {
+  z-index: 99;
+  background-image: url(/assets/svg/upload.svg);
+  background-repeat: no-repeat;
+  background-position: 95%;
+}
+#downarrow {
+  z-index: 99;
+  background-image: url(/assets/svg/downarrow.svg);
+  background-repeat: no-repeat;
+  background-position: 95%;
+}
 input[type="date"]::-webkit-inner-spin-button,
 input[type="date"]::-webkit-calendar-picker-indicator {
   opacity: 0;
