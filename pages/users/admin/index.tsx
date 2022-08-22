@@ -20,6 +20,8 @@ function Index() {
   const values = {
     modal: fmodal,
     setModal: setfModal,
+    editModal: false,
+    deleteModal: false,
   };
 
   return (
