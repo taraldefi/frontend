@@ -1,55 +1,54 @@
 import Layout from "@components/layouts/layout";
 import Entity from "@components/entity/entity";
 import React from "react";
+import FormModal from "@components/modal/entityFormModal";
+import AppContext from "@components/appContext";
+import DeleteModal from "@components/modal/deleteModal";
+import FormEditModal from "@components/modal/entityEditFormModal";
 
-function index() {
+const data = {
+  id: 1,
+  image: "/assets/images/entity.png",
+  title: "Ullrich Weigel",
+  registrationNo: 1,
+  products: 25,
+  applications: 25,
+};
+
+function Index() {
+  const [fmodal, setfModal] = React.useState(false);
+  const values = {
+    modal: fmodal,
+    setModal: setfModal,
+  };
+
   return (
-    <Layout>
-      <div className="entityContainer">
-        <div className="entity">
-          <Entity
-            entityData={{
-              id: 11,
-              image: "/assets/images/entity.png",
-              title: "string",
-              registrationNo: 55,
-              products: 6,
-              applications: 5,
-            }}
-          />
-          <Entity
-            entityData={{
-              id: 11,
-              image: "/assets/images/entity.png",
-              title: "string",
-              registrationNo: 55,
-              products: 6,
-              applications: 5,
-            }}
-          />
-          <Entity
-            entityData={{
-              id: 11,
-              image: "/assets/images/entity.png",
-              title: "string",
-              registrationNo: 55,
-              products: 6,
-              applications: 5,
-            }}
-          />
-          {/* <Entity entityData={ } />
-          <Entity entityData={ } />
-          <Entity entityData={ } />
-          <Entity entityData={ } />
-          <Entity entityData={ } />
-          <Entity entityData={ } />
-          <Entity entityData={ } />
-          <Entity entityData={ } />
-          <Entity entityData={ } /> */}
+    <AppContext.Provider value={values}>
+      <FormModal
+        modal={values.modal}
+        setModal={() => {
+          values.setModal(!values.modal);
+        }}
+      ></FormModal>
+
+      <Layout>
+        <div className="entityContainer">
+          <div className="entity">
+            <Entity entityData={data} />
+            <Entity entityData={data} />
+            <Entity entityData={data} />
+            <Entity entityData={data} />
+            <Entity entityData={data} />
+            <Entity entityData={data} />
+            <Entity entityData={data} />
+            <Entity entityData={data} />
+            <Entity entityData={data} />
+            <Entity entityData={data} />
+          </div>
         </div>
-      </div>
-    </Layout>
+      </Layout>
+    </AppContext.Provider>
   );
 }
 
-export default index;
+export default Index;

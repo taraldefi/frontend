@@ -1,13 +1,14 @@
 import React from "react";
 import { useRouter } from "next/router";
 import { TopbarData } from "./data";
-import { match } from "assert";
-import ButtonIcon from "@components/widgets/buttonWithIcon";
-import ButtonWithIcon from "@components/widgets/buttonWithIcon";
-import SecondButton from "@components/widgets/buttonSecondary";
 import Button from "@components/widgets/button";
+import AppContext from "@components/appContext";
+import { useContext } from "react";
+import { globalState } from "../../types/global";
+
 function TopBarNav() {
   const router = useRouter();
+  const myContext = useContext<globalState>(AppContext);
   const matchPath = (item: any) => {
     const currentRoute = router.asPath.split("/")[1];
     console.log(currentRoute);
@@ -34,8 +35,8 @@ function TopBarNav() {
           ></input>
           <Button
             title={"New Entity"}
-            onClick={function (): void {
-              throw new Error("Function not implemented.");
+            onClick={() => {
+              myContext.setModal(!myContext.modal);
             }}
           />
         </div>
