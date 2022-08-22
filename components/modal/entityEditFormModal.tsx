@@ -2,7 +2,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
 
-
 type Props = {
   modal: Boolean;
   setModal: React.Dispatch<React.SetStateAction<boolean>>;

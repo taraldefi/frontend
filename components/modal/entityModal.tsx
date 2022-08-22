@@ -2,22 +2,25 @@ import React from "react";
 import { faEllipsis, faEuroSign } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { PortalIcons } from "@components/icons";
+import router from "next/router";
 function Modal() {
   const [modal, setModal] = React.useState(false);
   return (
     <div
-      className={"modal " + (modal && "active")}
+      className={"modal"}
       onClick={() => setModal(!modal)}
     >
-      <FontAwesomeIcon
+      <div className={"iconEntityOption " + (modal && "active")}><FontAwesomeIcon
         icon={faEllipsis}
         className="iconx"
         fontSize={18}
         color="#0D8489"
-      ></FontAwesomeIcon>
-      {modal && (
+      ></FontAwesomeIcon></div>
+      <div className={"modalContainer " + (modal && "active")}>{modal && (
         <div className="modalMenue">
-          <div>
+          <div className="modalViewButton" 
+          onClick={() => {router.push("/users/view")}}
+          >
             <PortalIcons selected={false} icon={"eye"}></PortalIcons>
             <span>View</span>
           </div>
@@ -31,7 +34,7 @@ function Modal() {
             <span>Delete</span>
           </div>
         </div>
-      )}
+      )}</div>
     </div>
   );
 }

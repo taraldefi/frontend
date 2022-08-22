@@ -1,3 +1,11 @@
+.entityContainer:hover {
+
+  box-shadow: 3px 18px 36px 1px rgba(100, 116, 139, 0.13);
+  -webkit-box-shadow: 3px 18px 36px 1px rgba(100, 116, 139, 0.13);
+  -moz-box-shadow: 3px 18px 36px 1px rgba(100, 116, 139, 0.13);
+
+}
+
 .entityContainer {
   background-color: #fff;
   width: 100%;
@@ -9,10 +17,18 @@
   padding-top: 40px;
 
   .entity {
+    :hover {
+      box-shadow: 3px 18px 36px 1px rgba(100, 116, 139, 0.135);
+      -webkit-box-shadow: 3px 18px 36px 1px rgba(100, 116, 139, 0.135);
+      -moz-box-shadow: 3px 18px 36px 1px rgba(100, 116, 139, 0.13);
+    }
     display: grid;
     grid-template-columns: auto auto auto;
 
     .entityWrapper {
+      :hover{
+        box-shadow: initial;
+      }
       display: flex;
       flex-direction: column;
       padding: 20px 0px 20px 16px;
@@ -22,14 +38,8 @@
       border-radius: 16px;
       margin-right: 24px;
       margin-bottom: 24px;
-
-      &.active {
-        box-shadow: 3px 18px 36px 1px rgba(100, 116, 139, 0.42);
-        -webkit-box-shadow: 3px 18px 36px 1px rgba(100, 116, 139, 0.42);
-        -moz-box-shadow: 3px 18px 36px 1px rgba(100, 116, 139, 0.42);
-      }
-
       .entityTopContent {
+        
         display: flex;
         padding-bottom: 16px;
         border-bottom: 1px solid #e2e8f0;
@@ -63,11 +73,13 @@
             font-weight: bold;
           }
         }
+
         .optionsContainer {
           margin-left: auto;
         }
-
-        .modal {
+        .modalContainer{
+          position: absolute;
+          
           &.active {
             width: 148px;
             height: 192px;
@@ -75,9 +87,18 @@
             position: absolute;
             z-index: 99;
             border-radius: 16px;
-            box-shadow: 3px 18px 36px 1px rgba(100, 116, 139, 0.42);
-            -webkit-box-shadow: 3px 18px 36px 1px rgba(100, 116, 139, 0.42);
-            -moz-box-shadow: 3px 18px 36px 1px rgba(100, 116, 139, 0.42);
+            box-shadow: 3px 18px 36px 1px rgba(100, 116, 139, 0.13);
+            -webkit-box-shadow: 3px 18px 36px 1px rgba(100, 116, 139, 0.13);
+            -moz-box-shadow: 3px 18px 36px 1px rgba(100, 116, 139, 0.13);
+          }
+        }
+        .modal {
+          
+          .iconEntityOption{
+            opacity: 0.7;
+            &.active {
+              opacity: 1;
+            }
           }
           .modalMenue {
             display: flex;
@@ -85,21 +106,25 @@
             justify-content: space-around;
             padding: 24px;
             gap: 20px;
+
             :nth-child(1) {
               display: flex;
               gap: 13px;
               align-items: center;
             }
+
             :nth-child(2) {
               display: flex;
               gap: 16px;
               align-items: center;
             }
+
             :nth-child(4) {
               display: flex;
               gap: 15px;
               align-items: center;
             }
+
             :nth-child(3) {
               width: 100%;
               height: 1px;

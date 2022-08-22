@@ -9,11 +9,11 @@ type Props = {
   entityData: entityType;
 };
 function Entity({ entityData }: Props) {
-  const [toggle, setToggle] = React.useState(false);
+  
   return (
     <div
-      onClick={() => setToggle(!toggle)}
-      className={"entityWrapper " + (toggle && "active")}
+
+      className={"entityWrapper"}
     >
       <div className="entityTopContent">
         <div className="entityImageContainer">
