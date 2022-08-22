@@ -5,6 +5,7 @@ interface Props {
 }
 function PortalIcons({ selected, icon }: Props): JSX.Element {
   switch (icon.toLowerCase()) {
+    
     case "delete":
       return (
         <svg

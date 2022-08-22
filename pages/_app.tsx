@@ -15,6 +15,7 @@ import "@styles/transactions.scss";
 import "@styles/financials.scss";
 import "@styles/signoff.scss";
 import "@styles/user.scss";
+import "@styles/entityView.scss";
 import type { AppProps } from "next/app";
 
 function MyApp({ Component, pageProps }: AppProps) {

@@ -25,7 +25,7 @@ function TopBarNav() {
   };
   return (
     <div className="topbarLower">
-      {router.asPath == "/users/admin" ? (
+      {router.asPath == "/users/admin" || "/users/view" ? (
         <div className="entityContent">
           <input
             type="text"

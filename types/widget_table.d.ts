@@ -143,3 +143,9 @@ export interface signOffTableType {
   status1: boolean;
   status2: boolean;
 }
+export interface entityTableType {
+  productTitle: string;
+  issuanceDate: string;
+  maturityDate: string;
+  facilityAmount: number;
+}
