@@ -9,6 +9,7 @@ import { globalState } from "../../types/global";
 function TopBarNav() {
   const router = useRouter();
   const myContext = useContext<globalState>(AppContext);
+
   const matchPath = (item: any) => {
     const currentRoute = router.asPath.split("/")[1];
     console.log(currentRoute);
@@ -24,9 +25,10 @@ function TopBarNav() {
       return false;
     }
   };
+  console.log(router.asPath);
   return (
     <div className="topbarLower">
-      {router.asPath == "/users/admin" || "/users/view" ? (
+      {router.asPath == "/users/admin" || router.asPath == "/users/view" ? (
         <div className="entityContent">
           <input
             type="text"
@@ -36,6 +38,7 @@ function TopBarNav() {
           <Button
             title={"New Entity"}
             onClick={() => {
+              console.log("debug 1:", open);
               myContext.setModal(!myContext.modal);
             }}
           />

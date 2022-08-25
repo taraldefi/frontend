@@ -1,7 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import { faEllipsis, faEuroSign } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Modal from "@components/modal/entityModal";
 import { entityType } from "../../types";
 
@@ -9,12 +7,8 @@ type Props = {
   entityData: entityType;
 };
 function Entity({ entityData }: Props) {
-  
   return (
-    <div
-
-      className={"entityWrapper"}
-    >
+    <div className={"entityWrapper"}>
       <div className="entityTopContent">
         <div className="entityImageContainer">
           <Image
