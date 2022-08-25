@@ -1,9 +1,7 @@
 .entityContainer:hover {
-
   box-shadow: 3px 18px 36px 1px rgba(100, 116, 139, 0.13);
   -webkit-box-shadow: 3px 18px 36px 1px rgba(100, 116, 139, 0.13);
   -moz-box-shadow: 3px 18px 36px 1px rgba(100, 116, 139, 0.13);
-
 }
 
 .entityContainer {
@@ -26,7 +24,7 @@
     grid-template-columns: auto auto auto;
 
     .entityWrapper {
-      :hover{
+      :hover {
         box-shadow: initial;
       }
       display: flex;
@@ -39,7 +37,6 @@
       margin-right: 24px;
       margin-bottom: 24px;
       .entityTopContent {
-        
         display: flex;
         padding-bottom: 16px;
         border-bottom: 1px solid #e2e8f0;
@@ -77,9 +74,9 @@
         .optionsContainer {
           margin-left: auto;
         }
-        .modalContainer{
+        .modalContainer {
           position: absolute;
-          
+
           &.active {
             width: 148px;
             height: 192px;
@@ -93,8 +90,7 @@
           }
         }
         .modal {
-          
-          .iconEntityOption{
+          .iconEntityOption {
             opacity: 0.7;
             &.active {
               opacity: 1;
