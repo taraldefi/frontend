@@ -1,42 +1,44 @@
 .formModal {
-  box-shadow: 3px 18px 36px 100vw rgba(93, 96, 99, 0.42);
-  -webkit-box-shadow: 3px 18px 36px 100vw rgba(93, 96, 99, 0.42);
-  -moz-box-shadow: 3px 18px 36px 100vw rgba(93, 96, 99, 0.42);
   overflow-y: hidden;
+  width: 35%;
+  height: 100%;
+  left: 100%;
+  background-color: #fff;
+  position: fixed;
+  z-index: 99;
+  transition: all 0.5s ease;
   &.active {
-    width: 35%;
-    height: 100%;
     left: 65%;
-    background-color: #fff;
-    position: fixed;
-    z-index: 99;
-    animation: animate 0.5s ease;
-    -moz-animation: animate 0.5s ease; /* Firefox */
-    -webkit-animation: animate 0.5s ease; /* Safari and Chrome */
-    @keyframes animate {
-      from {
-        left: 75%;
-      }
-      to {
-        left: 65%;
-      }
-    }
-    @-moz-keyframes animate {
-      from {
-        left: 75%;
-      }
-      to {
-        left: 65%;
-      }
-    }
-    @-webkit-keyframes animate {
-      from {
-        left: 75%;
-      }
-      to {
-        left: 65%;
-      }
-    }
+    box-shadow: 3px 18px 36px 100vw rgba(93, 96, 99, 0.42);
+    -webkit-box-shadow: 3px 18px 36px 100vw rgba(93, 96, 99, 0.42);
+    -moz-box-shadow: 3px 18px 36px 100vw rgba(93, 96, 99, 0.42);
+    // animation: animate 0.5s ease;
+    // -moz-animation: animate 0.4s ease; /* Firefox */
+    // -webkit-animation: animate 0.4s ease; /* Safari and Chrome */
+    // @keyframes animate {
+    //   from {
+    //     left: 100%;
+    //   }
+    //   to {
+    //     left: 65%;
+    //   }
+    // }
+    // @-moz-keyframes animate {
+    //   from {
+    //     left: 100%;
+    //   }
+    //   to {
+    //     left: 65%;
+    //   }
+    // }
+    // @-webkit-keyframes animate {
+    //   from {
+    //     left: 100%;
+    //   }
+    //   to {
+    //     left: 65%;
+    //   }
+    // }
   }
 
   .modalMenue {
@@ -65,6 +67,7 @@
         color: gray;
       }
     }
+
     .form {
       padding-top: 10%;
       width: 70%;
@@ -85,6 +88,7 @@
         width: 100%;
         margin-top: 10%;
       }
+
       .buttonEdit {
         border: 2px #1d4ed8 solid;
         color: #1d4ed8;
@@ -99,6 +103,7 @@
         margin-top: 10%;
         font-weight: bold;
       }
+
       .label {
         display: flex;
         justify-content: flex-start;
@@ -107,6 +112,7 @@
         text-transform: uppercase;
         font-weight: 600;
       }
+
       .entityfield {
         width: 100%;
         padding-top: 20px;
@@ -126,6 +132,7 @@
           border-radius: 4px;
           border: 1.5px solid #cbd5e1;
         }
+
         input[type="file"] {
           color: #fff;
         }
@@ -163,6 +170,7 @@
           font-size: 14px;
         }
       }
+
       .flexrow {
         width: 100%;
         display: flex;
@@ -172,11 +180,13 @@
     }
   }
 }
+
 .deleteModal {
   box-shadow: 3px 18px 36px 100vw rgba(93, 96, 99, 0.42);
   -webkit-box-shadow: 3px 18px 36px 100vw rgba(93, 96, 99, 0.42);
   -moz-box-shadow: 3px 18px 36px 100vw rgba(93, 96, 99, 0.42);
   overflow-y: hidden;
+
   &.active {
     width: 27vw;
     height: 45%;
@@ -187,13 +197,17 @@
     z-index: 99;
     border-radius: 16px;
     animation: bounce-in 0.5s ease;
-    -moz-animation: bounce-in 0.5s ease; /* Firefox */
-    -webkit-animation: bounce-in 0.5s ease; /* Safari and Chrome */
+    -moz-animation: bounce-in 0.5s ease;
+    /* Firefox */
+    -webkit-animation: bounce-in 0.5s ease;
+
+    /* Safari and Chrome */
     @keyframes bounce-in {
       0% {
         opacity: 0;
         transform: scale(0.3);
       }
+
       50% {
         opacity: 1;
         transform: scale(1.05);
@@ -209,6 +223,7 @@
     display: flex;
     flex-direction: column;
     gap: 25px;
+
     .close {
       position: relative;
       color: rgb(78, 78, 78);
@@ -236,6 +251,7 @@
         color: gray;
       }
     }
+
     .form {
       width: 70%;
       gap: 10px;
@@ -255,6 +271,7 @@
         justify-content: center;
         width: 100%;
       }
+
       .buttonEdit {
         border: 2px #1d4ed8 solid;
         color: #1d4ed8;
@@ -268,6 +285,7 @@
 
         font-weight: bold;
       }
+
       .label {
         display: flex;
         justify-content: flex-start;
