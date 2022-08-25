@@ -9,12 +9,8 @@ type Props = {
   entityData: entityType;
 };
 function Entity({ entityData }: Props) {
-  
   return (
-    <div
-
-      className={"entityWrapper"}
-    >
+    <div className={"entityWrapper"}>
       <div className="entityTopContent">
         <div className="entityImageContainer">
           <Image
