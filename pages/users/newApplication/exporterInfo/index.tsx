@@ -2,12 +2,29 @@ import ApplicationLayout from "@components/layouts/new_application_layout";
 import React from "react";
 
 function Index() {
-  const [selectedRadioBtn, setSelectedRadioBtn] = React.useState("");
+  const [selectedRadioBtn, setSelectedRadioBtn] = React.useState("No");
   const isRadioSelected = (value: string): boolean =>
     selectedRadioBtn === value;
   const handleRadioClick = (e: React.ChangeEvent<HTMLInputElement>): void =>
     setSelectedRadioBtn(e.currentTarget.value);
-  console.log({ selectedRadioBtn });
+  const [selectedRadioBtn1, setSelectedRadioBtn1] = React.useState("No");
+  const isRadioSelected1 = (value: string): boolean =>
+    selectedRadioBtn1 === value;
+  const handleRadioClick1 = (e: React.ChangeEvent<HTMLInputElement>): void =>
+    setSelectedRadioBtn1(e.currentTarget.value);
+  const [valueSelect, setValueSelect] = React.useState("Select country...");
+  const handleSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setValueSelect(e.currentTarget.value);
+  }
+  const [valueSelect1, setValueSelect1] = React.useState("Select country...");
+  const handleSelect1 = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setValueSelect1(e.currentTarget.value);
+  }
+  const [valueSelect2, setValueSelect2] = React.useState("Select country...");
+  const handleSelect2 = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setValueSelect2(e.currentTarget.value);
+  }
+  console.log(valueSelect)
   return (
     <div>
       <ApplicationLayout>
@@ -73,10 +90,37 @@ function Index() {
             </div>
             <div className="countriesBox">
               <span>Main countries of business 1</span>
-              <select className="inputs">
-                <option value="">Select country...</option>
-                <option value=""></option>
+              <select className="inputs" value={valueSelect} onChange={handleSelect} >
+                <option value="Select country...">Select country...</option>
+                <option value="China">China</option>
+                <option value="Japan">Japan</option>
+                <option value="India">India</option>
               </select>
+              {valueSelect != "Select country..." ?
+                <div className="countriesBoxIn">
+                  <span>Main countries of business 2</span>
+                  <select className="inputs" value={valueSelect1} onChange={handleSelect1} >
+                    <option value="Select country...">Select country...</option>
+                    <option value="China">China</option>
+                    <option value="Japan">Japan</option>
+                    <option value="India">India</option>
+                  </select>
+                  {valueSelect1 != "Select country..." ?
+                    <div className="countriesBoxIn">
+                      <span>Main countries of business 3</span>
+                      <select className="inputs" value={valueSelect2} onChange={handleSelect2} >
+                        <option value="Select country...">Select country...</option>
+                        <option value="China">China</option>
+                        <option value="Japan">Japan</option>
+                        <option value="India">India</option>
+                      </select>
+                    </div>
+                    : <></>
+                  }
+                </div>
+                : <></>
+              }
+
             </div>
             <div>
               <span>Date company registered</span>
@@ -190,34 +234,79 @@ function Index() {
                   <label htmlFor="ECACoverNO">No</label>
                 </div>
               </div>
+              {selectedRadioBtn == "Yes" ? (
+                <div className="radioBackIn">
+                  <span>How many years of trading without ECA cover?</span>
+                  <input
+                    type="text"
+                    className="inputs"
+                    placeholder="3"
+                  /><span>How many years of experience with importer country?</span>
+                  <input
+                    type="text"
+                    className="inputs"
+                    placeholder="3"
+                  /><span>Describe your receivables management process.</span>
+                  <textarea
+                    className="inputs"
+                    placeholder="A process is the instance of a computer program that is being executed by one or many threads  ."
+                  />
+                </div>
+              ) : (
+                <div></div>
+              )}
             </div>
-            {selectedRadioBtn == "Yes" ? (
-              <div className="radioBack">
-                <span>Is an external credit rating available?</span>
+            
+            <div className="radioBack">
+              <span>Is an external credit rating available?</span>
+              <div>
                 <div>
-                  <div>
-                    <input
-                      type="radio"
-                      id="creaditRatingYes"
-                      name="creditRatingRadio"
-                      value="Yes"
-                    />
-                    <label htmlFor="creaditRatingYes">Yes</label>
-                  </div>
-                  <div>
-                    <input
-                      type="radio"
-                      id="creaditRatingNo"
-                      name="creditRatingRadio"
-                      value="No"
-                    />
-                    <label htmlFor="In-creaditRatingNo">No</label>
-                  </div>
+                  <input
+                    type="radio"
+                    id="ECRYes"
+                    name="otherInfoRadio1"
+                    value="Yes"
+                    checked={isRadioSelected1("Yes")}
+                    onChange={handleRadioClick1}
+                  />
+                  <label htmlFor="ECRYes">Yes</label>
+                </div>
+                <div>
+                  <input
+                    type="radio"
+                    id="ECRNO"
+                    name="otherInfoRadio1"
+                    value="No"
+                    checked={isRadioSelected1("No")}
+                    onChange={handleRadioClick1}
+                  />
+                  <label htmlFor="ECRNO">No</label>
                 </div>
               </div>
-            ) : (
-              <div></div>
-            )}
+              {selectedRadioBtn1 == "Yes" ? (
+                <div className="radioBackIn">
+                  <span>Please provide the credit rating</span>
+                  <input
+                    type="number"
+                    className="inputs"
+                    placeholder="80"
+                  /><span>Which agency provided the rating?</span>
+                  <input
+                    type="text"
+                    className="inputs"
+                    placeholder="Global Trade Inc,."
+                  /><span>When was the rating issued?</span>
+                  <input
+                    type="date"
+                    id="calendar"
+                    className="inputs"
+                    
+                  />
+                </div>
+              ) : (
+                <div></div>
+              )}
+            </div>
           </div>
         </div>
       </ApplicationLayout>
