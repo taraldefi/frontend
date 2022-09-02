@@ -5,6 +5,7 @@
   display: flex;
   width: 84%;
   padding: 40px 40px 40px 40px;
+
   .vLine {
     width: 0.1px;
     height: initial;
@@ -30,6 +31,12 @@
       background-color: #9797970f;
       flex-direction: column;
       margin-bottom: 15px;
+     
+      .countriesBoxIn {
+        display: flex;
+        gap: 6px;
+        padding: 0px !important;
+      }
     }
 
     :nth-child(n + 2) {
@@ -80,9 +87,10 @@
       gap: 6px;
       flex-direction: column;
       padding-bottom: 13px;
-
+      
       .inputs {
         width: 100%;
+       
       }
     }
 
@@ -92,6 +100,10 @@
       background-color: #9797970f;
       flex-direction: column;
       margin-bottom: 15px;
+      .radioBackIn{
+        padding-right: 15px !important;
+        
+      }
 
       :nth-child(2) {
         display: flex;
@@ -129,11 +141,13 @@
       gap: 6px;
       flex-direction: column;
       padding-bottom: 13px;
-
-      .inputs {
-        width: 100%;
+      textarea{
+        height: max-content;
+        padding-bottom:10%;
       }
+     
     }
+
     .radioBack {
       padding: 16px 54px 16px 16px;
       display: flex;
@@ -156,5 +170,15 @@
         }
       }
     }
+  }
+  .inputs {
+    width: 100%;
+    
+  }
+  input[type="date"]{
+    // height: 44px !important;
+    height:auto;
+    flex-direction: row !important; 
+  //  padding-top: 100px !important;
   }
 }
