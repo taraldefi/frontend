@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -7,6 +7,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { PortalIcons } from "@components/icons";
 import Button from "@components/widgets/button";
+import { globalState } from "types/global";
+import AppContext from "@components/appContext";
 interface infoType {
   BeneficialOwner: string;
   CodeAbbreviation: string;
@@ -21,6 +23,7 @@ type Props = {
   infoData: infoType;
 };
 function EntityView({ infoData }: Props) {
+  const myContext = useContext<globalState>(AppContext);
   return (
     <div className="viewContent">
       <div className="detailsContainer">
@@ -128,14 +131,12 @@ function EntityView({ infoData }: Props) {
           </div>
         </div>
         <div className="infoAction">
-          <div onClick={() => {}}>
+          <div onClick={() => myContext.setDeleteModal(!myContext.deleteModal)}>
             <PortalIcons selected={false} icon={"delete"}></PortalIcons>
           </div>
           <Button
             title={"Edit Entity"}
-            onClick={function (): void {
-              throw new Error("Function not implemented.");
-            }}
+            onClick={() => myContext.setEditModal(!myContext.editModal)}
           ></Button>
         </div>
       </div>

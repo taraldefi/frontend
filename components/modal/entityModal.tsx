@@ -30,12 +30,11 @@ function Modal() {
               <PortalIcons selected={false} icon={"eye"}></PortalIcons>
               <span>View</span>
             </div>
-
             <div onClick={() => myContext.setEditModal(!myContext.editModal)}>
               <PortalIcons selected={false} icon={"pen"}></PortalIcons>
               <span>Edit</span>
             </div>
-
+            <span></span>
             <div
               onClick={() => myContext.setDeleteModal(!myContext.deleteModal)}
             >
