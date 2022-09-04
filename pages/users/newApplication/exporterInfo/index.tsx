@@ -2,7 +2,7 @@ import ApplicationLayout from "@components/layouts/new_application_layout";
 import React from "react";
 
 function Index() {
-  const [selectedRadioBtn, setSelectedRadioBtn] = React.useState("No");
+  const [selectedRadioBtn, setSelectedRadioBtn] = React.useState("Yes");
   const isRadioSelected = (value: string): boolean =>
     selectedRadioBtn === value;
   const handleRadioClick = (e: React.ChangeEvent<HTMLInputElement>): void =>
@@ -232,7 +232,6 @@ function Index() {
                     id="ECACoverYes"
                     name="otherInfoRadio"
                     value="Yes"
-                    checked={isRadioSelected("Yes")}
                     onChange={handleRadioClick}
                   />
                   <label htmlFor="ECACoverYes">Yes</label>
@@ -243,13 +242,12 @@ function Index() {
                     id="ECACoverNO"
                     name="otherInfoRadio"
                     value="No"
-                    checked={isRadioSelected("No")}
                     onChange={handleRadioClick}
                   />
                   <label htmlFor="ECACoverNO">No</label>
                 </div>
               </div>
-              {selectedRadioBtn == "Yes" ? (
+              {selectedRadioBtn == "No" ? (
                 <div className="radioBackIn">
                   <span>How many years of trading without ECA cover?</span>
                   <input type="text" className="inputs" placeholder="3" />
@@ -277,7 +275,6 @@ function Index() {
                     id="ECRYes"
                     name="otherInfoRadio1"
                     value="Yes"
-                    checked={isRadioSelected1("Yes")}
                     onChange={handleRadioClick1}
                   />
                   <label htmlFor="ECRYes">Yes</label>
@@ -288,7 +285,6 @@ function Index() {
                     id="ECRNO"
                     name="otherInfoRadio1"
                     value="No"
-                    checked={isRadioSelected1("No")}
                     onChange={handleRadioClick1}
                   />
                   <label htmlFor="ECRNO">No</label>

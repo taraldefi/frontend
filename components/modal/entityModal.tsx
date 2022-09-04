@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { faEllipsis, faEuroSign } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { PortalIcons } from "@components/icons";
 import router from "next/router";
+import { globalState } from "types/global";
+import AppContext from "@components/appContext";
 function Modal() {
+  const myContext = useContext<globalState>(AppContext);
   const [modal, setModal] = React.useState(false);
   return (
     <div className={"modal"} onClick={() => setModal(!modal)}>
@@ -27,12 +30,14 @@ function Modal() {
               <PortalIcons selected={false} icon={"eye"}></PortalIcons>
               <span>View</span>
             </div>
-            <div>
+            <div onClick={() => myContext.setEditModal(!myContext.editModal)}>
               <PortalIcons selected={false} icon={"pen"}></PortalIcons>
               <span>Edit</span>
             </div>
             <span></span>
-            <div>
+            <div
+              onClick={() => myContext.setDeleteModal(!myContext.deleteModal)}
+            >
               <PortalIcons selected={false} icon={"delete"}></PortalIcons>
               <span>Delete</span>
             </div>

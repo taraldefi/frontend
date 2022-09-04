@@ -16,40 +16,23 @@ const data = {
 };
 
 function Index() {
-  const [fmodal, setfModal] = React.useState(false);
-  const values = {
-    modal: fmodal,
-    setModal: setfModal,
-    editModal: false,
-    deleteModal: false,
-  };
-
   return (
-    <AppContext.Provider value={values}>
-      <FormModal
-        modal={values.modal}
-        setModal={() => {
-          values.setModal(!values.modal);
-        }}
-      ></FormModal>
-
-      <Layout>
-        <div className="entityContainer">
-          <div className="entity">
-            <Entity entityData={data} />
-            <Entity entityData={data} />
-            <Entity entityData={data} />
-            <Entity entityData={data} />
-            <Entity entityData={data} />
-            <Entity entityData={data} />
-            <Entity entityData={data} />
-            <Entity entityData={data} />
-            <Entity entityData={data} />
-            <Entity entityData={data} />
-          </div>
+    <Layout>
+      <div className="entityContainer">
+        <div className="entity">
+          <Entity entityData={data} />
+          <Entity entityData={data} />
+          <Entity entityData={data} />
+          <Entity entityData={data} />
+          <Entity entityData={data} />
+          <Entity entityData={data} />
+          <Entity entityData={data} />
+          <Entity entityData={data} />
+          <Entity entityData={data} />
+          <Entity entityData={data} />
         </div>
-      </Layout>
-    </AppContext.Provider>
+      </div>
+    </Layout>
   );
 }
 

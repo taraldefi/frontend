@@ -1,4 +1,6 @@
-import React from "react";
+import AppContext from "@components/appContext";
+import React, { useContext } from "react";
+import { globalState } from "types/global";
 import Topbar from "../topBar";
 import TopBarNav from "../topBarNavigation";
 

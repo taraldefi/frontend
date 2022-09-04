@@ -1,7 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import { faEllipsis, faEuroSign } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Modal from "@components/modal/entityModal";
 import { entityType } from "../../types";
 
