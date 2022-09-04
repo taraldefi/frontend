@@ -31,7 +31,7 @@
       background-color: #9797970f;
       flex-direction: column;
       margin-bottom: 15px;
-     
+
       .countriesBoxIn {
         display: flex;
         gap: 6px;
@@ -87,10 +87,9 @@
       gap: 6px;
       flex-direction: column;
       padding-bottom: 13px;
-      
+
       .inputs {
         width: 100%;
-       
       }
     }
 
@@ -100,9 +99,8 @@
       background-color: #9797970f;
       flex-direction: column;
       margin-bottom: 15px;
-      .radioBackIn{
+      .radioBackIn {
         padding-right: 15px !important;
-        
       }
 
       :nth-child(2) {
@@ -141,11 +139,10 @@
       gap: 6px;
       flex-direction: column;
       padding-bottom: 13px;
-      textarea{
+      textarea {
         height: max-content;
-        padding-bottom:10%;
+        padding-bottom: 10%;
       }
-     
     }
 
     .radioBack {
@@ -173,12 +170,11 @@
   }
   .inputs {
     width: 100%;
-    
   }
-  input[type="date"]{
+  input[type="date"] {
     // height: 44px !important;
-    height:auto;
-    flex-direction: row !important; 
-  //  padding-top: 100px !important;
+    height: auto;
+    flex-direction: row !important;
+    //  padding-top: 100px !important;
   }
 }
