@@ -249,17 +249,24 @@ function Index() {
               </div>
               {selectedRadioBtn == "No" ? (
                 <div className="radioBackIn">
-                  <span>How many years of trading without ECA cover?</span>
-                  <input type="text" className="inputs" placeholder="3" />
-                  <span>
-                    How many years of experience with importer country?
-                  </span>
-                  <input type="text" className="inputs" placeholder="3" />
-                  <span>Describe your receivables management process.</span>
-                  <textarea
-                    className="inputs"
-                    placeholder="A process is the instance of a computer program that is being executed by one or many threads  ."
-                  />
+                  <div>
+                    <span>How many years of trading without ECA cover?</span>
+                    <input type="text" className="inputs" placeholder="3" />
+                  </div>
+                  <div></div>
+                  <div>
+                    <span>
+                      How many years of experience with importer country?
+                    </span>
+                    <input type="text" className="inputs" placeholder="3" />
+                  </div>
+                  <div>
+                    <span>Describe your receivables management process.</span>
+                    <textarea
+                      className="inputs"
+                      placeholder="A process is the instance of a computer program that is being executed by one or many threads  ."
+                    />
+                  </div>
                 </div>
               ) : (
                 <div></div>
@@ -292,16 +299,23 @@ function Index() {
               </div>
               {selectedRadioBtn1 == "Yes" ? (
                 <div className="radioBackIn">
-                  <span>Please provide the credit rating</span>
-                  <input type="number" className="inputs" placeholder="80" />
-                  <span>Which agency provided the rating?</span>
-                  <input
-                    type="text"
-                    className="inputs"
-                    placeholder="Global Trade Inc,."
-                  />
-                  <span>When was the rating issued?</span>
-                  <input type="date" id="calendar" className="inputs" />
+                  <div>
+                    <span>Please provide the credit rating</span>
+                    <input type="number" className="inputs" placeholder="80" />
+                  </div>
+                  <div></div>
+                  <div>
+                    <span>Which agency provided the rating?</span>
+                    <input
+                      type="text"
+                      className="inputs"
+                      placeholder="Global Trade Inc,."
+                    />
+                  </div>
+                  <div>
+                    <span>When was the rating issued?</span>
+                    <input type="date" id="calendar" className="inputs" />
+                  </div>
                 </div>
               ) : (
                 <div></div>

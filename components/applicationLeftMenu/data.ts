@@ -4,12 +4,13 @@ export const SidebarData = [
     title: "Exporter Info",
     name: "exporterInfo",
     path: "/users/newApplication/exporterInfo",
+    
   },
   {
     id: 2,
     title: "Financials - P&L",
-    name: "financialsPL",
-    path: "/users/newApplication/financialsPL",
+    name: "financials-p&l",
+    path: "/users/newApplication/financials-p&l/profit&loss",
   },
   {
     id: 3,
