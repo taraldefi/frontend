@@ -1,49 +1,51 @@
-import React from "react";
-import { SidebarData } from "./data";
-import { PortalIcons } from "../icons";
-import { useRouter } from "next/router";
+// import React from "react";
+// import { SidebarData } from "./data";
+// import { PortalIcons } from "../icons";
+// import { useRouter } from "next/router";
 
-export default function ApplicationLeftMenu() {
-  const router = useRouter();
-  function checkActive(item: any) {
-    const result = router.asPath.split("/").map((element) => element.trim());
-    const match = result.find((element) => {
-      if (element == item.name.toLowerCase()) {
-        return true;
-      }
-    });
+// export default function ApplicationLeftMenu() {
+//   const router = useRouter();
+//   function checkActive(item: any) {
+//     const result = router.asPath.split("/").map((element) => element.trim());
+//     const match = result.find((element) => {
+//       if (element == item.name.toLowerCase()) {
+//         return true;
+//       }
+//     });
 
-    if (item.path == router.asPath) {
-      return true;
-    } else if (item.name == "summary" && router.asPath == "/") {
-      return true;
-    } else if (match) {
-      return true;
-    } else {
-      return false;
-    }
-  }
-  return (
-    <div className="leftMenu">
-      <div className="items">
-        {SidebarData.map((item, index) => {
-          return (
-            <div
-              onClick={(e) => {
-                e.preventDefault();
-                router.push(item.path);
-              }}
-              key={index}
-              className="item"
-            >
-              <PortalIcons icon={item.title} selected={checkActive(item)} />
-              <span className={checkActive(item) ? "selected" : ""}>
-                {item.title}
-              </span>
-            </div>
-          );
-        })}
-      </div>
-    </div>
-  );
-}
+//     if (item.path == router.asPath) {
+//       return true;
+//     } else if (item.name == "summary" && router.asPath == "/") {
+//       return true;
+//     } else if (match) {
+//       return true;
+//     } else {
+//       return false;
+//     }
+//   }
+//   return (
+//     <div className="leftMenu">
+//       <div className="items">
+//         {SidebarData.map((item, index) => {
+//           return (
+//             <div
+//               onClick={(e) => {
+//                 e.preventDefault();
+//                 router.push(item.path);
+//               }}
+//               key={index}
+//               className="item"
+//             >
+//               <PortalIcons icon={item.title} selected={checkActive(item)} />
+//               <span className={checkActive(item) ? "selected" : ""}>
+//                 {item.title}
+//               </span>
+//             </div>
+//           );
+//         })}
+//       </div>
+//     </div>
+//   );
+// }
+import Sidebar from "./SideBar";
+export default Sidebar;
