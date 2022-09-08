@@ -19,6 +19,7 @@ import "@styles/entityView.scss";
 import "@styles/modal.scss";
 import "@styles/exporterInfo.scss";
 import "@styles/applicationSecurity.scss";
+import "@styles/financialsPL.scss";
 import type { AppProps } from "next/app";
 import FormModal from "@components/modal/entityFormModal";
 import { useContext } from "react";

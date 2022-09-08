@@ -1,0 +1,52 @@
+.plContainer {
+    position: absolute;
+    top: 127px;
+    left: 256px;
+    display: flex;
+    width: 84%;
+    padding: 40px 40px 40px 40px;
+    display: flex;
+
+    .vLine {
+        width: 0.1px;
+        height: initial;
+        background-color: rgba(0, 0, 0, 0.1);
+        margin-left: 22px;
+        margin-right: 22px;
+    }
+
+    .hLine {
+        width: initial;
+        height: 0.1px;
+        background-color: rgba(0, 0, 0, 0.1);
+        margin-left: 22px;
+        margin-right: 22px;
+    }
+
+    .assetsContainer {
+        flex: .25;
+        background-color: #000;
+
+        .maintitle {
+            font-size: 14px;
+            font-weight: bold;
+            color: #64748b;
+            padding-bottom: 13px;
+        }
+    }
+
+    .currentYear {
+        flex: .5;
+        background-color: #000;
+    }
+
+    .prevYear1 {
+        flex: .5;
+        background-color: #000;
+    }
+
+    .prevYear2 {
+        flex: .5;
+        background-color: #000;
+    }
+}

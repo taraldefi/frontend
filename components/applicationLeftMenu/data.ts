@@ -4,7 +4,6 @@ export const SidebarData = [
     title: "Exporter Info",
     name: "exporterInfo",
     path: "/users/newApplication/exporterInfo",
-    
   },
   {
     id: 2,
