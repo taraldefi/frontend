@@ -5,7 +5,7 @@ function Index() {
   return (
     <ApplicationLayout>
       <div className="plContainer">
-      Balance Sheet
+        Realtionship
       </div>
     </ApplicationLayout>
   );

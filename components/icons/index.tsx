@@ -16,7 +16,7 @@ function PortalIcons({ selected, icon }: Props): JSX.Element {
         >
           <path
             d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z"
-            stroke="#CBD5E1"
+            stroke={selected ? "#0d8489" : "#CBD5E1"}
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -105,7 +105,7 @@ function PortalIcons({ selected, icon }: Props): JSX.Element {
           />
           <path
             d="M16.5 3.50023C16.8978 3.1024 17.4374 2.87891 18 2.87891C18.2786 2.87891 18.5544 2.93378 18.8118 3.04038C19.0692 3.14699 19.303 3.30324 19.5 3.50023C19.697 3.69721 19.8532 3.93106 19.9598 4.18843C20.0665 4.4458 20.1213 4.72165 20.1213 5.00023C20.1213 5.2788 20.0665 5.55465 19.9598 5.81202C19.8532 6.06939 19.697 6.30324 19.5 6.50023L7 19.0002L3 20.0002L4 16.0002L16.5 3.50023Z"
-            stroke="#CBD5E1"
+            stroke={selected ? "#0d8489" : "#CBD5E1"}
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"

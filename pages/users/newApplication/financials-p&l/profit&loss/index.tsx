@@ -6,14 +6,98 @@ function index() {
     <ApplicationLayout>
       <div className="plContainer">
         <div className="assetsContainer">
-          <div className="maintitle"></div>
+          <div className="maintitle">Assets</div>
+          <div className="assetsItems">
+            <span>Revenue</span>
+            <span>Cogs</span>
+            <div className="hLine"></div>
+            <span>Gross</span>
+            <span>Distribution</span>
+            <span>Administrative</span>
+            <span>Other Income</span>
+            <div className="hLine"></div>
+            <span>Operating</span>
+            <span>Income Tax Expense</span>
+            <div className="hLine"></div>
+            <span>Finance Costs Net</span>
+            <span>Profit Before Income Tax</span>
+            <span>Profit for The Period</span>
+            <span>EBITDA</span>
+          </div>
         </div>
         <div className="vLine"></div>
-        <div className="currentYear"></div>
+        <div className="currentYear">
+          <div className="maintitle">
+            2022 (Current Year)
+          </div>
+          <div className="currentYearItems">
+            <input type="text" className="inputs" placeholder="Enter amount..." />
+            <input type="text" className="inputs" placeholder="Enter amount..." />
+            <div className="hLine"></div>
+            <input type="text" className="inputs" placeholder="Enter amount..." />
+            <input type="text" className="inputs" placeholder="Enter amount..." />
+            <input type="text" className="inputs" placeholder="Enter amount..." />
+            <input type="text" className="inputs" placeholder="Enter amount..." />
+            <div className="hLine"></div>
+            <input type="text" className="inputs" placeholder="Enter amount..." />
+            <input type="text" className="inputs" placeholder="Enter amount..." />
+            <div className="hLine"></div>
+            <input type="text" className="inputs" placeholder="Enter amount..." />
+            <input type="text" className="inputs" placeholder="Enter amount..." />
+            <input type="text" className="inputs" placeholder="Enter amount..." />
+            <input type="text" className="inputs" placeholder="Enter amount..." />
+          </div>
+        </div>
         <div className="vLine"></div>
-        <div className="prevYear1"></div>
+        <div className="prevYear1">
+        <div className="currentYear">
+          <div className="maintitle">
+            2021
+          </div>
+          <div className="currentYearItems">
+            <input type="text" className="inputs" placeholder="Enter amount..." />
+            <input type="text" className="inputs" placeholder="Enter amount..." />
+            <div className="hLine"></div>
+            <input type="text" className="inputs" placeholder="Enter amount..." />
+            <input type="text" className="inputs" placeholder="Enter amount..." />
+            <input type="text" className="inputs" placeholder="Enter amount..." />
+            <input type="text" className="inputs" placeholder="Enter amount..." />
+            <div className="hLine"></div>
+            <input type="text" className="inputs" placeholder="Enter amount..." />
+            <input type="text" className="inputs" placeholder="Enter amount..." />
+            <div className="hLine"></div>
+            <input type="text" className="inputs" placeholder="Enter amount..." />
+            <input type="text" className="inputs" placeholder="Enter amount..." />
+            <input type="text" className="inputs" placeholder="Enter amount..." />
+            <input type="text" className="inputs" placeholder="Enter amount..." />
+          </div>
+        </div>
+        </div>
         <div className="vLine"></div>
-        <div className="prevYear2"></div>
+        <div className="prevYear2">
+        <div className="currentYear">
+          <div className="maintitle">
+            2020
+          </div>
+          <div className="currentYearItems">
+            <input type="text" className="inputs" placeholder="Enter amount..." />
+            <input type="text" className="inputs" placeholder="Enter amount..." />
+            <div className="hLine"></div>
+            <input type="text" className="inputs" placeholder="Enter amount..." />
+            <input type="text" className="inputs" placeholder="Enter amount..." />
+            <input type="text" className="inputs" placeholder="Enter amount..." />
+            <input type="text" className="inputs" placeholder="Enter amount..." />
+            <div className="hLine"></div>
+            <input type="text" className="inputs" placeholder="Enter amount..." />
+            <input type="text" className="inputs" placeholder="Enter amount..." />
+            <div className="hLine"></div>
+            <input type="text" className="inputs" placeholder="Enter amount..." />
+            <input type="text" className="inputs" placeholder="Enter amount..." />
+            <input type="text" className="inputs" placeholder="Enter amount..." />
+            <input type="text" className="inputs" placeholder="Enter amount..." />
+          </div>
+        </div>
+        </div>
       </div>
     </ApplicationLayout>
   );
