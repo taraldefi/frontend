@@ -24,7 +24,7 @@ function Index() {
   const handleSelect2 = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setValueSelect2(e.currentTarget.value);
   };
-  console.log(valueSelect);
+  
   return (
     <div>
       <ApplicationLayout>

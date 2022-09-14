@@ -4,9 +4,7 @@ import React from "react";
 function Index() {
   return (
     <ApplicationLayout>
-      <div className="plContainer">
-        Contact And Details
-      </div>
+      <div className="plContainer">Contact And Details</div>
     </ApplicationLayout>
   );
 }
