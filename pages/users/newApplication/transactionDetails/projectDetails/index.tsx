@@ -21,12 +21,15 @@ function Index() {
   return (
     <ApplicationLayout>
       <div className="tsContainer">
-
         <div className="projectDetails">
           <div className="maintitle">Project Details</div>
           <div className="inputContainer">
             <span>Please provide a short description of the project.</span>
-            <input type="text" className="inputs" placeholder="About the project..." />
+            <input
+              type="text"
+              className="inputs"
+              placeholder="About the project..."
+            />
           </div>
           <div className="inputContainer">
             <span>For what purpose will the goods be used</span>
@@ -36,22 +39,12 @@ function Index() {
             <span>Are these investment goods?</span>
             <div>
               <div>
-                <input
-                  type="radio"
-                  id="goodsYes"
-                  name="tsRadio"
-                  value="Yes"
-                />
-                <label >Yes</label>
+                <input type="radio" id="goodsYes" name="tsRadio" value="Yes" />
+                <label>Yes</label>
               </div>
               <div>
-                <input
-                  type="radio"
-                  id="goodsNO"
-                  name="tsRadio"
-                  value="No"
-                />
-                <label >No</label>
+                <input type="radio" id="goodsNO" name="tsRadio" value="No" />
+                <label>No</label>
               </div>
             </div>
           </div>
@@ -65,7 +58,7 @@ function Index() {
                   name="tsServiceRadio"
                   value="Yes"
                 />
-                <label >Yes</label>
+                <label>Yes</label>
               </div>
               <div>
                 <input
@@ -74,16 +67,16 @@ function Index() {
                   name="tsServiceRadio"
                   value="No"
                 />
-                <label >No</label>
+                <label>No</label>
               </div>
             </div>
           </div>
           <div className="inputContainer">
             <span>Exported good type</span>
             <select className="inputs">
-              <option className="inputs" >Select type...</option>
-              <option ></option>
-              <option ></option>
+              <option className="inputs">Select type...</option>
+              <option></option>
+              <option></option>
             </select>
           </div>
           <div className="radioBack">
@@ -97,7 +90,7 @@ function Index() {
                   value="Yes"
                   onChange={handleRadioClick}
                 />
-                <label >Yes</label>
+                <label>Yes</label>
               </div>
               <div>
                 <input
@@ -107,22 +100,29 @@ function Index() {
                   value="No"
                   onChange={handleRadioClick}
                 />
-                <label >No</label>
+                <label>No</label>
               </div>
             </div>
-            {selectedRadioBtn == "Yes" ? <div>
-              <div className="inputContainer">
-                <span>What year were the goods manufactured?</span>
-                <input type="date" className="inputs" id="calendar" />
+            {selectedRadioBtn == "Yes" ? (
+              <div>
+                <div className="inputContainer">
+                  <span>What year were the goods manufactured?</span>
+                  <input type="date" className="inputs" id="calendar" />
+                </div>
               </div>
-            </div> : <></>}
+            ) : (
+              <></>
+            )}
           </div>
         </div>
         <div className="vLine"></div>
         <div className="consortium">
           <div className="maintitle">Consortuim</div>
           <div className="radioBack">
-            <span>Are you delivering the project as part of a consortium with other companies?</span>
+            <span>
+              Are you delivering the project as part of a consortium with other
+              companies?
+            </span>
             <div>
               <div>
                 <input
@@ -132,7 +132,7 @@ function Index() {
                   value="Yes"
                   onChange={handleRadioClick1}
                 />
-                <label >Yes</label>
+                <label>Yes</label>
               </div>
               <div>
                 <input
@@ -142,27 +142,46 @@ function Index() {
                   value="No"
                   onChange={handleRadioClick1}
                 />
-                <label >No</label>
+                <label>No</label>
               </div>
             </div>
           </div>
-          {selectedRadioBtn1 == "Yes" ? <div className="radioBack">
+          {selectedRadioBtn1 == "Yes" ? (
+            <div className="radioBack">
+              <div className="inputContainer">
+                <span>
+                  Please provide a detailed description of the project
+                </span>
+                <textarea
+                  className="inputs"
+                  placeholder="A project is an individual or collaborative enterprise that is carefully planned to achieve a particular aim."
+                />
+              </div>
+              <div className="inputContainer">
+                <span>What is the total value of the consortium project?</span>
+                <input type="text" className="inputs" placeholder="5,000,000" />
+              </div>
+              <div className="inputContainer">
+                <span>
+                  How is the rest of the project intended to be financed?
+                </span>
+                <input
+                  type="text"
+                  className="inputs"
+                  placeholder="Internal investment"
+                />
+              </div>
+            </div>
+          ) : (
             <div className="inputContainer">
               <span>Please provide a detailed description of the project</span>
-              <textarea className="inputs" placeholder="A project is an individual or collaborative enterprise that is carefully planned to achieve a particular aim." />
+              <input
+                type="text"
+                className="inputs"
+                placeholder="About the project..."
+              />
             </div>
-            <div className="inputContainer">
-              <span>What is the total value of the consortium project?</span>
-              <input type="text" className="inputs" placeholder="5,000,000" />
-            </div>
-            <div className="inputContainer">
-              <span>How is the rest of the project intended to be financed?</span>
-              <input type="text" className="inputs" placeholder="Internal investment" />
-            </div>
-          </div> : <div className="inputContainer">
-            <span>Please provide a detailed description of the project</span>
-            <input type="text" className="inputs" placeholder="About the project..." />
-          </div>}
+          )}
         </div>
         <div className="vLine"></div>
         <div className="license">
@@ -178,7 +197,7 @@ function Index() {
                   value="Yes"
                   onChange={handleRadioClick2}
                 />
-                <label >Yes</label>
+                <label>Yes</label>
               </div>
               <div>
                 <input
@@ -188,76 +207,107 @@ function Index() {
                   value="No"
                   onChange={handleRadioClick2}
                 />
-                <label >No</label>
+                <label>No</label>
               </div>
             </div>
-            {selectedRadioBtn2 == "Yes" ? <div>
-              <div className="inputContainer">
-                <span>Which export license regulations do the goods fall under?</span>
-                <input type="text" className="inputs" placeholder="Global regulations" />
-              </div>
-              <div className="inputContainer">
-                <span>Has the export license already been received?</span>
-                <input type="text" className="inputs" placeholder="Correct" />
-              </div>
-              <div className="inputContainer">
-                <span>What is the remaining life of the goods?</span>
-                <input type="text" className="inputs" placeholder="3 Years" />
-              </div>
-              <div className="hLine"></div>
-              <div className="secondRadio">
-                <span>Were the goods overhauled?</span>
-                <div>
-                  <div>
-                    <input
-                      type="radio"
-                      id="overhauledYes"
-                      name="tsoverhauledRadio"
-                      value="Yes"
-                      onChange={handleRadioClick4}
-                    />
-                    <label >Yes</label>
-                  </div>
-                  <div>
-                    <input
-                      type="radio"
-                      id="overhauledNO"
-                      name="tsoverhauledRadio"
-                      value="No"
-                      onChange={handleRadioClick4}
-                    />
-                    <label >No</label>
-                  </div>
+            {selectedRadioBtn2 == "Yes" ? (
+              <div>
+                <div className="inputContainer">
+                  <span>
+                    Which export license regulations do the goods fall under?
+                  </span>
+                  <input
+                    type="text"
+                    className="inputs"
+                    placeholder="Global regulations"
+                  />
                 </div>
-                {selectedRadioBtn4 == "Yes" ? <div>
-                  <div className="inputContainer">
-                    <span>In which country were the goods overhauled?</span>
-                    <select  className="inputs">
-                      <option value="Greece">Greece</option>
-                      <option value=""></option>
-                    </select>
+                <div className="inputContainer">
+                  <span>Has the export license already been received?</span>
+                  <input type="text" className="inputs" placeholder="Correct" />
+                </div>
+                <div className="inputContainer">
+                  <span>What is the remaining life of the goods?</span>
+                  <input type="text" className="inputs" placeholder="3 Years" />
+                </div>
+                <div className="hLine"></div>
+                <div className="secondRadio">
+                  <span>Were the goods overhauled?</span>
+                  <div>
+                    <div>
+                      <input
+                        type="radio"
+                        id="overhauledYes"
+                        name="tsoverhauledRadio"
+                        value="Yes"
+                        onChange={handleRadioClick4}
+                      />
+                      <label>Yes</label>
+                    </div>
+                    <div>
+                      <input
+                        type="radio"
+                        id="overhauledNO"
+                        name="tsoverhauledRadio"
+                        value="No"
+                        onChange={handleRadioClick4}
+                      />
+                      <label>No</label>
+                    </div>
                   </div>
-                  <div className="inputContainer">
-                    <span>Why were the goods overhauled abroad?</span>
-                    <input type="text" className="inputs"  placeholder="Missing documents." />
-                  </div>
-                  <div className="inputContainer">
-                    <span>Why were the goods not refurbished?</span>
-                    <input type="text" className="inputs"  placeholder="Mistake from supplier" />
-                  </div>
-                  <div className="inputContainer">
-                    <span>Why were the goods not overhauled in KSA?</span>
-                    <input type="text" className="inputs"  placeholder="Overhauled overseas" />
-                  </div>
-                  <div className="inputContainer">
-                    <span>What proportion of the goods were overhauled abroad?</span>
-                    <input type="text" className="inputs" id="percentage"  placeholder="25" />
-                  </div>
-                </div> : <></>}
+                  {selectedRadioBtn4 == "Yes" ? (
+                    <div>
+                      <div className="inputContainer">
+                        <span>In which country were the goods overhauled?</span>
+                        <select className="inputs">
+                          <option value="Greece">Greece</option>
+                          <option value=""></option>
+                        </select>
+                      </div>
+                      <div className="inputContainer">
+                        <span>Why were the goods overhauled abroad?</span>
+                        <input
+                          type="text"
+                          className="inputs"
+                          placeholder="Missing documents."
+                        />
+                      </div>
+                      <div className="inputContainer">
+                        <span>Why were the goods not refurbished?</span>
+                        <input
+                          type="text"
+                          className="inputs"
+                          placeholder="Mistake from supplier"
+                        />
+                      </div>
+                      <div className="inputContainer">
+                        <span>Why were the goods not overhauled in KSA?</span>
+                        <input
+                          type="text"
+                          className="inputs"
+                          placeholder="Overhauled overseas"
+                        />
+                      </div>
+                      <div className="inputContainer">
+                        <span>
+                          What proportion of the goods were overhauled abroad?
+                        </span>
+                        <input
+                          type="text"
+                          className="inputs"
+                          id="percentage"
+                          placeholder="25"
+                        />
+                      </div>
+                    </div>
+                  ) : (
+                    <></>
+                  )}
+                </div>
               </div>
-            </div> : <></>}
-
-
+            ) : (
+              <></>
+            )}
           </div>
           <div className="radioBack">
             <span>Has the import license already been received?</span>
@@ -270,7 +320,7 @@ function Index() {
                   value="Yes"
                   onChange={handleRadioClick3}
                 />
-                <label >Yes</label>
+                <label>Yes</label>
               </div>
               <div>
                 <input
@@ -280,7 +330,7 @@ function Index() {
                   value="No"
                   onChange={handleRadioClick3}
                 />
-                <label >No</label>
+                <label>No</label>
               </div>
             </div>
           </div>

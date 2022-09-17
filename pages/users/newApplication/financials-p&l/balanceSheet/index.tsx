@@ -44,7 +44,6 @@ function Index() {
               className="inputs"
               placeholder="Enter amount..."
             />
-
           </div>
         </div>
         <div className="vLine"></div>

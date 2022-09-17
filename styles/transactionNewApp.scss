@@ -1,196 +1,193 @@
 .tsContainer {
-    position: absolute;
-    top: 127px;
-    left: 256px;
-    display: flex;
-    width: 84%;
-    padding: 40px 40px 40px 40px;
-    display: flex;
+  position: absolute;
+  top: 127px;
+  left: 256px;
+  display: flex;
+  width: 84%;
+  padding: 40px 40px 40px 40px;
+  display: flex;
 
-    .inputs {
-        width: 100%;
-        color: #64748b;
+  .inputs {
+    width: 100%;
+    color: #64748b;
+  }
+
+  .vLine {
+    width: 0.1px;
+    height: initial;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin-left: 22px;
+    margin-right: 22px;
+  }
+
+  .projectDetails {
+    flex: 1;
+    width: 100%;
+    color: #475569;
+    font-size: 14px;
+    font-weight: normal;
+
+    .maintitle {
+      font-size: 14px;
+      font-weight: bold;
+      color: #64748b;
+      padding-bottom: 11px;
     }
 
-    .vLine {
-        width: 0.1px;
-        height: initial;
+    .inputContainer {
+      padding-top: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .radioBack {
+      margin-top: 10px;
+      padding: 16px 54px 16px 16px;
+      display: flex;
+      background-color: #9797970f;
+      flex-direction: column;
+      margin-bottom: 15px;
+      gap: 15px;
+
+      :nth-child(2) {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+
+        :nth-child(n) {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          padding-bottom: 0px;
+          gap: 6px;
+        }
+      }
+    }
+  }
+
+  .consortium {
+    flex: 1;
+    width: 100%;
+    color: #475569;
+    font-size: 14px;
+    font-weight: normal;
+
+    .maintitle {
+      font-size: 14px;
+      font-weight: bold;
+      color: #64748b;
+      padding-bottom: 11px;
+    }
+
+    .inputContainer {
+      padding-top: 10px;
+      display: flex;
+      flex-direction: column !important;
+      gap: 6px !important;
+    }
+
+    .radioBack {
+      margin-top: 10px;
+      padding: 16px 54px 16px 16px;
+      display: flex;
+      background-color: #9797970f;
+      flex-direction: column;
+      margin-bottom: 15px;
+      gap: 10px;
+
+      :nth-child(2) {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+
+        :nth-child(n) {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          padding-bottom: 0px;
+          gap: 6px;
+        }
+      }
+
+      textarea {
+        height: max-content;
+        width: 110%;
+        padding-bottom: 10%;
+      }
+    }
+  }
+
+  .license {
+    overflow: scroll;
+    flex: 1;
+    width: 100%;
+    color: #475569;
+    font-size: 14px;
+    font-weight: normal;
+
+    .maintitle {
+      font-size: 14px;
+      font-weight: bold;
+      color: #64748b;
+      padding-bottom: 11px;
+    }
+
+    .inputContainer {
+      padding-top: 10px;
+      display: flex;
+      flex-direction: column !important;
+      gap: 6px !important;
+    }
+
+    .radioBack {
+      .hLine {
+        width: 100%;
+        height: 0.3px;
         background-color: rgba(0, 0, 0, 0.1);
-        margin-left: 22px;
-        margin-right: 22px;
+        margin: 15px 0px 15px 0px;
+      }
+      .secondRadio {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      margin-top: 10px;
+      padding: 16px 54px 16px 16px;
+      display: flex;
+      background-color: #9797970f;
+      flex-direction: column;
+      margin-bottom: 15px;
+      gap: 10px;
+
+      :nth-child(2) {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+
+        :nth-child(n) {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          padding-bottom: 0px;
+          gap: 6px;
+        }
+      }
+
+      textarea {
+        height: max-content;
+        width: 110%;
+        padding-bottom: 10%;
+      }
     }
-
-    .projectDetails {
-        flex: 1;
-        width: 100%;
-        color: #475569;
-        font-size: 14px;
-        font-weight: normal;
-
-        .maintitle {
-            font-size: 14px;
-            font-weight: bold;
-            color: #64748b;
-            padding-bottom: 11px;
-        }
-
-        .inputContainer {
-            padding-top: 10px;
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-
-        }
-
-        .radioBack {
-            margin-top: 10px;
-            padding: 16px 54px 16px 16px;
-            display: flex;
-            background-color: #9797970f;
-            flex-direction: column;
-            margin-bottom: 15px;
-            gap: 15px;
-
-            :nth-child(2) {
-                display: flex;
-                flex-direction: row;
-                gap: 30px;
-
-                :nth-child(n) {
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    justify-content: center;
-                    padding-bottom: 0px;
-                    gap: 6px;
-                }
-            }
-        }
-    }
-
-    .consortium {
-        flex: 1;
-        width: 100%;
-        color: #475569;
-        font-size: 14px;
-        font-weight: normal;
-
-        .maintitle {
-            font-size: 14px;
-            font-weight: bold;
-            color: #64748b;
-            padding-bottom: 11px;
-        }
-
-        .inputContainer {
-            padding-top: 10px;
-            display: flex;
-            flex-direction: column !important;
-            gap: 6px !important;
-
-        }
-
-        .radioBack {
-            margin-top: 10px;
-            padding: 16px 54px 16px 16px;
-            display: flex;
-            background-color: #9797970f;
-            flex-direction: column;
-            margin-bottom: 15px;
-            gap: 10px;
-
-            :nth-child(2) {
-                display: flex;
-                flex-direction: row;
-                gap: 30px;
-
-                :nth-child(n) {
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    justify-content: center;
-                    padding-bottom: 0px;
-                    gap: 6px;
-                }
-            }
-
-            textarea {
-                height: max-content;
-                width: 110%;
-                padding-bottom: 10%;
-            }
-        }
-    }
-
-    .license {
-        overflow: scroll;
-        flex: 1;
-        width: 100%;
-        color: #475569;
-        font-size: 14px;
-        font-weight: normal;
-
-        .maintitle {
-            font-size: 14px;
-            font-weight: bold;
-            color: #64748b;
-            padding-bottom: 11px;
-        }
-
-        .inputContainer {
-            padding-top: 10px;
-            display: flex;
-            flex-direction: column !important;
-            gap: 6px !important;
-
-        }
-
-        .radioBack {
-            .hLine {
-                width: 100%;
-                height: 0.3px;
-                background-color: rgba(0, 0, 0, 0.1);
-                margin: 15px 0px 15px 0px;
-              }
-            .secondRadio{
-                display: flex;
-                flex-direction: column;
-                gap:10px;
-            }
-            margin-top: 10px;
-            padding: 16px 54px 16px 16px;
-            display: flex;
-            background-color: #9797970f;
-            flex-direction: column;
-            margin-bottom: 15px;
-            gap: 10px;
-
-            :nth-child(2) {
-                display: flex;
-                flex-direction: row;
-                gap: 30px;
-
-                :nth-child(n) {
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    justify-content: center;
-                    padding-bottom: 0px;
-                    gap: 6px;
-                }
-            }
-
-            textarea {
-                height: max-content;
-                width: 110%;
-                padding-bottom: 10%;
-            }
-        }
-    }
-    input[type="text"] {
-        padding: 10px !important;
-    }
-    span{
-        justify-content: flex-start !important;
-    }
+  }
+  input[type="text"] {
+    padding: 10px !important;
+  }
+  span {
+    justify-content: flex-start !important;
+  }
 }

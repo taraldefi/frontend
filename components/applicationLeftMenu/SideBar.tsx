@@ -6,7 +6,7 @@ export default function SideBar() {
 
   return (
     <ProSidebar collapsed={false}>
-      <Menu iconShape="square" >
+      <Menu iconShape="square">
         <MenuItem
           onClick={(e) => {
             e.preventDefault();
