@@ -34,13 +34,22 @@ function Index() {
             </div>
             <div className="inputContainer">
               <span>For what purpose will the goods be used</span>
-              <input type="text" className="inputs" placeholder="Add purpose.." />
+              <input
+                type="text"
+                className="inputs"
+                placeholder="Add purpose.."
+              />
             </div>
             <div className="radioBack">
               <span>Are these investment goods?</span>
               <div>
                 <div>
-                  <input type="radio" id="goodsYes" name="tsRadio" value="Yes" />
+                  <input
+                    type="radio"
+                    id="goodsYes"
+                    name="tsRadio"
+                    value="Yes"
+                  />
                   <label>Yes</label>
                 </div>
                 <div>
@@ -121,8 +130,8 @@ function Index() {
             <div className="maintitle">Consortuim</div>
             <div className="radioBack">
               <span>
-                Are you delivering the project as part of a consortium with other
-                companies?
+                Are you delivering the project as part of a consortium with
+                other companies?
               </span>
               <div>
                 <div>
@@ -159,8 +168,14 @@ function Index() {
                   />
                 </div>
                 <div className="inputContainer">
-                  <span>What is the total value of the consortium project?</span>
-                  <input type="text" className="inputs" placeholder="5,000,000" />
+                  <span>
+                    What is the total value of the consortium project?
+                  </span>
+                  <input
+                    type="text"
+                    className="inputs"
+                    placeholder="5,000,000"
+                  />
                 </div>
                 <div className="inputContainer">
                   <span>
@@ -175,7 +190,9 @@ function Index() {
               </div>
             ) : (
               <div className="inputContainer">
-                <span>Please provide a detailed description of the project</span>
+                <span>
+                  Please provide a detailed description of the project
+                </span>
                 <input
                   type="text"
                   className="inputs"
@@ -225,11 +242,19 @@ function Index() {
                   </div>
                   <div className="inputContainer">
                     <span>Has the export license already been received?</span>
-                    <input type="text" className="inputs" placeholder="Correct" />
+                    <input
+                      type="text"
+                      className="inputs"
+                      placeholder="Correct"
+                    />
                   </div>
                   <div className="inputContainer">
                     <span>What is the remaining life of the goods?</span>
-                    <input type="text" className="inputs" placeholder="3 Years" />
+                    <input
+                      type="text"
+                      className="inputs"
+                      placeholder="3 Years"
+                    />
                   </div>
                   <div className="hLine"></div>
                   <div className="secondRadio">
@@ -259,7 +284,9 @@ function Index() {
                     {selectedRadioBtn4 == "Yes" ? (
                       <div>
                         <div className="inputContainer">
-                          <span>In which country were the goods overhauled?</span>
+                          <span>
+                            In which country were the goods overhauled?
+                          </span>
                           <select className="inputs">
                             <option value="Greece">Greece</option>
                             <option value=""></option>
