@@ -2,24 +2,26 @@ import ApplicationLayout from "@components/layouts/new_application_layout";
 import React from "react";
 
 function Index() {
-  const [selectedValue, setSelectedValue] = React.useState("Select country...")
+  const [selectedValue, setSelectedValue] = React.useState("Select country...");
   const handleSelect = (e: React.ChangeEvent<HTMLSelectElement>) =>
-    setSelectedValue(e.currentTarget.value)
-  const [selectedValue1, setSelectedValue1] = React.useState("Select country...")
+    setSelectedValue(e.currentTarget.value);
+  const [selectedValue1, setSelectedValue1] =
+    React.useState("Select country...");
   const handleSelect1 = (e: React.ChangeEvent<HTMLSelectElement>) =>
-    setSelectedValue1(e.currentTarget.value)
-  const [selectedValue2, setSelectedValue2] = React.useState("Select country...")
+    setSelectedValue1(e.currentTarget.value);
+  const [selectedValue2, setSelectedValue2] =
+    React.useState("Select country...");
   const handleSelect2 = (e: React.ChangeEvent<HTMLSelectElement>) =>
-    setSelectedValue2(e.currentTarget.value)
-  const [selectedRadioBtn, setSelectedRadioBtn] = React.useState("No")
+    setSelectedValue2(e.currentTarget.value);
+  const [selectedRadioBtn, setSelectedRadioBtn] = React.useState("No");
   const handleClick = (e: React.ChangeEvent<HTMLInputElement>): void =>
-    setSelectedRadioBtn(e.currentTarget.value)
-  const [selectedRadioBtn1, setSelectedRadioBtn1] = React.useState("No")
+    setSelectedRadioBtn(e.currentTarget.value);
+  const [selectedRadioBtn1, setSelectedRadioBtn1] = React.useState("No");
   const handleClick1 = (e: React.ChangeEvent<HTMLInputElement>): void =>
-    setSelectedRadioBtn1(e.currentTarget.value)
-  const [selectedRadioBtn2, setSelectedRadioBtn2] = React.useState("No")
+    setSelectedRadioBtn1(e.currentTarget.value);
+  const [selectedRadioBtn2, setSelectedRadioBtn2] = React.useState("No");
   const handleClick2 = (e: React.ChangeEvent<HTMLInputElement>): void =>
-    setSelectedRadioBtn2(e.currentTarget.value)
+    setSelectedRadioBtn2(e.currentTarget.value);
   return (
     <ApplicationLayout>
       <div className="impInfoContainer">
@@ -32,7 +34,11 @@ function Index() {
             </div>
             <div className="inputContainer">
               <span>Importer company registration number</span>
-              <input type="text" className="inputs" placeholder="Registration number..." />
+              <input
+                type="text"
+                className="inputs"
+                placeholder="Registration number..."
+              />
             </div>
             <div className="selectBack">
               <div className="inputContainer">
@@ -45,36 +51,42 @@ function Index() {
                   <option value="india">india</option>
                 </select>
               </div>
-              {selectedValue != "Select country..." ?
+              {selectedValue != "Select country..." ? (
                 <>
                   <div className="inputContainer">
                     <span>Main countries of business 2</span>
                     <select className="inputs" onChange={handleSelect1}>
-                      <option value="Select country...">Select country...</option>
+                      <option value="Select country...">
+                        Select country...
+                      </option>
                       <option value="Germany">Germany</option>
                       <option value="Switzerland">Switzerland</option>
                       <option value="France">France</option>
                       <option value="india">india</option>
                     </select>
                   </div>
-                  {selectedValue1 != "Select country..." ?
+                  {selectedValue1 != "Select country..." ? (
                     <>
                       <div className="inputContainer">
                         <span>Main countries of business 3</span>
                         <select className="inputs" onChange={handleSelect2}>
-                          <option value="Select country...">Select country...</option>
+                          <option value="Select country...">
+                            Select country...
+                          </option>
                           <option value="Germany">Germany</option>
                           <option value="Switzerland">Switzerland</option>
                           <option value="France">France</option>
                           <option value="india">india</option>
                         </select>
                       </div>
-                      {selectedValue2 !== "Select country..." ?
+                      {selectedValue2 !== "Select country..." ? (
                         <>
                           <div className="inputContainer">
                             <span>Main countries of business 4</span>
-                            <select className="inputs" >
-                              <option value="Select country...">Select country...</option>
+                            <select className="inputs">
+                              <option value="Select country...">
+                                Select country...
+                              </option>
                               <option value="Germany">Germany</option>
                               <option value="Switzerland">Switzerland</option>
                               <option value="France">France</option>
@@ -82,17 +94,17 @@ function Index() {
                             </select>
                           </div>
                         </>
-                        :
+                      ) : (
                         <></>
-                      }
+                      )}
                     </>
-                    :
+                  ) : (
                     <></>
-                  }
+                  )}
                 </>
-                :
+              ) : (
                 <></>
-              }
+              )}
             </div>
           </div>
           <div className="vLine"></div>
@@ -102,19 +114,11 @@ function Index() {
               <span>Is the company controlled by another mother company?</span>
               <div>
                 <div>
-                  <input
-                    type="radio"
-                    name="busiStatRadio"
-                    value="Yes"
-                  />
+                  <input type="radio" name="busiStatRadio" value="Yes" />
                   <label>Yes</label>
                 </div>
                 <div>
-                  <input
-                    type="radio"
-                    name="busiStatRadio"
-                    value="No"
-                  />
+                  <input type="radio" name="busiStatRadio" value="No" />
                   <label>No</label>
                 </div>
               </div>
@@ -141,19 +145,21 @@ function Index() {
                   <label>No</label>
                 </div>
               </div>
-              {selectedRadioBtn == "Yes" ?
+              {selectedRadioBtn == "Yes" ? (
                 <>
                   <div className="inputContainer">
-                    <span>Please select the importer sector from the list below.</span>
+                    <span>
+                      Please select the importer sector from the list below.
+                    </span>
                     <select name="" id="" className="inputs">
                       <option value="">Software Development</option>
                       <option value=""></option>
                     </select>
                   </div>
                 </>
-                :
+              ) : (
                 <></>
-              }
+              )}
             </div>
             <div className="radioBack">
               <span>Does your importer operate in the public sector?</span>
@@ -177,19 +183,21 @@ function Index() {
                   <label>No</label>
                 </div>
               </div>
-              {selectedRadioBtn1 == "Yes" ?
+              {selectedRadioBtn1 == "Yes" ? (
                 <>
                   <div className="inputContainer">
-                    <span>Please select the importer sector from the list below.</span>
+                    <span>
+                      Please select the importer sector from the list below.
+                    </span>
                     <select name="" id="" className="inputs">
                       <option value="">Software Development</option>
                       <option value=""></option>
                     </select>
                   </div>
                 </>
-                :
+              ) : (
                 <></>
-              }
+              )}
             </div>
           </div>
           <div className="vLine"></div>
@@ -217,24 +225,33 @@ function Index() {
                   <label>No</label>
                 </div>
               </div>
-              {selectedRadioBtn2 == "Yes" ?
+              {selectedRadioBtn2 == "Yes" ? (
                 <>
                   <div className="inputContainer">
                     <span>Importer rating</span>
-                    <input type="text" className="inputs" placeholder="80" id="percentage"/>
+                    <input
+                      type="text"
+                      className="inputs"
+                      placeholder="80"
+                      id="percentage"
+                    />
                   </div>
                   <div className="inputContainer">
                     <span>Importer rating agency</span>
-                    <input type="text" className="inputs" placeholder="Global Company" />
+                    <input
+                      type="text"
+                      className="inputs"
+                      placeholder="Global Company"
+                    />
                   </div>
                   <div className="inputContainer">
                     <span>Importer rating issued date</span>
                     <input type="date" id="calendar" className="inputs" />
                   </div>
                 </>
-                :
+              ) : (
                 <></>
-              }
+              )}
             </div>
           </div>
         </div>
