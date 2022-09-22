@@ -2,14 +2,14 @@ import ApplicationLayout from "@components/layouts/new_application_layout";
 import React from "react";
 
 function Index() {
-  const [valueSelect, setValueSelect] = React.useState("Select currency...")
+  const [valueSelect, setValueSelect] = React.useState("Select currency...");
   const handleSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setValueSelect(e.currentTarget.value)
-  }
-  const [selectedRadioBtn, setSelectedRadioBtn] = React.useState("No")
+    setValueSelect(e.currentTarget.value);
+  };
+  const [selectedRadioBtn, setSelectedRadioBtn] = React.useState("No");
   const handleClick = (e: React.ChangeEvent<HTMLInputElement>): void => {
-    setSelectedRadioBtn(e.currentTarget.value)
-  }
+    setSelectedRadioBtn(e.currentTarget.value);
+  };
   return (
     <ApplicationLayout>
       <div className="tsNewContainers">
@@ -20,26 +20,22 @@ function Index() {
               <span>Is your company fully responsible for the project?</span>
               <div>
                 <div>
-                  <input
-                    type="radio"
-                    value="Yes"
-                    name="responsibilityRadio"
-                  />
+                  <input type="radio" value="Yes" name="responsibilityRadio" />
                   <label>Yes</label>
                 </div>
                 <div>
-                  <input
-                    type="radio"
-                    value="No"
-                    name="responsibilityRadio"
-                  />
+                  <input type="radio" value="No" name="responsibilityRadio" />
                   <label>No</label>
                 </div>
               </div>
             </div>
             <div className="inputContainer">
               <span>Non-standard accounting methodologies used in project</span>
-              <input type="text" className="inputs" placeholder="Write here..." />
+              <input
+                type="text"
+                className="inputs"
+                placeholder="Write here..."
+              />
             </div>
             <div className="selectBack">
               <span>Enter the currency for the entire project.</span>
@@ -52,20 +48,31 @@ function Index() {
                 <option value="USD">USD</option>
                 <option value="INR">INR</option>
               </select>
-              {valueSelect != "Select currency..." ?
+              {valueSelect != "Select currency..." ? (
                 <>
                   <div className="inputContainer">
                     <span>Enter the amount for the entire project.</span>
-                    <input type="text" className="inputs" placeholder="5,000,000" />
+                    <input
+                      type="text"
+                      className="inputs"
+                      placeholder="5,000,000"
+                    />
                   </div>
                   <div className="inputContainer">
-                    <span>Provide a description of the product and services delivered.</span>
-                    <input type="text" className="inputs" placeholder="Provide a description..." />
+                    <span>
+                      Provide a description of the product and services
+                      delivered.
+                    </span>
+                    <input
+                      type="text"
+                      className="inputs"
+                      placeholder="Provide a description..."
+                    />
                   </div>
                 </>
-                :
+              ) : (
                 <></>
-              }
+              )}
             </div>
           </div>
           <div className="vLine"></div>
@@ -73,24 +80,44 @@ function Index() {
             <div className="maintitle">ADDITIONAL INFO</div>
             <div className="inputContainer">
               <span>Additional financing applications reference number</span>
-              <input type="text" className="inputs" placeholder="Reference number..." />
+              <input
+                type="text"
+                className="inputs"
+                placeholder="Reference number..."
+              />
             </div>
             <div className="selectBack">
               <div>
                 <span>ECA name cover if it’s been secured/applied</span>
-                <input type="text" className="inputs" placeholder="ECA name..." />
+                <input
+                  type="text"
+                  className="inputs"
+                  placeholder="ECA name..."
+                />
               </div>
               <div>
                 <span>Has the cover been preliminarily approved?</span>
-                <input type="text" className="inputs" placeholder="Write here..." />
+                <input
+                  type="text"
+                  className="inputs"
+                  placeholder="Write here..."
+                />
               </div>
               <div>
                 <span>Has the cover received final approval?</span>
-                <input type="text" className="inputs" placeholder="Write here..." />
+                <input
+                  type="text"
+                  className="inputs"
+                  placeholder="Write here..."
+                />
               </div>
               <div>
                 <span>Application UID ECA cover</span>
-                <input type="text" className="inputs" placeholder="Write here..." />
+                <input
+                  type="text"
+                  className="inputs"
+                  placeholder="Write here..."
+                />
               </div>
             </div>
           </div>
@@ -119,10 +146,13 @@ function Index() {
                   <label>No</label>
                 </div>
               </div>
-              {selectedRadioBtn == "Yes" ?
+              {selectedRadioBtn == "Yes" ? (
                 <div className="radioIn">
                   <div className="inputContainer">
-                    <span>Do you have a certification of origin for part of the goods?</span>
+                    <span>
+                      Do you have a certification of origin for part of the
+                      goods?
+                    </span>
                     <div>
                       <div>
                         <input
@@ -143,14 +173,18 @@ function Index() {
                     </div>
                   </div>
                   <div className="inputContainer">
-                    <span>Select the country of the purchased sub suppliers</span>
+                    <span>
+                      Select the country of the purchased sub suppliers
+                    </span>
                     <select name="" id="" className="inputs">
                       <option value="">China</option>
                       <option value="">Japan</option>
                     </select>
                   </div>
                   <div className="inputContainer">
-                    <span>Value of the materials from the purchased sub-suppliers</span>
+                    <span>
+                      Value of the materials from the purchased sub-suppliers
+                    </span>
                     <select name="" id="" className="inputs">
                       <option value="">Full</option>
                       <option value=""></option>
@@ -158,16 +192,26 @@ function Index() {
                   </div>
                   <div className="inputContainer">
                     <span>Enter the name of the sub-supplier.</span>
-                    <input type="text" className="inputs" placeholder="Global Traders Inc,." />
+                    <input
+                      type="text"
+                      className="inputs"
+                      placeholder="Global Traders Inc,."
+                    />
                   </div>
                   <div className="inputContainer">
-                    <span>Describe why all foreign sub-suppliers are necessary.</span>
-                    <input type="text" className="inputs" placeholder="Write here..." />
+                    <span>
+                      Describe why all foreign sub-suppliers are necessary.
+                    </span>
+                    <input
+                      type="text"
+                      className="inputs"
+                      placeholder="Write here..."
+                    />
                   </div>
                 </div>
-                :
+              ) : (
                 <></>
-              }
+              )}
             </div>
           </div>
         </div>

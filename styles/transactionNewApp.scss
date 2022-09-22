@@ -13,7 +13,8 @@
     display: flex;
     flex-direction: column;
     gap: 6px;
-    span{
+
+    span {
       font-size: 13.5px;
     }
   }
@@ -504,14 +505,16 @@
         flex-direction: column;
         margin-bottom: 5px;
         gap: 10px;
-        .radioIn{
+
+        .radioIn {
           display: flex;
           flex-direction: column;
           gap: 6px;
         }
+
         :nth-child(2) {
           display: flex;
-          // flex-direction: row; 
+          // flex-direction: row;
           gap: 5px;
 
           :nth-child(n) {
