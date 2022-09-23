@@ -249,7 +249,7 @@ export default function ApplicationLeftMenu() {
                   "/users/newApplication/importerInfo/relationship" ||
                 router.asPath == "/users/newApplication/importerInfo/business"
                   ? "selected"
-                  : ""  
+                  : ""
               }
             >
               Importer Info

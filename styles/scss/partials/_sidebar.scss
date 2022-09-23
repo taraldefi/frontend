@@ -108,7 +108,7 @@
     @media (max-width: $breakpoint-sm) {
       @include break-point;
     }
-  } 
+  }
   &.md {
     @media (max-width: $breakpoint-md) {
       @include break-point;
