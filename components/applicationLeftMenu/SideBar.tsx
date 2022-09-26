@@ -27,15 +27,10 @@ export default function SideBar() {
           <PortalIcons
             selected={
               router.asPath ==
-              "/users/newApplication/financials-p&l/profit&loss"
-                ? true
-                : false ||
-                  router.asPath ==
-                    "/users/newApplication/financials-p&l/balanceSheet"
-                ? true
-                : false ||
-                  router.asPath ==
-                    "/users/newApplication/financials-p&l/cashFlow"
+                "/users/newApplication/financials-p&l/profit&loss" ||
+              router.asPath ==
+                "/users/newApplication/financials-p&l/balanceSheet" ||
+              router.asPath == "/users/newApplication/financials-p&l/cashFlow"
                 ? true
                 : false
             }
