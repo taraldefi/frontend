@@ -25,7 +25,7 @@ function Index() {
                     type="radio"
                     name="ptConcludeRadio"
                     value="Yes"
-                    // onChange={}
+                  // onChange={}
                   />
                   <label>Yes</label>
                 </div>
@@ -34,7 +34,7 @@ function Index() {
                     type="radio"
                     name="ptConcludeRadio"
                     value="No"
-                    // onChange={}
+                  // onChange={}
                   />
                   <label>No</label>
                 </div>
@@ -48,7 +48,7 @@ function Index() {
                     type="radio"
                     name="ptRefinancingRadio"
                     value="Yes"
-                    // onChange={}
+                  // onChange={}
                   />
                   <label>Yes</label>
                 </div>
@@ -57,7 +57,7 @@ function Index() {
                     type="radio"
                     name="ptRefinancingRadio"
                     value="No"
-                    // onChange={}
+                  // onChange={}
                   />
                   <label>No</label>
                 </div>
@@ -194,14 +194,16 @@ function Index() {
           <div className="vLine"></div>
           <div className="ptVID">
             <div className="maintitle">VARIABLE INTEREST DESCRIPTION</div>
-            <span>
-              Provide description regarding the variable interest/premium
-            </span>
-            <input
-              type="text"
-              className="inputs"
-              placeholder="Variable interest..."
-            />
+            <div className="inputContainer">
+              <span>
+                Provide description regarding the variable interest/premium
+              </span>
+              <input
+                type="text"
+                className="inputs"
+                placeholder="Variable interest..."
+              />
+            </div>
           </div>
         </div>
       </div>

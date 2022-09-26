@@ -105,6 +105,17 @@
       gap: 6px;
     }
 
+    .ptDetails {
+      flex: 1;
+      width: 100%;
+      color: #475569;
+      font-size: 14px;
+      font-weight: normal;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
     .ptMedium {
       flex: 1;
       width: 100%;
@@ -116,7 +127,29 @@
       gap: 6px;
     }
 
+    .ptInterest {
+      flex: 1;
+      width: 100%;
+      color: #475569;
+      font-size: 14px;
+      font-weight: normal;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
     .ptSM {
+      flex: 1;
+      width: 100%;
+      color: #475569;
+      font-size: 14px;
+      font-weight: normal;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .ptVID {
       flex: 1;
       width: 100%;
       color: #475569;

@@ -23,7 +23,7 @@ function Index() {
       <div className="tsNewContainers">
         <div className="tsProjContainer">
           <div className="projectDetails">
-            <div className="maintitle">Project Details</div>
+            <div className="maintitle">PROJECT DETAILS</div>
             <div className="inputContainer">
               <span>Please provide a short description of the project.</span>
               <input
@@ -127,7 +127,7 @@ function Index() {
           </div>
           <div className="vLine"></div>
           <div className="consortium">
-            <div className="maintitle">Consortuim</div>
+            <div className="maintitle">CONSORTIUM</div>
             <div className="radioBack">
               <span>
                 Are you delivering the project as part of a consortium with
@@ -203,7 +203,7 @@ function Index() {
           </div>
           <div className="vLine"></div>
           <div className="license">
-            <div className="maintitle">License</div>
+            <div className="maintitle">LICENSE</div>
             <div className="radioBack">
               <span>Is an export license required?</span>
               <div>

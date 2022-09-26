@@ -39,11 +39,12 @@ function Index() {
                   <label>No</label>
                 </div>
               </div>
-              {selectedRadioBtn == "Yes"
-                ?
+              {selectedRadioBtn == "Yes" ? (
                 <>
                   <div className="inputContainer">
-                    <span>What is the currency agreed for the downpayment?</span>
+                    <span>
+                      What is the currency agreed for the downpayment?
+                    </span>
                     <select name="" id="" className="inputs">
                       <option value="">USD</option>
                       <option value="">INR</option>
@@ -51,35 +52,53 @@ function Index() {
                   </div>
                   <div className="inputContainer">
                     <span>How much is the downpayment amount?</span>
-                    <input type="text" className="inputs" placeholder="500000" />
+                    <input
+                      type="text"
+                      className="inputs"
+                      placeholder="500000"
+                    />
                   </div>
                   <div className="inputContainer">
                     <span>Description for the short term downpayment</span>
-                    <input type="text" className="inputs" placeholder="Deposit for the shipment" />
+                    <input
+                      type="text"
+                      className="inputs"
+                      placeholder="Deposit for the shipment"
+                    />
                   </div>
                   <div className="inputContainer">
                     <span>What is the currency agreed for the balance?</span>
                     <select name="" id="" className="inputs">
-                      <option id="" >USD</option>
-                      <option id="" >INR</option>
+                      <option id="">USD</option>
+                      <option id="">INR</option>
                     </select>
                   </div>
                   <div className="inputContainer">
                     <span>How much is the balance amount?</span>
-                    <input type="text" className="inputs" placeholder="1500000" />
+                    <input
+                      type="text"
+                      className="inputs"
+                      placeholder="1500000"
+                    />
                   </div>
                   <div className="inputContainer">
                     <span>When will the balance be paid?</span>
                     <input type="date" className="inputs" id="calendar" />
                   </div>
                   <div className="inputContainer">
-                    <span>Please describe if a payment vehicle/SPV will be utilised.</span>
-                    <input type="text" className="inputs" placeholder="Description..." />
+                    <span>
+                      Please describe if a payment vehicle/SPV will be utilised.
+                    </span>
+                    <input
+                      type="text"
+                      className="inputs"
+                      placeholder="Description..."
+                    />
                   </div>
                 </>
-                :
+              ) : (
                 <></>
-              }
+              )}
             </div>
           </div>
           <div className="vLine"></div>
@@ -107,10 +126,12 @@ function Index() {
                   <label>No</label>
                 </div>
               </div>
-              {selectedRadioBtn1 == "Yes" ?
+              {selectedRadioBtn1 == "Yes" ? (
                 <>
                   <div className="inputContainer">
-                    <span>What is the currency agreed for the downpayment?</span>
+                    <span>
+                      What is the currency agreed for the downpayment?
+                    </span>
                     <select name="" className="inputs" id="">
                       <option value="">USD</option>
                       <option value="">INR</option>
@@ -118,14 +139,24 @@ function Index() {
                   </div>
                   <div className="inputContainer">
                     <span>How much is the downpayment amount?</span>
-                    <input type="text" className="inputs" placeholder="500000" />
+                    <input
+                      type="text"
+                      className="inputs"
+                      placeholder="500000"
+                    />
                   </div>
                   <div className="inputContainer">
                     <span>Description for the downpayment</span>
-                    <input type="text" className="inputs" placeholder="Deposit for the shipment" />
+                    <input
+                      type="text"
+                      className="inputs"
+                      placeholder="Deposit for the shipment"
+                    />
                   </div>
                   <div className="inputContainer">
-                    <span>What is the currency agreed for the outstanding amount?</span>
+                    <span>
+                      What is the currency agreed for the outstanding amount?
+                    </span>
                     <select name="" className="inputs" id="">
                       <option value="">USD</option>
                       <option value="">INR</option>
@@ -133,15 +164,29 @@ function Index() {
                   </div>
                   <div className="inputContainer">
                     <span>How much is the outstanding amount?</span>
-                    <input type="text" className="inputs" placeholder="1500000" />
+                    <input
+                      type="text"
+                      className="inputs"
+                      placeholder="1500000"
+                    />
                   </div>
                   <div className="inputContainer">
                     <span>Description for the outstanding amount</span>
-                    <input type="text" className="inputs" placeholder="Description..." />
+                    <input
+                      type="text"
+                      className="inputs"
+                      placeholder="Description..."
+                    />
                   </div>
                   <div className="inputContainer">
-                    <span>Please describe if a payment vehicle/SPV will be utilised.</span>
-                    <input type="text" className="inputs" placeholder="Description..." />
+                    <span>
+                      Please describe if a payment vehicle/SPV will be utilised.
+                    </span>
+                    <input
+                      type="text"
+                      className="inputs"
+                      placeholder="Description..."
+                    />
                   </div>
                   <div className="inputContainer">
                     <span>When is the downpayment expected?</span>
@@ -149,7 +194,11 @@ function Index() {
                   </div>
                   <div className="inputContainer">
                     <span>What repayment structure has been agreed?</span>
-                    <input type="text" className="inputs" placeholder="Structure..." />
+                    <input
+                      type="text"
+                      className="inputs"
+                      placeholder="Structure..."
+                    />
                   </div>
                   <div className="inputContainer">
                     <span>When does the credit period begin?</span>
@@ -157,23 +206,30 @@ function Index() {
                   </div>
                   <div className="inputContainer">
                     <span>Please add additional notes/description</span>
-                    <input type="text" className="inputs" placeholder="Notes..." />
+                    <input
+                      type="text"
+                      className="inputs"
+                      placeholder="Notes..."
+                    />
                   </div>
                   <div className="inputContainer">
                     <span>What are the number of repayment installments?</span>
                     <input type="text" className="inputs" placeholder="6" />
                   </div>
                 </>
-                :
+              ) : (
                 <></>
-              }
+              )}
             </div>
           </div>
           <div className="vLine"></div>
           <div className="ptSM">
             <div className="maintitle">PAYMENT TYPE (SHORT-MEDIUM)</div>
             <div className="radioBack">
-              <span>Is a combination of both short-term and medium-term being offered/requested?</span>
+              <span>
+                Is a combination of both short-term and medium-term being
+                offered/requested?
+              </span>
               <div>
                 <div>
                   <input
@@ -194,11 +250,12 @@ function Index() {
                   <label>No</label>
                 </div>
               </div>
-              {selectedRadioBtn2 == "Yes"
-                ?
+              {selectedRadioBtn2 == "Yes" ? (
                 <>
                   <div className="inputContainer">
-                    <span>What is the currency agreed for the downpayment?</span>
+                    <span>
+                      What is the currency agreed for the downpayment?
+                    </span>
                     <select name="" id="" className="inputs">
                       <option value="">USD</option>
                       <option value="">INR</option>
@@ -206,22 +263,34 @@ function Index() {
                   </div>
                   <div className="inputContainer">
                     <span>How much is the downpayment amount?</span>
-                    <input type="text" className="inputs" placeholder="500000" />
+                    <input
+                      type="text"
+                      className="inputs"
+                      placeholder="500000"
+                    />
                   </div>
                   <div className="inputContainer">
                     <span>Description for the downpayment</span>
-                    <input type="text" className="inputs" placeholder="Deposit for the shipment" />
+                    <input
+                      type="text"
+                      className="inputs"
+                      placeholder="Deposit for the shipment"
+                    />
                   </div>
                   <div className="inputContainer">
                     <span>What is the currency agreed for the balance?</span>
                     <select name="" id="" className="inputs">
-                      <option id="" >USD</option>
-                      <option id="" >INR</option>
+                      <option id="">USD</option>
+                      <option id="">INR</option>
                     </select>
                   </div>
                   <div className="inputContainer">
                     <span>How much is the balance amount?</span>
-                    <input type="text" className="inputs" placeholder="1500000" />
+                    <input
+                      type="text"
+                      className="inputs"
+                      placeholder="1500000"
+                    />
                   </div>
                   <div className="inputContainer">
                     <span>When will the balance be paid?</span>
@@ -229,30 +298,50 @@ function Index() {
                   </div>
                   <div className="inputContainer">
                     <span>Over which payment term were these agreed?</span>
-                    <input type="text" className="inputs" placeholder="Description..." />
+                    <input
+                      type="text"
+                      className="inputs"
+                      placeholder="Description..."
+                    />
                   </div>
                   <div className="inputContainer">
                     <span>Advance payment currency (if any)</span>
                     <select name="" id="" className="inputs">
-                      <option id="" >USD</option>
-                      <option id="" >INR</option>
+                      <option id="">USD</option>
+                      <option id="">INR</option>
                     </select>
                   </div>
                   <div className="inputContainer">
                     <span>Advance payment amount (if any)</span>
-                    <input type="text" className="inputs" placeholder="500000" />
+                    <input
+                      type="text"
+                      className="inputs"
+                      placeholder="500000"
+                    />
                   </div>
                   <div className="inputContainer">
                     <span>Advance payment description (if any)</span>
-                    <input type="text" className="inputs" placeholder="Description..." />
+                    <input
+                      type="text"
+                      className="inputs"
+                      placeholder="Description..."
+                    />
                   </div>
                   <div className="inputContainer">
                     <span>Deposit received already?</span>
-                    <input type="text" className="inputs" placeholder="100000" />
+                    <input
+                      type="text"
+                      className="inputs"
+                      placeholder="100000"
+                    />
                   </div>
                   <div className="inputContainer">
                     <span>What is the expected repayment structure?</span>
-                    <input type="text" className="inputs" placeholder="Description..." />
+                    <input
+                      type="text"
+                      className="inputs"
+                      placeholder="Description..."
+                    />
                   </div>
                   <div className="inputContainer">
                     <span>When is the credit start date?</span>
@@ -260,19 +349,30 @@ function Index() {
                   </div>
                   <div className="inputContainer">
                     <span>Are there any special structures agreed?</span>
-                    <input type="text" className="inputs" placeholder="Description..." />
+                    <input
+                      type="text"
+                      className="inputs"
+                      placeholder="Description..."
+                    />
                   </div>
                   <div className="inputContainer">
                     <span>What are the number of repayment installments?</span>
                     <input type="text" className="inputs" placeholder="6" />
                   </div>
                   <div className="inputContainer">
-                    <span>Please describe if a payment vehicle will be utilised</span>
-                    <input type="text" className="inputs" placeholder="Description..." />
+                    <span>
+                      Please describe if a payment vehicle will be utilised
+                    </span>
+                    <input
+                      type="text"
+                      className="inputs"
+                      placeholder="Description..."
+                    />
                   </div>
                 </>
-                :
-                <></>}
+              ) : (
+                <></>
+              )}
             </div>
           </div>
         </div>

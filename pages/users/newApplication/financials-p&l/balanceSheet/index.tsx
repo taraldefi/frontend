@@ -6,7 +6,7 @@ function Index() {
     <ApplicationLayout>
       <div className="plContainer">
         <div className="assetsContainer">
-          <div className="maintitle">Assets</div>
+          <div className="maintitle">ASSETS</div>
           <div className="assetsItems">
             <span>Current Assets</span>
             <span>Fixed Assets</span>
