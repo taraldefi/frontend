@@ -2,19 +2,19 @@ import ApplicationLayout from "@components/layouts/new_application_layout";
 import React from "react";
 
 function Index() {
-  const [selectedRadioBtn, setSelectedRadioBtn] = React.useState("No")
+  const [selectedRadioBtn, setSelectedRadioBtn] = React.useState("No");
   const handleRadioClick = (e: React.ChangeEvent<HTMLInputElement>): void =>
     setSelectedRadioBtn(e.currentTarget.value);
-  const [selectedRadioBtn1, setSelectedRadioBtn1] = React.useState("No")
+  const [selectedRadioBtn1, setSelectedRadioBtn1] = React.useState("No");
   const handleRadioClick1 = (e: React.ChangeEvent<HTMLInputElement>): void =>
     setSelectedRadioBtn1(e.currentTarget.value);
-  const [selectedRadioBtn2, setSelectedRadioBtn2] = React.useState("No")
+  const [selectedRadioBtn2, setSelectedRadioBtn2] = React.useState("No");
   const handleRadioClick2 = (e: React.ChangeEvent<HTMLInputElement>): void =>
     setSelectedRadioBtn2(e.currentTarget.value);
   return (
     <ApplicationLayout>
       <div className="ptContainer">
-        <div className="ptDetailsContainer">
+        <div className="ptItemsContainer">
           <div className="ptDetails">
             <div className="maintitle">DETAILS</div>
             <div className="radioBack">
@@ -25,7 +25,7 @@ function Index() {
                     type="radio"
                     name="ptConcludeRadio"
                     value="Yes"
-                  // onChange={}
+                    // onChange={}
                   />
                   <label>Yes</label>
                 </div>
@@ -34,7 +34,7 @@ function Index() {
                     type="radio"
                     name="ptConcludeRadio"
                     value="No"
-                  // onChange={}
+                    // onChange={}
                   />
                   <label>No</label>
                 </div>
@@ -48,7 +48,7 @@ function Index() {
                     type="radio"
                     name="ptRefinancingRadio"
                     value="Yes"
-                  // onChange={}
+                    // onChange={}
                   />
                   <label>Yes</label>
                 </div>
@@ -57,7 +57,7 @@ function Index() {
                     type="radio"
                     name="ptRefinancingRadio"
                     value="No"
-                  // onChange={}
+                    // onChange={}
                   />
                   <label>No</label>
                 </div>
@@ -68,7 +68,10 @@ function Index() {
           <div className="ptInterest">
             <div className="maintitle">INTEREST</div>
             <div className="radioBack">
-              <span>Are you charging your importer interest/have you agreed a premium for extended payment terms?</span>
+              <span>
+                Are you charging your importer interest/have you agreed a
+                premium for extended payment terms?
+              </span>
               <div>
                 <div>
                   <input
@@ -89,23 +92,32 @@ function Index() {
                   <label>No</label>
                 </div>
               </div>
-              {selectedRadioBtn == "Yes" ?
+              {selectedRadioBtn == "Yes" ? (
                 <>
                   <div className="inputContainer">
-                    <span>Which currency is the interest/premium charged in?</span>
+                    <span>
+                      Which currency is the interest/premium charged in?
+                    </span>
                     <select name="" id="" className="inputs">
                       <option value="">USD</option>
                       <option value="">INR</option>
                     </select>
                   </div>
                   <div className="inputContainer">
-                    <span>What is the total value of the interest/premium?</span>
-                    <input type="text" id="percentage" placeholder="10" className="inputs" />
+                    <span>
+                      What is the total value of the interest/premium?
+                    </span>
+                    <input
+                      type="text"
+                      id="percentage"
+                      placeholder="10"
+                      className="inputs"
+                    />
                   </div>
                 </>
-                :
+              ) : (
                 <></>
-              }
+              )}
             </div>
             <div className="radioBack">
               <span>Is the interest rate/premium fixed?</span>
@@ -129,14 +141,19 @@ function Index() {
                   <label>No</label>
                 </div>
               </div>
-              {selectedRadioBtn1 == "Yes" ?
+              {selectedRadioBtn1 == "Yes" ? (
                 <div className="inputContainer">
                   <span>Fixed interest rate value</span>
-                  <input type="text" className="inputs" id="percentage" placeholder="10" />
+                  <input
+                    type="text"
+                    className="inputs"
+                    id="percentage"
+                    placeholder="10"
+                  />
                 </div>
-                :
+              ) : (
                 <></>
-              }
+              )}
             </div>
             <div className="radioBack">
               <span>Is the interest rate/premium degressive?</span>
@@ -160,21 +177,31 @@ function Index() {
                   <label>No</label>
                 </div>
               </div>
-              {selectedRadioBtn2 == "Yes" ?
+              {selectedRadioBtn2 == "Yes" ? (
                 <div className="inputContainer">
                   <span>Degressiv interest rate description</span>
-                  <input type="text" className="inputs" placeholder="Degressiv interest rate description" />
+                  <input
+                    type="text"
+                    className="inputs"
+                    placeholder="Degressiv interest rate description"
+                  />
                 </div>
-                :
+              ) : (
                 <></>
-              }
+              )}
             </div>
           </div>
           <div className="vLine"></div>
           <div className="ptVID">
             <div className="maintitle">VARIABLE INTEREST DESCRIPTION</div>
-            <span>Provide description regarding the variable interest/premium</span>
-            <input type="text" className="inputs" placeholder="Variable interest..." />
+            <span>
+              Provide description regarding the variable interest/premium
+            </span>
+            <input
+              type="text"
+              className="inputs"
+              placeholder="Variable interest..."
+            />
           </div>
         </div>
       </div>
