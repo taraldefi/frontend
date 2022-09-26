@@ -22,6 +22,7 @@ import "@styles/applicationSecurity.scss";
 import "@styles/financialsPL.scss";
 import "@styles/transactionNewApp.scss";
 import "@styles/importerInfo.scss";
+import "@styles/paymentTerms.scss";
 import "@styles/scss/styles.scss";
 import type { AppProps } from "next/app";
 import FormModal from "@components/modal/entityFormModal";
