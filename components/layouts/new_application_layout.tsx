@@ -1,4 +1,5 @@
 import ApplicationLeftMenu from "@components/applicationLeftMenu";
+import BottomBar from "@components/newApplicationBottom";
 import React from "react";
 import LeftMenu from "../leftMenu";
 import Layout from "./layout";
@@ -9,10 +10,13 @@ interface LayoutProps {
 
 const ApplicationLayout = ({ children }: LayoutProps) => {
   return (
-    <Layout>
-      <ApplicationLeftMenu></ApplicationLeftMenu>
-      <div className="mainBody">{children}</div>
-    </Layout>
+    <>
+      <Layout>
+        <ApplicationLeftMenu></ApplicationLeftMenu>
+        <div className="mainBodyIn">{children}<BottomBar></BottomBar></div>
+      </Layout>
+
+    </>
   );
 };
 

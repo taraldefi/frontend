@@ -2,6 +2,7 @@ import ApplicationLayout from "@components/layouts/new_application_layout";
 import React from "react";
 
 function index() {
+  const currentYear = new Date().getFullYear();
   return (
     <ApplicationLayout>
       <div className="plContainer">
@@ -27,7 +28,7 @@ function index() {
         </div>
         <div className="vLine"></div>
         <div className="currentYear">
-          <div className="maintitle">2022 (Current Year)</div>
+          <div className="maintitle">{currentYear} (Current Year)</div>
           <div className="currentYearItems">
             <input
               type="text"
@@ -97,7 +98,7 @@ function index() {
         <div className="vLine"></div>
         <div className="prevYear1">
           <div className="currentYear">
-            <div className="maintitle">2021</div>
+            <div className="maintitle">{currentYear-1}</div>
             <div className="currentYearItems">
               <input
                 type="text"
@@ -168,7 +169,7 @@ function index() {
         <div className="vLine"></div>
         <div className="prevYear2">
           <div className="currentYear">
-            <div className="maintitle">2020</div>
+            <div className="maintitle">{currentYear-2}</div>
             <div className="currentYearItems">
               <input
                 type="text"

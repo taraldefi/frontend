@@ -5,6 +5,7 @@ import Button from "@components/widgets/button";
 import AppContext from "@components/appContext";
 import { useContext } from "react";
 import { globalState } from "../../types/global";
+import SecondButton from "@components/widgets/buttonSecondary";
 
 function TopBarNav() {
   const router = useRouter();
@@ -30,18 +31,26 @@ function TopBarNav() {
     <div className="topbarLower">
       {router.asPath == "/users/admin" || router.asPath == "/users/view" ? (
         <div className="entityContent">
-          <input
-            type="text"
-            placeholder="Search by name or number..."
-            className="inputs"
-          ></input>
-          <Button
-            title={"New Entity"}
-            onClick={() => {
-              console.log("debug 1:", open);
-              myContext.setModal(!myContext.modal);
-            }}
-          />
+          {router.asPath == "/users/admin" ?
+            <div className="entitySearch"><input
+              type="text"
+              placeholder="Search by name or number..."
+              className="inputs"
+            ></input></div>
+            :
+            <div className="viewEntitySelect">
+              <select name="" id="" className="inputs">
+                <option value="">Entity Name</option>
+              </select>
+            </div>
+          }
+          <SecondButton title={"New Entity"} onClick={() => {
+            console.log("debug 1:", open);
+            myContext.setModal(!myContext.modal);
+          }}></SecondButton>
+          <Button title={"New Application"} onClick={function (): void {
+            router.push("/users/newApplication/exporterInfo")
+          }}></Button>
         </div>
       ) : (
         <div className="contents">

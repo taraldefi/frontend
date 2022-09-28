@@ -25,7 +25,7 @@ function Index() {
                     type="radio"
                     name="ptConcludeRadio"
                     value="Yes"
-                  // onChange={}
+                    // onChange={}
                   />
                   <label>Yes</label>
                 </div>
@@ -34,7 +34,7 @@ function Index() {
                     type="radio"
                     name="ptConcludeRadio"
                     value="No"
-                  // onChange={}
+                    // onChange={}
                   />
                   <label>No</label>
                 </div>
@@ -48,7 +48,7 @@ function Index() {
                     type="radio"
                     name="ptRefinancingRadio"
                     value="Yes"
-                  // onChange={}
+                    // onChange={}
                   />
                   <label>Yes</label>
                 </div>
@@ -57,7 +57,7 @@ function Index() {
                     type="radio"
                     name="ptRefinancingRadio"
                     value="No"
-                  // onChange={}
+                    // onChange={}
                   />
                   <label>No</label>
                 </div>
