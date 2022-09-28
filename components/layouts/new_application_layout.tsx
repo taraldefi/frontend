@@ -13,9 +13,11 @@ const ApplicationLayout = ({ children }: LayoutProps) => {
     <>
       <Layout>
         <ApplicationLeftMenu></ApplicationLeftMenu>
-        <div className="mainBodyIn">{children}<BottomBar></BottomBar></div>
+        <div className="mainBodyIn">
+          {children}
+          <BottomBar></BottomBar>
+        </div>
       </Layout>
-
     </>
   );
 };

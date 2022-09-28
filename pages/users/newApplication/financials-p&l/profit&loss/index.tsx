@@ -98,7 +98,7 @@ function index() {
         <div className="vLine"></div>
         <div className="prevYear1">
           <div className="currentYear">
-            <div className="maintitle">{currentYear-1}</div>
+            <div className="maintitle">{currentYear - 1}</div>
             <div className="currentYearItems">
               <input
                 type="text"
@@ -169,7 +169,7 @@ function index() {
         <div className="vLine"></div>
         <div className="prevYear2">
           <div className="currentYear">
-            <div className="maintitle">{currentYear-2}</div>
+            <div className="maintitle">{currentYear - 2}</div>
             <div className="currentYearItems">
               <input
                 type="text"

@@ -98,7 +98,7 @@ function Summary() {
               <span>CONTRACT STATUS</span>
               <div className="header">
                 <PortalIcons icon="checkBox" selected={false} />
-                <span>contact Signed</span>
+                <span>Contract Signed</span>
               </div>
             </div>
           </div>

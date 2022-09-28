@@ -31,26 +31,34 @@ function TopBarNav() {
     <div className="topbarLower">
       {router.asPath == "/users/admin" || router.asPath == "/users/view" ? (
         <div className="entityContent">
-          {router.asPath == "/users/admin" ?
-            <div className="entitySearch"><input
-              type="text"
-              placeholder="Search by name or number..."
-              className="inputs"
-            ></input></div>
-            :
+          {router.asPath == "/users/admin" ? (
+            <div className="entitySearch">
+              <input
+                type="text"
+                placeholder="Search by name or number..."
+                className="inputs"
+              ></input>
+            </div>
+          ) : (
             <div className="viewEntitySelect">
               <select name="" id="" className="inputs">
                 <option value="">Entity Name</option>
               </select>
             </div>
-          }
-          <SecondButton title={"New Entity"} onClick={() => {
-            console.log("debug 1:", open);
-            myContext.setModal(!myContext.modal);
-          }}></SecondButton>
-          <Button title={"New Application"} onClick={function (): void {
-            router.push("/users/newApplication/exporterInfo")
-          }}></Button>
+          )}
+          <SecondButton
+            title={"New Entity"}
+            onClick={() => {
+              console.log("debug 1:", open);
+              myContext.setModal(!myContext.modal);
+            }}
+          ></SecondButton>
+          <Button
+            title={"New Application"}
+            onClick={function (): void {
+              router.push("/users/newApplication/exporterInfo");
+            }}
+          ></Button>
         </div>
       ) : (
         <div className="contents">
