@@ -53,6 +53,11 @@
   transition: 1s ease 0.3s;
 }
 
+.tabs {
+  display: flex;
+  flex-direction: column;
+}
+
 .tab {
   width: 100%;
   height: 134px;
@@ -88,9 +93,30 @@
 .topbarLower {
   padding: 16px;
   border-top: 1px solid #e2e8f065;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: white;
+
+  .newAppBackContainer {
+    padding-left: 40px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    span {
+      font-size: 20px;
+      font-weight: bolder;
+      color: #0d8489;
+    }
+  }
+
+  .userTabItems {
+    display: flex;
+    flex: 0.5;
+  }
 
   .entityContent {
-    float: right;
     display: flex;
     gap: 20px;
     padding-right: 55px;
@@ -145,6 +171,7 @@
 .mainBody {
   display: flex;
   background-color: #f8fafc;
+  flex-direction: row;
 }
 
 .leftMenu {

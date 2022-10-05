@@ -1,0 +1,93 @@
+.kycContainer {
+  width: 100%;
+
+  .vLine {
+    width: 0.1px;
+    height: initial;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin-left: 22px;
+    margin-right: 22px;
+  }
+
+  .mainTitle {
+    font-size: 14px;
+    font-weight: bold;
+    color: #64748b;
+    padding-bottom: 11px;
+  }
+
+  .splitBox {
+    span {
+      color: #475569;
+    }
+
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+  }
+
+  .inputContainer {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+
+    textarea {
+      height: auto;
+    }
+
+    span {
+      font-size: 13.5px;
+      color: #475569;
+    }
+  }
+
+  .inputs {
+    width: 100%;
+    color: #64748b;
+  }
+
+  .genInfo {
+    display: flex;
+    flex-direction: row;
+
+    .infoWrapper {
+      flex: 0.5;
+      display: flex;
+      gap: 10px;
+      flex-direction: column;
+    }
+
+    .branchWrapper {
+      flex: 0.5;
+    }
+
+    .dummyWrapper {
+      flex: 0.5;
+    }
+  }
+
+  .contInfo {
+    display: flex;
+    flex-direction: row;
+
+    .mainWrapper {
+      flex: 0.5;
+      display: flex;
+      gap: 10px;
+      flex-direction: column;
+    }
+
+    .otherWrapper {
+      flex: 0.5;
+      display: flex;
+      gap: 10px;
+      flex-direction: column;
+    }
+
+    .dummyWrapper {
+      flex: 0.5;
+    }
+  }
+}
