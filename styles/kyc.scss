@@ -1,6 +1,28 @@
 .kycContainer {
   width: 100%;
 
+  .outerContainerKyc {
+    display: flex;
+    flex-direction: row;
+
+    .InnerContainer1 {
+      flex: 0.5;
+      display: flex;
+      gap: 10px;
+      flex-direction: column;
+    }
+    .InnerContainer2 {
+      flex: 0.5;
+      display: flex;
+      gap: 10px;
+      flex-direction: column;
+    }
+
+    .dummyWrapper {
+      flex: 0.5;
+    }
+  }
+
   .vLine {
     width: 0.1px;
     height: initial;
@@ -80,7 +102,8 @@
           justify-content: flex-end;
           padding-right: 30px;
           padding-top: 15px;
-          .btn_secondary{
+
+          .btn_secondary {
             border-radius: 0px;
             font-weight: bold;
             color: #000;

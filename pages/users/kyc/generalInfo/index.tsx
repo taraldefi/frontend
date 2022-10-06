@@ -76,10 +76,15 @@ function index() {
                   </div>
                   <div className="inputContainer">
                     <span>Headquarters Location</span>
-                    <div className="specialWrapper"><select className="inputs" name="" id="">
-                      <option value="">Berlin</option>
-                    </select>
-                      <PortalIcons selected={false} icon={"delete"}></PortalIcons></div>
+                    <div className="specialWrapper">
+                      <select className="inputs" name="" id="">
+                        <option value="">Berlin</option>
+                      </select>
+                      <PortalIcons
+                        selected={false}
+                        icon={"delete"}
+                      ></PortalIcons>
+                    </div>
                   </div>
                 </div>
                 <div className="splitBox">
@@ -91,17 +96,27 @@ function index() {
                   </div>
                   <div className="inputContainer">
                     <span>Headquarters Location</span>
-                    <div className="specialWrapper"><select className="inputs" name="" id="">
-                      <option value="">Parice</option>
-                    </select>
-                      <PortalIcons selected={false} icon={"delete"}></PortalIcons></div>
+                    <div className="specialWrapper">
+                      <select className="inputs" name="" id="">
+                        <option value="">Parice</option>
+                      </select>
+                      <PortalIcons
+                        selected={false}
+                        icon={"delete"}
+                      ></PortalIcons>
+                    </div>
                   </div>
                 </div>
               </div>
               <div className="buttonContainer">
-                <SecondButton title={"+ New Branch"} onClick={function (event: React.MouseEvent<HTMLElement, MouseEvent>): void {
-                  throw new Error("Function not implemented.");
-                }}></SecondButton>
+                <SecondButton
+                  title={"+ New Branch"}
+                  onClick={function (
+                    event: React.MouseEvent<HTMLElement, MouseEvent>
+                  ): void {
+                    throw new Error("Function not implemented.");
+                  }}
+                ></SecondButton>
               </div>
             </div>
           </div>
