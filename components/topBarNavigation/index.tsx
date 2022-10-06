@@ -67,7 +67,7 @@ function TopBarNav() {
       ) : (
         <></>
       )}
-      {router.asPath.split("/")[1] == "users" ? (
+      {router.asPath.split("/")[1] == "users" && router.asPath.split("/")[2] != "admin" && router.asPath.split("/")[2] != "newApplication" ? (
         <div className="userTabItems">
           <div className="contents">
             {TopbarNewData.map((item, index) => {
