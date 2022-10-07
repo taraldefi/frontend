@@ -2,10 +2,33 @@ import { PortalIcons } from "@components/icons";
 import KYCLayout from "@components/layouts/kycLayout";
 import Layout from "@components/layouts/layout";
 import Button from "@components/widgets/button";
+import { useForm, useFieldArray } from "react-hook-form";
 import SecondButton from "@components/widgets/buttonSecondary";
 import React from "react";
 
-function index() {
+function Index() {
+  type FormValues = {
+    branch: {
+      nationality: string;
+      headquaters: string;
+    }[];
+  };
+  const {
+    register,
+    control,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<FormValues>({
+    defaultValues: {
+      branch: [{ nationality: "American", headquaters: "New York" }],
+    },
+    mode: "onBlur",
+  });
+  const { fields, append, remove } = useFieldArray({
+    name: "branch",
+    control,
+  });
+
   return (
     <KYCLayout>
       <div className="kycContainer">
@@ -67,55 +90,59 @@ function index() {
             <div className="mainTitle">BRANCHES</div>
             <div className="allWrapper">
               <div>
-                <div className="splitBox">
-                  <div className="inputContainer">
-                    <span>Nationality</span>
-                    <select className="inputs" name="" id="">
-                      <option value="">Switzerland</option>
-                    </select>
-                  </div>
-                  <div className="inputContainer">
-                    <span>Headquarters Location</span>
-                    <div className="specialWrapper">
-                      <select className="inputs" name="" id="">
-                        <option value="">Berlin</option>
-                      </select>
-                      <PortalIcons
-                        selected={false}
-                        icon={"delete"}
-                      ></PortalIcons>
+                {fields.map((field, index) => {
+                  return (
+                    <div id={field.id} key={index} className="splitBox">
+                      <div className="inputContainer">
+                        <span>Nationality</span>
+                        <select
+                          {...register(`branch.${index}.nationality` as const, {
+                            required: true,
+                          })}
+                          className="inputs"
+                          name=""
+                          id=""
+                        >
+                          <option value="">Switzerland</option>
+                        </select>
+                      </div>
+                      <div className="inputContainer">
+                        <span>Headquarters Location</span>
+                        <div className="specialWrapper">
+                          <select
+                            {...register(
+                              `branch.${index}.headquaters` as const,
+                              {
+                                required: true,
+                              }
+                            )}
+                            className="inputs"
+                            name=""
+                            id=""
+                          >
+                            <option value="">Berlin</option>
+                          </select>
+                          <div onClick={() => remove(index)}>
+                            <PortalIcons
+                              selected={false}
+                              icon={"delete"}
+                            ></PortalIcons>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-                <div className="splitBox">
-                  <div className="inputContainer">
-                    <span>Nationality</span>
-                    <select className="inputs" name="" id="">
-                      <option value="">France</option>
-                    </select>
-                  </div>
-                  <div className="inputContainer">
-                    <span>Headquarters Location</span>
-                    <div className="specialWrapper">
-                      <select className="inputs" name="" id="">
-                        <option value="">Parice</option>
-                      </select>
-                      <PortalIcons
-                        selected={false}
-                        icon={"delete"}
-                      ></PortalIcons>
-                    </div>
-                  </div>
-                </div>
+                  );
+                })}
               </div>
               <div className="buttonContainer">
                 <SecondButton
                   title={"+ New Branch"}
-                  onClick={function (
-                    event: React.MouseEvent<HTMLElement, MouseEvent>
-                  ): void {
-                    throw new Error("Function not implemented.");
-                  }}
+                  onClick={() =>
+                    append({
+                      nationality: "",
+                      headquaters: "",
+                    })
+                  }
                 ></SecondButton>
               </div>
             </div>
@@ -127,4 +154,4 @@ function index() {
   );
 }
 
-export default index;
+export default Index;
