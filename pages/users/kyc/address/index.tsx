@@ -7,7 +7,7 @@ function index() {
     <KYCLayout>
       <div className="kycContainer">
         <div className="outerContainerKyc">
-          <div className="InnerContainer1">
+          <div className="innerContainer1">
             <div className="mainTitle">ADDRESS</div>
             <div className="inputContainer">
               <span>City</span>
@@ -41,7 +41,7 @@ function index() {
             </div>
           </div>
           <div className="vLine"></div>
-          <div className="InnerContainer2">
+          <div className="innerContainer2">
             <div className="mainTitle">ADDITIONAL INFO</div>
             <div className="inputContainer">
               <span>Purpose of required product</span>

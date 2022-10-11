@@ -5,13 +5,14 @@
     display: flex;
     flex-direction: row;
 
-    .InnerContainer1 {
+    .innerContainer1 {
       flex: 0.5;
       display: flex;
       gap: 10px;
       flex-direction: column;
     }
-    .InnerContainer2 {
+
+    .innerContainer2 {
       flex: 0.5;
       display: flex;
       gap: 10px;
@@ -55,10 +56,6 @@
     flex-direction: column;
     gap: 6px;
     width: 100%;
-
-    textarea {
-      height: auto;
-    }
 
     span {
       font-size: 13.5px;

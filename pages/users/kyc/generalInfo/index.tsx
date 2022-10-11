@@ -4,9 +4,21 @@ import Layout from "@components/layouts/layout";
 import Button from "@components/widgets/button";
 import { useForm, useFieldArray } from "react-hook-form";
 import SecondButton from "@components/widgets/buttonSecondary";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 function Index() {
+  const textareaRef = useRef<HTMLTextAreaElement | null>(null);
+  const [value, setValue] = useState<String>();
+  const textAreaChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setValue(event.target.value);
+  };
+  useEffect(() => {
+    if (textareaRef && textareaRef.current) {
+      textareaRef.current.style.height = "0px";
+      const scrollHeight = textareaRef.current.scrollHeight;
+      textareaRef.current.style.height = scrollHeight + "px";
+    }
+  }, [value]);
   type FormValues = {
     branch: {
       nationality: string;
@@ -64,6 +76,8 @@ function Index() {
             <div className="inputContainer">
               <span>Nature of Business</span>
               <textarea
+                ref={textareaRef}
+                onChange={textAreaChange}
                 name=""
                 rows={4}
                 cols={40}
