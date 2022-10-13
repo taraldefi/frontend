@@ -1,5 +1,97 @@
 .kycContainer {
   width: 100%;
+  font-size: 13.5px;
+
+  #greyed {
+    background-color: rgba(203, 213, 225, 0.068);
+  }
+
+  .consentContainer {
+    .mainTitle {
+      color: #475569;
+      font-size: 13px;
+    }
+    .consentInnerItems {
+      .consentInnerWrapper {
+        .consentButtonContainer {
+          display: flex;
+          align-items: center;
+        }
+        padding-top: 8px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+    }
+    margin-top: 30px;
+    padding: 16px;
+    display: flex;
+    background-color: #9797970f;
+    flex-direction: column;
+    gap: 2.5px;
+  }
+
+  .pdfWrapper {
+    .buttonContainer {
+      display: flex;
+      justify-content: flex-end;
+      // padding-right: 30px;
+      padding-top: 15px;
+      font-weight: 600;
+
+      .btn_secondary {
+        border-radius: 0px;
+        font-weight: 600;
+        color: #0f172a;
+        border: 1px solid #e2e8f0;
+      }
+    }
+
+    display: flex;
+    flex-direction: column;
+
+    .pdfContainer {
+      justify-content: space-between;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      background-color: #fff;
+      border-radius: 2px;
+    }
+  }
+
+  .radioBack {
+    padding: 16px 0px 16px 16px;
+    display: flex;
+    background-color: #9797970f;
+    flex-direction: column;
+    gap: 10px;
+    // margin-bottom: 15px;
+
+    .radioBackIn {
+      padding-right: 15px !important;
+    }
+
+    label {
+      font-size: 12px;
+    }
+
+    :nth-child(2) {
+      display: flex;
+      flex-direction: row;
+      gap: 30px;
+
+      :nth-child(n) {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 0px;
+        gap: 6px;
+      }
+    }
+  }
 
   .outerContainerKyc {
     display: flex;
