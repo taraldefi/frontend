@@ -149,3 +149,12 @@ export interface entityTableType {
   maturityDate: string;
   facilityAmount: number;
 }
+export interface applicationTableType {
+  applicationId: number;
+  product: string;
+  dateFrom: string;
+  dateTo: string;
+  importerId: string;
+  importerName: string;
+  status: string;
+}
