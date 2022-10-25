@@ -5,6 +5,31 @@ interface Props {
 }
 function PortalIcons({ selected, icon }: Props): JSX.Element {
   switch (icon.toLowerCase()) {
+    case "right arow":
+      return (
+        <svg
+          width="19"
+          height="18"
+          viewBox="0 0 19 18"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M4.25 9H14.75"
+            stroke="#F8FAFC"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M9.5 3.75L14.75 9L9.5 14.25"
+            stroke="#F8FAFC"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      );
     case "attachments":
       return (
         <svg

@@ -1,0 +1,149 @@
+.accountContainer {
+  display: flex;
+  flex-direction: column;
+
+  .vLine {
+    width: 0.1px;
+    height: initial;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin-left: 22px;
+    margin-right: 22px;
+  }
+
+  .vLineT {
+    width: 0.1px;
+    height: initial;
+    // background-color: rgba(0, 0, 0, 0.1);
+    margin-left: 22px;
+    margin-right: 22px;
+  }
+
+  .mainTitle {
+    font-size: 12px;
+    font-weight: bold;
+    color: #64748b;
+    padding-bottom: 11px;
+  }
+
+  .greened {
+    color: #0d8489;
+  }
+
+  .agreementBox {
+    span {
+      font-size: 12px !important;
+
+      :nth-child(n) {
+        color: #0d8489;
+        font-weight: bold;
+      }
+    }
+
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    padding: 16px 12px 16px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    gap: 10px;
+    margin-bottom: 6px;
+    .iconContainer {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+  .buttonBox {
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100% !important;
+      height: 42px !important;
+      background-color: #0bd7a4;
+      border: 1px solid #0bd7a4;
+      span {
+        // font-weight: bold;
+        font-size: 14px;
+        color: #fff;
+      }
+    }
+  }
+
+  .splitBox {
+    span {
+      color: #475569;
+    }
+
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .inputContainer {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+
+    span {
+      font-size: 13.5px;
+      color: #475569;
+    }
+  }
+
+  .inputs {
+    width: 100%;
+    color: #64748b;
+  }
+
+  .titleWrapper {
+    display: flex;
+    flex-direction: column;
+
+    .titleTop {
+      flex-grow: 1;
+
+      .accMainTitle {
+        font-weight: bolder;
+        font-size: 24px;
+        padding-bottom: 8px;
+      }
+
+      .accSubTitle {
+        color: #475569;
+        font-size: 12px;
+      }
+    }
+
+    .titleBottom {
+      flex-grow: 1;
+      height: 52px;
+    }
+  }
+
+  .contentWrapper {
+    display: flex;
+    flex-direction: row;
+
+    .innerContainer1 {
+      flex: 0.5;
+      display: flex;
+      gap: 10px;
+      flex-direction: column;
+    }
+
+    .innerContainer2 {
+      flex: 0.5;
+      display: flex;
+      gap: 10px;
+      flex-direction: column;
+    }
+
+    .dummyWrapper {
+      flex: 0.5;
+    }
+  }
+}

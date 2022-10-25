@@ -27,6 +27,7 @@ import "@styles/kyc.scss";
 import "@styles/applicationTable.scss";
 import "@styles/scss/styles.scss";
 import "@styles/newLayout.scss";
+import "@styles/auth.scss";
 import type { AppProps } from "next/app";
 import FormModal from "@components/modal/entityFormModal";
 import { useContext } from "react";

@@ -1,107 +1,97 @@
 .ApplicationTable {
-    width: 100%;
-    border: 1px solid #E2E8F0;
-    // padding:20px;
-    margin: 20px 70px 70px 70px;
-    border-radius: 8px;
-    font-size: 14px;
-    contain: content;
+  width: 100%;
+  border: 1px solid #e2e8f0;
+  // padding:20px;
+  margin: 20px 70px 70px 70px;
+  border-radius: 8px;
+  font-size: 14px;
+  contain: content;
 
-    .titleRow {
-        display: grid;
-        grid-template-columns: auto auto auto auto auto auto auto;
-        font-size: 13px;
-        font-weight: bold;
-        color: #475569;
-        background-color: #F8FAFC;
-        // padding: 10px;
-        border-bottom: 1px solid #E2E8F0;
+  .titleRow {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    font-size: 13px;
+    font-weight: bold;
+    color: #475569;
+    background-color: #f8fafc;
+    // padding: 10px;
+    border-bottom: 1px solid #e2e8f0;
 
-        :nth-child(1) {
-            padding: 10px 62px 10px 24px;
-
-        }
-
-        :nth-child(2) {
-            padding: 10px 230px 10px 24px;
-
-        }
-
-        :nth-child(3) {
-            padding: 10px 75px 10px 24px;
-
-        }
-
-        :nth-child(4) {
-            padding: 10px 86px 10px 24px;
-
-        }
-
-        :nth-child(5) {
-            padding: 10px 75px 10px 24px;
-
-        }
-
-        :nth-child(6) {
-            padding: 10px 90px 10px 24px;
-
-        }
-
-        :nth-child(7) {
-            padding: 10px 142px 10px 24px;
-
-        }
+    :nth-child(1) {
+      padding: 10px 62px 10px 24px;
     }
 
-    .tableContent {
-        display: grid;
-        grid-template-columns: auto auto auto auto auto auto auto;
-        background-color: #fff;
-        height: 70px;
-        align-items: center;
-        border-bottom: 1px solid #E2E8F0;
-        // justify-content: space-between;
-
-        :nth-child(1) {
-            width: 200px;
-            padding-left: 24px;
-
-        }
-
-        :nth-child(2) {
-            width: 305px;
-            contain: content;
-        }
-
-        :nth-child(3) {
-            width: 157px;
-            padding-left: 5px;
-        }
-
-        :nth-child(4) {
-            width: 180px;
-            padding-left: 20px;
-
-        }
-
-        :nth-child(5) {
-            width: 180px;
-            padding-left: 5px;
-        }
-
-        :nth-child(6) {
-            width: 212px;
-            contain: content;
-            margin-right: 9px;
-        }
-
-        :nth-child(7) {
-            width: 180px;
-
-        }
-
-        .appTableItems {
-            font-weight: bold;
-        }
+    :nth-child(2) {
+      padding: 10px 230px 10px 24px;
     }
+
+    :nth-child(3) {
+      padding: 10px 75px 10px 24px;
+    }
+
+    :nth-child(4) {
+      padding: 10px 86px 10px 24px;
+    }
+
+    :nth-child(5) {
+      padding: 10px 75px 10px 24px;
+    }
+
+    :nth-child(6) {
+      padding: 10px 90px 10px 24px;
+    }
+
+    :nth-child(7) {
+      padding: 10px 142px 10px 24px;
+    }
+  }
+
+  .tableContent {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    background-color: #fff;
+    height: 70px;
+    align-items: center;
+    border-bottom: 1px solid #e2e8f0;
+    // justify-content: space-between;
+
+    :nth-child(1) {
+      width: 200px;
+      padding-left: 24px;
+    }
+
+    :nth-child(2) {
+      width: 305px;
+      contain: content;
+    }
+
+    :nth-child(3) {
+      width: 157px;
+      padding-left: 5px;
+    }
+
+    :nth-child(4) {
+      width: 180px;
+      padding-left: 20px;
+    }
+
+    :nth-child(5) {
+      width: 180px;
+      padding-left: 5px;
+    }
+
+    :nth-child(6) {
+      width: 212px;
+      contain: content;
+      margin-right: 9px;
+    }
+
+    :nth-child(7) {
+      width: 180px;
+    }
+
+    .appTableItems {
+      font-weight: bold;
+    }
+  }
 }
