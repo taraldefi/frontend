@@ -6,8 +6,8 @@
     width: 0.1px;
     height: initial;
     background-color: rgba(0, 0, 0, 0.1);
-    margin-left: 22px;
-    margin-right: 22px;
+    margin-left: 24px;
+    margin-right: 24px;
   }
 
   .vLineT {
@@ -47,12 +47,14 @@
     border-radius: 4px;
     gap: 10px;
     margin-bottom: 6px;
+
     .iconContainer {
       display: flex;
       flex-direction: row;
       align-items: center;
     }
   }
+
   .buttonBox {
     .btn {
       display: flex;
@@ -62,8 +64,9 @@
       height: 42px !important;
       background-color: #0bd7a4;
       border: 1px solid #0bd7a4;
+
       span {
-        // font-weight: bold;
+        font-weight: bold;
         font-size: 14px;
         color: #fff;
       }
@@ -119,8 +122,17 @@
     }
 
     .titleBottom {
+      width: max-content;
+      padding: 10px;
       flex-grow: 1;
-      height: 52px;
+      height: 32px;
+      color: #475569;
+      font-size: 12px;
+      background-color: #4755691a;
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+      margin-bottom: 20px;
     }
   }
 
@@ -144,6 +156,36 @@
 
     .dummyWrapper {
       flex: 0.5;
+    }
+  }
+
+  .innerContainer1 {
+    .inputContainer {
+      .btn {
+        span {
+          font-weight: bold;
+          color: #1d4ed8;
+        }
+
+        svg {
+          width: 15px;
+        }
+
+        justify-content: center;
+        width: 100% !important;
+        border: 2px solid #1d4ed8;
+        background-color: rgba(255, 255, 255, 0);
+      }
+    }
+  }
+  .fgP {
+    .inputContainer {
+      span {
+        font-weight: bolder;
+        color: #1d4ed8;
+        font-size: 12px;
+        margin-top: -8px;
+      }
     }
   }
 }
