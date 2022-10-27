@@ -121,6 +121,11 @@
       }
     }
 
+    .titleBottomR {
+      flex-grow: 1;
+      height: 32px;
+    }
+
     .titleBottom {
       width: max-content;
       padding: 10px;
@@ -178,6 +183,7 @@
       }
     }
   }
+
   .fgP {
     .inputContainer {
       span {

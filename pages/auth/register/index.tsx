@@ -16,7 +16,7 @@ function Index() {
               Enter you information to create a new account with the platform.
             </div>
           </div>
-          <div className="titleBottom"></div>
+          <div className="titleBottomR"></div>
         </div>
         <div className="contentWrapper">
           <div className="innerContainer1">
