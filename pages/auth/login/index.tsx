@@ -1,8 +1,30 @@
 import AuthLayout from "@components/layouts/auth_layout";
 import ButtonIcon from "@components/widgets/buttonWithIcon";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'
 import React from "react";
+import { SubmitHandler, useForm } from "react-hook-form";
 
 function Index() {
+
+  const [visible, setVisisblity] = React.useState(false);
+  const Icon = <FontAwesomeIcon icon={visible ? faEye : faEyeSlash} onClick={() => { setVisisblity(!visible) }} />
+  const InputType = visible ? "text" : "password";
+
+
+  const onSubmit: SubmitHandler<Inputs> = data => console.log(data)
+  type Inputs = {
+    email: string,
+    password: string,
+  };
+  const { register, handleSubmit, formState: { errors } } = useForm<Inputs>(
+    {
+      defaultValues: {
+        email: "",
+        password: "",
+      }
+    }
+  );
   return (
     <AuthLayout>
       <div className="accountContainer">
@@ -20,24 +42,32 @@ function Index() {
           </div>
         </div>
         <div className="contentWrapper">
-          <div className="innerContainer1">
+          <form onSubmit={handleSubmit(onSubmit)} className="innerContainer1" >
             <div className="mainTitle">ACCOUNT DETAILS</div>
             <div className="inputContainer">
               <span>Email</span>
               <input
                 type="email"
-                className="inputs"
+                className={errors.email ? "inputsRed" : "inputs"}
                 placeholder="Email address..."
+                {...register("email", { required: true })}
               />
             </div>
             <div className="inputContainer">
               <span>Password</span>
               <input
-                type="password"
-                className="inputs"
+                type={InputType}
+                className={errors.password ? "inputsRed" : "inputs"}
                 placeholder="Enter password..."
+                {...register("password", { required: true })}
               />
+              <div className="parent"><div className="iconPassword">{Icon}</div></div>
             </div>
+            {
+              (errors.password || errors.email) && (<div className="inputContainer">
+                <div className="errorMessage">Please fill all the required fields.</div>
+              </div>)
+            }
             <div className="inputContainer">
               <ButtonIcon title={"Send OTP"} icon={"lock"}></ButtonIcon>
             </div>
@@ -46,7 +76,7 @@ function Index() {
                 <span>FORGOT PASSWORD</span>
               </div>
             </div>
-          </div>
+          </form>
           <div className="vLine"></div>
           <div className="innerContainer2">
             <div className="mainTitle">OTP</div>

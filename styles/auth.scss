@@ -194,4 +194,32 @@
       }
     }
   }
+
+  .errorMessage {
+    background-color: #f9000023;
+    color: #f84141;
+    padding: 10px 8px 10px 8px;
+    font-size: 12px;
+    width: fit-content;
+  }
+
+  .inputsRed {
+    font-family: inter;
+    padding: 10px;
+    width: 100%;
+    height: 44px;
+    color: black;
+    border-radius: 4px;
+    border: 1.5px solid #df1818;
+  }
+}
+
+.parent {
+  position: relative;
+
+  .iconPassword {
+    position: absolute;
+    bottom: 19px;
+    left: 300px;
+  }
 }
