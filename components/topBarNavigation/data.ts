@@ -31,24 +31,24 @@ export const TopbarNewData = [
     id: 1,
     title: "Overview",
     name: "view",
-    path: "/users/view",
+    path: "/users/exporter/view",
   },
   {
     id: 2,
     title: "Profile",
     name: "profile",
-    path: "/users/profile",
+    path: "/users/exporter/profile",
   },
   {
     id: 3,
     title: "KYC",
     name: "kyc",
-    path: "/users/kyc/generalInfo",
+    path: "/users/exporter/kyc/generalInfo",
   },
   {
     id: 4,
     title: "Applications",
     name: "applications",
-    path: "/users/applications",
+    path: "/users/exporter/applications",
   },
 ];

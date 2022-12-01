@@ -12,21 +12,21 @@ export default function ApplicationLeftMenu() {
         <div
           onClick={(e) => {
             e.preventDefault();
-            router.push("/users/newApplication/exporterInfo");
+            router.push("/users/exporter/newApplication/exporterInfo");
           }}
           className="item"
         >
           <PortalIcons
             icon={"Exporter Info"}
             selected={
-              router.asPath == "/users/newApplication/exporterInfo"
+              router.asPath == "/users/exporter/newApplication/exporterInfo"
                 ? true
                 : false
             }
           />
           <span
             className={
-              router.asPath == "/users/newApplication/exporterInfo"
+              router.asPath == "/users/exporter/newApplication/exporterInfo"
                 ? "selected"
                 : ""
             }
@@ -37,7 +37,7 @@ export default function ApplicationLeftMenu() {
         <div
           onClick={(e) => {
             e.preventDefault();
-            // router.push("/users/newApplication/financials-p&l/profit&loss");
+            // router.push("/users/exporter/newApplication/financials-p&l/profit&loss");
           }}
           className="item"
         >
@@ -45,9 +45,9 @@ export default function ApplicationLeftMenu() {
             icon={"Financials - P&L"}
             selected={
               router.asPath ==
-                "/users/newApplication/financials-p&l/profit&loss" ||
+                "/users/exporter/newApplication/financials-p&l/profit&loss" ||
               router.asPath ==
-                "/users/newApplication/financials-p&l/balanceSheet" ||
+                "/users/exporter/newApplication/financials-p&l/balanceSheet" ||
               router.asPath == "/users/newApplication/financials-p&l/cashFlow"
                 ? true
                 : false
@@ -57,10 +57,10 @@ export default function ApplicationLeftMenu() {
             <span
               className={
                 router.asPath ==
-                  "/users/newApplication/financials-p&l/profit&loss" ||
+                  "/users/exporter/newApplication/financials-p&l/profit&loss" ||
                 router.asPath ==
-                  "/users/newApplication/financials-p&l/balanceSheet" ||
-                router.asPath == "/users/newApplication/financials-p&l/cashFlow"
+                  "/users/exporter/newApplication/financials-p&l/balanceSheet" ||
+                router.asPath == "/users/exporter/newApplication/financials-p&l/cashFlow"
                   ? "selected"
                   : ""
               }
@@ -71,12 +71,12 @@ export default function ApplicationLeftMenu() {
               <span
                 onClick={(e) => {
                   router.push(
-                    "/users/newApplication/financials-p&l/profit&loss"
+                    "/users/exporter/newApplication/financials-p&l/profit&loss"
                   );
                 }}
                 className={
                   router.asPath ==
-                  "/users/newApplication/financials-p&l/profit&loss"
+                  "/users/exporter/newApplication/financials-p&l/profit&loss"
                     ? "selectedSub"
                     : ""
                 }
@@ -86,12 +86,12 @@ export default function ApplicationLeftMenu() {
               <span
                 onClick={(e) => {
                   router.push(
-                    "/users/newApplication/financials-p&l/balanceSheet"
+                    "/users/exporter/newApplication/financials-p&l/balanceSheet"
                   );
                 }}
                 className={
                   router.asPath ==
-                  "/users/newApplication/financials-p&l/balanceSheet"
+                  "/users/exporter/newApplication/financials-p&l/balanceSheet"
                     ? "selectedSub"
                     : ""
                 }
@@ -101,11 +101,11 @@ export default function ApplicationLeftMenu() {
               <span
                 onClick={(e) => {
                   console.log(router.asPath);
-                  router.push("/users/newApplication/financials-p&l/cashFlow");
+                  router.push("/users/exporter/newApplication/financials-p&l/cashFlow");
                 }}
                 className={
                   router.asPath ==
-                  "/users/newApplication/financials-p&l/cashFlow"
+                  "/users/exporter/newApplication/financials-p&l/cashFlow"
                     ? "selectedSub"
                     : ""
                 }
@@ -128,15 +128,15 @@ export default function ApplicationLeftMenu() {
             icon={"Transaction Details"}
             selected={
               router.asPath ==
-              "/users/newApplication/transactionDetails/projectDetails"
+              "/users/exporter/newApplication/transactionDetails/projectDetails"
                 ? true
                 : false ||
                   router.asPath ==
-                    "/users/newApplication/transactionDetails/contactAndDelivery"
+                    "/users/exporter/newApplication/transactionDetails/contactAndDelivery"
                 ? true
                 : false ||
                   router.asPath ==
-                    "/users/newApplication/transactionDetails/additionalInfo"
+                    "/users/exporter/newApplication/transactionDetails/additionalInfo"
                 ? true
                 : false
             }
@@ -145,15 +145,15 @@ export default function ApplicationLeftMenu() {
             <span
               className={
                 router.asPath ==
-                "/users/newApplication/transactionDetails/projectDetails"
+                "/users/exporter/newApplication/transactionDetails/projectDetails"
                   ? "selected"
                   : "" ||
                     router.asPath ==
-                      "/users/newApplication/transactionDetails/contactAndDelivery"
+                      "/users/exporter/newApplication/transactionDetails/contactAndDelivery"
                   ? "selected"
                   : "" ||
                     router.asPath ==
-                      "/users/newApplication/transactionDetails/additionalInfo"
+                      "/users/exporter/newApplication/transactionDetails/additionalInfo"
                   ? "selected"
                   : ""
               }
@@ -165,12 +165,12 @@ export default function ApplicationLeftMenu() {
                 onClick={(e) => {
                   e.preventDefault();
                   router.push(
-                    "/users/newApplication/transactionDetails/projectDetails"
+                    "/users/exporter/newApplication/transactionDetails/projectDetails"
                   );
                 }}
                 className={
                   router.asPath ==
-                  "/users/newApplication/transactionDetails/projectDetails"
+                  "/users/exporter/newApplication/transactionDetails/projectDetails"
                     ? "selectedSub"
                     : ""
                 }
@@ -181,12 +181,12 @@ export default function ApplicationLeftMenu() {
                 onClick={(e) => {
                   e.preventDefault();
                   router.push(
-                    "/users/newApplication/transactionDetails/contactAndDelivery"
+                    "/users/exporter/newApplication/transactionDetails/contactAndDelivery"
                   );
                 }}
                 className={
                   router.asPath ==
-                  "/users/newApplication/transactionDetails/contactAndDelivery"
+                  "/users/exporter/newApplication/transactionDetails/contactAndDelivery"
                     ? "selectedSub"
                     : ""
                 }
@@ -197,12 +197,12 @@ export default function ApplicationLeftMenu() {
                 onClick={(e) => {
                   e.preventDefault();
                   router.push(
-                    "/users/newApplication/transactionDetails/additionalInfo"
+                    "/users/exporter/newApplication/transactionDetails/additionalInfo"
                   );
                 }}
                 className={
                   router.asPath ==
-                  "/users/newApplication/transactionDetails/additionalInfo"
+                  "/users/exporter/newApplication/transactionDetails/additionalInfo"
                     ? "selectedSub"
                     : ""
                 }
@@ -222,18 +222,18 @@ export default function ApplicationLeftMenu() {
           <PortalIcons
             icon={"Importer Info"}
             selected={
-              router.asPath == "/users/newApplication/importerInfo/information"
+              router.asPath == "/users/exporter/newApplication/importerInfo/information"
                 ? true
                 : false ||
                   router.asPath ==
-                    "/users/newApplication/importerInfo/attachments"
+                    "/users/exporter/newApplication/importerInfo/attachments"
                 ? true
                 : false ||
                   router.asPath ==
-                    "/users/newApplication/importerInfo/relationship"
+                    "/users/exporter/newApplication/importerInfo/relationship"
                 ? true
                 : false ||
-                  router.asPath == "/users/newApplication/importerInfo/business"
+                  router.asPath == "/users/exporter/newApplication/importerInfo/business"
                 ? true
                 : false
             }
@@ -242,12 +242,12 @@ export default function ApplicationLeftMenu() {
             <span
               className={
                 router.asPath ==
-                  "/users/newApplication/importerInfo/information" ||
+                  "/users/exporter/newApplication/importerInfo/information" ||
                 router.asPath ==
-                  "/users/newApplication/importerInfo/attachments" ||
+                  "/users/exporter/newApplication/importerInfo/attachments" ||
                 router.asPath ==
-                  "/users/newApplication/importerInfo/relationship" ||
-                router.asPath == "/users/newApplication/importerInfo/business"
+                  "/users/exporter/newApplication/importerInfo/relationship" ||
+                router.asPath == "/users/exporter/newApplication/importerInfo/business"
                   ? "selected"
                   : ""
               }
@@ -258,11 +258,11 @@ export default function ApplicationLeftMenu() {
               <span
                 onClick={(e) => {
                   e.preventDefault();
-                  router.push("/users/newApplication/importerInfo/information");
+                  router.push("/users/exporter/newApplication/importerInfo/information");
                 }}
                 className={
                   router.asPath ==
-                  "/users/newApplication/importerInfo/information"
+                  "/users/exporter/newApplication/importerInfo/information"
                     ? "selectedSub"
                     : ""
                 }
@@ -272,10 +272,10 @@ export default function ApplicationLeftMenu() {
               <span
                 onClick={(e) => {
                   e.preventDefault();
-                  router.push("/users/newApplication/importerInfo/business");
+                  router.push("/users/exporter/newApplication/importerInfo/business");
                 }}
                 className={
-                  router.asPath == "/users/newApplication/importerInfo/business"
+                  router.asPath == "/users/exporter/newApplication/importerInfo/business"
                     ? "selectedSub"
                     : ""
                 }
@@ -286,12 +286,12 @@ export default function ApplicationLeftMenu() {
                 onClick={(e) => {
                   e.preventDefault();
                   router.push(
-                    "/users/newApplication/importerInfo/relationship"
+                    "/users/exporter/newApplication/importerInfo/relationship"
                   );
                 }}
                 className={
                   router.asPath ==
-                  "/users/newApplication/importerInfo/relationship"
+                  "/users/exporter/newApplication/importerInfo/relationship"
                     ? "selectedSub"
                     : ""
                 }
@@ -301,11 +301,11 @@ export default function ApplicationLeftMenu() {
               <span
                 onClick={(e) => {
                   e.preventDefault();
-                  router.push("/users/newApplication/importerInfo/attachments");
+                  router.push("/users/exporter/newApplication/importerInfo/attachments");
                 }}
                 className={
                   router.asPath ==
-                  "/users/newApplication/importerInfo/attachments"
+                  "/users/exporter/newApplication/importerInfo/attachments"
                     ? "selectedSub"
                     : ""
                 }
@@ -318,18 +318,18 @@ export default function ApplicationLeftMenu() {
         <div
           onClick={(e) => {
             e.preventDefault();
-            router.push("/users/newApplication/paymentTerms/details");
+            router.push("/users/exporter/newApplication/paymentTerms/details");
           }}
           className="item"
         >
           <PortalIcons
             icon={"Importer Info"}
             selected={
-              router.asPath == "/users/newApplication/paymentTerms/details"
+              router.asPath == "/users/exporter/newApplication/paymentTerms/details"
                 ? true
                 : false ||
                   router.asPath ==
-                    "/users/newApplication/paymentTerms/paymentType"
+                    "/users/exporter/newApplication/paymentTerms/paymentType"
                 ? true
                 : false
             }
@@ -337,11 +337,11 @@ export default function ApplicationLeftMenu() {
           <div>
             <span
               className={
-                router.asPath == "/users/newApplication/paymentTerms/details"
+                router.asPath == "/users/exporter/newApplication/paymentTerms/details"
                   ? "selected"
                   : "" ||
                     router.asPath ==
-                      "/users/newApplication/paymentTerms/paymentType"
+                      "/users/exporter/newApplication/paymentTerms/paymentType"
                   ? "selected"
                   : ""
               }
@@ -352,10 +352,10 @@ export default function ApplicationLeftMenu() {
               <span
                 onClick={(e) => {
                   e.preventDefault();
-                  router.push("/users/newApplication/paymentTerms/details");
+                  router.push("/users/exporter/newApplication/paymentTerms/details");
                 }}
                 className={
-                  router.asPath == "/users/newApplication/paymentTerms/details"
+                  router.asPath == "/users/exporter/exporter/newApplication/paymentTerms/details"
                     ? "selectedSub"
                     : ""
                 }
@@ -365,11 +365,11 @@ export default function ApplicationLeftMenu() {
               <span
                 onClick={(e) => {
                   e.preventDefault();
-                  router.push("/users/newApplication/paymentTerms/paymentType");
+                  router.push("/users/exporter/newApplication/paymentTerms/paymentType");
                 }}
                 className={
                   router.asPath ==
-                  "/users/newApplication/paymentTerms/paymentType"
+                  "/users/exporter/newApplication/paymentTerms/paymentType"
                     ? "selectedSub"
                     : ""
                 }
@@ -382,19 +382,19 @@ export default function ApplicationLeftMenu() {
         <div
           onClick={(e) => {
             e.preventDefault();
-            router.push("/users/newApplication/security");
+            router.push("/users/exporter/newApplication/security");
           }}
           className="item"
         >
           <PortalIcons
             icon={"Security"}
             selected={
-              router.asPath == "/users/newApplication/security" ? true : false
+              router.asPath == "/users/exporter/newApplication/security" ? true : false
             }
           />
           <span
             className={
-              router.asPath == "/users/newApplication/security"
+              router.asPath == "/users/exporter/newApplication/security"
                 ? "selected"
                 : ""
             }
@@ -405,19 +405,19 @@ export default function ApplicationLeftMenu() {
         <div
           onClick={(e) => {
             e.preventDefault();
-            router.push("/users/newApplication/closing");
+            router.push("/users/exporter/newApplication/closing");
           }}
           className="item"
         >
           <PortalIcons
             icon={"Closing"}
             selected={
-              router.asPath == "/users/newApplication/closing" ? true : false
+              router.asPath == "/users/exporter/newApplication/closing" ? true : false
             }
           />
           <span
             className={
-              router.asPath == "/users/newApplication/closing" ? "selected" : ""
+              router.asPath == "/users/exporter/newApplication/closing" ? "selected" : ""
             }
           >
             Closing

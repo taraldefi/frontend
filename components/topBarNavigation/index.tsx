@@ -9,14 +9,15 @@ import SecondButton from "@components/widgets/buttonSecondary";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 function TopBarNav() {
+  
   const handleClick1 = (e: any) => {
-    router.push("/users/admin");
+    router.push("/users/exporter");
   };
   const router = useRouter();
   const myContext = useContext<globalState>(AppContext);
 
   const matchPath1 = (item: any) => {
-    const currentRoute = router.asPath.split("/")[2];
+    const currentRoute = router.asPath.split("/")[3];
     console.log(currentRoute);
 
     if (currentRoute === item.name.toLowerCase()) {
@@ -44,7 +45,7 @@ function TopBarNav() {
   };
   console.log(router.asPath);
   const matchPathNewApp = () => {
-    const currentPath = router.asPath.split("/")[2];
+    const currentPath = router.asPath.split("/")[3];
     if (currentPath === "newApplication") {
       return true;
     }
@@ -67,9 +68,8 @@ function TopBarNav() {
       ) : (
         <></>
       )}
-      {router.asPath.split("/")[1] == "users" &&
-      router.asPath.split("/")[2] != "admin" &&
-      router.asPath.split("/")[2] != "newApplication" ? (
+      {router.asPath.split("/")[1] == "users"&&
+      router.asPath.split("/")[3] != "newApplication"  ? (
         <div className="userTabItems">
           <div className="contents">
             {TopbarNewData.map((item, index) => {
@@ -96,11 +96,12 @@ function TopBarNav() {
       ) : (
         <></>
       )}
-      {router.asPath == "/users/admin" || router.asPath == "/users/view" ? (
+      {router.asPath.split("/")[2] == "exporter"&&
+      router.asPath.split("/")[3] != "newApplication" ? (
         <>
           <div className="userTabItems"></div>
           <div className="entityContent">
-            {router.asPath == "/users/admin" ? (
+            {router.asPath == "/users/exporter" ? (
               <div className="entitySearch">
                 <input
                   type="text"
@@ -124,14 +125,12 @@ function TopBarNav() {
             ></SecondButton>
             <Button
               title={"New Application"}
-              onClick={function (): void {
-                router.push("/users/newApplication/exporterInfo");
-              }}
+              onClick={() => myContext.setNewApplicationModal(!myContext.newApplicationModal)}
             ></Button>
           </div>
         </>
       ) : (
-        router.asPath.split("/")[1] == "applications" && (
+        router.asPath.split("/")[3] == "applications" && (
           <div className="contents">
             {TopbarData.map((item, index) => {
               return (

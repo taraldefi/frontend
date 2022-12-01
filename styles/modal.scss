@@ -7,34 +7,43 @@
   position: fixed;
   z-index: 99;
   transition: all 0.5s ease;
+
   &.active {
     left: 65%;
     box-shadow: 3px 18px 36px 100vw rgba(93, 96, 99, 0.42);
     -webkit-box-shadow: 3px 18px 36px 100vw rgba(93, 96, 99, 0.42);
     -moz-box-shadow: 3px 18px 36px 100vw rgba(93, 96, 99, 0.42);
     animation: animate 0.5s ease;
-    -moz-animation: animate 0.4s ease; /* Firefox */
-    -webkit-animation: animate 0.4s ease; /* Safari and Chrome */
+    -moz-animation: animate 0.4s ease;
+    /* Firefox */
+    -webkit-animation: animate 0.4s ease;
+
+    /* Safari and Chrome */
     @keyframes animate {
       from {
         left: 100%;
       }
+
       to {
         left: 65%;
       }
     }
+
     @-moz-keyframes animate {
       from {
         left: 100%;
       }
+
       to {
         left: 65%;
       }
     }
+
     @-webkit-keyframes animate {
       from {
         left: 100%;
       }
+
       to {
         left: 65%;
       }
@@ -293,6 +302,110 @@
         font-size: 15px;
         text-transform: uppercase;
         font-weight: 600;
+      }
+    }
+  }
+}
+
+.newApplicationModal {
+  box-shadow: 3px 18px 36px 100vw rgba(93, 96, 99, 0.42);
+  -webkit-box-shadow: 3px 18px 36px 100vw rgba(93, 96, 99, 0.42);
+  -moz-box-shadow: 3px 18px 36px 100vw rgba(93, 96, 99, 0.42);
+  overflow-y: hidden;
+
+  &.active {
+    width: 42vw;
+    height: 47%;
+    left: 30vw;
+    top: 12.5vw;
+    background-color: #fff;
+    position: fixed;
+    z-index: 99;
+    border-radius: 16px;
+    animation: bounce-in 0.5s ease;
+    -moz-animation: bounce-in 0.5s ease;
+    /* Firefox */
+    -webkit-animation: bounce-in 0.5s ease;
+
+    /* Safari and Chrome */
+    @keyframes bounce-in {
+      0% {
+        opacity: 0;
+        transform: scale(0.3);
+      }
+
+      50% {
+        opacity: 1;
+        transform: scale(1.05);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+  }
+
+  .modalMenue {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    .close {
+      position: relative;
+      color: rgb(78, 78, 78);
+      top: 20px;
+      left: 20px;
+    }
+
+
+
+    .form {
+      width: 70%;
+      gap: 10px;
+      margin: auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      padding-top: 30px;
+
+      .svgContainer {
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 10px;
+      }
+
+      .buttonContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 12px;
+       .btn{
+        width: 107px !important;
+       }
+      }
+
+      .vLine {
+        width: 1.5px;
+        height: initial;
+        position: relative;
+        top: 40px;
+        background-color: rgba(1, 0, 0, 0.1);
+        margin-left: 22px;
+        margin-right: 22px;
+      }
+
+      .header-application {
+        font-weight: bolder;
+        text-align: center;
+      }
+
+      .info-application {
+        font-weight: normal;
+        font-size: 12px;
+        text-align: center;
+        padding-top: 10px;
       }
     }
   }

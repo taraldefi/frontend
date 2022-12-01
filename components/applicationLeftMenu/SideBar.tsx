@@ -10,12 +10,12 @@ export default function SideBar() {
         <MenuItem
           onClick={(e) => {
             e.preventDefault();
-            router.push("/users/newApplication/exporterInfo");
+            router.push("/users/exporter/newApplication/exporterInfo");
           }}
         >
           <PortalIcons
             selected={
-              router.asPath == "/users/newApplication/exporterInfo"
+              router.asPath == "/users/exporter/newApplication/exporterInfo"
                 ? true
                 : false
             }
@@ -27,7 +27,7 @@ export default function SideBar() {
           <PortalIcons
             selected={
               router.asPath ==
-                "/users/newApplication/financials-p&l/profit&loss" ||
+                "/users/exporter/newApplication/financials-p&l/profit&loss" ||
               router.asPath ==
                 "/users/newApplication/financials-p&l/balanceSheet" ||
               router.asPath == "/users/newApplication/financials-p&l/cashFlow"
@@ -41,7 +41,7 @@ export default function SideBar() {
               className="spanItem"
               onClick={(e) => {
                 e.preventDefault();
-                router.push("/users/newApplication/financials-p&l/profit&loss");
+                router.push("/users/exporter/newApplication/financials-p&l/profit&loss");
               }}
             >
               <div className="innerItemWrapper">Profit & Loss</div>
@@ -131,7 +131,7 @@ export default function SideBar() {
                 ? true
                 : false ||
                   router.asPath ==
-                    "/users/newApplication/importerInfo/relationship"
+                    "/users/exporter/newApplication/importerInfo/relationship"
                 ? true
                 : false ||
                   router.asPath == "/users/newApplication/importerInfo/business"
@@ -163,7 +163,7 @@ export default function SideBar() {
               className="spanItem"
               onClick={(e) => {
                 e.preventDefault();
-                router.push("/users/newApplication/importerInfo/relationship");
+                router.push("/users/exporter/newApplication/importerInfo/relationship");
               }}
             >
               <div className="innerItemWrapper">Relationship</div>

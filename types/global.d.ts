@@ -5,6 +5,8 @@ export interface globalState {
   setEditModal: React.Dispatch<React.SetStateAction<boolean>>;
   deleteModal: Boolean;
   setDeleteModal: React.Dispatch<React.SetStateAction<boolean>>;
+  newApplicationModal: Boolean;
+  setNewApplicationModal: React.Dispatch<React.SetStateAction<boolean>>;
   exporter?: String;
   importer?: String;
   date?: String;

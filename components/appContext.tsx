@@ -7,6 +7,8 @@ const AppContext = React.createContext<globalState>({
   setEditModal: () => {},
   deleteModal: false,
   setDeleteModal: () => {},
+  newApplicationModal: false,
+  setNewApplicationModal: () => {},
 });
 
 export default AppContext;
