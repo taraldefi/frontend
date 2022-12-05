@@ -42,3 +42,57 @@ export const SidebarData = [
     path: "/users/exporter/newApplication/closing",
   },
 ];
+export const SidebarDataEx = [
+  {
+    id: 1,
+    title: "Exporter Info",
+    name: "exporterInfo",
+    path: "/users/exporter/quick/exporterInfo",
+  },
+  {
+    id: 2,
+    title: "Importer Info",
+    name: "importerInfo",
+    path: "/users/exporter/quick/importerInfo",
+  },
+  {
+    id: 3,
+    title: "Payment Terms",
+    name: "paymentTerms",
+    path: "/users/exporter/quick/paymentTerms",
+  },
+  {
+    id: 4,
+    title: "Security",
+    name: "security",
+    path: "/users/exporter/quick/security",
+  }
+
+];
+export const SidebarDataIm = [
+  {
+    id: 1,
+    title: "Exporter Info",
+    name: "Your Info",
+    path: "/users/importer/quick/exporterInfo",
+  },
+ 
+  {
+    id: 2,
+    title: "Importer Info",
+    name: "Supplier Info",
+    path: "/users/importer/quick/importerInfo",
+  },
+  {
+    id: 3,
+    title: "Payment Terms",
+    name: "Payment Terms",
+    path: "/users/importer/quick/paymentTerms",
+  },
+  {
+    id: 4,
+    title: "Security",
+    name: "Security",
+    path: "/users/importer/quick/security",
+  }
+];

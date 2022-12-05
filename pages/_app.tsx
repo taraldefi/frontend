@@ -55,7 +55,10 @@ function MyApp({ Component, pageProps }: AppProps) {
   };
   return (
     <AppContext.Provider value={values}>
-      {(values.modal || values.editModal || values.deleteModal||values.newApplicationModal) && (
+      {(values.modal ||
+        values.editModal ||
+        values.deleteModal ||
+        values.newApplicationModal) && (
         <>
           <FormModal
             modal={values.modal}
@@ -73,7 +76,9 @@ function MyApp({ Component, pageProps }: AppProps) {
           ></DeleteModal>
           <NewApplicationModal
             modal={values.newApplicationModal}
-            setModal={() => values.setNewApplicationModal(!values.newApplicationModal)}
+            setModal={() =>
+              values.setNewApplicationModal(!values.newApplicationModal)
+            }
           ></NewApplicationModal>
         </>
       )}

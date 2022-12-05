@@ -9,6 +9,10 @@ type Props = {
   setModal: React.Dispatch<React.SetStateAction<boolean>>;
 };
 function NewApplicationModal({ modal, setModal }: Props) {
+  const nextpath = router.asPath.split("/")[2] == "exporter" ?
+    "/users/exporter/quick/exporterInfo" :
+    router.asPath.split("/")[2] == "importer" ?
+      "/users/importer/quick/exporterInfo":  "";
   return (
     <div className={"newApplicationModal " + (modal && "active")}>
       {modal && (
@@ -32,7 +36,12 @@ function NewApplicationModal({ modal, setModal }: Props) {
                 Add basic application info and fill the rest later.
               </div>
               <div className="buttonContainer">
-                <button className="btn">start</button>
+                <button className="btn"
+                  onClick={() => {
+                    router.push(nextpath.toString());
+                    setModal(false);
+                  }}
+                >start</button>
               </div>
             </div>
             <div className="vLine"></div>
@@ -45,7 +54,15 @@ function NewApplicationModal({ modal, setModal }: Props) {
                 Fill all the forms requirements and info now.
               </div>
               <div className="buttonContainer">
-                <button className="btn" onClick={() => {router.push("/users/exporter/newApplication/exporterInfo");setModal(false)}}>start</button>
+                <button
+                  className="btn"
+                  onClick={() => {
+                    router.push("/users/exporter/newApplication/exporterInfo");
+                    setModal(false);
+                  }}
+                >
+                  start
+                </button>
               </div>
             </div>
           </div>

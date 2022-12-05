@@ -1,5 +1,5 @@
 import React from "react";
-import { SidebarData } from "./data";
+import { SidebarDataEx, SidebarDataIm } from "./data";
 import { PortalIcons } from "../icons";
 import { useRouter } from "next/router";
 
@@ -8,422 +8,513 @@ export default function ApplicationLeftMenu() {
 
   return (
     <div className="leftMenu">
-      <div className="items">
-        <div
-          onClick={(e) => {
-            e.preventDefault();
-            router.push("/users/exporter/newApplication/exporterInfo");
-          }}
-          className="item"
-        >
-          <PortalIcons
-            icon={"Exporter Info"}
-            selected={
-              router.asPath == "/users/exporter/newApplication/exporterInfo"
-                ? true
-                : false
-            }
-          />
-          <span
-            className={
-              router.asPath == "/users/exporter/newApplication/exporterInfo"
-                ? "selected"
-                : ""
-            }
+      {router.asPath.split("/")[3] == "newApplication" ?
+        <div className="items">
+          <div
+            onClick={(e) => {
+              e.preventDefault();
+              router.push("/users/exporter/newApplication/exporterInfo");
+            }}
+            className="item"
           >
-            Exporter Info
-          </span>
-        </div>
-        <div
-          onClick={(e) => {
-            e.preventDefault();
-            // router.push("/users/exporter/newApplication/financials-p&l/profit&loss");
-          }}
-          className="item"
-        >
-          <PortalIcons
-            icon={"Financials - P&L"}
-            selected={
-              router.asPath ==
-                "/users/exporter/newApplication/financials-p&l/profit&loss" ||
-              router.asPath ==
-                "/users/exporter/newApplication/financials-p&l/balanceSheet" ||
-              router.asPath == "/users/newApplication/financials-p&l/cashFlow"
-                ? true
-                : false
-            }
-          />
-          <div>
+            <PortalIcons
+              icon={"Exporter Info"}
+              selected={
+                router.asPath == "/users/exporter/newApplication/exporterInfo"
+                  ? true
+                  : false
+              }
+            />
             <span
               className={
+                router.asPath == "/users/exporter/newApplication/exporterInfo"
+                  ? "selected"
+                  : ""
+              }
+            >
+              Exporter Info
+            </span>
+          </div>
+          <div
+            onClick={(e) => {
+              e.preventDefault();
+              // router.push("/users/exporter/newApplication/financials-p&l/profit&loss");
+            }}
+            className="item"
+          >
+            <PortalIcons
+              icon={"Financials - P&L"}
+              selected={
                 router.asPath ==
                   "/users/exporter/newApplication/financials-p&l/profit&loss" ||
-                router.asPath ==
+                  router.asPath ==
                   "/users/exporter/newApplication/financials-p&l/balanceSheet" ||
-                router.asPath == "/users/exporter/newApplication/financials-p&l/cashFlow"
-                  ? "selected"
-                  : ""
+                  router.asPath == "/users/newApplication/financials-p&l/cashFlow"
+                  ? true
+                  : false
               }
-            >
-              Financials - P&L
-            </span>
-            <div className="subItem">
+            />
+            <div>
               <span
-                onClick={(e) => {
-                  router.push(
-                    "/users/exporter/newApplication/financials-p&l/profit&loss"
-                  );
-                }}
                 className={
                   router.asPath ==
-                  "/users/exporter/newApplication/financials-p&l/profit&loss"
-                    ? "selectedSub"
+                    "/users/exporter/newApplication/financials-p&l/profit&loss" ||
+                    router.asPath ==
+                    "/users/exporter/newApplication/financials-p&l/balanceSheet" ||
+                    router.asPath ==
+                    "/users/exporter/newApplication/financials-p&l/cashFlow"
+                    ? "selected"
                     : ""
                 }
               >
-                Profit & Loss
+                Financials - P&L
               </span>
-              <span
-                onClick={(e) => {
-                  router.push(
-                    "/users/exporter/newApplication/financials-p&l/balanceSheet"
-                  );
-                }}
-                className={
-                  router.asPath ==
-                  "/users/exporter/newApplication/financials-p&l/balanceSheet"
-                    ? "selectedSub"
-                    : ""
-                }
-              >
-                Balance Sheet
-              </span>
-              <span
-                onClick={(e) => {
-                  console.log(router.asPath);
-                  router.push("/users/exporter/newApplication/financials-p&l/cashFlow");
-                }}
-                className={
-                  router.asPath ==
-                  "/users/exporter/newApplication/financials-p&l/cashFlow"
-                    ? "selectedSub"
-                    : ""
-                }
-              >
-                Cash Flow
-              </span>
+              <div className="subItem">
+                <span
+                  onClick={(e) => {
+                    router.push(
+                      "/users/exporter/newApplication/financials-p&l/profit&loss"
+                    );
+                  }}
+                  className={
+                    router.asPath ==
+                      "/users/exporter/newApplication/financials-p&l/profit&loss"
+                      ? "selectedSub"
+                      : ""
+                  }
+                >
+                  Profit & Loss
+                </span>
+                <span
+                  onClick={(e) => {
+                    router.push(
+                      "/users/exporter/newApplication/financials-p&l/balanceSheet"
+                    );
+                  }}
+                  className={
+                    router.asPath ==
+                      "/users/exporter/newApplication/financials-p&l/balanceSheet"
+                      ? "selectedSub"
+                      : ""
+                  }
+                >
+                  Balance Sheet
+                </span>
+                <span
+                  onClick={(e) => {
+                    console.log(router.asPath);
+                    router.push(
+                      "/users/exporter/newApplication/financials-p&l/cashFlow"
+                    );
+                  }}
+                  className={
+                    router.asPath ==
+                      "/users/exporter/newApplication/financials-p&l/cashFlow"
+                      ? "selectedSub"
+                      : ""
+                  }
+                >
+                  Cash Flow
+                </span>
+              </div>
             </div>
           </div>
-        </div>
-        <div
-          onClick={(e) => {
-            e.preventDefault();
-            // router.push(
-            //   "/users/newApplication/transactionDetails/projectDetails"
-            // );
-          }}
-          className="item"
-        >
-          <PortalIcons
-            icon={"Transaction Details"}
-            selected={
-              router.asPath ==
-              "/users/exporter/newApplication/transactionDetails/projectDetails"
-                ? true
-                : false ||
-                  router.asPath ==
-                    "/users/exporter/newApplication/transactionDetails/contactAndDelivery"
-                ? true
-                : false ||
-                  router.asPath ==
-                    "/users/exporter/newApplication/transactionDetails/additionalInfo"
-                ? true
-                : false
-            }
-          />
-          <div>
-            <span
-              className={
+          <div
+            onClick={(e) => {
+              e.preventDefault();
+              // router.push(
+              //   "/users/newApplication/transactionDetails/projectDetails"
+              // );
+            }}
+            className="item"
+          >
+            <PortalIcons
+              icon={"Transaction Details"}
+              selected={
                 router.asPath ==
-                "/users/exporter/newApplication/transactionDetails/projectDetails"
-                  ? "selected"
-                  : "" ||
+                  "/users/exporter/newApplication/transactionDetails/projectDetails"
+                  ? true
+                  : false ||
+                    router.asPath ==
+                    "/users/exporter/newApplication/transactionDetails/contactAndDelivery"
+                    ? true
+                    : false ||
+                      router.asPath ==
+                      "/users/exporter/newApplication/transactionDetails/additionalInfo"
+                      ? true
+                      : false
+              }
+            />
+            <div>
+              <span
+                className={
+                  router.asPath ==
+                    "/users/exporter/newApplication/transactionDetails/projectDetails"
+                    ? "selected"
+                    : "" ||
+                      router.asPath ==
+                      "/users/exporter/newApplication/transactionDetails/contactAndDelivery"
+                      ? "selected"
+                      : "" ||
+                        router.asPath ==
+                        "/users/exporter/newApplication/transactionDetails/additionalInfo"
+                        ? "selected"
+                        : ""
+                }
+              >
+                Transaction Details
+              </span>
+              <div className="subItem">
+                <span
+                  onClick={(e) => {
+                    e.preventDefault();
+                    router.push(
+                      "/users/exporter/newApplication/transactionDetails/projectDetails"
+                    );
+                  }}
+                  className={
+                    router.asPath ==
+                      "/users/exporter/newApplication/transactionDetails/projectDetails"
+                      ? "selectedSub"
+                      : ""
+                  }
+                >
+                  Project Details
+                </span>
+                <span
+                  onClick={(e) => {
+                    e.preventDefault();
+                    router.push(
+                      "/users/exporter/newApplication/transactionDetails/contactAndDelivery"
+                    );
+                  }}
+                  className={
                     router.asPath ==
                       "/users/exporter/newApplication/transactionDetails/contactAndDelivery"
-                  ? "selected"
-                  : "" ||
+                      ? "selectedSub"
+                      : ""
+                  }
+                >
+                  Contract and Delivery
+                </span>
+                <span
+                  onClick={(e) => {
+                    e.preventDefault();
+                    router.push(
+                      "/users/exporter/newApplication/transactionDetails/additionalInfo"
+                    );
+                  }}
+                  className={
                     router.asPath ==
                       "/users/exporter/newApplication/transactionDetails/additionalInfo"
-                  ? "selected"
-                  : ""
-              }
-            >
-              Transaction Details
-            </span>
-            <div className="subItem">
-              <span
-                onClick={(e) => {
-                  e.preventDefault();
-                  router.push(
-                    "/users/exporter/newApplication/transactionDetails/projectDetails"
-                  );
-                }}
-                className={
-                  router.asPath ==
-                  "/users/exporter/newApplication/transactionDetails/projectDetails"
-                    ? "selectedSub"
-                    : ""
-                }
-              >
-                Project Details
-              </span>
-              <span
-                onClick={(e) => {
-                  e.preventDefault();
-                  router.push(
-                    "/users/exporter/newApplication/transactionDetails/contactAndDelivery"
-                  );
-                }}
-                className={
-                  router.asPath ==
-                  "/users/exporter/newApplication/transactionDetails/contactAndDelivery"
-                    ? "selectedSub"
-                    : ""
-                }
-              >
-                Contract and Delivery
-              </span>
-              <span
-                onClick={(e) => {
-                  e.preventDefault();
-                  router.push(
-                    "/users/exporter/newApplication/transactionDetails/additionalInfo"
-                  );
-                }}
-                className={
-                  router.asPath ==
-                  "/users/exporter/newApplication/transactionDetails/additionalInfo"
-                    ? "selectedSub"
-                    : ""
-                }
-              >
-                Additional Info
-              </span>
+                      ? "selectedSub"
+                      : ""
+                  }
+                >
+                  Additional Info
+                </span>
+              </div>
             </div>
           </div>
-        </div>
-        <div
-          onClick={(e) => {
-            e.preventDefault();
-            // router.push("/users/newApplication/importerInfo/information");
-          }}
-          className="item"
-        >
-          <PortalIcons
-            icon={"Importer Info"}
-            selected={
-              router.asPath == "/users/exporter/newApplication/importerInfo/information"
-                ? true
-                : false ||
-                  router.asPath ==
-                    "/users/exporter/newApplication/importerInfo/attachments"
-                ? true
-                : false ||
-                  router.asPath ==
-                    "/users/exporter/newApplication/importerInfo/relationship"
-                ? true
-                : false ||
-                  router.asPath == "/users/exporter/newApplication/importerInfo/business"
-                ? true
-                : false
-            }
-          />
-          <div>
-            <span
-              className={
+          <div
+            onClick={(e) => {
+              e.preventDefault();
+              // router.push("/users/newApplication/importerInfo/information");
+            }}
+            className="item"
+          >
+            <PortalIcons
+              icon={"Importer Info"}
+              selected={
                 router.asPath ==
-                  "/users/exporter/newApplication/importerInfo/information" ||
-                router.asPath ==
-                  "/users/exporter/newApplication/importerInfo/attachments" ||
-                router.asPath ==
-                  "/users/exporter/newApplication/importerInfo/relationship" ||
-                router.asPath == "/users/exporter/newApplication/importerInfo/business"
-                  ? "selected"
-                  : ""
-              }
-            >
-              Importer Info
-            </span>
-            <div className="subItem">
-              <span
-                onClick={(e) => {
-                  e.preventDefault();
-                  router.push("/users/exporter/newApplication/importerInfo/information");
-                }}
-                className={
-                  router.asPath ==
                   "/users/exporter/newApplication/importerInfo/information"
-                    ? "selectedSub"
-                    : ""
-                }
-              >
-                Information
-              </span>
+                  ? true
+                  : false ||
+                    router.asPath ==
+                    "/users/exporter/newApplication/importerInfo/attachments"
+                    ? true
+                    : false ||
+                      router.asPath ==
+                      "/users/exporter/newApplication/importerInfo/relationship"
+                      ? true
+                      : false ||
+                        router.asPath ==
+                        "/users/exporter/newApplication/importerInfo/business"
+                        ? true
+                        : false
+              }
+            />
+            <div>
               <span
-                onClick={(e) => {
-                  e.preventDefault();
-                  router.push("/users/exporter/newApplication/importerInfo/business");
-                }}
-                className={
-                  router.asPath == "/users/exporter/newApplication/importerInfo/business"
-                    ? "selectedSub"
-                    : ""
-                }
-              >
-                Business
-              </span>
-              <span
-                onClick={(e) => {
-                  e.preventDefault();
-                  router.push(
-                    "/users/exporter/newApplication/importerInfo/relationship"
-                  );
-                }}
                 className={
                   router.asPath ==
-                  "/users/exporter/newApplication/importerInfo/relationship"
-                    ? "selectedSub"
+                    "/users/exporter/newApplication/importerInfo/information" ||
+                    router.asPath ==
+                    "/users/exporter/newApplication/importerInfo/attachments" ||
+                    router.asPath ==
+                    "/users/exporter/newApplication/importerInfo/relationship" ||
+                    router.asPath ==
+                    "/users/exporter/newApplication/importerInfo/business"
+                    ? "selected"
                     : ""
                 }
               >
-                Relationship
+                Importer Info
               </span>
-              <span
-                onClick={(e) => {
-                  e.preventDefault();
-                  router.push("/users/exporter/newApplication/importerInfo/attachments");
-                }}
-                className={
-                  router.asPath ==
-                  "/users/exporter/newApplication/importerInfo/attachments"
-                    ? "selectedSub"
-                    : ""
-                }
-              >
-                Attachments
-              </span>
+              <div className="subItem">
+                <span
+                  onClick={(e) => {
+                    e.preventDefault();
+                    router.push(
+                      "/users/exporter/newApplication/importerInfo/information"
+                    );
+                  }}
+                  className={
+                    router.asPath ==
+                      "/users/exporter/newApplication/importerInfo/information"
+                      ? "selectedSub"
+                      : ""
+                  }
+                >
+                  Information
+                </span>
+                <span
+                  onClick={(e) => {
+                    e.preventDefault();
+                    router.push(
+                      "/users/exporter/newApplication/importerInfo/business"
+                    );
+                  }}
+                  className={
+                    router.asPath ==
+                      "/users/exporter/newApplication/importerInfo/business"
+                      ? "selectedSub"
+                      : ""
+                  }
+                >
+                  Business
+                </span>
+                <span
+                  onClick={(e) => {
+                    e.preventDefault();
+                    router.push(
+                      "/users/exporter/newApplication/importerInfo/relationship"
+                    );
+                  }}
+                  className={
+                    router.asPath ==
+                      "/users/exporter/newApplication/importerInfo/relationship"
+                      ? "selectedSub"
+                      : ""
+                  }
+                >
+                  Relationship
+                </span>
+                <span
+                  onClick={(e) => {
+                    e.preventDefault();
+                    router.push(
+                      "/users/exporter/newApplication/importerInfo/attachments"
+                    );
+                  }}
+                  className={
+                    router.asPath ==
+                      "/users/exporter/newApplication/importerInfo/attachments"
+                      ? "selectedSub"
+                      : ""
+                  }
+                >
+                  Attachments
+                </span>
+              </div>
             </div>
           </div>
-        </div>
-        <div
-          onClick={(e) => {
-            e.preventDefault();
-            router.push("/users/exporter/newApplication/paymentTerms/details");
-          }}
-          className="item"
-        >
-          <PortalIcons
-            icon={"Importer Info"}
-            selected={
-              router.asPath == "/users/exporter/newApplication/paymentTerms/details"
-                ? true
-                : false ||
-                  router.asPath ==
+          <div
+            onClick={(e) => {
+              e.preventDefault();
+              router.push("/users/exporter/newApplication/paymentTerms/details");
+            }}
+            className="item"
+          >
+            <PortalIcons
+              icon={"Importer Info"}
+              selected={
+                router.asPath ==
+                  "/users/exporter/newApplication/paymentTerms/details"
+                  ? true
+                  : false ||
+                    router.asPath ==
                     "/users/exporter/newApplication/paymentTerms/paymentType"
-                ? true
-                : false
-            }
-          />
-          <div>
-            <span
-              className={
-                router.asPath == "/users/exporter/newApplication/paymentTerms/details"
-                  ? "selected"
-                  : "" ||
+                    ? true
+                    : false
+              }
+            />
+            <div>
+              <span
+                className={
+                  router.asPath ==
+                    "/users/exporter/newApplication/paymentTerms/details"
+                    ? "selected"
+                    : "" ||
+                      router.asPath ==
+                      "/users/exporter/newApplication/paymentTerms/paymentType"
+                      ? "selected"
+                      : ""
+                }
+              >
+                Payment Terms
+              </span>
+              <div className="subItem">
+                <span
+                  onClick={(e) => {
+                    e.preventDefault();
+                    router.push(
+                      "/users/exporter/newApplication/paymentTerms/details"
+                    );
+                  }}
+                  className={
+                    router.asPath ==
+                      "/users/exporter/exporter/newApplication/paymentTerms/details"
+                      ? "selectedSub"
+                      : ""
+                  }
+                >
+                  Details
+                </span>
+                <span
+                  onClick={(e) => {
+                    e.preventDefault();
+                    router.push(
+                      "/users/exporter/newApplication/paymentTerms/paymentType"
+                    );
+                  }}
+                  className={
                     router.asPath ==
                       "/users/exporter/newApplication/paymentTerms/paymentType"
+                      ? "selectedSub"
+                      : ""
+                  }
+                >
+                  Payment Type
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            onClick={(e) => {
+              e.preventDefault();
+              router.push("/users/exporter/newApplication/security");
+            }}
+            className="item"
+          >
+            <PortalIcons
+              icon={"Security"}
+              selected={
+                router.asPath == "/users/exporter/newApplication/security"
+                  ? true
+                  : false
+              }
+            />
+            <span
+              className={
+                router.asPath == "/users/exporter/newApplication/security"
                   ? "selected"
                   : ""
               }
             >
-              Payment Terms
+              Security
             </span>
-            <div className="subItem">
-              <span
-                onClick={(e) => {
-                  e.preventDefault();
-                  router.push("/users/exporter/newApplication/paymentTerms/details");
-                }}
-                className={
-                  router.asPath == "/users/exporter/exporter/newApplication/paymentTerms/details"
-                    ? "selectedSub"
-                    : ""
-                }
-              >
-                Details
-              </span>
-              <span
-                onClick={(e) => {
-                  e.preventDefault();
-                  router.push("/users/exporter/newApplication/paymentTerms/paymentType");
-                }}
-                className={
-                  router.asPath ==
-                  "/users/exporter/newApplication/paymentTerms/paymentType"
-                    ? "selectedSub"
-                    : ""
-                }
-              >
-                Payment Type
-              </span>
-            </div>
           </div>
-        </div>
-        <div
-          onClick={(e) => {
-            e.preventDefault();
-            router.push("/users/exporter/newApplication/security");
-          }}
-          className="item"
-        >
-          <PortalIcons
-            icon={"Security"}
-            selected={
-              router.asPath == "/users/exporter/newApplication/security" ? true : false
-            }
-          />
-          <span
-            className={
-              router.asPath == "/users/exporter/newApplication/security"
-                ? "selected"
-                : ""
-            }
+          <div
+            onClick={(e) => {
+              e.preventDefault();
+              router.push("/users/exporter/newApplication/closing");
+            }}
+            className="item"
           >
-            Security
-          </span>
-        </div>
-        <div
-          onClick={(e) => {
-            e.preventDefault();
-            router.push("/users/exporter/newApplication/closing");
-          }}
-          className="item"
-        >
-          <PortalIcons
-            icon={"Closing"}
-            selected={
-              router.asPath == "/users/exporter/newApplication/closing" ? true : false
-            }
-          />
-          <span
-            className={
-              router.asPath == "/users/exporter/newApplication/closing" ? "selected" : ""
-            }
-          >
-            Closing
-          </span>
-        </div>
-      </div>
+            <PortalIcons
+              icon={"Closing"}
+              selected={
+                router.asPath == "/users/exporter/newApplication/closing"
+                  ? true
+                  : false
+              }
+            />
+            <span
+              className={
+                router.asPath == "/users/exporter/newApplication/closing"
+                  ? "selected"
+                  : ""
+              }
+            >
+              Closing
+            </span>
+          </div>
+        </div> :
+        (router.asPath.split("/")[2]=="exporter" && router.asPath.split("/")[3]=="quick") ? <div className="itemsNew">
+          
+          {SidebarDataEx.map((item, index) => {
+            return <>
+              <div key={index}
+                onClick={(e) => {
+                  e.preventDefault();
+                  router.push(item.path);
+                }}
+                className="item"
+              >
+                <PortalIcons
+                  icon={item.title}
+                  selected={
+                    router.asPath == item.path
+                      ? true
+                      : false
+                  }
+                />
+                <span
+                  className={
+                    router.asPath == item.path
+                      ? "selected"
+                      : ""
+                  }
+                >
+                  {item.title}
+                </span>
+              </div>
+            </>
+          })}
+        </div> : (router.asPath.split("/")[2]=="importer" && router.asPath.split("/")[3]=="quick") ? <div className="itemsNew">
+        
+          {SidebarDataIm.map((item, index) => {
+            return <>
+              <div key={index}
+                onClick={(e) => {
+                  e.preventDefault();
+                  router.push(item.path);
+                }}
+                className="item"
+              >
+                <PortalIcons
+                  icon={item.title}
+                  selected={
+                    router.asPath == item.path
+                      ? true
+                      : false
+                  }
+                />
+                <span
+                  className={
+                    router.asPath == item.path
+                      ? "selected"
+                      : ""
+                  }
+                >
+                  {item.name}
+                </span>
+              </div>
+            </>
+          })}
+        </div> : <></>
+      }
     </div>
   );
 }

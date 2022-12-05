@@ -26,7 +26,7 @@ export const TopbarData = [
     path: "/tasks",
   },
 ];
-export const TopbarNewData = [
+export const TopbarNewDataEx = [
   {
     id: 1,
     title: "Overview",
@@ -50,5 +50,31 @@ export const TopbarNewData = [
     title: "Applications",
     name: "applications",
     path: "/users/exporter/applications",
+  },
+];
+export const TopbarNewDataIm = [
+  {
+    id: 1,
+    title: "Overview",
+    name: "view",
+    path: "/users/importer/view",
+  },
+  {
+    id: 2,
+    title: "Profile",
+    name: "profile",
+    path: "/users/importer/profile",
+  },
+  {
+    id: 3,
+    title: "KYC",
+    name: "kyc",
+    path: "/users/importer/kyc/generalInfo",
+  },
+  {
+    id: 4,
+    title: "Applications",
+    name: "applications",
+    path: "/users/importer/applications",
   },
 ];

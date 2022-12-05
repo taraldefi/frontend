@@ -41,7 +41,9 @@ export default function SideBar() {
               className="spanItem"
               onClick={(e) => {
                 e.preventDefault();
-                router.push("/users/exporter/newApplication/financials-p&l/profit&loss");
+                router.push(
+                  "/users/exporter/newApplication/financials-p&l/profit&loss"
+                );
               }}
             >
               <div className="innerItemWrapper">Profit & Loss</div>
@@ -163,7 +165,9 @@ export default function SideBar() {
               className="spanItem"
               onClick={(e) => {
                 e.preventDefault();
-                router.push("/users/exporter/newApplication/importerInfo/relationship");
+                router.push(
+                  "/users/exporter/newApplication/importerInfo/relationship"
+                );
               }}
             >
               <div className="innerItemWrapper">Relationship</div>
