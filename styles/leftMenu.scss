@@ -17,9 +17,9 @@
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
   }
-  .spl{
+  .spl {
     justify-content: flex-start !important;
-    display:none;
+    display: none;
   }
   .items {
     width: 177px;
@@ -36,7 +36,7 @@
     .item:hover {
       cursor: pointer;
     }
-    
+
     .item {
       display: flex;
       text-decoration: none;
@@ -75,7 +75,7 @@
   }
   .itemsNew {
     width: 177px;
-    height:calc(100vh - 250px);
+    height: calc(100vh - 250px);
     display: flex;
     flex-direction: column;
     margin-left: 0px;
@@ -89,7 +89,7 @@
     .item:hover {
       cursor: pointer;
     }
-    
+
     .item {
       display: flex;
       text-decoration: none;

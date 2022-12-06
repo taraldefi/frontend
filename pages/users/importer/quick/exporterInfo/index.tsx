@@ -71,7 +71,6 @@ function Index() {
                 placeholder="Post code..."
               />
             </div>
-
           </div>
           <div className="vLine"></div>
           <div className="taxAndRevenue">
@@ -93,13 +92,9 @@ function Index() {
                 id="percentage"
               />
             </div>
-            
-
           </div>
           <div className="vLine0"></div>
-          <div className="otherInfo">
-
-          </div>
+          <div className="otherInfo"></div>
         </div>
       </ApplicationLayout>
     </div>

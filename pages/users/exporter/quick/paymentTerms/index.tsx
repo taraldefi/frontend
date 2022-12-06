@@ -25,7 +25,7 @@ function Index() {
                     type="radio"
                     name="ptConcludeRadio"
                     value="Yes"
-                  // onChange={}
+                    // onChange={}
                   />
                   <label>Yes</label>
                 </div>
@@ -34,7 +34,7 @@ function Index() {
                     type="radio"
                     name="ptConcludeRadio"
                     value="No"
-                  // onChange={}
+                    // onChange={}
                   />
                   <label>No</label>
                 </div>
@@ -48,7 +48,7 @@ function Index() {
                     type="radio"
                     name="ptRefinancingRadio"
                     value="Yes"
-                  // onChange={}
+                    // onChange={}
                   />
                   <label>Yes</label>
                 </div>
@@ -57,7 +57,7 @@ function Index() {
                     type="radio"
                     name="ptRefinancingRadio"
                     value="No"
-                  // onChange={}
+                    // onChange={}
                   />
                   <label>No</label>
                 </div>
@@ -69,7 +69,8 @@ function Index() {
             <div className="maintitle">INTEREST</div>
             <div className="radioBack">
               <span>
-                Are you charging your importer interest/have you agreed a premium for extended payment terms?
+                Are you charging your importer interest/have you agreed a
+                premium for extended payment terms?
               </span>
               <div>
                 <div>
@@ -194,7 +195,10 @@ function Index() {
           <div className="ptVID">
             <div className="maintitle">PAYMENT TYPE</div>
             <div className="radioBack">
-              <span>What is the payment type agreed upon for this transaction? (Short, Medium, or Short-Medium)</span>
+              <span>
+                What is the payment type agreed upon for this transaction?
+                (Short, Medium, or Short-Medium)
+              </span>
               <div></div>
               <div className="inputContainer">
                 <span>Payment Type</span>
@@ -204,9 +208,7 @@ function Index() {
               </div>
             </div>
             <div className="inputContainer">
-              <span>
-                Payment Duration
-              </span>
+              <span>Payment Duration</span>
               <input
                 type="text"
                 className="inputs"

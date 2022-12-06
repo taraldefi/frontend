@@ -8,7 +8,7 @@ export default function ApplicationLeftMenu() {
 
   return (
     <div className="leftMenu">
-      {router.asPath.split("/")[3] == "newApplication" ?
+      {router.asPath.split("/")[3] == "newApplication" ? (
         <div className="items">
           <div
             onClick={(e) => {
@@ -47,9 +47,9 @@ export default function ApplicationLeftMenu() {
               selected={
                 router.asPath ==
                   "/users/exporter/newApplication/financials-p&l/profit&loss" ||
-                  router.asPath ==
+                router.asPath ==
                   "/users/exporter/newApplication/financials-p&l/balanceSheet" ||
-                  router.asPath == "/users/newApplication/financials-p&l/cashFlow"
+                router.asPath == "/users/newApplication/financials-p&l/cashFlow"
                   ? true
                   : false
               }
@@ -59,9 +59,9 @@ export default function ApplicationLeftMenu() {
                 className={
                   router.asPath ==
                     "/users/exporter/newApplication/financials-p&l/profit&loss" ||
-                    router.asPath ==
+                  router.asPath ==
                     "/users/exporter/newApplication/financials-p&l/balanceSheet" ||
-                    router.asPath ==
+                  router.asPath ==
                     "/users/exporter/newApplication/financials-p&l/cashFlow"
                     ? "selected"
                     : ""
@@ -78,7 +78,7 @@ export default function ApplicationLeftMenu() {
                   }}
                   className={
                     router.asPath ==
-                      "/users/exporter/newApplication/financials-p&l/profit&loss"
+                    "/users/exporter/newApplication/financials-p&l/profit&loss"
                       ? "selectedSub"
                       : ""
                   }
@@ -93,7 +93,7 @@ export default function ApplicationLeftMenu() {
                   }}
                   className={
                     router.asPath ==
-                      "/users/exporter/newApplication/financials-p&l/balanceSheet"
+                    "/users/exporter/newApplication/financials-p&l/balanceSheet"
                       ? "selectedSub"
                       : ""
                   }
@@ -109,7 +109,7 @@ export default function ApplicationLeftMenu() {
                   }}
                   className={
                     router.asPath ==
-                      "/users/exporter/newApplication/financials-p&l/cashFlow"
+                    "/users/exporter/newApplication/financials-p&l/cashFlow"
                       ? "selectedSub"
                       : ""
                   }
@@ -132,34 +132,34 @@ export default function ApplicationLeftMenu() {
               icon={"Transaction Details"}
               selected={
                 router.asPath ==
-                  "/users/exporter/newApplication/transactionDetails/projectDetails"
+                "/users/exporter/newApplication/transactionDetails/projectDetails"
                   ? true
                   : false ||
                     router.asPath ==
-                    "/users/exporter/newApplication/transactionDetails/contactAndDelivery"
-                    ? true
-                    : false ||
-                      router.asPath ==
+                      "/users/exporter/newApplication/transactionDetails/contactAndDelivery"
+                  ? true
+                  : false ||
+                    router.asPath ==
                       "/users/exporter/newApplication/transactionDetails/additionalInfo"
-                      ? true
-                      : false
+                  ? true
+                  : false
               }
             />
             <div>
               <span
                 className={
                   router.asPath ==
-                    "/users/exporter/newApplication/transactionDetails/projectDetails"
+                  "/users/exporter/newApplication/transactionDetails/projectDetails"
                     ? "selected"
                     : "" ||
                       router.asPath ==
-                      "/users/exporter/newApplication/transactionDetails/contactAndDelivery"
-                      ? "selected"
-                      : "" ||
-                        router.asPath ==
+                        "/users/exporter/newApplication/transactionDetails/contactAndDelivery"
+                    ? "selected"
+                    : "" ||
+                      router.asPath ==
                         "/users/exporter/newApplication/transactionDetails/additionalInfo"
-                        ? "selected"
-                        : ""
+                    ? "selected"
+                    : ""
                 }
               >
                 Transaction Details
@@ -174,7 +174,7 @@ export default function ApplicationLeftMenu() {
                   }}
                   className={
                     router.asPath ==
-                      "/users/exporter/newApplication/transactionDetails/projectDetails"
+                    "/users/exporter/newApplication/transactionDetails/projectDetails"
                       ? "selectedSub"
                       : ""
                   }
@@ -190,7 +190,7 @@ export default function ApplicationLeftMenu() {
                   }}
                   className={
                     router.asPath ==
-                      "/users/exporter/newApplication/transactionDetails/contactAndDelivery"
+                    "/users/exporter/newApplication/transactionDetails/contactAndDelivery"
                       ? "selectedSub"
                       : ""
                   }
@@ -206,7 +206,7 @@ export default function ApplicationLeftMenu() {
                   }}
                   className={
                     router.asPath ==
-                      "/users/exporter/newApplication/transactionDetails/additionalInfo"
+                    "/users/exporter/newApplication/transactionDetails/additionalInfo"
                       ? "selectedSub"
                       : ""
                   }
@@ -227,21 +227,21 @@ export default function ApplicationLeftMenu() {
               icon={"Importer Info"}
               selected={
                 router.asPath ==
-                  "/users/exporter/newApplication/importerInfo/information"
+                "/users/exporter/newApplication/importerInfo/information"
                   ? true
                   : false ||
                     router.asPath ==
-                    "/users/exporter/newApplication/importerInfo/attachments"
-                    ? true
-                    : false ||
-                      router.asPath ==
+                      "/users/exporter/newApplication/importerInfo/attachments"
+                  ? true
+                  : false ||
+                    router.asPath ==
                       "/users/exporter/newApplication/importerInfo/relationship"
-                      ? true
-                      : false ||
-                        router.asPath ==
-                        "/users/exporter/newApplication/importerInfo/business"
-                        ? true
-                        : false
+                  ? true
+                  : false ||
+                    router.asPath ==
+                      "/users/exporter/newApplication/importerInfo/business"
+                  ? true
+                  : false
               }
             />
             <div>
@@ -249,11 +249,11 @@ export default function ApplicationLeftMenu() {
                 className={
                   router.asPath ==
                     "/users/exporter/newApplication/importerInfo/information" ||
-                    router.asPath ==
+                  router.asPath ==
                     "/users/exporter/newApplication/importerInfo/attachments" ||
-                    router.asPath ==
+                  router.asPath ==
                     "/users/exporter/newApplication/importerInfo/relationship" ||
-                    router.asPath ==
+                  router.asPath ==
                     "/users/exporter/newApplication/importerInfo/business"
                     ? "selected"
                     : ""
@@ -271,7 +271,7 @@ export default function ApplicationLeftMenu() {
                   }}
                   className={
                     router.asPath ==
-                      "/users/exporter/newApplication/importerInfo/information"
+                    "/users/exporter/newApplication/importerInfo/information"
                       ? "selectedSub"
                       : ""
                   }
@@ -287,7 +287,7 @@ export default function ApplicationLeftMenu() {
                   }}
                   className={
                     router.asPath ==
-                      "/users/exporter/newApplication/importerInfo/business"
+                    "/users/exporter/newApplication/importerInfo/business"
                       ? "selectedSub"
                       : ""
                   }
@@ -303,7 +303,7 @@ export default function ApplicationLeftMenu() {
                   }}
                   className={
                     router.asPath ==
-                      "/users/exporter/newApplication/importerInfo/relationship"
+                    "/users/exporter/newApplication/importerInfo/relationship"
                       ? "selectedSub"
                       : ""
                   }
@@ -319,7 +319,7 @@ export default function ApplicationLeftMenu() {
                   }}
                   className={
                     router.asPath ==
-                      "/users/exporter/newApplication/importerInfo/attachments"
+                    "/users/exporter/newApplication/importerInfo/attachments"
                       ? "selectedSub"
                       : ""
                   }
@@ -332,7 +332,9 @@ export default function ApplicationLeftMenu() {
           <div
             onClick={(e) => {
               e.preventDefault();
-              router.push("/users/exporter/newApplication/paymentTerms/details");
+              router.push(
+                "/users/exporter/newApplication/paymentTerms/details"
+              );
             }}
             className="item"
           >
@@ -340,26 +342,26 @@ export default function ApplicationLeftMenu() {
               icon={"Importer Info"}
               selected={
                 router.asPath ==
-                  "/users/exporter/newApplication/paymentTerms/details"
+                "/users/exporter/newApplication/paymentTerms/details"
                   ? true
                   : false ||
                     router.asPath ==
-                    "/users/exporter/newApplication/paymentTerms/paymentType"
-                    ? true
-                    : false
+                      "/users/exporter/newApplication/paymentTerms/paymentType"
+                  ? true
+                  : false
               }
             />
             <div>
               <span
                 className={
                   router.asPath ==
-                    "/users/exporter/newApplication/paymentTerms/details"
+                  "/users/exporter/newApplication/paymentTerms/details"
                     ? "selected"
                     : "" ||
                       router.asPath ==
-                      "/users/exporter/newApplication/paymentTerms/paymentType"
-                      ? "selected"
-                      : ""
+                        "/users/exporter/newApplication/paymentTerms/paymentType"
+                    ? "selected"
+                    : ""
                 }
               >
                 Payment Terms
@@ -374,7 +376,7 @@ export default function ApplicationLeftMenu() {
                   }}
                   className={
                     router.asPath ==
-                      "/users/exporter/exporter/newApplication/paymentTerms/details"
+                    "/users/exporter/exporter/newApplication/paymentTerms/details"
                       ? "selectedSub"
                       : ""
                   }
@@ -390,7 +392,7 @@ export default function ApplicationLeftMenu() {
                   }}
                   className={
                     router.asPath ==
-                      "/users/exporter/newApplication/paymentTerms/paymentType"
+                    "/users/exporter/newApplication/paymentTerms/paymentType"
                       ? "selectedSub"
                       : ""
                   }
@@ -450,71 +452,66 @@ export default function ApplicationLeftMenu() {
               Closing
             </span>
           </div>
-        </div> :
-        (router.asPath.split("/")[2]=="exporter" && router.asPath.split("/")[3]=="quick") ? <div className="itemsNew">
-          
+        </div>
+      ) : router.asPath.split("/")[2] == "exporter" &&
+        router.asPath.split("/")[3] == "quick" ? (
+        <div className="itemsNew">
           {SidebarDataEx.map((item, index) => {
-            return <>
-              <div key={index}
-                onClick={(e) => {
-                  e.preventDefault();
-                  router.push(item.path);
-                }}
-                className="item"
-              >
-                <PortalIcons
-                  icon={item.title}
-                  selected={
-                    router.asPath == item.path
-                      ? true
-                      : false
-                  }
-                />
-                <span
-                  className={
-                    router.asPath == item.path
-                      ? "selected"
-                      : ""
-                  }
+            return (
+              <>
+                <div
+                  key={index}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    router.push(item.path);
+                  }}
+                  className="item"
                 >
-                  {item.title}
-                </span>
-              </div>
-            </>
+                  <PortalIcons
+                    icon={item.title}
+                    selected={router.asPath == item.path ? true : false}
+                  />
+                  <span
+                    className={router.asPath == item.path ? "selected" : ""}
+                  >
+                    {item.title}
+                  </span>
+                </div>
+              </>
+            );
           })}
-        </div> : (router.asPath.split("/")[2]=="importer" && router.asPath.split("/")[3]=="quick") ? <div className="itemsNew">
-        
+        </div>
+      ) : router.asPath.split("/")[2] == "importer" &&
+        router.asPath.split("/")[3] == "quick" ? (
+        <div className="itemsNew">
           {SidebarDataIm.map((item, index) => {
-            return <>
-              <div key={index}
-                onClick={(e) => {
-                  e.preventDefault();
-                  router.push(item.path);
-                }}
-                className="item"
-              >
-                <PortalIcons
-                  icon={item.title}
-                  selected={
-                    router.asPath == item.path
-                      ? true
-                      : false
-                  }
-                />
-                <span
-                  className={
-                    router.asPath == item.path
-                      ? "selected"
-                      : ""
-                  }
+            return (
+              <>
+                <div
+                  key={index}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    router.push(item.path);
+                  }}
+                  className="item"
                 >
-                  {item.name}
-                </span>
-              </div>
-            </>
+                  <PortalIcons
+                    icon={item.title}
+                    selected={router.asPath == item.path ? true : false}
+                  />
+                  <span
+                    className={router.asPath == item.path ? "selected" : ""}
+                  >
+                    {item.name}
+                  </span>
+                </div>
+              </>
+            );
           })}
-        </div> : <></>
-      }
+        </div>
+      ) : (
+        <></>
+      )}
     </div>
   );
 }

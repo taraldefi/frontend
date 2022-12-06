@@ -77,17 +77,14 @@ function Index() {
                   <label htmlFor="ECACoverNO">No</label>
                 </div>
               </div>
-              {selectedRadioBtn == "Yes" ? (
-                <></>
-              ) : (
-                <></>
-              )}
+              {selectedRadioBtn == "Yes" ? <></> : <></>}
             </div>
 
             {selectedRadioBtn == "Yes" ? (
               <div className="radioBack">
                 <span>
-                Do you have significant influence on security/collateral provider?
+                  Do you have significant influence on security/collateral
+                  provider?
                 </span>
                 <div>
                   <div>
@@ -130,7 +127,8 @@ function Index() {
             {selectedRadioBtn == "Yes" ? (
               <div className="radioBack">
                 <span>
-                Do you have payment experience with security/collateral provider?
+                  Do you have payment experience with security/collateral
+                  provider?
                 </span>
                 <div>
                   <div>

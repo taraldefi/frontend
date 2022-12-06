@@ -112,9 +112,7 @@ function Index() {
             </div>
           </div>
 
-          <div className="otherInfo">
-
-          </div>
+          <div className="otherInfo"></div>
         </div>
       </ApplicationLayout>
     </div>

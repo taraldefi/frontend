@@ -66,8 +66,7 @@ export const SidebarDataEx = [
     title: "Security",
     name: "security",
     path: "/users/exporter/quick/security",
-  }
-
+  },
 ];
 export const SidebarDataIm = [
   {
@@ -76,7 +75,7 @@ export const SidebarDataIm = [
     name: "Your Info",
     path: "/users/importer/quick/exporterInfo",
   },
- 
+
   {
     id: 2,
     title: "Importer Info",
@@ -94,5 +93,5 @@ export const SidebarDataIm = [
     title: "Security",
     name: "Security",
     path: "/users/importer/quick/security",
-  }
+  },
 ];

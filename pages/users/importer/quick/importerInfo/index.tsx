@@ -33,7 +33,11 @@ function Index() {
             <div className="maintitle">GENERAL INFO</div>
             <div>
               <span>Supplier&apos;s company name</span>
-              <input type="text" className="inputs" placeholder="Company name..." />
+              <input
+                type="text"
+                className="inputs"
+                placeholder="Company name..."
+              />
             </div>
             <div>
               <span>Phone Number</span>
@@ -74,7 +78,9 @@ function Index() {
             <div className="maintitle">RELATIONSHIP WITH SUPPLIER</div>
 
             <div className="radioBack">
-              <span>Do you have previous payment experience with the Supplier?</span>
+              <span>
+                Do you have previous payment experience with the Supplier?
+              </span>
               <div>
                 <div>
                   <input
@@ -98,31 +104,45 @@ function Index() {
             </div>
             <div>
               <span>Describe your previous payment experience.</span>
-              <input className="inputs" id="greyed" placeholder="Desciption..."/>
+              <input
+                className="inputs"
+                id="greyed"
+                placeholder="Desciption..."
+              />
             </div>
             <div>
               <span>Length of payment experience</span>
-              <input className="inputs" id="greyed" placeholder="Payment length..."/>
+              <input
+                className="inputs"
+                id="greyed"
+                placeholder="Payment length..."
+              />
             </div>
             <div>
               <span>Number of deals</span>
-              <input className="inputs" id="greyed" placeholder="Number of deals..."/>
+              <input
+                className="inputs"
+                id="greyed"
+                placeholder="Number of deals..."
+              />
             </div>
             <div>
               <span>Average volume of business with your customer</span>
-              <input className="inputs" id="greyed" placeholder="Business volume..."/>
+              <input
+                className="inputs"
+                id="greyed"
+                placeholder="Business volume..."
+              />
             </div>
-            <div >
+            <div>
               <span>Payment history with Supplier</span>
               <select className="inputs" id="greyed">
                 <option value="">Select type...</option>
               </select>
             </div>
           </div>
-          
-          <div className="otherInfo">
 
-          </div>
+          <div className="otherInfo"></div>
         </div>
       </ApplicationLayout>
     </div>

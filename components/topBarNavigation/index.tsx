@@ -9,7 +9,7 @@ import SecondButton from "@components/widgets/buttonSecondary";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 function TopBarNav() {
-  const routesStrings = ["exporter", "newApplication", "quick", "applications"]
+  const routesStrings = ["exporter", "newApplication", "quick", "applications"];
   const handleClick1 = (e: any) => {
     router.push("/users/exporter");
   };
@@ -72,47 +72,49 @@ function TopBarNav() {
       {
         //Overview,kyc etc top bar
         router.asPath.split("/")[1] == "users" &&
-          router.asPath.split("/")[3] != "newApplication" &&
-          router.asPath.split("/")[3] != "quick" ? (
+        router.asPath.split("/")[3] != "newApplication" &&
+        router.asPath.split("/")[3] != "quick" ? (
           <div className="userTabItems">
             <div className="contents">
-              {router.asPath.split("/")[2] == "exporter" ? TopbarNewDataEx.map((item, index) => {
-                return (
-                  <div
-                    onClick={(e) => {
-                      e.preventDefault();
-                      router.push(item.path);
-                    }}
-                    key={index}
-                  >
-                    <span
-                      className={
-                        matchPath1(item) ? "content selected" : "content"
-                      }
-                    >
-                      {item.title}
-                    </span>
-                  </div>
-                );
-              }) : TopbarNewDataIm.map((item, index) => {
-                return (
-                  <div
-                    onClick={(e) => {
-                      e.preventDefault();
-                      router.push(item.path);
-                    }}
-                    key={index}
-                  >
-                    <span
-                      className={
-                        matchPath1(item) ? "content selected" : "content"
-                      }
-                    >
-                      {item.title}
-                    </span>
-                  </div>
-                );
-              })}
+              {router.asPath.split("/")[2] == "exporter"
+                ? TopbarNewDataEx.map((item, index) => {
+                    return (
+                      <div
+                        onClick={(e) => {
+                          e.preventDefault();
+                          router.push(item.path);
+                        }}
+                        key={index}
+                      >
+                        <span
+                          className={
+                            matchPath1(item) ? "content selected" : "content"
+                          }
+                        >
+                          {item.title}
+                        </span>
+                      </div>
+                    );
+                  })
+                : TopbarNewDataIm.map((item, index) => {
+                    return (
+                      <div
+                        onClick={(e) => {
+                          e.preventDefault();
+                          router.push(item.path);
+                        }}
+                        key={index}
+                      >
+                        <span
+                          className={
+                            matchPath1(item) ? "content selected" : "content"
+                          }
+                        >
+                          {item.title}
+                        </span>
+                      </div>
+                    );
+                  })}
             </div>
             <div className="entityContent">
               {router.asPath == "/users/exporter" || "/users/importer" ? (
@@ -140,7 +142,9 @@ function TopBarNav() {
               <Button
                 title={"New Application"}
                 onClick={() =>
-                  myContext.setNewApplicationModal(!myContext.newApplicationModal)
+                  myContext.setNewApplicationModal(
+                    !myContext.newApplicationModal
+                  )
                 }
               ></Button>
             </div>
@@ -159,7 +163,9 @@ function TopBarNav() {
                     key={index}
                   >
                     <span
-                      className={matchPath(item) ? "content selected" : "content"}
+                      className={
+                        matchPath(item) ? "content selected" : "content"
+                      }
                     >
                       {item.title}
                     </span>
@@ -168,8 +174,8 @@ function TopBarNav() {
               })}
             </div>
           )
-        )}
-      
+        )
+      }
     </div>
   );
 }

@@ -25,7 +25,7 @@ function Index() {
                     type="radio"
                     name="ptConcludeRadio"
                     value="Yes"
-                  // onChange={}
+                    // onChange={}
                   />
                   <label>YES</label>
                 </div>
@@ -34,7 +34,7 @@ function Index() {
                     type="radio"
                     name="ptConcludeRadio"
                     value="No"
-                  // onChange={}
+                    // onChange={}
                   />
                   <label>NO</label>
                 </div>
@@ -48,7 +48,7 @@ function Index() {
                     type="radio"
                     name="ptRefinancingRadio"
                     value="Yes"
-                  // onChange={}
+                    // onChange={}
                   />
                   <label>YES</label>
                 </div>
@@ -57,7 +57,7 @@ function Index() {
                     type="radio"
                     name="ptRefinancingRadio"
                     value="No"
-                  // onChange={}
+                    // onChange={}
                   />
                   <label>NO</label>
                 </div>
@@ -69,7 +69,8 @@ function Index() {
             <div className="maintitle">INTEREST</div>
             <div className="radioBack">
               <span>
-                Is your supplier charging you interest/have you agreed a premium for extended payment terms?
+                Is your supplier charging you interest/have you agreed a premium
+                for extended payment terms?
               </span>
               <div>
                 <div>
@@ -95,7 +96,7 @@ function Index() {
                 <>
                   <div className="inputContainer">
                     <span>
-                    Which currency is the interest/premium charged in?
+                      Which currency is the interest/premium charged in?
                     </span>
                     <select name="" id="" className="inputs">
                       <option value="">Select currency</option>
@@ -104,7 +105,7 @@ function Index() {
                   </div>
                   <div className="inputContainer">
                     <span>
-                    What is the total value of the interest/premium?
+                      What is the total value of the interest/premium?
                     </span>
                     <input
                       type="text"
@@ -194,7 +195,10 @@ function Index() {
           <div className="ptVID">
             <div className="maintitle">PAYMENT TYPE</div>
             <div className="radioBack">
-              <span>What is the payment type agreed upon for this transaction? (Short, Medium, or Short-Medium)</span>
+              <span>
+                What is the payment type agreed upon for this transaction?
+                (Short, Medium, or Short-Medium)
+              </span>
               <div></div>
               <div className="inputContainer">
                 <span>Payment Type</span>
@@ -204,9 +208,7 @@ function Index() {
               </div>
             </div>
             <div className="inputContainer">
-              <span>
-              Payment Duration
-              </span>
+              <span>Payment Duration</span>
               <input
                 type="text"
                 className="inputs"
