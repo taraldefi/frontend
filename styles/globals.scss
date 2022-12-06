@@ -25,7 +25,7 @@ body {
     justify-content: flex-end;
     gap: 100px;
     position: relative;
-    padding-right:100px;
+    padding-right: 100px;
     .btnContainer {
       display: flex;
       flex-direction: row;
@@ -35,8 +35,7 @@ body {
         width: 80px;
         border: #475569 solid 1px;
         font-weight: bold;
-        color: #475569
-        ;
+        color: #475569;
       }
 
       .btn {
@@ -152,3 +151,8 @@ input[type="radio"] {
 // #greyed {
 //   background-color: rgba(203, 213, 225, 0.068) !important;
 // }
+#search {
+  background-image: url(/assets/svg/search.svg);
+  background-repeat: no-repeat;
+  background-position: 310px;
+}
