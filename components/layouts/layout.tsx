@@ -18,7 +18,7 @@ const Layout = ({ children }: LayoutProps) => {
         <TopBarNav />
       </div>
       <div className="mainBody">{children}</div>
-      {<BottomBar></BottomBar>}
+      {/* {<BottomBar></BottomBar>} */}
     </div>
   );
 };

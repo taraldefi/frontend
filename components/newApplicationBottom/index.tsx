@@ -7,18 +7,8 @@ function BottomBar() {
     <div className="botomBar">
       <div className="bbBackground">
         <div className="btnContainer">
-          <SecondButton
-            title={"Discard"}
-            onClick={function (): void {
-              throw new Error("Function not implemented.");
-            }}
-          ></SecondButton>
-          <Button
-            title={"Next"}
-            onClick={function (): void {
-              throw new Error("Function not implemented.");
-            }}
-          ></Button>
+          <SecondButton title={"Discard"} onClick={() => {}}></SecondButton>
+          <Button title={"Next"} onClick={() => {}}></Button>
         </div>
       </div>
     </div>

@@ -57,7 +57,7 @@ export const SidebarDataEx = [
   },
   {
     id: 3,
-    title: "Payment Terms",
+    title: "payment terms",
     name: "paymentTerms",
     path: "/users/exporter/quick/paymentTerms",
   },
