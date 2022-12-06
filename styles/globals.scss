@@ -8,14 +8,13 @@ body {
 
 .botomBar {
   width: 100%;
-  z-index: 999999;
+  z-index: 999;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
-
-  // position: relative;
-  // top: 996px;
+  position: fixed;
+  top: 675px;
   .bbBackground {
     background-color: #fff;
     width: 100%;
@@ -23,14 +22,26 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     gap: 100px;
     position: relative;
-
+    padding-right:100px;
     .btnContainer {
       display: flex;
       flex-direction: row;
       gap: 24px;
+
+      .btn_secondary {
+        width: 80px;
+        border: #475569 solid 1px;
+        font-weight: bold;
+        color: #475569
+        ;
+      }
+
+      .btn {
+        width: 140px !important;
+      }
     }
   }
 }
@@ -120,6 +131,10 @@ body {
   max-width: 200px;
 }
 
+.vLine0 {
+  background-color: #2a455c00 !important;
+}
+
 .fileWraper {
   font-size: 12px;
   text-align: center;
@@ -133,3 +148,7 @@ body {
 input[type="radio"] {
   accent-color: #0d8489;
 }
+
+// #greyed {
+//   background-color: rgba(203, 213, 225, 0.068) !important;
+// }

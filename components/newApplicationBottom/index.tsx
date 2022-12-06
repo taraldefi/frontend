@@ -13,12 +13,12 @@ function BottomBar() {
               throw new Error("Function not implemented.");
             }}
           ></SecondButton>
-          <SecondButton
-            title={"Save Changes"}
+          <Button
+            title={"Next"}
             onClick={function (): void {
               throw new Error("Function not implemented.");
             }}
-          ></SecondButton>
+          ></Button>
         </div>
       </div>
     </div>

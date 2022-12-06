@@ -24,7 +24,7 @@ function Modal() {
             <div
               className="modalViewButton"
               onClick={() => {
-                router.push("/users/view");
+                router.push("/users/exporter/view");
               }}
             >
               <PortalIcons selected={false} icon={"eye"}></PortalIcons>

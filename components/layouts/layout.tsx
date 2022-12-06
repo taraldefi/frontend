@@ -1,4 +1,6 @@
 import AppContext from "@components/appContext";
+import BottomBar from "@components/newApplicationBottom";
+import router from "next/router";
 import React, { useContext } from "react";
 import { globalState } from "types/global";
 import Topbar from "../topBar";
@@ -16,6 +18,7 @@ const Layout = ({ children }: LayoutProps) => {
         <TopBarNav />
       </div>
       <div className="mainBody">{children}</div>
+      {<BottomBar></BottomBar>}
     </div>
   );
 };
