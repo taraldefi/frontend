@@ -10,11 +10,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 function TopBarNav() {
   const routesStrings = ["exporter", "newApplication", "quick", "applications"];
+  const myContext = useContext<globalState>(AppContext);
   const handleClick1 = (e: any) => {
+    myContext.setIndex!(0);
     router.push("/users/exporter");
   };
   const router = useRouter();
-  const myContext = useContext<globalState>(AppContext);
 
   const matchPath1 = (item: any) => {
     const currentRoute = router.asPath.split("/")[3];

@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { SidebarDataEx, SidebarDataIm } from "./data";
 import { PortalIcons } from "../icons";
 import { useRouter } from "next/router";
+import { globalState } from "types/global";
+import AppContext from "@components/appContext";
 
 export default function ApplicationLeftMenu() {
   const router = useRouter();
+  const myContext = useContext<globalState>(AppContext);
 
   return (
     <div className="leftMenu">
@@ -463,6 +466,7 @@ export default function ApplicationLeftMenu() {
                   key={index}
                   onClick={(e) => {
                     e.preventDefault();
+                    myContext.setIndex!(item.id);
                     router.push(item.path);
                   }}
                   className="item"
@@ -491,6 +495,7 @@ export default function ApplicationLeftMenu() {
                   key={index}
                   onClick={(e) => {
                     e.preventDefault();
+                    myContext.setIndex!(item.id);
                     router.push(item.path);
                   }}
                   className="item"

@@ -10,4 +10,6 @@ export interface globalState {
   exporter?: String;
   importer?: String;
   date?: String;
+  index?: number;
+  setIndex?: React.Dispatch<React.SetStateAction<number>>;
 }

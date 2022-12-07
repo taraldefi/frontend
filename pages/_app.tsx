@@ -42,6 +42,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   const [emodal, seteModal] = React.useState(false);
   const [dmodal, setdModal] = React.useState(false);
   const [amodal, setaModal] = React.useState(false);
+  const [index, setIndex] = React.useState(1);
 
   const values = {
     modal: fmodal,
@@ -50,6 +51,8 @@ function MyApp({ Component, pageProps }: AppProps) {
     setEditModal: seteModal,
     deleteModal: dmodal,
     setDeleteModal: setdModal,
+    index: index,
+    setIndex: setIndex,
     newApplicationModal: amodal,
     setNewApplicationModal: setaModal,
   };
