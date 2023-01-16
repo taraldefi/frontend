@@ -1,3 +1,32 @@
+@import "main.scss";
+@import "topbar.scss";
+@import "leftMenu.scss";
+@import "summary.scss";
+@import "status.scss";
+@import "button.scss";
+@import "fileUpload.scss";
+@import "activity.scss";
+@import "compliance.scss";
+@import "research.scss";
+@import "slider.scss";
+@import "rating.scss";
+@import "transactions.scss";
+@import "financials.scss";
+@import "signoff.scss";
+@import "user.scss";
+@import "entityView.scss";
+@import "modal.scss";
+@import "exporterInfo.scss";
+@import "applicationSecurity.scss";
+@import "financialsPL.scss";
+@import "transactionNewApp.scss";
+@import "importerInfo.scss";
+@import "paymentTerms.scss";
+@import "kyc.scss";
+@import "applicationTable.scss";
+// @import "scss/styles.scss";
+@import "newLayout.scss";
+@import "auth.scss";
 body {
   padding: 0;
   background-color: #f8fafc;
@@ -61,11 +90,11 @@ body {
   z-index: 1;
 }
 
-.tab {
-  width: 100%;
-  height: 134px;
-  background-color: rgb(255, 255, 255);
-}
+// .tab {
+//   width: 100%;
+//   height: 134px;
+//   background-color: rgb(255, 255, 255);
+// }
 
 .regContainer {
   display: flex;
