@@ -15,7 +15,6 @@ const ApplicationLayout = ({ children }: LayoutProps) => {
         <ApplicationLeftMenu></ApplicationLeftMenu>
         <div className="mainBodyIn">
           {children}
-          <BottomBar></BottomBar>
         </div>
       </Layout>
     </>

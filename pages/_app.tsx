@@ -30,29 +30,29 @@ function MyApp({ Component, pageProps }: AppProps) {
         values.editModal ||
         values.deleteModal ||
         values.newApplicationModal) && (
-          <>
-            <FormModal
-              modal={values.modal}
-              setModal={() => {
-                values.setModal(!values.modal);
-              }}
-            ></FormModal>
-            <FormEditModal
-              modal={values.editModal}
-              setModal={() => values.setEditModal(!values.editModal)}
-            ></FormEditModal>
-            <DeleteModal
-              modal={values.deleteModal}
-              setModal={() => values.setDeleteModal(!values.deleteModal)}
-            ></DeleteModal>
-            <NewApplicationModal
-              modal={values.newApplicationModal}
-              setModal={() =>
-                values.setNewApplicationModal(!values.newApplicationModal)
-              }
-            ></NewApplicationModal>
-          </>
-        )}
+        <>
+          <FormModal
+            modal={values.modal}
+            setModal={() => {
+              values.setModal(!values.modal);
+            }}
+          ></FormModal>
+          <FormEditModal
+            modal={values.editModal}
+            setModal={() => values.setEditModal(!values.editModal)}
+          ></FormEditModal>
+          <DeleteModal
+            modal={values.deleteModal}
+            setModal={() => values.setDeleteModal(!values.deleteModal)}
+          ></DeleteModal>
+          <NewApplicationModal
+            modal={values.newApplicationModal}
+            setModal={() =>
+              values.setNewApplicationModal(!values.newApplicationModal)
+            }
+          ></NewApplicationModal>
+        </>
+      )}
 
       <Component {...pageProps} />
     </AppContext.Provider>

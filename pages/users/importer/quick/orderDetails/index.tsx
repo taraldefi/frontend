@@ -1,4 +1,5 @@
 import ApplicationLayout from "@components/layouts/new_application_layout";
+import BottomBar from "@components/newApplicationBottom";
 import ButtonSecondary from "@components/widgets/buttonSecondary";
 import React from "react";
 
@@ -94,6 +95,7 @@ function Index() {
           </div>
         </div>
       </div>
+      <BottomBar></BottomBar>
     </ApplicationLayout>
   );
 }
