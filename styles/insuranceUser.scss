@@ -1,0 +1,94 @@
+.insurance-container {
+    display: flex;
+    padding: 40px 80px;
+
+    .insurance-contents {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 24px;
+
+        .insurance-title-container {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            gap: 10px;
+
+            :nth-child(1) {
+                font-weight: 700;
+                font-size: 24px;
+            }
+
+            :nth-child(2) {
+                font-weight: normal;
+                font-size: 16px;
+            }
+        }
+
+        .insurance-balance-container {
+            background-color: #E7F3F4;
+            display: flex;
+            width: 100%;
+            gap: 10px;
+            padding: 24px 40px;
+            border-radius: 8px;
+            .available-balance {
+                width: 80%;
+
+                .balance {
+                    font-size: 24px;
+                    width: 50px;
+                    font-weight: bolder;
+                    color: #64748B;
+                }
+            }
+
+            .tal-balance {
+                display: flex;
+                flex-direction: column;
+                padding: 12px;
+                gap: 10px;
+                width: 20%;
+                border-radius: 8px;
+                background-color: rgba(255, 255, 255, 0.502);
+                :nth-child(1) {
+                    color: #003C6E;
+                    font-weight: bolder;
+                }
+                :nth-child(2) {
+                    color: #0D8489;
+                    font-weight: bolder;
+                }
+            }
+
+            .st-tal-balance {
+                display: flex;
+                flex-direction: column;
+                padding: 12px;
+                gap: 10px;
+                width: 20%;
+                border-radius: 8px;
+
+                background-color: rgba(255, 255, 255, 0.5);
+                :nth-child(1) {
+                    color: #003C6E;
+                    font-weight: bolder;
+                }
+                :nth-child(2) {
+                    color: #0D8489;
+                    font-weight: bolder;
+                }
+            }
+
+        }
+
+        .insurance-tal-container {}
+
+        .insurance-unstacked-container {}
+    }
+
+    .insurance-info {
+        width: 520px;
+        height: 700px;
+    }
+}
