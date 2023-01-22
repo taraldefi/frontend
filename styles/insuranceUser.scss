@@ -99,7 +99,6 @@
           height: 60px;
           width: 60px;
         }
-
       }
 
       .lock-tal-container {
@@ -116,19 +115,19 @@
           :nth-child(1) {
             font-weight: normal;
             font-size: small;
-            color: #64748B;
+            color: #64748b;
           }
 
           :nth-child(2) {
             font-weight: bolder;
             font-size: large;
-            color: #003C6E;
+            color: #003c6e;
           }
 
           :nth-child(3) {
             font-weight: normal;
             font-size: x-small;
-            color: #64748B;
+            color: #64748b;
             margin-top: 6px;
           }
         }
@@ -142,13 +141,13 @@
           :nth-child(1) {
             font-weight: normal;
             font-size: small;
-            color: #64748B;
+            color: #64748b;
           }
 
           :nth-child(2) {
             font-weight: bolder;
             font-size: large;
-            color: #003C6E;
+            color: #003c6e;
           }
         }
       }
@@ -168,14 +167,13 @@
           font-weight: bolder;
         }
       }
-
     }
 
     .insurance-unstacked-container {
       display: flex;
       flex-direction: column;
       gap: 5px;
-      background-color: #DCDCDE33;
+      background-color: #dcdcde33;
       padding: 34px;
 
       :nth-child(1) {
@@ -195,6 +193,25 @@
 
   .insurance-info {
     width: 520px;
-    height: 700px;
+    // height: 700px;
+    margin: 0px 40px 40px 40px;
+    padding: 40px;
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    background-color: #DCDCDE33;
+    
+    .insurance-info-title {
+      font-weight: bolder;
+      font-size: large;
+    }
+
+    .insurance-info-content {
+      width: 102%;
+
+      p,li {
+        font-size: 14px;
+      }
+    }
   }
 }
