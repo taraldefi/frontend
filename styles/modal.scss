@@ -84,6 +84,13 @@
       display: flex;
       flex-direction: column;
 
+      //lock tal modal
+      .form-tal-info {
+        background-color: #dcdcde33;
+        padding: 20px;
+        margin-top: 24px;
+      }
+
       .button {
         border: 0;
         color: white;
@@ -366,6 +373,8 @@
       justify-content: space-around;
       padding-top: 30px;
 
+      //lock success modal
+
       .svgContainer {
         height: 120px;
         display: flex;
@@ -379,6 +388,151 @@
         align-items: center;
         justify-content: center;
         padding-top: 12px;
+
+        .btn {
+          width: 107px !important;
+        }
+      }
+
+      .vLine {
+        width: 1.5px;
+        height: initial;
+        position: relative;
+        top: 40px;
+        background-color: rgba(1, 0, 0, 0.1);
+        margin-left: 22px;
+        margin-right: 22px;
+      }
+
+      .header-application {
+        font-weight: bolder;
+        text-align: center;
+      }
+
+      .info-application {
+        font-weight: normal;
+        font-size: 12px;
+        text-align: center;
+        padding-top: 10px;
+      }
+    }
+  }
+}
+
+.lockSuccessModal {
+  box-shadow: 3px 18px 36px 100vw rgba(93, 96, 99, 0.42);
+  -webkit-box-shadow: 3px 18px 36px 100vw rgba(93, 96, 99, 0.42);
+  -moz-box-shadow: 3px 18px 36px 100vw rgba(93, 96, 99, 0.42);
+  overflow-y: hidden;
+
+  &.active {
+    width: 33vw;
+    height: 39%;
+    left: 34vw;
+    top: 15.5vw;
+    background-color: #fff;
+    position: fixed;
+    z-index: 99;
+    border-radius: 16px;
+    animation: bounce-in 0.5s ease;
+    -moz-animation: bounce-in 0.5s ease;
+    /* Firefox */
+    -webkit-animation: bounce-in 0.5s ease;
+
+    /* Safari and Chrome */
+    @keyframes bounce-in {
+      0% {
+        opacity: 0;
+        transform: scale(0.3);
+      }
+
+      50% {
+        opacity: 1;
+        transform: scale(1.05);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+  }
+
+  .modalMenue {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    .close {
+      position: relative;
+      color: rgb(78, 78, 78);
+      top: 20px;
+      left: 20px;
+    }
+
+    .form {
+      width: 70%;
+      gap: 10px;
+      margin: auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+
+      //lock success modal
+      .lock-success-modal {
+        padding: 22.5px;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        .main-title {
+          font-weight: bolder;
+          font-size: larger;
+          color: #000;
+        }
+
+        .sub-title {
+          font-weight: normal;
+          font-size: normal;
+          color: #475569;
+        }
+
+        .status {
+          font-size: medium;
+          color: #64748b;
+          font-weight: bolder;
+        }
+
+        .button-container {
+          width: 100%;
+          margin-top: 10px;
+          height: 50px;
+
+          .btn_secondary {
+            width: 100%;
+            height: 40px;
+            border: solid #475569 1px;
+            color: #475569;
+            font-weight: bolder;
+            font-size: 15px;
+          }
+        }
+      }
+
+      .svgContainer {
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 10px;
+      }
+
+      .buttonContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 12px;
+
         .btn {
           width: 107px !important;
         }

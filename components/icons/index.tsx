@@ -1,3 +1,4 @@
+import { faExclamation } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 interface Props {
   selected: boolean;
@@ -5,6 +6,38 @@ interface Props {
 }
 function PortalIcons({ selected, icon }: Props): JSX.Element {
   switch (icon.toLowerCase()) {
+    case "exclamation":
+      return (
+        <svg
+          width="40"
+          height="40"
+          viewBox="0 0 40 40"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M20 36.6666C29.2047 36.6666 36.6666 29.2047 36.6666 20C36.6666 10.7952 29.2047 3.33331 20 3.33331C10.7952 3.33331 3.33331 10.7952 3.33331 20C3.33331 29.2047 10.7952 36.6666 20 36.6666Z"
+            stroke="#64748B"
+            strokeWidth="3"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M20 26.6667V20"
+            stroke="#64748B"
+            strokeWidth="3"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M20 13.3333H20.0167"
+            stroke="#64748B"
+            strokeWidth="3"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      );
     case "tal icon":
       return (
         <svg

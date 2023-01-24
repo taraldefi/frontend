@@ -1,9 +1,12 @@
+import AppContext from "@components/appContext";
 import { PortalIcons } from "@components/icons";
 import TopBar from "@components/topBar";
 import SecondButton from "@components/widgets/buttonSecondary";
-import React from "react";
+import React, { useContext } from "react";
+import { globalState } from "types/global";
 
-function index() {
+function Index() {
+  const myContext = useContext<globalState>(AppContext);
   return (
     <>
       <TopBar></TopBar>
@@ -48,10 +51,9 @@ function index() {
               <div className="lock-tal-button">
                 <SecondButton
                   title={"Lock TAL"}
-                  onClick={function (
-                    event: React.MouseEvent<HTMLElement, MouseEvent>
-                  ): void {
-                    throw new Error("Function not implemented.");
+                  onClick={() => {
+                    console.log("debug 1:", open);
+                    myContext.setTalModal(!myContext.modal);
                   }}
                 ></SecondButton>
               </div>
@@ -67,10 +69,53 @@ function index() {
             </span>
           </div>
         </div>
-        <div className="insurance-info"></div>
+        <div className="insurance-info">
+          <div className="insurance-info-icon">
+            <PortalIcons selected={false} icon={"exclamation"}></PortalIcons>
+          </div>
+          <div className="insurance-info-title">
+            <span>How locking works</span>
+          </div>
+          <div className="insurance-info-content">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+              ultrices, purus eu aliquet ultricies, nibh dui rhoncus ex, a
+              commodo nunc neque eleifend metus. Nunc ultrices lobortis leo sed
+              lacinia. Donec ut molestie ante. Suspendisse potenti. Donec
+              faucibus hendrerit leo eu blandit:
+            </p>
+            <ul>
+              <li>
+                Praesent maximus, dui ac pretium egestas, massa enim euismod
+                neque, sit amet placerat neque neque a lectus.
+              </li>
+              <li>
+                Pellentesque habitant morbi tristique senectus et netus et
+                malesuada fames ac turpis egestas.
+              </li>
+              <li>
+                Aliquam dapibus leo quis nisl tristique, sed condimentum tortor
+                placerat.
+              </li>
+              <li>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                tempor quis tortor non convallis.
+              </li>
+              <li>
+                Aliquam enim leo, ullamcorper id vulputate nec, maximus quis
+                orci.
+              </li>
+              <li>Duis molestie felis a est convallis imperdiet.</li>
+            </ul>
+            <p>
+              Phasellus feugiat urna neque, non sodales sem pulvinar ultricies.
+              Phasellus sagittis gravida mauris, a euismod eros semper quis.{" "}
+            </p>
+          </div>
+        </div>
       </div>
     </>
   );
 }
 
-export default index;
+export default Index;
