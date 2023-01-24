@@ -1,24 +1,25 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import React, { useContext } from "react";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
 import { PortalIcons } from "@components/icons";
 import router from "next/router";
+import AppContext from "@components/appContext";
 import ButtonSecondary from "@components/widgets/buttonSecondary";
+import { globalState } from "types/global";
 
 type Props = {
   modal: Boolean;
   setModal: React.Dispatch<React.SetStateAction<boolean>>;
 };
 function LockSuccessModal({ modal, setModal }: Props) {
-  console.log(modal);
+  const myContext = useContext<globalState>(AppContext);
   return (
     <div className={"lockSuccessModal " + (modal && "active")}>
       {modal && (
         <div className="modalMenue">
           <div
             onClick={() => {
-              setModal(!modal);
-              console.log(!modal);
+              myContext.setLockSuccessModal(!myContext.lockSuccessModal);
             }}
             className="close"
           >
@@ -36,8 +37,7 @@ function LockSuccessModal({ modal, setModal }: Props) {
                 <ButtonSecondary
                   title={"View Transaction"}
                   onClick={() => {
-                    setModal(!true);
-                    console.log(!modal);
+                    myContext.setLockSuccessModal(!myContext.lockSuccessModal);
                   }}
                 ></ButtonSecondary>
               </div>
