@@ -46,16 +46,25 @@ function index() {
                 <span>9.45%</span>
               </div>
               <div className="lock-tal-button">
-                <SecondButton title={"Lock TAL"} onClick={function (event: React.MouseEvent<HTMLElement, MouseEvent>): void {
-                  throw new Error("Function not implemented.");
-                }}></SecondButton>
+                <SecondButton
+                  title={"Lock TAL"}
+                  onClick={function (
+                    event: React.MouseEvent<HTMLElement, MouseEvent>
+                  ): void {
+                    throw new Error("Function not implemented.");
+                  }}
+                ></SecondButton>
               </div>
             </div>
           </div>
           <div className="insurance-unstacked-container">
             <span>Unstacked LP Tokens</span>
-            <span>We noticed that your wallet contains LP Tokens that are not stacked yet.
-              If you want to stake them, pick the appropriate token in the table, hit Lock TAL and choose Stake LP to initiate staking.</span>
+            <span>
+              We noticed that your wallet contains LP Tokens that are not
+              stacked yet. If you want to stake them, pick the appropriate token
+              in the table, hit Lock TAL and choose Stake LP to initiate
+              staking.
+            </span>
           </div>
         </div>
         <div className="insurance-info"></div>
