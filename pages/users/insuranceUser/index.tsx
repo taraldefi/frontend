@@ -5,7 +5,7 @@ import SecondButton from "@components/widgets/buttonSecondary";
 import React, { useContext } from "react";
 import { globalState } from "types/global";
 
-function index() {
+function Index() {
   const myContext = useContext<globalState>(AppContext);
   return (
     <>
@@ -52,9 +52,9 @@ function index() {
                 <SecondButton
                   title={"Lock TAL"}
                   onClick={() => {
-                  console.log("debug 1:", open);
-                  myContext.setTalModal(!myContext.modal);
-                }}
+                    console.log("debug 1:", open);
+                    myContext.setTalModal(!myContext.modal);
+                  }}
                 ></SecondButton>
               </div>
             </div>
@@ -77,23 +77,40 @@ function index() {
             <span>How locking works</span>
           </div>
           <div className="insurance-info-content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ultrices, purus eu aliquet ultricies, nibh dui rhoncus ex, a commodo nunc neque eleifend metus. Nunc ultrices lobortis leo sed lacinia. Donec ut molestie ante. Suspendisse potenti. Donec faucibus hendrerit leo eu blandit:
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+              ultrices, purus eu aliquet ultricies, nibh dui rhoncus ex, a
+              commodo nunc neque eleifend metus. Nunc ultrices lobortis leo sed
+              lacinia. Donec ut molestie ante. Suspendisse potenti. Donec
+              faucibus hendrerit leo eu blandit:
             </p>
             <ul>
-              <li>Praesent maximus, dui ac pretium egestas, massa enim euismod neque, sit amet placerat neque neque a lectus.
+              <li>
+                Praesent maximus, dui ac pretium egestas, massa enim euismod
+                neque, sit amet placerat neque neque a lectus.
               </li>
-              <li>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+              <li>
+                Pellentesque habitant morbi tristique senectus et netus et
+                malesuada fames ac turpis egestas.
               </li>
-              <li>Aliquam dapibus leo quis nisl tristique, sed condimentum tortor placerat.
+              <li>
+                Aliquam dapibus leo quis nisl tristique, sed condimentum tortor
+                placerat.
               </li>
-              <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tempor quis tortor non convallis.
+              <li>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                tempor quis tortor non convallis.
               </li>
-              <li>Aliquam enim leo, ullamcorper id vulputate nec, maximus quis orci.
+              <li>
+                Aliquam enim leo, ullamcorper id vulputate nec, maximus quis
+                orci.
               </li>
-              <li>Duis molestie felis a est convallis imperdiet.
-              </li>
+              <li>Duis molestie felis a est convallis imperdiet.</li>
             </ul>
-            <p>Phasellus feugiat urna neque, non sodales sem pulvinar ultricies. Phasellus sagittis gravida mauris, a euismod eros semper quis. </p>
+            <p>
+              Phasellus feugiat urna neque, non sodales sem pulvinar ultricies.
+              Phasellus sagittis gravida mauris, a euismod eros semper quis.{" "}
+            </p>
           </div>
         </div>
       </div>
@@ -101,4 +118,4 @@ function index() {
   );
 }
 
-export default index;
+export default Index;

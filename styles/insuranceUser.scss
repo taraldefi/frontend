@@ -199,8 +199,8 @@
     display: flex;
     gap: 8px;
     flex-direction: column;
-    background-color: #DCDCDE33;
-    
+    background-color: #dcdcde33;
+
     .insurance-info-title {
       font-weight: bolder;
       font-size: large;
@@ -209,7 +209,8 @@
     .insurance-info-content {
       width: 102%;
 
-      p,li {
+      p,
+      li {
         font-size: 14px;
       }
     }
