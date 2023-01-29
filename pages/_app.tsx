@@ -8,13 +8,17 @@ import DeleteModal from "@components/modal/deleteModal";
 import NewApplicationModal from "@components/modal/newApplicationModal";
 import TalModal from "@components/modal/talModal";
 import LockSuccessModal from "@components/modal/lockSuccessModal";
+import YieldModal from "@components/modal/yieldModal";
+import StakeSuccessModal from "@components/modal/stakeSuccessModal";
 function MyApp({ Component, pageProps }: AppProps) {
-  const [fmodal, setfModal] = React.useState(false);
-  const [emodal, seteModal] = React.useState(false);
-  const [dmodal, setdModal] = React.useState(false);
-  const [amodal, setaModal] = React.useState(false);
-  const [tmodal, settModal] = React.useState(false);
-  const [lmodal, setlModal] = React.useState(false);
+  const [fmodal, setfModal] = React.useState(false); // form modal
+  const [emodal, seteModal] = React.useState(false); // edit form modal
+  const [dmodal, setdModal] = React.useState(false); // delete modal
+  const [amodal, setaModal] = React.useState(false); // application modal
+  const [tmodal, settModal] = React.useState(false); // tal modal
+  const [lmodal, setlModal] = React.useState(false); // lock asset modal
+  const [ymodal, setyModal] = React.useState(false); // yield modal
+  const [smodal, setsModal] = React.useState(false); // stake success modal
 
   const values = {
     modal: fmodal,
@@ -29,6 +33,10 @@ function MyApp({ Component, pageProps }: AppProps) {
     setTalModal: settModal,
     lockSuccessModal: lmodal,
     setLockSuccessModal: setlModal,
+    yieldModal: ymodal,
+    setYieldModal: setyModal,
+    stakeSuccessModal: smodal,
+    setStakeSuccessModal: setsModal,
   };
   return (
     <AppContext.Provider value={values}>
@@ -37,7 +45,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         values.deleteModal ||
         values.talModal ||
         values.lockSuccessModal ||
-        values.newApplicationModal) && (
+        values.newApplicationModal ||
+        values.yieldModal ||
+        values.stakeSuccessModal) && (
         <>
           <LockSuccessModal
             modal={values.lockSuccessModal}
@@ -51,6 +61,18 @@ function MyApp({ Component, pageProps }: AppProps) {
               values.setTalModal(!values.talModal);
             }}
           ></TalModal>
+          <YieldModal
+            modal={values.yieldModal}
+            setModal={() => {
+              values.setYieldModal(!values.yieldModal);
+            }}
+          ></YieldModal>
+          <StakeSuccessModal
+            modal={values.stakeSuccessModal}
+            setModal={() => {
+              values.setStakeSuccessModal(!values.stakeSuccessModal);
+            }}
+          ></StakeSuccessModal>
           <FormModal
             modal={values.modal}
             setModal={() => {

@@ -1,0 +1,139 @@
+.yield-container {
+  display: flex;
+  padding: 40px 80px;
+
+  .yield-contents {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    gap: 12px;
+
+    .yield-title-container {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      gap: 10px;
+
+      :nth-child(1) {
+        font-weight: 700;
+        font-size: 24px;
+      }
+
+      :nth-child(2) {
+        font-weight: normal;
+        font-size: 16px;
+      }
+    }
+
+    .yield-tal-container {
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 24px 20px;
+      width: 100%;
+      display: flex;
+      svg {
+        height: 40px;
+        width: 40px;
+      }
+      justify-content: space-between;
+      .item1 {
+        grid-area: icon;
+      }
+      .item2 {
+        grid-area: title;
+        font-weight: bold;
+        font-size: 14px;
+        color: #003c6e;
+      }
+      .item3 {
+        grid-area: desc;
+
+        font-weight: normal;
+        font-size: small;
+        color: #003c6e;
+      }
+
+      .lock-title {
+        display: grid;
+        grid-template-areas:
+          "icon title"
+          "icon desc";
+        gap: 0px 20px;
+      }
+
+      .lock-tal-Tal {
+        display: flex;
+        flex-direction: column;
+
+        svg {
+          height: 15px;
+          width: 15px;
+        }
+
+        gap: 5px;
+
+        :nth-child(1) {
+          font-weight: bold;
+          font-size: 14px;
+          color: #003c6e;
+        }
+
+        :nth-child(2) {
+          display: flex;
+          gap: 2px;
+          font-weight: normal;
+          font-size: small;
+          color: #003c6e;
+        }
+      }
+
+      .lock-tal-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+        .btn_secondary {
+          width: 130px;
+          height: 35px;
+          border: #4c5561d1 1.5px solid;
+          color: #475569;
+
+          font-weight: bolder;
+        }
+      }
+    }
+
+    .yield-disclaimer-container {
+      svg {
+        height: 30px;
+        width: 30px;
+      }
+      .d-item1 {
+        grid-area: d-icon;
+      }
+      .d-item2 {
+        grid-area: d-title;
+        font-weight: bolder;
+        font-weight: large;
+        color: #000;
+      }
+      .d-item3 {
+        grid-area: d-desc;
+        font-weight: normal;
+        font-weight: medium;
+        color: #000;
+        line-height: 20px;
+      }
+      width: 60%;
+      display: grid;
+      padding: 20px;
+      background-color: #dcdcde33;
+      grid-template-areas:
+        "d-icon d-title"
+        "d-icon d-desc";
+      gap: 5px 20px;
+    }
+  }
+}

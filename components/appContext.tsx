@@ -13,6 +13,10 @@ const AppContext = React.createContext<globalState>({
   setLockSuccessModal: () => {},
   talModal: false,
   setTalModal: () => {},
+  stakeSuccessModal: false,
+  setStakeSuccessModal: () => {},
+  yieldModal: false,
+  setYieldModal: () => {},
 });
 
 export default AppContext;
