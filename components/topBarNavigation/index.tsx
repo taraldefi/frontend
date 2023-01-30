@@ -1,7 +1,8 @@
 import React from "react";
 import { useRouter } from "next/router";
 import { TopbarData, TopbarNewDataEx, TopbarNewDataIm } from "./data";
-import Button from "@components/widgets/button";
+// import Button from "@components/widgets/button";
+import { Button } from "@icodex-az/tariala-component-library";
 import AppContext from "@components/appContext";
 import { useContext } from "react";
 import { globalState } from "../../types/global";
@@ -139,14 +140,19 @@ function TopBarNav() {
                   myContext.setModal(!myContext.modal);
                 }}
               ></SecondButton>
-              <Button
-                title={"New Application"}
-                onClick={() =>
-                  myContext.setNewApplicationModal(
-                    !myContext.newApplicationModal
-                  )
-                }
-              ></Button>
+
+              <div>
+                <Button
+                  primary={true}
+                  backgroundColor="#1ab98b"
+                  label={"New Application"}
+                  onClick={() =>
+                    myContext.setNewApplicationModal(
+                      !myContext.newApplicationModal
+                    )
+                  }
+                ></Button>
+              </div>
             </div>
           </div>
         ) : (

@@ -1,4 +1,5 @@
 import "@styles/globals.scss";
+import "@icodex-az/tariala-component-library/build/index.scss";
 import type { AppProps } from "next/app";
 import FormModal from "@components/modal/entityFormModal";
 import AppContext from "@components/appContext";
