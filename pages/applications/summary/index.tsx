@@ -2,15 +2,18 @@ import React from "react";
 import DashBoardLayout from "@components/layouts/dashboard_layout";
 import { PortalIcons } from "@components/icons";
 import Select from "@components/Select/Select";
+import DashBoardPageLayout from "@components/layouts/dashboard_page_layout";
 function Summary() {
   return (
-    <>
-      <DashBoardLayout>
+    <div className="summaryMain">
+      <DashBoardPageLayout
+        sortBarData={[]}
+        showexport={true}
+        exporter={""}
+        importer={""}
+        date={""}
+      >
         <div className="summaryBody">
-          <div className="titleBox">
-            <span>[Exporter] - [Importer] - [Date] </span>
-          </div>
-
           <div className="inputBox">
             <div className="business">
               <span>BUSINESS SIDES</span>
@@ -30,34 +33,31 @@ function Summary() {
             <div className="transaction">
               <span>TRANSACTION DETAILS</span>
               <span>Transaction</span>
-              <div className="portalIcon">
-                <PortalIcons selected={false} icon={"dollar"} />
-              </div>
               <input
                 type="text"
+                id="dollar"
                 className="inputs"
                 placeholder="Transaction amount..."
               ></input>
               <span>Interest</span>
-              <div className="portalIcon">
-                <PortalIcons selected={false} icon={"interest"} />
-              </div>
+
               <input
+                id="percentage"
                 type="text"
                 className="inputs"
                 placeholder="Percentage..."
               ></input>
               <span>Downpayment</span>
-              <div className="portalIcon">
-                <PortalIcons selected={false} icon={"dollar"} />
-              </div>
+
               <input
                 type="text"
+                id="dollar"
                 className="inputs"
                 placeholder="Deposit amount..."
               ></input>
               <span>Term</span>
               <input
+                id="calendar"
                 type="date"
                 className="inputs"
                 placeholder="select date..."
@@ -79,6 +79,7 @@ function Summary() {
               </select>
               <span>Delivery date</span>
               <input
+                id="calendar"
                 type="date"
                 className="inputs"
                 placeholder="Select date..."
@@ -97,13 +98,13 @@ function Summary() {
               <span>CONTRACT STATUS</span>
               <div className="header">
                 <PortalIcons icon="checkBox" selected={false} />
-                <span>contact Signed</span>
+                <span>Contract Signed</span>
               </div>
             </div>
           </div>
         </div>
-      </DashBoardLayout>
-    </>
+      </DashBoardPageLayout>
+    </div>
   );
 }
 

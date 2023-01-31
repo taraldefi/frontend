@@ -21,7 +21,7 @@ export const SidebarData = [
     id: 4,
     title: "Financial",
     name: "financial",
-    path: "/applications/financial",
+    path: "/applications/financial/profit",
   },
   {
     id: 5,
@@ -33,13 +33,13 @@ export const SidebarData = [
     id: 6,
     title: "Compliance",
     name: "compliance",
-    path: "/applications/compliance",
+    path: "/applications/compliance/company",
   },
   {
     id: 7,
     title: "Research & Sentiment",
     name: "research",
-    path: "/applications/research",
+    path: "/applications/research/research",
   },
   {
     id: 8,
@@ -51,13 +51,13 @@ export const SidebarData = [
     id: 9,
     title: "Trade Documents",
     name: "trade",
-    path: "/applications/trade",
+    path: "/applications/trade/contract",
   },
   {
     id: 10,
     title: "Rating",
     name: "rating",
-    path: "/applications/rating",
+    path: "/applications/rating/quantitative",
   },
   {
     id: 11,

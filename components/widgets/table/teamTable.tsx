@@ -2,7 +2,6 @@ import React from "react";
 import ProgressBar from "@components/widgets/progressBar";
 import Image from "next/image";
 import { teamTableDataType } from "types/widget_table";
-import StatusWidget from "../statusWidget";
 import SecondButton from "../buttonSecondary";
 interface Props {
   TableData: teamTableDataType[];
@@ -13,7 +12,7 @@ export const TeamTable = ({ TableData, value }: Props) => {
   return (
     <>
       <div className="taskBox">
-        <span>TEAM ({value})</span>
+        <span>TASKS ({value})</span>
         <SecondButton
           title="View All Members"
           onClick={() => setToggle(!toggle)}
@@ -35,7 +34,7 @@ export const TeamTable = ({ TableData, value }: Props) => {
         </div>
         {TableData.map((item, index) => {
           return (
-            <div className="tabelContent" key={index}>
+            <div className="tableContent" key={index}>
               <div className="memberContainer" id="member">
                 <Image
                   className="images"

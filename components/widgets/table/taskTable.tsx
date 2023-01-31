@@ -2,7 +2,6 @@ import React from "react";
 import ProgressBar from "@components/widgets/progressBar";
 import Image from "next/image";
 import { taskTableDataType } from "types/widget_table";
-import StatusWidget from "../statusWidget";
 import SecondButton from "../buttonSecondary";
 interface Props {
   TableData: taskTableDataType[];
@@ -34,7 +33,7 @@ export const TaskTable = ({ TableData, value }: Props) => {
         </div>
         {TableData.map((item, index) => {
           return (
-            <div className="tabelContent" key={index}>
+            <div className="tableContent" key={index}>
               <div className="assigneeContainer" id="assignee">
                 <Image
                   className="images"

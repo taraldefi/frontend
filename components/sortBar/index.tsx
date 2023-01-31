@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 
 interface Prop {
   data: Array<SortBarItem>;
+  width: string;
 }
 
 export default function SortBarNav({ data }: Prop) {

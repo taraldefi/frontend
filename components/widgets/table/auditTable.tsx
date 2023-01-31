@@ -1,8 +1,8 @@
 import React from "react";
-import ProgressBar from "@components/widgets/progressBar";
 import Image from "next/image";
 import { auditTableDataType } from "types/widget_table";
-import StatusWidget from "../statusWidget";
+import { StatusWidget } from "@icodex-az/tariala-component-library";
+import { PortalIcons } from "@components/icons";
 interface Props {
   TableData: auditTableDataType[];
 }
@@ -22,7 +22,7 @@ export const AuditTable = ({ TableData }: Props) => {
       </div>
       {TableData.map((item, index) => {
         return (
-          <div className="tabelContent" key={index}>
+          <div className="tableContent" key={index}>
             <div className="processTab">{item.action}</div>
             <div className="imageContainer">
               <Image
@@ -40,7 +40,10 @@ export const AuditTable = ({ TableData }: Props) => {
             </div>
 
             <div className="activity">
-              <StatusWidget type={item.activity}></StatusWidget>
+              <StatusWidget
+                type={item.activity}
+                showIcon={false}
+              ></StatusWidget>
             </div>
 
             <div className="date">{item.date}</div>

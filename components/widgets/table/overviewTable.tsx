@@ -2,7 +2,7 @@ import React from "react";
 import ProgressBar from "@components/widgets/progressBar";
 import Image from "next/image";
 import { overviewTableDataType } from "types/widget_table";
-import StatusWidget from "../statusWidget";
+import { StatusWidget } from "@icodex-az/tariala-component-library";
 interface Props {
   TableData: overviewTableDataType[];
 }
@@ -24,7 +24,7 @@ export const OverviewTable = ({ TableData }: Props) => {
       </div>
       {TableData.map((item, index) => {
         return (
-          <div className="tabelContent" key={index}>
+          <div className="tableContent" key={index}>
             <div className="processTab">{item.process}</div>
             <div className="imageContainer">
               {TableData[index].users.map((item, index) => {
@@ -45,7 +45,7 @@ export const OverviewTable = ({ TableData }: Props) => {
               color={"#04C1DE"}
               showText={false}
             />
-            <StatusWidget type={item.status}></StatusWidget>
+            <StatusWidget type={item.status} showIcon={false}></StatusWidget>
             <div className="date">{item.date}</div>
           </div>
         );

@@ -10,7 +10,7 @@ const DashBoardLayout = ({ children }: LayoutProps) => {
   return (
     <Layout>
       <LeftMenu></LeftMenu>
-      <div className="mainBody">{children}</div>
+      <div className="mainBodyIn">{children}</div>
     </Layout>
   );
 };
