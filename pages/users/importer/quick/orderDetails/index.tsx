@@ -1,6 +1,6 @@
 import ApplicationLayout from "@components/layouts/new_application_layout";
 import BottomBar from "@components/newApplicationBottom";
-import ButtonSecondary from "@components/widgets/buttonSecondary";
+import { Button } from "@icodex-az/tariala-component-library";
 import React from "react";
 
 function Index() {
@@ -63,14 +63,7 @@ function Index() {
               </div>
             </div>
           </div>
-          <ButtonSecondary
-            title={"+ Add Product"}
-            onClick={function (
-              event: React.MouseEvent<HTMLElement, MouseEvent>
-            ): void {
-              throw new Error("Function not implemented.");
-            }}
-          ></ButtonSecondary>
+          <Button label={"+ Add Product"} onClick={() => {}}></Button>
         </div>
         <div className="vLine"></div>
         <div className="portContainer">

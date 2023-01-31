@@ -56,7 +56,7 @@
   }
 
   .buttonBox {
-    .btn {
+    .button--secondary {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -64,6 +64,9 @@
       height: 42px !important;
       background-color: #0bd7a4;
       border: 1px solid #0bd7a4;
+      color: white;
+      font-weight: bold;
+      font-size: 15px;
 
       span {
         font-weight: bold;
@@ -166,13 +169,17 @@
 
   .innerContainer1 {
     .inputContainer {
-      .btn {
+      .button--secondary {
+        font-size: 15px;
+        color: #1d4ed8;
+        font-weight: bold;
         span {
           font-weight: bold;
           color: #1d4ed8;
         }
 
         svg {
+          color: #1d4ed8;
           width: 15px;
         }
 

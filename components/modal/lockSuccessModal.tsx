@@ -4,7 +4,7 @@ import { faClose } from "@fortawesome/free-solid-svg-icons";
 import { PortalIcons } from "@components/icons";
 import router from "next/router";
 import AppContext from "@components/appContext";
-import ButtonSecondary from "@components/widgets/buttonSecondary";
+import { Button } from "@icodex-az/tariala-component-library";
 import { globalState } from "types/global";
 
 type Props = {
@@ -34,12 +34,12 @@ function LockSuccessModal({ modal, setModal }: Props) {
               </div>
               <div className="status">STATUS: PENDING</div>
               <div className="button-container">
-                <ButtonSecondary
-                  title={"View Transaction"}
+                <Button
+                  label={"View Transaction"}
                   onClick={() => {
                     myContext.setLockSuccessModal(!myContext.lockSuccessModal);
                   }}
-                ></ButtonSecondary>
+                ></Button>
               </div>
             </div>
           </div>

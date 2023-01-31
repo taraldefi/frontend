@@ -33,7 +33,8 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
-    .btn_secondary {
+    .button--secondary {
+      width: 150px;
       border: 1px solid #475569;
       color: #475569;
       font-weight: bolder;

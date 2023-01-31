@@ -1,7 +1,6 @@
 import AppContext from "@components/appContext";
 import { PortalIcons } from "@components/icons";
 import TopBar from "@components/topBar";
-import SecondButton from "@components/widgets/buttonSecondary";
 import React, { useContext } from "react";
 import { globalState } from "types/global";
 import { PoolCard } from "@icodex-az/tariala-component-library";

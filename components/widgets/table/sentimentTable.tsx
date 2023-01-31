@@ -1,6 +1,4 @@
 import React from "react";
-import Image from "next/image";
-import SecondButton from "../buttonSecondary";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowUpRightFromSquare,

@@ -5,7 +5,8 @@ import { TableData } from "@pages/applications/research/research/data";
 import { ResearchTable } from "@components/widgets/table/researchTable";
 import { useForm } from "react-hook-form";
 import { tableFormResearch } from "types/form";
-import ButtonIcon from "@components/widgets/buttonWithIcon";
+import { Button } from "@icodex-az/tariala-component-library";
+import { PortalIcons } from "@components/icons";
 function Research() {
   var x: number = Object.keys(TableData).length;
   const [fields, setFields] = useState<tableFormResearch[]>(TableData);
@@ -50,7 +51,14 @@ function Research() {
               </div>
 
               <div className="buttonContainer">
-                <ButtonIcon icon="add" title="Add"></ButtonIcon>
+                <Button
+                  primary={true}
+                  backgroundColor="#1AB98B"
+                  icon={
+                    <PortalIcons selected={false} icon={"add"}></PortalIcons>
+                  }
+                  label="Add"
+                ></Button>
               </div>
             </form>
           </div>

@@ -1,7 +1,7 @@
 import AppContext from "@components/appContext";
 import { PortalIcons } from "@components/icons";
 import TopBar from "@components/topBar";
-import SecondButton from "@components/widgets/buttonSecondary";
+import { Button } from "@icodex-az/tariala-component-library";
 import React, { useContext } from "react";
 import { globalState } from "types/global";
 
@@ -49,13 +49,13 @@ function Index() {
                 <span>9.45%</span>
               </div>
               <div className="lock-tal-button">
-                <SecondButton
-                  title={"Lock TAL"}
+                <Button
+                  label={"Lock TAL"}
                   onClick={() => {
                     console.log("debug 1:", open);
                     myContext.setTalModal(!myContext.modal);
                   }}
-                ></SecondButton>
+                ></Button>
               </div>
             </div>
           </div>

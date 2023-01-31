@@ -2,7 +2,7 @@ import React from "react";
 import { SidebarData } from "./data";
 import { PortalIcons } from "../icons";
 import { useRouter } from "next/router";
-import Progress from "../widgets/progressBar";
+import { ProgressBar } from "@icodex-az/tariala-component-library";
 
 export default function LeftMenu() {
   const router = useRouter();
@@ -46,7 +46,7 @@ export default function LeftMenu() {
         })}
       </div>
       <div className="progressBox">
-        <Progress progress={27} color={"#003C6E"} showText={true} />
+        <ProgressBar progress={27} color={"#003C6E"} showText={true} />
       </div>
     </div>
   );
