@@ -145,9 +145,8 @@
         :nth-child(1) {
           border-radius: 3px;
           border-color: #81cfdb;
-          // color: #fff;
-          padding: 6px 10px 6px 10px;
-          // background: #81CFDB;
+          height: 34px;
+          display: flex;
         }
       }
 
@@ -155,6 +154,7 @@
         :nth-child(1) {
           border-radius: 3px;
           border-color: #81cfdb;
+          display: flex;
           height: 34px;
         }
       }

@@ -369,10 +369,10 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
-"@icodex-az/tariala-component-library@1.0.7":
-  version "1.0.7"
-  resolved "https://npm.pkg.github.com/download/@icodex-az/tariala-component-library/1.0.7/61f6191700eadb985eafdc82d92546670011a204#61f6191700eadb985eafdc82d92546670011a204"
-  integrity sha512-BZPC4APRSlyz2SL08MOyLW0JJzoA1TO8WlmImHxk0q8P2G6SAPn8GNx3xrpQvj9deQAawMcxCkeAPAaX8p1iLw==
+"@icodex-az/tariala-component-library@^1.0.8":
+  version "1.0.8"
+  resolved "https://npm.pkg.github.com/download/@icodex-az/tariala-component-library/1.0.8/ae2b7eba3af15054d30edf4293649f6c6c70c483#ae2b7eba3af15054d30edf4293649f6c6c70c483"
+  integrity sha512-vkrV7E7RpW/h+e9O0X31pFmb/ujQ050yoo7CLGVARg24trAByNCvZP7ELYvQOFNhaWUc5mzHVgEMeIkPfryC5w==
   dependencies:
     react-feather "^2.0.10"
 

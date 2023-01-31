@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
-import ButtonIcon from "./buttonWithIcon";
+import { Button } from "@icodex-az/tariala-component-library";
+import { PortalIcons } from "@components/icons";
 
 const FileUpload = ({ files, setFiles, removeFile }: any) => {
   const uploadHandler = (event: any) => {
@@ -30,11 +31,13 @@ const FileUpload = ({ files, setFiles, removeFile }: any) => {
       <div className="file-card">
         <div className="file-inputs">
           <input type="file" accept=".pdf" onChange={uploadHandler} />
-          <ButtonIcon
-            title={"Upload"}
-            icon={"upload"}
+          <Button
+            backgroundColor="#1ab98b"
+            primary={true}
+            label={"Upload"}
+            icon={<PortalIcons selected={false} icon={"upload"}></PortalIcons>}
             onClick={() => {}}
-          ></ButtonIcon>
+          ></Button>
         </div>
       </div>
     </>

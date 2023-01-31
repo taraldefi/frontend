@@ -387,12 +387,12 @@
 }
 
 .newApplicationModal {
-  // box-shadow: 3px 18px 36px 100vw rgba(93, 96, 99, 0.42);
-  // -webkit-box-shadow: 3px 18px 36px 100vw rgba(93, 96, 99, 0.42);
-  // -moz-box-shadow: 3px 18px 36px 100vw rgba(93, 96, 99, 0.42);
   overflow-y: hidden;
 
   &.active {
+    box-shadow: 3px 18px 36px 100vw rgba(93, 96, 99, 0.42);
+    -webkit-box-shadow: 3px 18px 36px 100vw rgba(93, 96, 99, 0.42);
+    -moz-box-shadow: 3px 18px 36px 100vw rgba(93, 96, 99, 0.42);
     width: 42vw;
     height: 47%;
     left: 30vw;
@@ -470,7 +470,6 @@
         width: 1.5px;
         height: initial;
         position: relative;
-        top: 40px;
         background-color: rgba(1, 0, 0, 0.1);
         margin-left: 22px;
         margin-right: 22px;

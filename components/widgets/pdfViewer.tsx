@@ -8,7 +8,7 @@ import {
   zoomPlugin,
 } from "@react-pdf-viewer/zoom";
 import "@react-pdf-viewer/core/lib/styles/index.css";
-import Button from "./button";
+import { Button } from "@icodex-az/tariala-component-library";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCirclePlus, faCircleMinus } from "@fortawesome/free-solid-svg-icons";
 
@@ -69,7 +69,7 @@ const Modal: React.FC<ModalProps> = ({
           </div>
         </div>
         <div>
-          <Button title={"Close"} onClick={() => setShown(false)} />
+          <Button label={"Close"} onClick={() => setShown(false)} />
         </div>
       </div>
       <Worker workerUrl="https://unpkg.com/pdfjs-dist@2.14.305/build/pdf.worker.min.js">

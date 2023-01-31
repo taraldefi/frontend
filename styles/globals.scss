@@ -62,15 +62,16 @@ body {
       flex-direction: row;
       gap: 24px;
 
-      .btn_secondary {
+      .button--secondary {
         width: 80px;
         border: #475569 solid 1px;
         font-weight: bold;
         color: #475569;
       }
 
-      .btn {
-        width: 140px !important;
+      .button--primary {
+        justify-content: center;
+        width: 140px;
       }
     }
   }

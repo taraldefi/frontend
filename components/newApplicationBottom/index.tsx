@@ -1,5 +1,5 @@
-import Button from "@components/widgets/button";
-import SecondButton from "@components/widgets/buttonSecondary";
+import { Button } from "@icodex-az/tariala-component-library";
+
 import React from "react";
 
 function BottomBar() {
@@ -7,8 +7,13 @@ function BottomBar() {
     <div className="botomBar">
       <div className="bbBackground">
         <div className="btnContainer">
-          <SecondButton title={"Discard"} onClick={() => {}}></SecondButton>
-          <Button title={"Next"} onClick={() => {}}></Button>
+          <Button label={"Discard"} onClick={() => {}}></Button>
+          <Button
+            backgroundColor="#1ab98b"
+            primary={true}
+            label={"Next"}
+            onClick={() => {}}
+          ></Button>
         </div>
       </div>
     </div>

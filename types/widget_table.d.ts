@@ -2,13 +2,13 @@ export interface overviewTableDataType {
   process: string;
   users: string[];
   progress: number;
-  status: "Change" | "Review" | "Completed" | "Up" | "Down" | "Active";
+  status: any;
   date: string;
 }
 export interface auditTableDataType {
   action: string;
   user: auditUser;
-  activity: "Change" | "Review" | "Completed" | "Up" | "Down" | "Active";
+  activity: any;
   date: string;
 }
 

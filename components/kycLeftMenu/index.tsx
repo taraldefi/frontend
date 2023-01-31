@@ -1,7 +1,6 @@
 import React from "react";
 import { PortalIcons } from "../icons";
 import { useRouter } from "next/router";
-import Progress from "../widgets/progressBar";
 import { SidebarData } from "./data";
 
 export default function LeftMenu() {
