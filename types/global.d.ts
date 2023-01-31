@@ -12,6 +12,10 @@ export interface globalState {
   setTalModal: React.Dispatch<React.SetStateAction<boolean>>;
   lockSuccessModal: Boolean;
   setLockSuccessModal: React.Dispatch<React.SetStateAction<boolean>>;
+  yieldModal: Boolean;
+  setYieldModal: React.Dispatch<React.SetStateAction<boolean>>;
+  stakeSuccessModal: Boolean;
+  setStakeSuccessModal: React.Dispatch<React.SetStateAction<boolean>>;
   exporter?: String;
   importer?: String;
   date?: String;

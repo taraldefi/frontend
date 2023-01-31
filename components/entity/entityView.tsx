@@ -6,7 +6,7 @@ import {
   faSchoolCircleExclamation,
 } from "@fortawesome/free-solid-svg-icons";
 import { PortalIcons } from "@components/icons";
-import Button from "@components/widgets/button";
+import { Button } from "@icodex-az/tariala-component-library";
 import { globalState } from "types/global";
 import AppContext from "@components/appContext";
 interface infoType {
@@ -135,7 +135,7 @@ function EntityView({ infoData }: Props) {
             <PortalIcons selected={false} icon={"delete"}></PortalIcons>
           </div>
           <Button
-            title={"Edit Entity"}
+            label={"Edit Entity"}
             onClick={() => myContext.setEditModal(!myContext.editModal)}
           ></Button>
         </div>

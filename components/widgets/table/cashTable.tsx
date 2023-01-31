@@ -2,7 +2,7 @@ import { faEllipsis, faEuroSign } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { cashFlowTableType } from "types/widget_table";
-import SecondButton from "../buttonSecondary";
+import { Button } from "@icodex-az/tariala-component-library";
 interface Props {
   TableData: cashFlowTableType;
 }
@@ -47,8 +47,8 @@ export const CashTable = ({ TableData }: Props) => {
                         {TableData[key][`${item}`] == "file" ? (
                           <div id="fileButton">
                             {" "}
-                            <SecondButton
-                              title={"Open File"}
+                            <Button
+                              label={"Open File"}
                               onClick={function (): void {
                                 throw new Error("Function not implemented.");
                               }}

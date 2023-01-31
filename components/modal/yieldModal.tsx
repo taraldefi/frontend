@@ -9,7 +9,7 @@ type Props = {
   modal: Boolean;
   setModal: React.Dispatch<React.SetStateAction<boolean>>;
 };
-function TalModal({ modal, setModal }: Props) {
+function YieldModal({ modal, setModal }: Props) {
   const myContext = useContext<globalState>(AppContext);
   return (
     <div className={"formModal " + (modal && "active")}>
@@ -23,42 +23,40 @@ function TalModal({ modal, setModal }: Props) {
           >
             <FontAwesomeIcon icon={faClose}></FontAwesomeIcon>
           </div>
-          <div className="header">
-            Lock TAL
-            <span className="subtitle">
-              Select the amount you&apos;d like to lock.
+
+          <div className="header ">
+            <div className="yield-icon ">
+              {" "}
+              <PortalIcons selected={false} icon={"tal icon"}></PortalIcons>
+            </div>
+            Cauris Fund #4 <br /> <br />
+            <span className="yield-subtitle">
+              Stake your STX/USDA LP tokens at 39.72% (estimated APR) and start
+              earning rewards now.
             </span>
           </div>
           <div className="form">
-            <span className="label">Lock tal info</span>
             <div className="entityfield">
-              <span>Available amount 1,483.406843 TAL</span>
+              <span>Available amount 1,483.406843 USDC</span>
               <div className="custom-input">
                 <input
                   type="number"
                   className="custom-input-input"
                   placeholder="0.0"
                 />
-                <button className="custom-input-text">TAL</button>
+                <button className="custom-input-text">USDC</button>
                 <div className="vl"></div>
                 <button className="custom-input-button" type="submit">
                   MAX
                 </button>
               </div>
             </div>
-            <div className="form-tal-info">
-              <PortalIcons selected={false} icon={"Exclamation"}></PortalIcons>
-              <p>
-                Once you have staked your TAL tokens, they will be locked for at
-                least 10 days (cooldown period). Reminder: The cooldown has to
-                be started manually.
-              </p>
-            </div>
+
             <div>
               <button
                 className="button"
                 onClick={() => {
-                  myContext.setLockSuccessModal(!myContext.lockSuccessModal);
+                  myContext.setStakeSuccessModal(!myContext.stakeSuccessModal);
                   setModal(!modal);
                 }}
               >
@@ -72,4 +70,4 @@ function TalModal({ modal, setModal }: Props) {
   );
 }
 
-export default TalModal;
+export default YieldModal;
