@@ -5,7 +5,7 @@ import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { PortalIcons } from "@components/icons";
 import { MetricRange } from "../metricWidget";
-import StatusWidget from "../statusWidget";
+import { StatusWidget } from "@icodex-az/tariala-component-library";
 
 interface Props {
   TableData: quantitativeTableDataType[];
@@ -35,9 +35,17 @@ export const QuantitativeTable = ({ TableData }: Props) => {
 
               <div className="statusTab">
                 {item.status ? (
-                  <StatusWidget type={"Up"} icon={"up"}></StatusWidget>
+                  <StatusWidget
+                    type={"Up"}
+                    icon={<PortalIcons selected={false} icon={"up"} />}
+                    showIcon={true}
+                  ></StatusWidget>
                 ) : (
-                  <StatusWidget type={"Down"} icon={"down"}></StatusWidget>
+                  <StatusWidget
+                    type={"Down"}
+                    icon={<PortalIcons selected={false} icon={"down"} />}
+                    showIcon={true}
+                  ></StatusWidget>
                 )}
               </div>
 

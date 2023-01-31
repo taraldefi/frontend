@@ -4,7 +4,8 @@ import TopBar from "@components/topBar";
 import SecondButton from "@components/widgets/buttonSecondary";
 import React, { useContext } from "react";
 import { globalState } from "types/global";
-
+import { PoolCard } from "@icodex-az/tariala-component-library";
+import logo from "@public/assets/svg/logo.svg";
 function Index() {
   const myContext = useContext<globalState>(AppContext);
   return (
@@ -17,150 +18,55 @@ function Index() {
             <span>list description and overview.</span>
           </div>
 
-          <div className="yield-tal-container">
-            <div className="lock-title">
-              <div className="item1">
-                {" "}
-                <PortalIcons selected={false} icon={"tal icon"}></PortalIcons>
-              </div>
-              <div className="item2">
-                Cauris Fund #4: Africa Innovation Pool
-              </div>
-              <div className="item3">Fintech loans in Africa</div>
-            </div>
-            <div className="lock-tal-Tal">
-              <span>12.15% USDC</span>
-              <span>
-                19.28% with GFI{" "}
-                <PortalIcons
-                  selected={false}
-                  icon={"general info"}
-                ></PortalIcons>
-              </span>
-            </div>
+          <PoolCard
+            poolTitle={"Cauris Fund #4: Africa Innovation Pool"}
+            poolDescription={"Fintech loans in Africa"}
+            unitranche={true}
+            poolStat={"12.15% USDC"}
+            poolSubstat={"19.28% with GFI"}
+            poolState={"yield"}
+            poolIcon={logo.src}
+            onClick={() => {
+              myContext.setYieldModal(!myContext.modal);
+            }}
+          />
+          <PoolCard
+            poolTitle={"Cauris Fund #3: Africa Innovation Pool"}
+            poolDescription={"Africa multi-sector loans"}
+            unitranche={false}
+            poolStat={"17.00% USDC"}
+            poolSubstat={"23.99% with GFI"}
+            poolState={"closed"}
+            poolIcon={logo.src}
+            onClick={() => {
+              myContext.setYieldModal(!myContext.modal);
+            }}
+          />
+          <PoolCard
+            poolTitle={"Cauris Fund #4: Africa Innovation Pool"}
+            poolDescription={"Fintech loans in Africa"}
+            unitranche={true}
+            poolStat={"12.15% USDC"}
+            poolSubstat={"19.28% with GFI"}
+            poolState={"yield"}
+            poolIcon={logo.src}
+            onClick={() => {
+              myContext.setYieldModal(!myContext.modal);
+            }}
+          />
+          <PoolCard
+            poolTitle={"Cauris Fund #4: Africa Innovation Pool"}
+            poolDescription={"Fintech loans in Africa"}
+            unitranche={true}
+            poolStat={"12.15% USDC"}
+            poolSubstat={"19.28% with GFI"}
+            poolState={"yield"}
+            poolIcon={logo.src}
+            onClick={() => {
+              myContext.setYieldModal(!myContext.modal);
+            }}
+          />
 
-            <div className="lock-tal-button">
-              <SecondButton
-                title={"Unitranche"}
-                onClick={() => {}}
-              ></SecondButton>
-              <SecondButton
-                title={"yield"}
-                onClick={() => {
-                  console.log("debug 1:", open);
-                  myContext.setYieldModal(!myContext.modal);
-                }}
-              ></SecondButton>
-            </div>
-          </div>
-          <div className="yield-tal-container">
-            <div className="lock-title">
-              <div className="item1">
-                {" "}
-                <PortalIcons selected={false} icon={"tal icon"}></PortalIcons>
-              </div>
-              <div className="item2">
-                Cauris Fund #4: Africa Innovation Pool
-              </div>
-              <div className="item3">Fintech loans in Africa</div>
-            </div>
-            <div className="lock-tal-Tal">
-              <span>12.15% USDC</span>
-              <span>
-                19.28% with GFI{" "}
-                <PortalIcons
-                  selected={false}
-                  icon={"general info"}
-                ></PortalIcons>
-              </span>
-            </div>
-
-            <div className="lock-tal-button">
-              <SecondButton
-                title={"Unitranche"}
-                onClick={() => {}}
-              ></SecondButton>
-              <SecondButton
-                title={"yield"}
-                onClick={() => {
-                  console.log("debug 1:", open);
-                  myContext.setYieldModal(!myContext.modal);
-                }}
-              ></SecondButton>
-            </div>
-          </div>
-          <div className="yield-tal-container">
-            <div className="lock-title">
-              <div className="item1">
-                {" "}
-                <PortalIcons selected={false} icon={"tal icon"}></PortalIcons>
-              </div>
-              <div className="item2">
-                Cauris Fund #4: Africa Innovation Pool
-              </div>
-              <div className="item3">Fintech loans in Africa</div>
-            </div>
-            <div className="lock-tal-Tal">
-              <span>12.15% USDC</span>
-              <span>
-                19.28% with GFI
-                <PortalIcons
-                  selected={false}
-                  icon={"general info"}
-                ></PortalIcons>
-              </span>
-            </div>
-
-            <div className="lock-tal-button">
-              <SecondButton
-                title={"Unitranche"}
-                onClick={() => {}}
-              ></SecondButton>
-              <SecondButton
-                title={"full"}
-                onClick={() => {
-                  console.log("debug 1:", open);
-                  myContext.setYieldModal(!myContext.modal);
-                }}
-              ></SecondButton>
-            </div>
-          </div>
-          <div className="yield-tal-container">
-            <div className="lock-title">
-              <div className="item1">
-                {" "}
-                <PortalIcons selected={false} icon={"tal icon"}></PortalIcons>
-              </div>
-              <div className="item2">
-                Cauris Fund #4: Africa Innovation Pool
-              </div>
-              <div className="item3">Fintech loans in Africa</div>
-            </div>
-            <div className="lock-tal-Tal">
-              <span>12.15% USDC</span>
-              <span>
-                19.28% with GFI{" "}
-                <PortalIcons
-                  selected={false}
-                  icon={"general info"}
-                ></PortalIcons>
-              </span>
-            </div>
-
-            <div className="lock-tal-button">
-              <SecondButton
-                title={"Unitranche"}
-                onClick={() => {}}
-              ></SecondButton>
-              <SecondButton
-                title={"closed"}
-                onClick={() => {
-                  console.log("debug 1:", open);
-                  myContext.setYieldModal(!myContext.modal);
-                }}
-              ></SecondButton>
-            </div>
-          </div>
           <div className="yield-disclaimer-container">
             <div className="d-item1">
               {" "}

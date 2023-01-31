@@ -2,7 +2,6 @@ import React from "react";
 import ProgressBar from "@components/widgets/progressBar";
 import Image from "next/image";
 import { taskTableDataType } from "types/widget_table";
-import StatusWidget from "../statusWidget";
 import SecondButton from "../buttonSecondary";
 interface Props {
   TableData: taskTableDataType[];
