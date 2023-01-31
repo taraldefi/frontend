@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import ComplianceLayout from "@components/layouts/compliance_layout";
-import ButtonIcon from "@components/widgets/buttonWithIcon";
+import { Button } from "@icodex-az/tariala-component-library";
 import { TableData } from "./data";
 import { PersonsTable } from "@components/widgets/table/personsTable";
 import { tableFormPerson } from "types/form";
 import { useForm } from "react-hook-form";
+import { PortalIcons } from "@components/icons";
 
 function Company() {
   var x: number = Object.keys(TableData).length;
@@ -72,7 +73,12 @@ function Company() {
               </div>
             </div>
             <div className="buttonContainer">
-              <ButtonIcon icon="add" title="Add"></ButtonIcon>
+              <Button
+                primary={true}
+                backgroundColor="#1AB98B"
+                icon={<PortalIcons selected={false} icon={"add"}></PortalIcons>}
+                label="Add"
+              ></Button>
             </div>
           </form>
         </div>

@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { PortalIcons } from "@components/icons";
-import { MetricRange } from "../metricWidget";
+import { MetricRange } from "@icodex-az/tariala-component-library";
 import { StatusWidget } from "@icodex-az/tariala-component-library";
 
 interface Props {

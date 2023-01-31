@@ -1,5 +1,5 @@
 import React from "react";
-import ProgressBar from "@components/widgets/progressBar";
+import { ProgressBar } from "@icodex-az/tariala-component-library";
 import Image from "next/image";
 import { overviewTableDataType } from "types/widget_table";
 import { StatusWidget } from "@icodex-az/tariala-component-library";

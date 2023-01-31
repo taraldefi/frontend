@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import { tableFormPerson } from "types/form";
-import SecondButton from "../buttonSecondary";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEllipsis } from "@fortawesome/free-solid-svg-icons";
 interface Props {

@@ -3,9 +3,10 @@ import DashBoardLayout from "@components/layouts/dashboard_layout";
 import ComplianceLayout from "@components/layouts/compliance_layout";
 import { ScreeningTable } from "@components/widgets/table/screeningTable";
 import { TableData } from "./data";
-import ButtonIcon from "@components/widgets/buttonWithIcon";
+import { Button } from "@icodex-az/tariala-component-library";
 import { tableFormScreening } from "types/form";
 import { useForm } from "react-hook-form";
+import { PortalIcons } from "@components/icons";
 function Company() {
   var x: number = Object.keys(TableData).length;
   const [fields, setFields] = useState<tableFormScreening[]>(TableData);
@@ -49,7 +50,12 @@ function Company() {
             </div>
 
             <div className="buttonContainer">
-              <ButtonIcon icon="add" title="Add"></ButtonIcon>
+              <Button
+                primary={true}
+                backgroundColor="#1AB98B"
+                icon={<PortalIcons selected={false} icon={"add"}></PortalIcons>}
+                label="Add"
+              ></Button>
             </div>
           </form>
         </div>
