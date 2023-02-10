@@ -215,6 +215,25 @@
   background-color: #f8fafc;
 }
 
+.rightContent {
+  .table {
+    padding-bottom: 25px;
+    .persons--tab {
+      width: 470px;
+    }
+    .source--tab{
+      width: 260px;
+    }
+    tr th+th+th+th {
+      padding: 0px 50px;
+    }
+
+    .status--tab {
+      padding: 0px 50px;
+    }
+  }
+}
+
 .titleBox {
   z-index: 99;
   display: flex;

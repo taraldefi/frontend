@@ -167,6 +167,9 @@
   }
 
   .viewTableContainer {
+    table>tr>th{
+      width: 185px;
+    }
     flex: 3;
     padding: 192px 40px 95px 0px;
 
