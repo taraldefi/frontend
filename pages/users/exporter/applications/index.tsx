@@ -2,7 +2,7 @@ import Layout from "@components/layouts/layout";
 import NewLayoutNM from "@components/layouts/testLayoutNoMenue";
 
 import React from "react";
-import {  ApplicationTable } from "@icodex-az/tariala-component-library";
+import { ApplicationTable } from "@icodex-az/tariala-component-library";
 
 import { TableData } from "./data";
 export default function Index() {
@@ -10,12 +10,8 @@ export default function Index() {
     <NewLayoutNM>
       <div className="application--wrapper">
         <ApplicationTable applicationTableData={TableData} />
-    
       </div>
       {/* <ApplicaitonTable TableData={TableData}></ApplicaitonTable> */}
     </NewLayoutNM>
-  
   );
 }
-
-
