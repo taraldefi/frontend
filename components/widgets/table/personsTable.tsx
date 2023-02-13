@@ -5,14 +5,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEllipsis } from "@fortawesome/free-solid-svg-icons";
 interface Props {
   TableData: tableFormPerson[];
-  value: number;
 }
-export const PersonsTable = ({ TableData, value }: Props) => {
+export const PersonsTable = ({ TableData }: Props) => {
   return (
     <>
-      <div className="taskBox">
-        <span>({value}) Persons</span>
-      </div>
       <div className={"tablePersons"}>
         <div className="tableTitles">
           <div className="statusTitle">
@@ -38,7 +34,7 @@ export const PersonsTable = ({ TableData, value }: Props) => {
               <div className="personsContainer" id="assignee">
                 <Image
                   className="images"
-                  src="/assets/images/18.png"
+                  src={item.image}
                   key={index}
                   alt=""
                   width="35%"

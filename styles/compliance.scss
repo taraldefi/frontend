@@ -145,6 +145,18 @@
   justify-content: space-between;
 }
 
+.screening--table {
+  .table {
+    table {
+      width: 100%;
+    }
+
+    .source--tab {
+      width: auto;
+    }
+  }
+}
+
 .tableComplianceScreening {
   contain: content;
   margin-top: 40px;
@@ -303,6 +315,7 @@
         flex-direction: column;
         justify-content: space-between;
       }
+
       .hit {
         ::placeholder {
           color: #94a3b8;
@@ -464,186 +477,20 @@
   }
 }
 
-.table {
-  * {
-    font-size: 14px;
-  }
-  .tablePersons {
-    contain: content;
-    width: 100%;
-    border-radius: 8px;
-    border: 1px solid #e2e8f0;
-    transition: all 2s ease;
+.persons--table {
+  .table {
+    table {
+      width: 100%;
 
-    .tableTitles {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 42px;
-
-      .statusTitle {
-        display: flex;
-        flex-direction: row;
-
-        .statusTitleItems {
-          align-items: center;
-          display: flex;
-          font-size: 12px;
-          color: #475569;
-          font-weight: bold;
-          font-family: "inter";
-          letter-spacing: 1px;
-        }
-
-        :nth-child(1) {
-          width: 240px;
-          height: 42px;
-          padding-left: 24px;
-        }
-
-        :nth-child(2) {
-          width: 180px;
-          height: 42px;
-          padding-left: 24px;
-        }
-
-        :nth-child(3) {
-          width: 222px;
-          height: 42px;
-          padding-left: 24px;
-        }
-
-        :nth-child(4) {
-          width: 180px;
-          height: 42px;
-          padding-left: 24px;
-        }
-
-        :nth-child(5) {
-          width: 180px;
-          height: 42px;
-          padding-left: 24px;
-        }
-
-        :nth-child(6) {
-          width: 100px;
-          height: 42px;
-          padding-left: 48px;
-        }
+      tr td:first-child {
+        width: 100%;
       }
     }
 
-    .tableContent {
-      height: 70px;
-      background-color: #ffffff;
-      border-top: 1px solid #e2e8f0;
-      display: flex;
-      align-items: center;
+    width: 100%;
 
-      .personsContainer {
-        width: 240px;
-        height: 70px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding-left: 24px;
-        :nth-child(1) {
-          padding-left: 12px;
-        }
-      }
-
-      .emailContainer {
-        width: 180px;
-        height: 70px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding-left: 24px;
-      }
-
-      .positionContainer {
-        width: 222px;
-        height: 70px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding-left: 24px;
-      }
-
-      .sv {
-        height: 70px;
-        width: 180px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding-left: 24px;
-
-        .sent {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 55px;
-          height: 25px;
-          border-radius: 50px;
-          background-color: #d1fae5;
-          color: #059669;
-          text-align: center;
-        }
-
-        .notSent {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 83px;
-          height: 25px;
-          border-radius: 50px;
-          background-color: #fee2e2;
-          color: #ef4444;
-          text-align: center;
-        }
-      }
-
-      .vs {
-        width: 180px;
-        height: 70px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding-left: 24px;
-
-        .complete {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 87px;
-          height: 25px;
-          border-radius: 50px;
-          background-color: #fef3c7;
-          color: #f59e0b;
-          text-align: center;
-        }
-
-        .notDone {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 97px;
-          height: 25px;
-          border-radius: 50px;
-          background-color: #10b981;
-          color: #ecfdf5;
-          text-align: center;
-        }
-      }
-
-      .OptionsContainer {
-        width: 100px;
-        height: 70px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding-left: 48px;
-      }
+    .statusTitleItems {
+      padding: 10px 25px 10px 25px !important;
     }
   }
 }
