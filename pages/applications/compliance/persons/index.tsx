@@ -85,7 +85,7 @@ function Company() {
       </div>
       <div className="table">
         <div className="taskBox">
-          <span>({x}) Persons</span>
+          <span>{x} PERSONS</span>
         </div>
         <div className="persons--table">
           <PersonsTable personsTableData={fields} />

@@ -1,28 +1,29 @@
-import { tableFormSentiments } from "types/form";
-export const TableData: tableFormSentiments[] = [
+import { tableFormScreening } from "types/form";
+
+export const TableData: tableFormScreening[] = [
   {
-    person: "Camero Williamson",
-    hit: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    source: "http://www.google.com",
+    persons: "Watch List",
+    Hit: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    Source: "http://www.google.com",
   },
   {
-    person: "Camero Williamson",
-    hit: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    source: "http://www.google.com",
+    persons: "Adverse Media",
+    Hit: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    Source: "http://www.google.com",
   },
   {
-    person: "Camero Williamson",
-    hit: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    source: "http://www.google.com",
+    persons: "Watch List",
+    Hit: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    Source: "http://www.google.com",
   },
   {
-    person: "Camero Williamson",
-    hit: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    source: "http://www.google.com",
+    persons: "Adverse Media",
+    Hit: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    Source: "http://www.google.com",
   },
   {
-    person: "Camero Williamson",
-    hit: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    source: "http://www.google.com",
+    persons: "Adverse Media",
+    Hit: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    Source: "http://www.google.com",
   },
 ];

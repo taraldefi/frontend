@@ -61,6 +61,9 @@ function Company() {
       </div>
 
       <div className="screening--table">
+        <span className="title" style={{ fontSize: "13.5px" }}>OUTLETS</span>
+        <br />
+        <br />
         <ScreeningTable screeningTableData={fields}></ScreeningTable>
       </div>
     </ComplianceLayout>
