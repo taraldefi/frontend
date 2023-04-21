@@ -33,13 +33,13 @@ export const TableData = [
     persons: "City",
     details: "City",
     source: "https://www.google.com/",
-    status: false,
+    status: true,
   },
   {
     persons: "Postcode",
     details: "Postcode",
     source: "https://www.google.com/",
-    status: false,
+    status: true,
   },
   {
     persons: "Street Name",
