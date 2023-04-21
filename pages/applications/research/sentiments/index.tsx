@@ -10,7 +10,6 @@ import { PortalIcons } from "@components/icons";
 function Research() {
   var x: number = Object.keys(TableData).length;
 
-
   const [fields, setFields] = useState<tableFormScreening[]>(TableData);
   const { register, handleSubmit, reset } = useForm<tableFormScreening>();
   const onSubmit = handleSubmit((data) => {

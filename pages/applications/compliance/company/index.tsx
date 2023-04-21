@@ -6,10 +6,12 @@ import { CompanyTable } from "@icodex-az/tariala-component-library";
 function Company() {
   return (
     <ComplianceLayout showexport={true}>
-      <span className="title" style={{ fontSize: "13.5px" }}>BUSINESS DETAILS</span>
+      <span className="title" style={{ fontSize: "13.5px" }}>
+        BUSINESS DETAILS
+      </span>
       <br />
       <CompanyTable companyTableData={TableData} />
-    </ComplianceLayout >
+    </ComplianceLayout>
   );
 }
 
