@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import DashBoardLayout from "@components/layouts/dashboard_layout";
 import ComplianceLayout from "@components/layouts/compliance_layout";
-import { ScreeningTable } from "@components/widgets/table/screeningTable";
 import { TableData } from "./data";
-import { Button } from "@icodex-az/tariala-component-library";
+import { Button, ScreeningTable } from "@icodex-az/tariala-component-library";
 import { tableFormScreening } from "types/form";
 import { useForm } from "react-hook-form";
 import { PortalIcons } from "@components/icons";
@@ -61,7 +60,14 @@ function Company() {
         </div>
       </div>
 
-      <ScreeningTable TableData={fields}></ScreeningTable>
+      <div className="screening--table">
+        <span className="title" style={{ fontSize: "13.5px" }}>
+          OUTLETS
+        </span>
+        <br />
+        <br />
+        <ScreeningTable screeningTableData={fields}></ScreeningTable>
+      </div>
     </ComplianceLayout>
   );
 }

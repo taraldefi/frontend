@@ -9,6 +9,8 @@ const AppContext = React.createContext<globalState>({
   setDeleteModal: () => {},
   newApplicationModal: false,
   setNewApplicationModal: () => {},
+  index: 0,
+  setIndex: () => {},
   lockSuccessModal: false,
   setLockSuccessModal: () => {},
   talModal: false,

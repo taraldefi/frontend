@@ -1,15 +1,17 @@
 import Layout from "@components/layouts/layout";
 import NewLayoutNM from "@components/layouts/testLayoutNoMenue";
-import { ApplicaitonTable } from "@components/widgets/table/applicationTable";
+
 import React from "react";
-import { applicationTableType } from "types/widget_table";
+import { ApplicationTable } from "@icodex-az/tariala-component-library";
+
 import { TableData } from "./data";
-function Index() {
+export default function Index() {
   return (
     <NewLayoutNM>
-      <ApplicaitonTable TableData={TableData}></ApplicaitonTable>
+      <div className="application--wrapper">
+        <ApplicationTable applicationTableData={TableData} />
+      </div>
+      {/* <ApplicaitonTable TableData={TableData}></ApplicaitonTable> */}
     </NewLayoutNM>
   );
 }
-
-export default Index;

@@ -18,11 +18,13 @@
       font-size: 13.5px;
     }
   }
+
   .rowBox {
     display: flex;
     gap: 10px !important;
     flex-direction: row !important;
     justify-content: space-between;
+
     .inputContainer {
       width: 100%;
     }
@@ -40,6 +42,7 @@
       font-weight: bolder;
     }
   }
+
   .portContainer {
     width: 30%;
     color: #475569;
