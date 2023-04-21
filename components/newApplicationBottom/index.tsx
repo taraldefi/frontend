@@ -1,7 +1,8 @@
-
+import AppContext from "@components/appContext";
 import { Button } from "@icodex-az/tariala-component-library";
-import React from "react";
-
+import { useRouter } from "next/router";
+import React, { useContext } from "react";
+import { globalState } from "types/global";
 
 function BottomBar() {
   const router = useRouter();
@@ -34,7 +35,6 @@ function BottomBar() {
               router.push(`/users/exporter/quick/${paths[myContext.index!]}`);
               myContext.setIndex!(myContext.index! + 1);
             }}
-
           ></Button>
         </div>
       </div>
