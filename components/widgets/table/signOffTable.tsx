@@ -1,8 +1,6 @@
 import React from "react";
-import ProgressBar from "@components/widgets/progressBar";
 import Image from "next/image";
 import { signOffTableType } from "types/widget_table";
-import StatusWidget from "../statusWidget";
 import { PortalIcons } from "@components/icons";
 interface Props {
   TableData: signOffTableType[];

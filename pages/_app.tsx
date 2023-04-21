@@ -1,48 +1,26 @@
 import "@styles/globals.scss";
-import "@styles/main.scss";
-import "@styles/topbar.scss";
-import "@styles/leftMenu.scss";
-import "@styles/summary.scss";
-import "@styles/status.scss";
-import "@styles/button.scss";
-import "@styles/fileUpload.scss";
-import "@styles/activity.scss";
-import "@styles/compliance.scss";
-import "@styles/research.scss";
-import "@styles/slider.scss";
-import "@styles/rating.scss";
-import "@styles/transactions.scss";
-import "@styles/financials.scss";
-import "@styles/signoff.scss";
-import "@styles/user.scss";
-import "@styles/entityView.scss";
-import "@styles/modal.scss";
-import "@styles/exporterInfo.scss";
-import "@styles/applicationSecurity.scss";
-import "@styles/financialsPL.scss";
-import "@styles/transactionNewApp.scss";
-import "@styles/importerInfo.scss";
-import "@styles/paymentTerms.scss";
-import "@styles/kyc.scss";
-import "@styles/applicationTable.scss";
-import "@styles/scss/styles.scss";
-import "@styles/newLayout.scss";
-import "@styles/auth.scss";
+import "@icodex-az/tariala-component-library/build/index.scss";
 import type { AppProps } from "next/app";
 import FormModal from "@components/modal/entityFormModal";
-import { useContext } from "react";
-import { globalState } from "types/global";
 import AppContext from "@components/appContext";
 import React from "react";
 import FormEditModal from "@components/modal/entityEditFormModal";
 import DeleteModal from "@components/modal/deleteModal";
 import NewApplicationModal from "@components/modal/newApplicationModal";
+import TalModal from "@components/modal/talModal";
+import LockSuccessModal from "@components/modal/lockSuccessModal";
+import YieldModal from "@components/modal/yieldModal";
+import StakeSuccessModal from "@components/modal/stakeSuccessModal";
 function MyApp({ Component, pageProps }: AppProps) {
-  const [fmodal, setfModal] = React.useState(false);
-  const [emodal, seteModal] = React.useState(false);
-  const [dmodal, setdModal] = React.useState(false);
-  const [amodal, setaModal] = React.useState(false);
   const [index, setIndex] = React.useState(1);
+  const [fmodal, setfModal] = React.useState(false); // form modal
+  const [emodal, seteModal] = React.useState(false); // edit form modal
+  const [dmodal, setdModal] = React.useState(false); // delete modal
+  const [amodal, setaModal] = React.useState(false); // application modal
+  const [tmodal, settModal] = React.useState(false); // tal modal
+  const [lmodal, setlModal] = React.useState(false); // lock asset modal
+  const [ymodal, setyModal] = React.useState(false); // yield modal
+  const [smodal, setsModal] = React.useState(false); // stake success modal
 
   const values = {
     modal: fmodal,
@@ -55,14 +33,50 @@ function MyApp({ Component, pageProps }: AppProps) {
     setIndex: setIndex,
     newApplicationModal: amodal,
     setNewApplicationModal: setaModal,
+    talModal: tmodal,
+    setTalModal: settModal,
+    lockSuccessModal: lmodal,
+    setLockSuccessModal: setlModal,
+    yieldModal: ymodal,
+    setYieldModal: setyModal,
+    stakeSuccessModal: smodal,
+    setStakeSuccessModal: setsModal,
   };
   return (
     <AppContext.Provider value={values}>
       {(values.modal ||
         values.editModal ||
         values.deleteModal ||
-        values.newApplicationModal) && (
+        values.talModal ||
+        values.lockSuccessModal ||
+        values.newApplicationModal ||
+        values.yieldModal ||
+        values.stakeSuccessModal) && (
         <>
+          <LockSuccessModal
+            modal={values.lockSuccessModal}
+            setModal={() => {
+              values.setTalModal(!values.lockSuccessModal);
+            }}
+          ></LockSuccessModal>
+          <TalModal
+            modal={values.talModal}
+            setModal={() => {
+              values.setTalModal(!values.talModal);
+            }}
+          ></TalModal>
+          <YieldModal
+            modal={values.yieldModal}
+            setModal={() => {
+              values.setYieldModal(!values.yieldModal);
+            }}
+          ></YieldModal>
+          <StakeSuccessModal
+            modal={values.stakeSuccessModal}
+            setModal={() => {
+              values.setStakeSuccessModal(!values.stakeSuccessModal);
+            }}
+          ></StakeSuccessModal>
           <FormModal
             modal={values.modal}
             setModal={() => {

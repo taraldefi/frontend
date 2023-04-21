@@ -1,9 +1,8 @@
 import { PortalIcons } from "@components/icons";
 import KYCLayout from "@components/layouts/kycLayout";
 import Layout from "@components/layouts/layout";
-import Button from "@components/widgets/button";
 import { useForm, useFieldArray } from "react-hook-form";
-import SecondButton from "@components/widgets/buttonSecondary";
+import { Button } from "@icodex-az/tariala-component-library";
 import React, { useEffect, useRef, useState } from "react";
 
 function Index() {
@@ -149,15 +148,15 @@ function Index() {
                 })}
               </div>
               <div className="buttonContainer">
-                <SecondButton
-                  title={"+ New Branch"}
+                <Button
+                  label={"+ New Branch"}
                   onClick={() =>
                     append({
                       nationality: "",
                       headquaters: "",
                     })
                   }
-                ></SecondButton>
+                ></Button>
               </div>
             </div>
           </div>

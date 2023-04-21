@@ -1,7 +1,7 @@
 import { PortalIcons } from "@components/icons";
 import KYCLayout from "@components/layouts/kycLayout";
 import Layout from "@components/layouts/layout";
-import SecondButton from "@components/widgets/buttonSecondary";
+import { Button } from "@icodex-az/tariala-component-library";
 import React from "react";
 
 function Index() {
@@ -86,10 +86,7 @@ function Index() {
                   <PortalIcons selected={false} icon={"delete"}></PortalIcons>
                 </div>
                 <div className="buttonContainer">
-                  <SecondButton
-                    title={"+ Upload New"}
-                    onClick={() => null}
-                  ></SecondButton>
+                  <Button label={"+ Upload New"} onClick={() => null}></Button>
                 </div>
               </div>
             </div>

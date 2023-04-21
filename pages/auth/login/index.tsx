@@ -1,9 +1,10 @@
 import AuthLayout from "@components/layouts/auth_layout";
-import ButtonIcon from "@components/widgets/buttonWithIcon";
+import { Button } from "@icodex-az/tariala-component-library";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
+import { PortalIcons } from "@components/icons";
 
 function Index() {
   const [visible, setVisisblity] = React.useState(false);
@@ -80,7 +81,12 @@ function Index() {
               </div>
             )}
             <div className="inputContainer">
-              <ButtonIcon title={"Send OTP"} icon={"lock"}></ButtonIcon>
+              <Button
+                label={"Send OTP"}
+                icon={
+                  <PortalIcons selected={false} icon={"delete"}></PortalIcons>
+                }
+              ></Button>
             </div>
             <div className="fgP">
               <div className="inputContainer">
@@ -97,7 +103,15 @@ function Index() {
             </div>
             <div className="inputContainer">
               <div className="buttonBox">
-                <ButtonIcon title={"Login"} icon={"right arow"}></ButtonIcon>
+                <Button
+                  label={"Login"}
+                  icon={
+                    <PortalIcons
+                      selected={false}
+                      icon={"right arow"}
+                    ></PortalIcons>
+                  }
+                ></Button>
               </div>
             </div>
             <div className="fgP">

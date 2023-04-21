@@ -1,7 +1,6 @@
 import { PortalIcons } from "@components/icons";
 import AuthLayout from "@components/layouts/auth_layout";
-import SecondButton from "@components/widgets/buttonSecondary";
-import ButtonIcon from "@components/widgets/buttonWithIcon";
+import { Button } from "@icodex-az/tariala-component-library";
 import React from "react";
 
 function Index() {
@@ -107,10 +106,17 @@ function Index() {
             </div>
             <div className="inputContainer">
               <div className="buttonBox">
-                <ButtonIcon
-                  title={"Create Account"}
-                  icon={"right arow"}
-                ></ButtonIcon>
+                <Button
+                  primary={true}
+                  backgroundColor="#1AB98B"
+                  icon={
+                    <PortalIcons
+                      selected={false}
+                      icon={"right arow"}
+                    ></PortalIcons>
+                  }
+                  label="Create Account"
+                ></Button>
               </div>
             </div>
           </div>

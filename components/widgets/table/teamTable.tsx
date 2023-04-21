@@ -1,9 +1,7 @@
 import React from "react";
-import ProgressBar from "@components/widgets/progressBar";
 import Image from "next/image";
 import { teamTableDataType } from "types/widget_table";
-import StatusWidget from "../statusWidget";
-import SecondButton from "../buttonSecondary";
+import { Button } from "@icodex-az/tariala-component-library";
 interface Props {
   TableData: teamTableDataType[];
   value: number;
@@ -13,11 +11,11 @@ export const TeamTable = ({ TableData, value }: Props) => {
   return (
     <>
       <div className="taskBox">
-        <span>TASKS ({value})</span>
-        <SecondButton
-          title="View All Members"
+        <span>MEMBERS ({value})</span>
+        <Button
+          label="View All Members"
           onClick={() => setToggle(!toggle)}
-        ></SecondButton>
+        ></Button>
       </div>
       <div className={"tableTeams " + (toggle && "active")}>
         <div className="tableTitles">

@@ -8,7 +8,6 @@ import {
   faArrowUpRightFromSquare,
   faEllipsis,
 } from "@fortawesome/free-solid-svg-icons";
-import ButtonIcon from "../buttonWithIcon";
 
 interface Props {
   TableData: screeningTableDataType[];

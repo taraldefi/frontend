@@ -1,5 +1,6 @@
 export interface tableFormPerson {
   name: string;
+  image: string;
   email: string;
   position: string;
   isSent: boolean;

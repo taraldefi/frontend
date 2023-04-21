@@ -89,12 +89,18 @@ export const SidebarDataIm = [
   },
   {
     id: 3,
+    title: "Order Details",
+    name: "Order Details",
+    path: "/users/importer/quick/orderDetails",
+  },
+  {
+    id: 4,
     title: "Payment Terms",
     name: "Payment Terms",
     path: "/users/importer/quick/paymentTerms",
   },
   {
-    id: 4,
+    id: 5,
     title: "Security",
     name: "Security",
     path: "/users/importer/quick/security",

@@ -76,18 +76,6 @@
         width: 400px;
       }
 
-      .tableStatus {
-        width: auto;
-        height: auto;
-        border-radius: 50px;
-        text-align: center;
-        font-size: 14px;
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-      }
-
       .imageContainer {
         :nth-child(1) {
           left: 12px;
@@ -205,18 +193,6 @@
         width: 511px;
       }
 
-      .tableStatus {
-        width: auto;
-        height: auto;
-        border-radius: 50px;
-        text-align: center;
-        font-size: 14px;
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-      }
-
       .imageContainer {
         .images {
           border-radius: 50%;
@@ -270,6 +246,13 @@
       font-weight: bolder;
       color: #64748b;
       font-size: 14px;
+    }
+    .button--secondary {
+      padding: 10px 10px;
+      font-size: 14px;
+      font-weight: bold;
+      color: #64748b;
+      height: 34px;
     }
   }
 

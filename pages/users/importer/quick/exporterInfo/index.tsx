@@ -1,4 +1,5 @@
 import ApplicationLayout from "@components/layouts/new_application_layout";
+import BottomBar from "@components/newApplicationBottom";
 import React from "react";
 
 function Index() {
@@ -96,6 +97,7 @@ function Index() {
           <div className="vLine0"></div>
           <div className="otherInfo"></div>
         </div>
+        <BottomBar></BottomBar>
       </ApplicationLayout>
     </div>
   );

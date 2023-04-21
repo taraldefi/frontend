@@ -18,29 +18,33 @@
       font-size: 13.5px;
     }
   }
-  .rowBox{
+
+  .rowBox {
     display: flex;
     gap: 10px !important;
     flex-direction: row !important;
     justify-content: space-between;
-    .inputContainer{
+
+    .inputContainer {
       width: 100%;
     }
-    
   }
-  .productContainer{
+  .productContainer {
+
     width: 70%;
     color: #475569;
     display: flex;
     flex-direction: column;
-    gap: 15px;;
-    .btn_secondary{
+    gap: 15px;
+    .button--secondary {
+      width: 150px;
       border: 1px solid #475569;
       color: #475569;
       font-weight: bolder;
     }
   }
-  .portContainer{
+
+  .portContainer {
     width: 30%;
     color: #475569;
   }

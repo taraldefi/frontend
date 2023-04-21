@@ -11,6 +11,14 @@ const AppContext = React.createContext<globalState>({
   setNewApplicationModal: () => {},
   index: 0,
   setIndex: () => {},
+  lockSuccessModal: false,
+  setLockSuccessModal: () => {},
+  talModal: false,
+  setTalModal: () => {},
+  stakeSuccessModal: false,
+  setStakeSuccessModal: () => {},
+  yieldModal: false,
+  setYieldModal: () => {},
 });
 
 export default AppContext;
