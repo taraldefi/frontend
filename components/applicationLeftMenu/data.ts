@@ -44,25 +44,25 @@ export const SidebarData = [
 ];
 export const SidebarDataEx = [
   {
-    id: 1,
+    id: 0,
     title: "Exporter Info",
     name: "exporterInfo",
     path: "/users/exporter/quick/exporterInfo",
   },
   {
-    id: 2,
+    id: 1,
     title: "Importer Info",
     name: "importerInfo",
     path: "/users/exporter/quick/importerInfo",
   },
   {
-    id: 3,
+    id: 2,
     title: "payment terms",
     name: "paymentTerms",
     path: "/users/exporter/quick/paymentTerms",
   },
   {
-    id: 4,
+    id: 3,
     title: "Security",
     name: "security",
     path: "/users/exporter/quick/security",
@@ -70,16 +70,22 @@ export const SidebarDataEx = [
 ];
 export const SidebarDataIm = [
   {
-    id: 1,
+    id: 0,
     title: "Exporter Info",
     name: "Your Info",
     path: "/users/importer/quick/exporterInfo",
   },
   {
-    id: 2,
+    id: 1,
     title: "Importer Info",
     name: "Supplier Info",
     path: "/users/importer/quick/importerInfo",
+  },
+  {
+    id: 2,
+    title: "Order Details",
+    name: "Order Details",
+    path: "/users/importer/quick/orderDetails",
   },
   {
     id: 3,

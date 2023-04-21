@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import ComplianceLayout from "@components/layouts/compliance_layout";
-import { Button } from "@icodex-az/tariala-component-library";
+import { Button, PersonsTable } from "@icodex-az/tariala-component-library";
 import { TableData } from "./data";
-import { PersonsTable } from "@components/widgets/table/personsTable";
+
 import { tableFormPerson } from "types/form";
 import { useForm } from "react-hook-form";
 import { PortalIcons } from "@components/icons";
@@ -84,7 +84,12 @@ function Company() {
         </div>
       </div>
       <div className="table">
-        <PersonsTable TableData={fields} value={x} />
+        <div className="taskBox">
+          <span>{x} PERSONS</span>
+        </div>
+        <div className="persons--table">
+          <PersonsTable personsTableData={fields} />
+        </div>
       </div>
     </ComplianceLayout>
   );

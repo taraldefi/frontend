@@ -2,6 +2,7 @@ import EntityView from "@components/entity/entityView";
 import Layout from "@components/layouts/layout";
 import { EntityViewTable } from "@components/widgets/table/entityViewTable";
 import React from "react";
+import { EntityTable } from "@icodex-az/tariala-component-library";
 import { TableData } from "./data";
 
 function index() {
@@ -24,7 +25,7 @@ function index() {
         </div>
         <div className="viewTableContainer">
           <span>Products</span>
-          <EntityViewTable TableData={TableData} />
+          <EntityTable entityTableData={TableData} />
         </div>
       </div>
     </Layout>
