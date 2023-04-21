@@ -12,6 +12,7 @@ import LockSuccessModal from "@components/modal/lockSuccessModal";
 import YieldModal from "@components/modal/yieldModal";
 import StakeSuccessModal from "@components/modal/stakeSuccessModal";
 function MyApp({ Component, pageProps }: AppProps) {
+  const [index, setIndex] = React.useState(1);
   const [fmodal, setfModal] = React.useState(false); // form modal
   const [emodal, seteModal] = React.useState(false); // edit form modal
   const [dmodal, setdModal] = React.useState(false); // delete modal
@@ -28,6 +29,8 @@ function MyApp({ Component, pageProps }: AppProps) {
     setEditModal: seteModal,
     deleteModal: dmodal,
     setDeleteModal: setdModal,
+    index: index,
+    setIndex: setIndex,
     newApplicationModal: amodal,
     setNewApplicationModal: setaModal,
     talModal: tmodal,
