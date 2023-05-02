@@ -1,12 +1,12 @@
-import AppContext from "@components/appContext";
 import { Button } from "@icodex-az/tariala-component-library";
+import { useAtom } from "jotai";
 import { useRouter } from "next/router";
-import React, { useContext } from "react";
-import { globalState } from "types/global";
+import React from "react";
+import { pageIndexAtom } from "store/PageIndexStore";
 
 function BottomBar() {
   const router = useRouter();
-  const myContext = useContext<globalState>(AppContext);
+  const [index, setIndex] = useAtom(pageIndexAtom);
   const paths = ["exporterInfo", "importerInfo", "paymentTerms", "security"];
   return (
     <div className="botomBar">
@@ -22,18 +22,18 @@ function BottomBar() {
                 : "Next"
             }
             onClick={() => {
-              console.log(myContext.index!);
-              if (myContext.index! > paths.length - 1) {
+              console.log(index);
+              if (index > paths.length - 1) {
                 router.push(`/users/exporter/applications`);
-                myContext.setIndex!(0);
+                setIndex(0);
                 return;
               }
-              if (!myContext.index!) {
+              if (index) {
                 router.push(`/users/exporter/quick/${paths[1]}`);
               }
 
-              router.push(`/users/exporter/quick/${paths[myContext.index!]}`);
-              myContext.setIndex!(myContext.index! + 1);
+              router.push(`/users/exporter/quick/${paths[index]}`);
+              setIndex(index + 1);
             }}
           ></Button>
         </div>

@@ -2,16 +2,20 @@ import React from "react";
 import { useRouter } from "next/router";
 import { TopbarData, TopbarNewDataEx, TopbarNewDataIm } from "./data";
 import { Button } from "@icodex-az/tariala-component-library";
-import AppContext from "@components/appContext";
-import { useContext } from "react";
-import { globalState } from "../../types/global";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { useAtom } from "jotai";
+import { pageIndexAtom } from "store/PageIndexStore";
+import { useModal } from "@hooks/useModal";
+import { ApplicationModalAtom, FormModalAtom } from "store/ModalStore";
+
 function TopBarNav() {
   const routesStrings = ["exporter", "newApplication", "quick", "applications"];
-  const myContext = useContext<globalState>(AppContext);
+  const [index, setIndex] = useAtom(pageIndexAtom);
+  const formModal = useModal(FormModalAtom);
+  const newApplicationModal = useModal(ApplicationModalAtom);
   const handleClick1 = (e: any) => {
-    myContext.setIndex!(0);
+    setIndex(0);
     router.push("/users/exporter");
   };
   const router = useRouter();
@@ -51,140 +55,137 @@ function TopBarNav() {
     }
   };
   return (
-    //New application back navigate
-    <div className="topbarLower">
-      {matchPathNewApp() ? (
-        <>
-          <div className="newAppBackContainer">
-            <div onClick={handleClick1}>
-              <FontAwesomeIcon
-                icon={faArrowLeft}
-                fontSize="24px"
-                color="#003C6E"
-              />
-            </div>
-            <span>New Application</span>
-          </div>
-        </>
-      ) : (
-        <></>
-      )}
-      {
-        //Overview,kyc etc top bar
-        router.asPath.split("/")[1] == "users" &&
-        router.asPath.split("/")[3] != "newApplication" &&
-        router.asPath.split("/")[3] != "quick" ? (
-          <div className="userTabItems">
-            <div className="contents">
-              {router.asPath.split("/")[2] == "exporter"
-                ? TopbarNewDataEx.map((item, index) => {
-                    return (
-                      <div
-                        onClick={(e) => {
-                          e.preventDefault();
-                          router.push(item.path);
-                        }}
-                        key={index}
-                      >
-                        <span
-                          className={
-                            matchPath1(item) ? "content selected" : "content"
-                          }
-                        >
-                          {item.title}
-                        </span>
-                      </div>
-                    );
-                  })
-                : TopbarNewDataIm.map((item, index) => {
-                    return (
-                      <div
-                        onClick={(e) => {
-                          e.preventDefault();
-                          router.push(item.path);
-                        }}
-                        key={index}
-                      >
-                        <span
-                          className={
-                            matchPath1(item) ? "content selected" : "content"
-                          }
-                        >
-                          {item.title}
-                        </span>
-                      </div>
-                    );
-                  })}
-            </div>
-            <div className="entityContent">
-              {router.asPath == "/users/exporter" || "/users/importer" ? (
-                <div className="entitySearch">
-                  <input
-                    type="text"
-                    placeholder="Search by name or number..."
-                    className="inputs"
-                  ></input>
-                </div>
-              ) : (
-                <div className="viewEntitySelect">
-                  <select name="" id="" className="inputs">
-                    <option value="">Entity Name</option>
-                  </select>
-                </div>
-              )}
-              <div>
-                <Button
-                  primary={false}
-                  label={"New Entity"}
-                  onClick={() => {
-                    console.log("debug 1:", open);
-                    myContext.setModal(!myContext.modal);
-                  }}
-                ></Button>
+    <>
+      <div className="topbarLower">
+        {matchPathNewApp() ? (
+          <>
+            <div className="newAppBackContainer">
+              <div onClick={handleClick1}>
+                <FontAwesomeIcon
+                  icon={faArrowLeft}
+                  fontSize="24px"
+                  color="#003C6E"
+                />
               </div>
-
-              <div>
-                <Button
-                  primary={true}
-                  backgroundColor="#1ab98b"
-                  label={"New Application"}
-                  onClick={() =>
-                    myContext.setNewApplicationModal(
-                      !myContext.newApplicationModal
-                    )
-                  }
-                ></Button>
-              </div>
+              <span>New Application</span>
             </div>
-          </div>
+          </>
         ) : (
-          //old application top bar
-          router.asPath.split("/")[1] == "applications" && (
-            <div className="contents">
-              {TopbarData.map((item, index) => {
-                return (
-                  <div
-                    onClick={(e) => {
-                      e.preventDefault();
-                      router.push(item.path);
-                    }}
-                    key={index}
-                  >
-                    <span
-                      className={
-                        matchPath(item) ? "content selected" : "content"
-                      }
-                    >
-                      {item.title}
-                    </span>
+          <></>
+        )}
+        {
+          //Overview,kyc etc top bar
+          router.asPath.split("/")[1] == "users" &&
+          router.asPath.split("/")[3] != "newApplication" &&
+          router.asPath.split("/")[3] != "quick" ? (
+            <div className="userTabItems">
+              <div className="contents">
+                {router.asPath.split("/")[2] == "exporter"
+                  ? TopbarNewDataEx.map((item, index) => {
+                      return (
+                        <div
+                          onClick={(e) => {
+                            e.preventDefault();
+                            router.push(item.path);
+                          }}
+                          key={index}
+                        >
+                          <span
+                            className={
+                              matchPath1(item) ? "content selected" : "content"
+                            }
+                          >
+                            {item.title}
+                          </span>
+                        </div>
+                      );
+                    })
+                  : TopbarNewDataIm.map((item, index) => {
+                      return (
+                        <div
+                          onClick={(e) => {
+                            e.preventDefault();
+                            router.push(item.path);
+                          }}
+                          key={index}
+                        >
+                          <span
+                            className={
+                              matchPath1(item) ? "content selected" : "content"
+                            }
+                          >
+                            {item.title}
+                          </span>
+                        </div>
+                      );
+                    })}
+              </div>
+              <div className="entityContent">
+                {router.asPath == "/users/exporter" || "/users/importer" ? (
+                  <div className="entitySearch">
+                    <input
+                      type="text"
+                      placeholder="Search by name or number..."
+                      className="inputs"
+                    ></input>
                   </div>
-                );
-              })}
+                ) : (
+                  <div className="viewEntitySelect">
+                    <select name="" id="" className="inputs">
+                      <option value="">Entity Name</option>
+                    </select>
+                  </div>
+                )}
+                <div>
+                  <Button
+                    primary={false}
+                    label={"New Entity"}
+                    onClick={() => {
+                      console.log("debug 1:", open);
+                      formModal.open();
+                    }}
+                  ></Button>
+                </div>
+
+                <div>
+                  <Button
+                    primary={true}
+                    backgroundColor="#1ab98b"
+                    label={"New Application"}
+                    onClick={() => newApplicationModal.open()}
+                  ></Button>
+                </div>
+              </div>
             </div>
+          ) : (
+            //old application top bar
+            router.asPath.split("/")[1] == "applications" && (
+              <div className="contents">
+                {TopbarData.map((item, index) => {
+                  return (
+                    <div
+                      onClick={(e) => {
+                        e.preventDefault();
+                        router.push(item.path);
+                      }}
+                      key={index}
+                    >
+                      <span
+                        className={
+                          matchPath(item) ? "content selected" : "content"
+                        }
+                      >
+                        {item.title}
+                      </span>
+                    </div>
+                  );
+                })}
+              </div>
+            )
           )
-        )
-      }
-    </div>
+        }
+      </div>
+    </>
   );
 }
 

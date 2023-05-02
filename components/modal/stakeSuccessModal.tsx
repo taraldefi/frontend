@@ -1,23 +1,21 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useContext } from "react";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
-import AppContext from "@components/appContext";
 import { Button } from "@icodex-az/tariala-component-library";
 import { globalState } from "types/global";
 
 type Props = {
-  modal: Boolean;
-  setModal: React.Dispatch<React.SetStateAction<boolean>>;
+  isOpen: boolean;
+  onClose: () => void;
 };
-function StakeSuccessModal({ modal, setModal }: Props) {
-  const myContext = useContext<globalState>(AppContext);
+function StakeSuccessModal({ isOpen, onClose }: Props) {
   return (
-    <div className={"lockSuccessModal " + (modal && "active")}>
-      {modal && (
+    <div className={"lockSuccessModal " + (isOpen && "active")}>
+      {isOpen && (
         <div className="modalMenue">
           <div
             onClick={() => {
-              myContext.setStakeSuccessModal(!myContext.stakeSuccessModal);
+              onClose();
             }}
             className="close"
           >
@@ -35,7 +33,7 @@ function StakeSuccessModal({ modal, setModal }: Props) {
                 <Button
                   label={"View Transaction"}
                   onClick={() => {
-                    myContext.setLockSuccessModal(!myContext.lockSuccessModal);
+                    onClose();
                   }}
                 ></Button>
               </div>

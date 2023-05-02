@@ -3,17 +3,17 @@ import React from "react";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
 
 type Props = {
-  modal: Boolean;
-  setModal: React.Dispatch<React.SetStateAction<boolean>>;
+  isOpen: boolean;
+  onClose: () => void;
 };
-function DeleteModal({ modal, setModal }: Props) {
+function DeleteModal({ isOpen, onClose }: Props) {
   return (
-    <div className={"deleteModal " + (modal && "active")}>
-      {modal && (
+    <div className={"deleteModal " + (isOpen && "active")}>
+      {isOpen && (
         <div className="modalMenue">
           <div
             onClick={() => {
-              setModal(!modal);
+              onClose();
             }}
             className="close"
           >
@@ -34,7 +34,7 @@ function DeleteModal({ modal, setModal }: Props) {
             <button
               className="buttonEdit"
               onClick={() => {
-                setModal(false);
+                onClose();
               }}
             >
               Keep it for now

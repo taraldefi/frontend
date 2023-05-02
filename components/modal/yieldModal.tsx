@@ -3,21 +3,22 @@ import React, { useContext } from "react";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
 import { PortalIcons } from "@components/icons";
 import { globalState } from "types/global";
-import AppContext from "@components/appContext";
+import { useModal } from "@hooks/useModal";
+import { YieldModalAtom } from "store/ModalStore";
 
 type Props = {
-  modal: Boolean;
-  setModal: React.Dispatch<React.SetStateAction<boolean>>;
+  isOpen: boolean;
+  onClose: () => void;
 };
-function YieldModal({ modal, setModal }: Props) {
-  const myContext = useContext<globalState>(AppContext);
+function YieldModal({ isOpen, onClose }: Props) {
+  const stakeModal = useModal(YieldModalAtom);
   return (
-    <div className={"formModal " + (modal && "active")}>
-      {modal && (
+    <div className={"formModal " + (isOpen && "active")}>
+      {isOpen && (
         <div className="modalMenue">
           <div
             onClick={() => {
-              setModal(!modal);
+              onClose();
             }}
             className="close"
           >
@@ -56,8 +57,8 @@ function YieldModal({ modal, setModal }: Props) {
               <button
                 className="button"
                 onClick={() => {
-                  myContext.setStakeSuccessModal(!myContext.stakeSuccessModal);
-                  setModal(!modal);
+                  stakeModal.open();
+                  onClose();
                 }}
               >
                 STAKE
