@@ -2,7 +2,7 @@ import React from "react";
 import { SidebarData } from "./data";
 import { PortalIcons } from "../icons";
 import { useRouter } from "next/router";
-import { ProgressBar } from "@icodex-az/tariala-component-library";
+import { ProgressBar } from "@taraldefi/tariala-component-library";
 
 export default function LeftMenu() {
   const router = useRouter();

@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useContext } from "react";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
-import { Button } from "@icodex-az/tariala-component-library";
+import { Button } from "@taraldefi/tariala-component-library";
 import { globalState } from "types/global";
 
 type Props = {

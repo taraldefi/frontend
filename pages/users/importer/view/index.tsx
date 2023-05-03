@@ -1,6 +1,6 @@
 import EntityView from "@components/entity/entityView";
 import Layout from "@components/layouts/layout";
-import { EntityTable } from "@icodex-az/tariala-component-library";
+import { EntityTable } from "@taraldefi/tariala-component-library";
 import React from "react";
 import { TableData } from "./data";
 

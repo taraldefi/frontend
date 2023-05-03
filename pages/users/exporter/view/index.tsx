@@ -1,7 +1,7 @@
 import EntityView from "@components/entity/entityView";
 import Layout from "@components/layouts/layout";
 import React from "react";
-import { EntityTable } from "@icodex-az/tariala-component-library";
+import { EntityTable } from "@taraldefi/tariala-component-library";
 import { TableData } from "./data";
 import DeleteModal from "@components/modal/deleteModal";
 import FormEditModal from "@components/modal/entityEditFormModal";

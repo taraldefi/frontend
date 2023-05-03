@@ -1,8 +1,8 @@
 import React from "react";
-import { ProgressBar } from "@icodex-az/tariala-component-library";
+import { ProgressBar } from "@taraldefi/tariala-component-library";
 import Image from "next/image";
 import { overviewTableDataType } from "types/widget_table";
-import { StatusWidget } from "@icodex-az/tariala-component-library";
+import { StatusWidget } from "@taraldefi/tariala-component-library";
 interface Props {
   TableData: overviewTableDataType[];
 }

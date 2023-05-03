@@ -1,4 +1,4 @@
-import { Button } from "@icodex-az/tariala-component-library";
+import { Button } from "@taraldefi/tariala-component-library";
 import { useAtom } from "jotai";
 import { useRouter } from "next/router";
 import React from "react";

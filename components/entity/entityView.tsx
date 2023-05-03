@@ -6,7 +6,7 @@ import {
   faSchoolCircleExclamation,
 } from "@fortawesome/free-solid-svg-icons";
 import { PortalIcons } from "@components/icons";
-import { Button } from "@icodex-az/tariala-component-library";
+import { Button } from "@taraldefi/tariala-component-library";
 import { globalState } from "types/global";
 import DeleteModal from "@components/modal/deleteModal";
 import { useModal } from "@hooks/useModal";

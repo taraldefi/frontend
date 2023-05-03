@@ -2,7 +2,7 @@ import { faEllipsis, faEuroSign } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { cashFlowTableType } from "types/widget_table";
-import { Button } from "@icodex-az/tariala-component-library";
+import { Button } from "@taraldefi/tariala-component-library";
 interface Props {
   TableData: cashFlowTableType;
 }

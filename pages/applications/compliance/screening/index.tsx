@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import DashBoardLayout from "@components/layouts/dashboard_layout";
 import ComplianceLayout from "@components/layouts/compliance_layout";
 import { TableData } from "./data";
-import { Button, ScreeningTable } from "@icodex-az/tariala-component-library";
+import { Button, ScreeningTable } from "@taraldefi/tariala-component-library";
 import { tableFormScreening } from "types/form";
 import { useForm } from "react-hook-form";
 import { PortalIcons } from "@components/icons";

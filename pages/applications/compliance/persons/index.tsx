@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ComplianceLayout from "@components/layouts/compliance_layout";
-import { Button, PersonsTable } from "@icodex-az/tariala-component-library";
+import { Button, PersonsTable } from "@taraldefi/tariala-component-library";
 import { TableData } from "./data";
 
 import { tableFormPerson } from "types/form";

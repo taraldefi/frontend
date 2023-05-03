@@ -1,7 +1,7 @@
 import { PortalIcons } from "@components/icons";
 import TopBar from "@components/topBar";
 import React from "react";
-import { PoolCard } from "@icodex-az/tariala-component-library";
+import { PoolCard } from "@taraldefi/tariala-component-library";
 import logo from "@public/assets/svg/logo.svg";
 import { useModal } from "@hooks/useModal";
 import { YieldModalAtom } from "store/ModalStore";
