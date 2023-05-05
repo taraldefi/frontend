@@ -1,17 +1,11 @@
-import React, { useContext } from "react";
+import React from "react";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCircleExclamation,
-  faSchoolCircleExclamation,
-} from "@fortawesome/free-solid-svg-icons";
+import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
 import { PortalIcons } from "@components/icons";
 import { Button } from "@taraldefi/tariala-component-library";
-import { globalState } from "types/global";
-import DeleteModal from "@components/modal/deleteModal";
 import { useModal } from "@hooks/useModal";
 import { DeleteModalAtom, EditFormModalAtom } from "store/ModalStore";
-import FormEditModal from "@components/modal/entityEditFormModal";
 interface infoType {
   BeneficialOwner: string;
   CodeAbbreviation: string;

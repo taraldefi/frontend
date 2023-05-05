@@ -10,7 +10,7 @@ import {
   EditFormModalAtom,
   FormModalAtom,
 } from "store/ModalStore";
-import DeleteModal from "@components/modal/deleteModal";
+import { DeleteModal } from "@taraldefi/tariala-component-library";
 import FormModal from "@components/modal/entityFormModal";
 import FormEditModal from "@components/modal/entityEditFormModal";
 import NewApplicationModal from "@components/modal/newApplicationModal";
@@ -35,6 +35,8 @@ const Layout = ({ children }: LayoutProps) => {
         {/* {<BottomBar></BottomBar>} */}
       </div>
       <DeleteModal
+        title="Delete Entity"
+        onDelete={() => {}}
         isOpen={deleteModal.isOpen}
         onClose={() => deleteModal.close()}
       ></DeleteModal>

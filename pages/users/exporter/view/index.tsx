@@ -3,15 +3,8 @@ import Layout from "@components/layouts/layout";
 import React from "react";
 import { EntityTable } from "@taraldefi/tariala-component-library";
 import { TableData } from "./data";
-import DeleteModal from "@components/modal/deleteModal";
-import FormEditModal from "@components/modal/entityEditFormModal";
-import { useModal } from "@hooks/useModal";
-import { DeleteModalAtom, EditFormModalAtom } from "store/ModalStore";
 
 function Index() {
-  const deleteModal = useModal(DeleteModalAtom);
-  const editModal = useModal(EditFormModalAtom);
-
   return (
     <Layout>
       <div className="viewbody">
@@ -34,14 +27,6 @@ function Index() {
           <EntityTable entityTableData={TableData} />
         </div>
       </div>
-      <DeleteModal
-        isOpen={deleteModal.isOpen}
-        onClose={() => deleteModal.close()}
-      ></DeleteModal>
-      <FormEditModal
-        isOpen={editModal.isOpen}
-        onClose={() => editModal.close()}
-      ></FormEditModal>
     </Layout>
   );
 }

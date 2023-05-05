@@ -1,18 +1,6 @@
 import Layout from "@components/layouts/layout";
 import Entity from "@components/entity/entity";
 import React from "react";
-import FormModal from "@components/modal/entityFormModal";
-import DeleteModal from "@components/modal/deleteModal";
-import FormEditModal from "@components/modal/entityEditFormModal";
-import { useModal } from "@hooks/useModal";
-import {
-  ApplicationModalAtom,
-  DeleteModalAtom,
-  EditFormModalAtom,
-  FormModalAtom,
-} from "store/ModalStore";
-import NewApplicationModal from "@components/modal/newApplicationModal";
-
 const data = {
   id: 1,
   image: "/assets/images/entity.png",
