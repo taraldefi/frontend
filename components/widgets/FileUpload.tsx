@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import { Button } from "@icodex-az/tariala-component-library";
+import { Button } from "@taraldefi/tariala-component-library";
 import { PortalIcons } from "@components/icons";
 
 const FileUpload = ({ files, setFiles, removeFile }: any) => {

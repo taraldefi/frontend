@@ -3,11 +3,13 @@ import { faEllipsis, faEuroSign } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { PortalIcons } from "@components/icons";
 import router from "next/router";
-import { globalState } from "types/global";
-import AppContext from "@components/appContext";
+import { useModal } from "@hooks/useModal";
+import { DeleteModalAtom, EditFormModalAtom } from "store/ModalStore";
+
 function Modal() {
-  const myContext = useContext<globalState>(AppContext);
   const [modal, setModal] = React.useState(false);
+  const editModal = useModal(EditFormModalAtom);
+  const deleteModal = useModal(DeleteModalAtom);
   return (
     <div className={"modal"} onClick={() => setModal(!modal)}>
       <div className={"iconEntityOption " + (modal && "active")}>
@@ -30,14 +32,12 @@ function Modal() {
               <PortalIcons selected={false} icon={"eye"}></PortalIcons>
               <span>View</span>
             </div>
-            <div onClick={() => myContext.setEditModal(!myContext.editModal)}>
+            <div onClick={() => editModal.open()}>
               <PortalIcons selected={false} icon={"pen"}></PortalIcons>
               <span>Edit</span>
             </div>
             <span></span>
-            <div
-              onClick={() => myContext.setDeleteModal(!myContext.deleteModal)}
-            >
+            <div onClick={() => deleteModal.open()}>
               <PortalIcons selected={false} icon={"delete"}></PortalIcons>
               <span>Delete</span>
             </div>

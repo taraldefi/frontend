@@ -3,17 +3,17 @@ import React from "react";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
 
 type Props = {
-  modal: Boolean;
-  setModal: React.Dispatch<React.SetStateAction<boolean>>;
+  isOpen: boolean;
+  onClose: () => void;
 };
-function FormEditModal({ modal, setModal }: Props) {
+function FormEditModal({ isOpen, onClose }: Props) {
   return (
-    <div className={"formModal " + (modal && "active")}>
-      {modal && (
+    <div className={"formModal " + (isOpen && "active")}>
+      {isOpen && (
         <div className="modalMenue">
           <div
             onClick={() => {
-              setModal(!modal);
+              onClose();
             }}
             className="close"
           >

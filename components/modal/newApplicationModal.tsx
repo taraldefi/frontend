@@ -2,13 +2,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
 import { PortalIcons } from "@components/icons";
-import router from "next/router";
+import { useRouter } from "next/router";
 
 type Props = {
-  modal: Boolean;
-  setModal: React.Dispatch<React.SetStateAction<boolean>>;
+  isOpen: boolean;
+  onClose: () => void;
 };
-function NewApplicationModal({ modal, setModal }: Props) {
+function NewApplicationModal({ isOpen, onClose }: Props) {
+  const router = useRouter();
   const nextpath =
     router.asPath.split("/")[2] == "exporter"
       ? "/users/exporter/quick/exporterInfo"
@@ -16,12 +17,12 @@ function NewApplicationModal({ modal, setModal }: Props) {
       ? "/users/importer/quick/exporterInfo"
       : "";
   return (
-    <div className={"newApplicationModal " + (modal && "active")}>
-      {modal && (
+    <div className={"newApplicationModal " + (isOpen && "active")}>
+      {isOpen && (
         <div className="modalMenue">
           <div
             onClick={() => {
-              setModal(!modal);
+              onClose();
             }}
             className="close"
           >
@@ -42,7 +43,7 @@ function NewApplicationModal({ modal, setModal }: Props) {
                   className="btn"
                   onClick={() => {
                     router.push(nextpath.toString());
-                    setModal(false);
+                    onClose();
                   }}
                 >
                   start
@@ -63,7 +64,7 @@ function NewApplicationModal({ modal, setModal }: Props) {
                   className="btn"
                   onClick={() => {
                     router.push("/users/exporter/newApplication/exporterInfo");
-                    setModal(false);
+                    onClose();
                   }}
                 >
                   start

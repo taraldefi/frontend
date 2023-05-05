@@ -1,12 +1,14 @@
-import AppContext from "@components/appContext";
 import { PortalIcons } from "@components/icons";
+import TalModal from "@components/modal/talModal";
 import TopBar from "@components/topBar";
-import { Button } from "@icodex-az/tariala-component-library";
+import { useModal } from "@hooks/useModal";
+import { Button } from "@taraldefi/tariala-component-library";
 import React, { useContext } from "react";
+import { TalModalAtom } from "store/ModalStore";
 import { globalState } from "types/global";
 
 function Index() {
-  const myContext = useContext<globalState>(AppContext);
+  const talModal = useModal(TalModalAtom);
   return (
     <>
       <TopBar></TopBar>
@@ -52,8 +54,7 @@ function Index() {
                 <Button
                   label={"Lock TAL"}
                   onClick={() => {
-                    console.log("debug 1:", open);
-                    myContext.setTalModal(!myContext.modal);
+                    talModal.open();
                   }}
                 ></Button>
               </div>
@@ -114,6 +115,10 @@ function Index() {
           </div>
         </div>
       </div>
+      <TalModal
+        isOpen={talModal.isOpen}
+        onClose={() => talModal.close()}
+      ></TalModal>
     </>
   );
 }

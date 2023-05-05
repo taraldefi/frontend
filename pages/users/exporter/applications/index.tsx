@@ -2,7 +2,7 @@ import Layout from "@components/layouts/layout";
 import NewLayoutNM from "@components/layouts/testLayoutNoMenue";
 
 import React from "react";
-import { ApplicationTable } from "@icodex-az/tariala-component-library";
+import { ApplicationTable } from "@taraldefi/tariala-component-library";
 
 import { TableData } from "./data";
 export default function Index() {

@@ -2,7 +2,7 @@ import { PortalIcons } from "@components/icons";
 import KYCLayout from "@components/layouts/kycLayout";
 import Layout from "@components/layouts/layout";
 import { useForm, useFieldArray } from "react-hook-form";
-import { Button } from "@icodex-az/tariala-component-library";
+import { Button } from "@taraldefi/tariala-component-library";
 import React, { useEffect, useRef, useState } from "react";
 
 function Index() {

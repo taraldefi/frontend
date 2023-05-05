@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { teamTableDataType } from "types/widget_table";
-import { Button } from "@icodex-az/tariala-component-library";
+import { Button } from "@taraldefi/tariala-component-library";
 interface Props {
   TableData: teamTableDataType[];
   value: number;

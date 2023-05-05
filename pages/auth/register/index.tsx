@@ -1,6 +1,6 @@
 import { PortalIcons } from "@components/icons";
 import AuthLayout from "@components/layouts/auth_layout";
-import { Button } from "@icodex-az/tariala-component-library";
+import { Button } from "@taraldefi/tariala-component-library";
 import React from "react";
 
 function Index() {

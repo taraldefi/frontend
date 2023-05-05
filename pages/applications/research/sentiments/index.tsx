@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import DashBoardLayout from "@components/layouts/dashboard_layout";
 import ResearchLayout from "@components/layouts/rs_layout";
-import { Button, ScreeningTable } from "@icodex-az/tariala-component-library";
-import { SentimentsTable } from "@components/widgets/table/sentimentTable";
+import { Button, ScreeningTable } from "@taraldefi/tariala-component-library";
 import { TableData } from "./data";
 import { tableFormScreening, tableFormSentiments } from "types/form";
 import { useForm } from "react-hook-form";

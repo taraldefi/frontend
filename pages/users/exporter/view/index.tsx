@@ -1,11 +1,10 @@
 import EntityView from "@components/entity/entityView";
 import Layout from "@components/layouts/layout";
-import { EntityViewTable } from "@components/widgets/table/entityViewTable";
 import React from "react";
-import { EntityTable } from "@icodex-az/tariala-component-library";
+import { EntityTable } from "@taraldefi/tariala-component-library";
 import { TableData } from "./data";
 
-function index() {
+function Index() {
   return (
     <Layout>
       <div className="viewbody">
@@ -32,4 +31,4 @@ function index() {
   );
 }
 
-export default index;
+export default Index;

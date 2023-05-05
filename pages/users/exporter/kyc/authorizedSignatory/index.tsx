@@ -1,7 +1,7 @@
 import { PortalIcons } from "@components/icons";
 import KYCLayout from "@components/layouts/kycLayout";
 import Layout from "@components/layouts/layout";
-import { Button } from "@icodex-az/tariala-component-library";
+import { Button } from "@taraldefi/tariala-component-library";
 import React from "react";
 
 function Index() {

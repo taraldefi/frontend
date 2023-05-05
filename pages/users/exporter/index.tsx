@@ -1,11 +1,6 @@
 import Layout from "@components/layouts/layout";
 import Entity from "@components/entity/entity";
 import React from "react";
-import FormModal from "@components/modal/entityFormModal";
-import AppContext from "@components/appContext";
-import DeleteModal from "@components/modal/deleteModal";
-import FormEditModal from "@components/modal/entityEditFormModal";
-
 const data = {
   id: 1,
   image: "/assets/images/entity.png",

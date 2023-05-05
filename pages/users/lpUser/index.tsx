@@ -1,12 +1,13 @@
-import AppContext from "@components/appContext";
 import { PortalIcons } from "@components/icons";
 import TopBar from "@components/topBar";
-import React, { useContext } from "react";
-import { globalState } from "types/global";
-import { PoolCard } from "@icodex-az/tariala-component-library";
+import React from "react";
+import { PoolCard } from "@taraldefi/tariala-component-library";
 import logo from "@public/assets/svg/logo.svg";
+import { useModal } from "@hooks/useModal";
+import { YieldModalAtom } from "store/ModalStore";
+import YieldModal from "@components/modal/yieldModal";
 function Index() {
-  const myContext = useContext<globalState>(AppContext);
+  const yieldModal = useModal(YieldModalAtom);
   return (
     <>
       <TopBar></TopBar>
@@ -26,7 +27,7 @@ function Index() {
             poolState={"yield"}
             poolIcon={logo.src}
             onClick={() => {
-              myContext.setYieldModal(!myContext.modal);
+              yieldModal.open();
             }}
           />
           <PoolCard
@@ -38,7 +39,7 @@ function Index() {
             poolState={"closed"}
             poolIcon={logo.src}
             onClick={() => {
-              myContext.setYieldModal(!myContext.modal);
+              yieldModal.open();
             }}
           />
           <PoolCard
@@ -50,7 +51,7 @@ function Index() {
             poolState={"yield"}
             poolIcon={logo.src}
             onClick={() => {
-              myContext.setYieldModal(!myContext.modal);
+              yieldModal.open();
             }}
           />
           <PoolCard
@@ -62,7 +63,7 @@ function Index() {
             poolState={"yield"}
             poolIcon={logo.src}
             onClick={() => {
-              myContext.setYieldModal(!myContext.modal);
+              yieldModal.open();
             }}
           />
 
@@ -81,6 +82,10 @@ function Index() {
           </div>
         </div>
       </div>
+      <YieldModal
+        isOpen={yieldModal.isOpen}
+        onClose={() => yieldModal.close()}
+      ></YieldModal>
     </>
   );
 }

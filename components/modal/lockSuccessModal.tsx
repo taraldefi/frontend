@@ -3,23 +3,21 @@ import React, { useContext } from "react";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
 import { PortalIcons } from "@components/icons";
 import router from "next/router";
-import AppContext from "@components/appContext";
-import { Button } from "@icodex-az/tariala-component-library";
+import { Button } from "@taraldefi/tariala-component-library";
 import { globalState } from "types/global";
 
 type Props = {
-  modal: Boolean;
-  setModal: React.Dispatch<React.SetStateAction<boolean>>;
+  isOpen: boolean;
+  onClose: () => void;
 };
-function LockSuccessModal({ modal, setModal }: Props) {
-  const myContext = useContext<globalState>(AppContext);
+function LockSuccessModal({ isOpen, onClose }: Props) {
   return (
-    <div className={"lockSuccessModal " + (modal && "active")}>
-      {modal && (
+    <div className={"lockSuccessModal " + (isOpen && "active")}>
+      {isOpen && (
         <div className="modalMenue">
           <div
             onClick={() => {
-              myContext.setLockSuccessModal(!myContext.lockSuccessModal);
+              onClose();
             }}
             className="close"
           >
@@ -37,7 +35,7 @@ function LockSuccessModal({ modal, setModal }: Props) {
                 <Button
                   label={"View Transaction"}
                   onClick={() => {
-                    myContext.setLockSuccessModal(!myContext.lockSuccessModal);
+                    onClose();
                   }}
                 ></Button>
               </div>
