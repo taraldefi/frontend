@@ -1,5 +1,5 @@
 import Layout from "@components/layouts/layout";
-import Entity from "@components/entity/entity";
+import { Entity } from "@taraldefi/tariala-component-library";
 import React from "react";
 
 const data = {

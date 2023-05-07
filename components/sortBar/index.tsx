@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
-import { SortBarItem } from "types/";
 import { useRouter } from "next/router";
+import { SortBarItem } from "types/";
 
 interface Prop {
   data: Array<SortBarItem>;

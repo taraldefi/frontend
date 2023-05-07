@@ -1,6 +1,5 @@
 import LeftMenu from "@components/kycLeftMenu";
-import React, { useContext } from "react";
-import { globalState } from "types/global";
+import React from "react";
 import Topbar from "../topBar";
 import TopBarNav from "../topBarNavigation";
 import { useModal } from "@hooks/useModal";

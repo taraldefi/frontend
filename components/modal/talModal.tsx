@@ -1,8 +1,6 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useContext } from "react";
-import { faClose } from "@fortawesome/free-solid-svg-icons";
 import { PortalIcons } from "@components/icons";
-import { globalState } from "types/global";
+import { faClose } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useModal } from "@hooks/useModal";
 
 import { LockSuccessModalAtom } from "store/ModalStore";
