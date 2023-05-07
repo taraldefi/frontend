@@ -11,7 +11,7 @@ interface menuItemProps {
   onClick?: (e: any) => void;
 }
 
-const menuItem: React.FC<menuItemProps> = ({
+const MenuItem: React.FC<menuItemProps> = ({
   id,
   title,
   children,
@@ -49,4 +49,4 @@ const menuItem: React.FC<menuItemProps> = ({
   );
 };
 
-export default menuItem;
+export default MenuItem;
