@@ -10,7 +10,6 @@ import { itemExpanded } from "store/sideBarStore";
 export default function ApplicationLeftMenu() {
   const router = useRouter();
   const [index, setIndex] = useAtom(pageIndexAtom);
-  const [selectedDiv, setSelectedDiv] = useAtom(itemExpanded);
 
   return (
     <div className="leftMenu">
@@ -34,7 +33,7 @@ export default function ApplicationLeftMenu() {
             <p
               onClick={(e) => {
                 router.push(
-                  "/users/exporter/newApplication/financials-p&l/profit&loss"
+                  `/users/exporter/newApplication/financials-p&l/profit&loss`
                 );
               }}
               className={
