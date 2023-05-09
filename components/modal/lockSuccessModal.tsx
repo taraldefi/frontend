@@ -1,10 +1,6 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useContext } from "react";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
-import { PortalIcons } from "@components/icons";
-import router from "next/router";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Button } from "@taraldefi/tariala-component-library";
-import { globalState } from "types/global";
 
 type Props = {
   isOpen: boolean;

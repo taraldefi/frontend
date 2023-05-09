@@ -1,9 +1,9 @@
-import React, { useContext } from "react";
-import { faEllipsis, faEuroSign } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { PortalIcons } from "@components/icons";
-import router from "next/router";
+import { faEllipsis } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useModal } from "@hooks/useModal";
+import router from "next/router";
+import React from "react";
 import { DeleteModalAtom, EditFormModalAtom } from "store/ModalStore";
 
 function Modal() {

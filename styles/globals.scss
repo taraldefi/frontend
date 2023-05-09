@@ -29,7 +29,9 @@
 @import "lpUser.scss";
 @import "newLayout.scss";
 @import "auth.scss";
+
 body {
+  user-select: none;
   padding: 0;
   background-color: #f8fafc;
   margin: 0;

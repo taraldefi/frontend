@@ -1,7 +1,5 @@
 import ApplicationLeftMenu from "@components/applicationLeftMenu";
-import BottomBar from "@components/newApplicationBottom";
 import React from "react";
-import LeftMenu from "../leftMenu";
 import Layout from "./layout";
 
 interface LayoutProps {

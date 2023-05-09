@@ -1,8 +1,7 @@
-import React from "react";
-import DashBoardLayout from "@components/layouts/dashboard_layout";
 import ComplianceLayout from "@components/layouts/compliance_layout";
-import FileUpload from "@components/widgets/FileUpload";
 import FileList from "@components/widgets/FileList";
+import FileUpload from "@components/widgets/FileUpload";
+import React from "react";
 function Company() {
   const [files, setFiles] = React.useState([]);
 

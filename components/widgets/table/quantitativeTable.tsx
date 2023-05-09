@@ -1,11 +1,9 @@
-import React from "react";
-import { quantitativeTableDataType } from "types/widget_table";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheck } from "@fortawesome/free-solid-svg-icons";
-import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { PortalIcons } from "@components/icons";
-import { MetricRange } from "@taraldefi/tariala-component-library";
-import { StatusWidget } from "@taraldefi/tariala-component-library";
+import {
+  MetricRange,
+  StatusWidget,
+} from "@taraldefi/tariala-component-library";
+import { quantitativeTableDataType } from "types/widget_table";
 
 interface Props {
   TableData: quantitativeTableDataType[];

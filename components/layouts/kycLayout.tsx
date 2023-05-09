@@ -1,7 +1,4 @@
-import LeftMenu from "@components/kycLeftMenu";
 import React from "react";
-
-import Layout from "./layout";
 import NewLayout from "./testLayout";
 
 interface LayoutProps {

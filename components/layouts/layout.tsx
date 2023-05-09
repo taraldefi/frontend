@@ -1,5 +1,3 @@
-import BottomBar from "@components/newApplicationBottom";
-import router from "next/router";
 import React from "react";
 import Topbar from "../topBar";
 import TopBarNav from "../topBarNavigation";

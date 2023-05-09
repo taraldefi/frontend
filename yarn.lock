@@ -837,10 +837,10 @@
   dependencies:
     tslib "^2.4.0"
 
-"@taraldefi/tariala-component-library@^1.0.3":
-  version "1.0.3"
-  resolved "https://npm.pkg.github.com/download/@taraldefi/tariala-component-library/1.0.3/aede1c35d9ee9910c0d1ee7050390ff4136de9ad#aede1c35d9ee9910c0d1ee7050390ff4136de9ad"
-  integrity sha512-A4Tm6eJ7JBRehJ66lTCq0clW5kbr8lTD1I1UH2HMfUkgvL7oGpoWGZH2uSvnGuFAs7dLvtEJrYllg3a048nI8w==
+"@taraldefi/tariala-component-library@^1.0.5":
+  version "1.0.5"
+  resolved "https://npm.pkg.github.com/download/@taraldefi/tariala-component-library/1.0.5/46c538249ee149847ef20546d43fa2a03c0dfe5c#46c538249ee149847ef20546d43fa2a03c0dfe5c"
+  integrity sha512-f/oyvzJkdZODntF7CxooDRm8VNGv48s0OPUWi6RMlDDZkd+OMDqCXpDIZpM/ofvPvmQ27QMZOcaYNGNrVp2QMg==
   dependencies:
     "@storybook/addon-knobs" "^7.0.2"
     react-feather "^2.0.10"
@@ -985,9 +985,9 @@
     "@types/react" "*"
 
 "@types/react-transition-group@^4.4.0":
-  version "4.4.5"
-  resolved "https://registry.yarnpkg.com/@types/react-transition-group/-/react-transition-group-4.4.5.tgz#aae20dcf773c5aa275d5b9f7cdbca638abc5e416"
-  integrity sha512-juKD/eiSM3/xZYzjuzH6ZwpP+/lejltmiS3QEzV/vmb/Q8+HfDmxu+Baga8UEMGBqV88Nbg4l2hY/K2DkyaLLA==
+  version "4.4.6"
+  resolved "https://registry.yarnpkg.com/@types/react-transition-group/-/react-transition-group-4.4.6.tgz#18187bcda5281f8e10dfc48f0943e2fdf4f75e2e"
+  integrity sha512-VnCdSxfcm08KjsJVQcfBmhEQAPnLB8G08hAxn39azX1qYBQ/5RVQuoHuKIcfKOdncuaUvEpFKFzEvbtIMsfVew==
   dependencies:
     "@types/react" "*"
 

@@ -1,8 +1,7 @@
-import { faEllipsis, faEuroSign } from "@fortawesome/free-solid-svg-icons";
+import { faEuroSign } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
-import { profitLossTableType } from "types/widget_table";
 import { Button } from "@taraldefi/tariala-component-library";
+import { profitLossTableType } from "types/widget_table";
 interface Props {
   TableData: profitLossTableType;
 }
