@@ -13,6 +13,7 @@ export interface tableFormSentiments {
 }
 export interface tableFormResearch {
   name: string;
+  image?: string;
   Hit: string;
   Source: string;
 }

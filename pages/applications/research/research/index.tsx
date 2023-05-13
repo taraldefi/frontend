@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import DashBoardLayout from "@components/layouts/dashboard_layout";
 import ResearchLayout from "@components/layouts/rs_layout";
 import { TableData } from "@pages/applications/research/research/data";
-import { ResearchTable } from "@components/widgets/table/researchTable";
+import { ResearchTable } from "@taraldefi/tariala-component-library";
 import { useForm } from "react-hook-form";
 import { tableFormResearch } from "types/form";
 import { Button } from "@taraldefi/tariala-component-library";
@@ -63,7 +63,7 @@ function Research() {
             </form>
           </div>
         </div>
-        <ResearchTable TableData={fields}></ResearchTable>
+        <ResearchTable researchTableData={fields}></ResearchTable>
       </ResearchLayout>
     </>
   );

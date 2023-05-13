@@ -1,12 +1,12 @@
 import React from "react";
-import { TableData } from "./sign_off_data";
+import { SignoffTableData } from "./signOffData";
 import SignOffLayout from "@components/layouts/signOffLayout";
-import { SignOffTable } from "@components/widgets/table/signOffTable";
+import { SignOffTable } from "@taraldefi/tariala-component-library";
 function SignOff() {
   return (
     <>
       <SignOffLayout showexport={true}>
-        <SignOffTable TableData={TableData} />
+        <SignOffTable signOffTableData={SignoffTableData} />
       </SignOffLayout>
     </>
   );

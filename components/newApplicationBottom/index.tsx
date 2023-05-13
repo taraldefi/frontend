@@ -28,12 +28,8 @@ function BottomBar() {
                 setIndex(0);
                 return;
               }
-              if (index) {
-                router.push(`/users/exporter/quick/${paths[1]}`);
-              }
-
-              router.push(`/users/exporter/quick/${paths[index]}`);
               setIndex(index + 1);
+              router.push(`/users/exporter/quick/${paths[index]}`);
             }}
           ></Button>
         </div>
