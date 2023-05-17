@@ -8,7 +8,7 @@ interface ModalState {
   close: () => void;
 }
 
-export function useModal(modalAtom: PrimitiveAtom<boolean>): ModalState {
+function useModal(modalAtom: PrimitiveAtom<boolean>): ModalState {
   const [isOpen, setIsOpen] = useAtom(modalAtom);
 
   function open() {
@@ -21,3 +21,5 @@ export function useModal(modalAtom: PrimitiveAtom<boolean>): ModalState {
 
   return { isOpen, open, close };
 }
+
+export default useModal;

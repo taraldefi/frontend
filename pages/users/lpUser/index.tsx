@@ -3,7 +3,7 @@ import TopBar from "@components/topBar";
 import React from "react";
 import { PoolCard } from "@taraldefi/tariala-component-library";
 import logo from "@public/assets/svg/logo.svg";
-import { useModal } from "@hooks/useModal";
+import { useModal } from "@utils/hooks";
 import { YieldModalAtom } from "store/ModalStore";
 import YieldModal from "@components/modal/yieldModal";
 function Index() {

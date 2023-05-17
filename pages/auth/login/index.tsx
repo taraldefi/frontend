@@ -1,10 +1,10 @@
+import { PortalIcons } from "@components/icons";
 import AuthLayout from "@components/layouts/auth_layout";
-import { Button } from "@taraldefi/tariala-component-library";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Button } from "@taraldefi/tariala-component-library";
 import React from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { PortalIcons } from "@components/icons";
 
 function Index() {
   const [visible, setVisisblity] = React.useState(false);

@@ -1,18 +1,26 @@
 import Hooks from "./utilsHooks";
 import cookieService from "./lib/cookieUtils";
+import { ICookieService } from "./lib/cookieUtils.types";
 import authHeader from "./lib/authHeader";
 
-const CoreUtils = new Hooks();
+interface ICoreUtils extends Hooks {
+  getCookie: ICookieService["getCookie"];
+  setCookie: ICookieService["setCookie"];
+  delCookie: ICookieService["delCookie"];
+  authHeader: typeof authHeader;
+}
 
-CoreUtils.add("getCookie", (...attrs: [string]) =>
-  cookieService.getCookie(...attrs)
+const CoreUtils = new Hooks() as ICoreUtils;
+
+CoreUtils.add("getCookie", (name: string) => cookieService.getCookie(name));
+CoreUtils.add(
+  "setCookie",
+  (name: string, value: string, path: string = "/", days: number = 30) =>
+    cookieService.setCookie(name, value, path, days)
 );
-CoreUtils.add("setCookie", (...attrs: [string, string, string, number]) =>
-  cookieService.setCookie(...attrs)
+CoreUtils.add("delCookie", (name: string, path: string = "/") =>
+  cookieService.delCookie(name, path)
 );
-CoreUtils.add("delCookie", (...attrs: [string, string]) =>
-  cookieService.delCookie(...attrs)
-);
-CoreUtils.add("authHeader", (...attrs: []) => authHeader(...attrs));
+CoreUtils.add("authHeader", () => authHeader());
 
 export default CoreUtils;

@@ -1,7 +1,7 @@
 import { PortalIcons } from "@components/icons";
 import { faEllipsis } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useModal } from "@hooks/useModal";
+import { useModal } from "@utils/hooks";
 import router from "next/router";
 import React from "react";
 import { DeleteModalAtom, EditFormModalAtom } from "store/ModalStore";

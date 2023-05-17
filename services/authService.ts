@@ -1,6 +1,6 @@
-import axios, { AxiosResponse, AxiosError } from "axios";
 import apiUrls from "@config/apiUrls";
 import CoreUtils from "@utils/coreUtils";
+import axios, { AxiosResponse } from "axios";
 
 interface LoginResponse {
   code: number;
@@ -8,13 +8,16 @@ interface LoginResponse {
     token: string;
   };
 }
-interface LogOutResponse {
-  success: string;
+interface RegisterResponse {
+  success: boolean;
 }
 
 class AuthService {
   /**
    * Login
+   * @param username
+   * @param password
+   * @param remember
    */
   async login(
     username: string,
@@ -78,23 +81,60 @@ class AuthService {
       return { code: 500, data: { token: "" } };
     }
   }
+  /**
+   *
+   * @param username
+   * @param email
+   * @param password
+   * @param name
+   */
 
-  register(username: string, email: string, password: string, name: string) {
-    return axios.post(apiUrls.USER_REGISTER, {
-      username,
-      email,
-      password,
-      name,
-    });
+  async register(
+    username: string,
+    email: string,
+    password: string,
+    name: string
+  ): Promise<RegisterResponse> {
+    let url = apiUrls.USER_REGISTER;
+    try {
+      const response = await axios.post(url, {
+        username,
+        email,
+        password,
+        name,
+      });
+      const jsonData = response.data;
+      if (jsonData.code == 200) {
+        return jsonData;
+      }
+
+      return { success: true };
+    } catch (error: any) {
+      if (error.response) {
+        console.log(error.response.status);
+      } else if (error.request) {
+        console.log(error.request);
+      } else {
+        console.log(error.message);
+      }
+      return { success: false };
+    }
   }
 
   /**
-   * Remove user from local storage
+   * logout function
+
    */
-  //TODO: call logout API
-  logout(): void {
-    localStorage.removeItem("SITE_DATA_AUTH");
-    CoreUtils.call("delCookie", "SITE_DATA_LOGIN_COOKIE", "/");
+  async logout(): Promise<AxiosResponse | void> {
+    try {
+      const response = await axios.post(apiUrls.USER_LOGOUT);
+      localStorage.removeItem("SITE_DATA_AUTH");
+      CoreUtils.call("delCookie", "SITE_DATA_LOGIN_COOKIE", "/");
+      return response;
+    } catch (error) {
+      console.error(error);
+      throw error;
+    }
   }
 }
 
