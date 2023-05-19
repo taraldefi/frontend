@@ -9,7 +9,16 @@ interface LoginResponse {
   };
 }
 interface RegisterResponse {
-  success: boolean;
+  username: string;
+  email: string;
+  name: string;
+  address: string;
+  isTwoFAEnabled: boolean;
+  contact: string;
+  avatar: string;
+  status: string;
+  createdAt: string;
+  updatedAt: string;
 }
 
 class AuthService {
@@ -68,18 +77,16 @@ class AuthService {
             "Session"
           );
         }
+        return jsonData;
       }
-      return jsonData;
     } catch (error: any) {
-      if (error.response) {
-        console.log(error.response.status);
-      } else if (error.request) {
-        console.log(error.request);
+      if (axios.isAxiosError(error)) {
+        console.log(error.response?.status || error.message);
       } else {
         console.log(error.message);
       }
-      return { code: 500, data: { token: "" } };
     }
+    throw new Error("Login failed.");
   }
   /**
    *
@@ -95,30 +102,25 @@ class AuthService {
     password: string,
     name: string
   ): Promise<RegisterResponse> {
-    let url = apiUrls.USER_REGISTER;
     try {
-      const response = await axios.post(url, {
+      const response = await axios.post(apiUrls.USER_REGISTER, {
         username,
         email,
         password,
         name,
       });
-      const jsonData = response.data;
-      if (jsonData.code == 200) {
-        return jsonData;
+      const { data } = response;
+      if (data.code === 200) {
+        return data;
       }
-
-      return { success: true };
     } catch (error: any) {
-      if (error.response) {
-        console.log(error.response.status);
-      } else if (error.request) {
-        console.log(error.request);
+      if (axios.isAxiosError(error)) {
+        console.log(error.response?.status || error.message);
       } else {
         console.log(error.message);
       }
-      return { success: false };
     }
+    throw new Error("Registration failed.");
   }
 
   /**
