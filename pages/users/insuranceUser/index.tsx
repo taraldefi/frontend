@@ -1,7 +1,7 @@
 import { PortalIcons } from "@components/icons";
 import TalModal from "@components/modal/talModal";
 import TopBar from "@components/topBar";
-import { useModal } from "@hooks/useModal";
+import { useModal } from "@utils/hooks";
 import { Button } from "@taraldefi/tariala-component-library";
 import React, { useContext } from "react";
 import { TalModalAtom } from "store/ModalStore";

@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
 import { PortalIcons } from "@components/icons";
 import { Button } from "@taraldefi/tariala-component-library";
-import { useModal } from "@hooks/useModal";
+import { useModal } from "@utils/hooks";
 import { DeleteModalAtom, EditFormModalAtom } from "store/ModalStore";
 interface infoType {
   BeneficialOwner: string;

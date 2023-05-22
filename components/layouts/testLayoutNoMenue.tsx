@@ -3,7 +3,7 @@ import React from "react";
 
 import Topbar from "../topBar";
 import TopBarNav from "../topBarNavigation";
-import { useModal } from "@hooks/useModal";
+import { useModal } from "@utils/hooks";
 import {
   ApplicationModalAtom,
   DeleteModalAtom,
