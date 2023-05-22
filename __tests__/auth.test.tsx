@@ -41,30 +41,111 @@ describe("AuthService", () => {
 
       expect(loginResponse).toEqual(mockResponse);
     });
+
+    it("should throw an error when login fails", async () => {
+      const mockResponse = {
+        data: {
+          token: "testToken",
+          code: 400,
+        },
+      };
+      (axios.post as jest.Mock).mockResolvedValueOnce(mockResponse);
+
+      // Call the login function and expect it to throw an error
+      await expect(
+        authService.login("username", "password", true)
+      ).rejects.toThrow("Login failed.");
+
+      // Check if axios.post was called with the correct parameters
+      expect(axios.post).toHaveBeenCalledWith(apiUrls.USER_LOGIN, {
+        username: "username",
+        password: "password",
+        remember: true,
+      });
+    });
   });
 
   describe("register", () => {
-    it("should make a POST request to the register API", async () => {
+    it("should register a user successfully", async () => {
       const mockResponse = {
-        success: true,
+        data: {
+          code: 200,
+          username: "string",
+          email: "string",
+          name: "string",
+          address: "string",
+          isTwoFAEnabled: true,
+          contact: "string",
+          avatar: "string",
+          status: "string",
+          createdAt: "2023-05-19T12:46:55.070Z",
+          updatedAt: "2023-05-19T12:46:55.070Z",
+        },
       };
+      (axios.post as jest.Mock).mockResolvedValueOnce(mockResponse); // Mock the axios.post method to return the mockResponse
 
-      (axios.post as jest.Mock).mockResolvedValueOnce({ data: mockResponse });
+      // Provide test data
+      const username = "testuser";
+      const email = "test@example.com";
+      const password = "testpassword";
+      const name = "Test User";
 
-      const registerResponse = await authService.register(
-        "username",
-        "test@123.com",
-        "password",
-        "testname"
+      // Call the register function
+      const result = await authService.register(
+        username,
+        email,
+        password,
+        name
       );
 
+      // Check if the result matches the expected output
+      expect(result).toEqual(mockResponse.data);
+
+      // Check if axios.post was called with the correct parameters
       expect(axios.post).toHaveBeenCalledWith(apiUrls.USER_REGISTER, {
-        username: "username",
-        email: "test@123.com",
-        password: "password",
-        name: "testname",
+        username,
+        email,
+        password,
+        name,
       });
-      expect(registerResponse).toEqual(mockResponse);
+    });
+
+    it("should throw an error when registration fails", async () => {
+      const mockResponse = {
+        data: {
+          username: "string",
+          email: "string",
+          name: "string",
+          address: "string",
+          isTwoFAEnabled: true,
+          contact: "string",
+          avatar: "string",
+          status: "string",
+          createdAt: "2023-05-19T12:46:55.070Z",
+          updatedAt: "2023-05-19T12:46:55.070Z",
+          code: 400,
+        },
+      };
+      (axios.post as jest.Mock).mockResolvedValueOnce(mockResponse);
+
+      // Provide test data
+      const username = "testuser";
+      const email = "test@example.com";
+      const password = "testpassword";
+      const name = "Test User";
+
+      // Call the register function and expect it to throw an error
+      await expect(
+        authService.register(username, email, password, name)
+      ).rejects.toThrow("Registration failed.");
+
+      // Check if axios.post was called with the correct parameters
+      expect(axios.post).toHaveBeenCalledWith(apiUrls.USER_REGISTER, {
+        username,
+        email,
+        password,
+        name,
+      });
     });
   });
 });
