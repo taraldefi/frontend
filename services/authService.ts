@@ -1,25 +1,7 @@
 import apiUrls from "@config/apiUrls";
 import CoreUtils from "@utils/coreUtils";
 import axios, { AxiosResponse } from "axios";
-
-interface LoginResponse {
-  code: number;
-  data: {
-    token: string;
-  };
-}
-interface RegisterResponse {
-  username: string;
-  email: string;
-  name: string;
-  address: string;
-  isTwoFAEnabled: boolean;
-  contact: string;
-  avatar: string;
-  status: string;
-  createdAt: string;
-  updatedAt: string;
-}
+import { LoginResponse, RegisterResponse, TwoFAResponse } from "types";
 
 class AuthService {
   /**
@@ -46,17 +28,17 @@ class AuthService {
 
     try {
       const response = await axios.post<LoginResponse>(url, {
-        username,
-        password,
-        remember,
+        username: username,
+        password: password,
+        remember: remember,
       });
-      const jsonData = response.data;
+      const { data } = response;
 
-      if (jsonData.code === 200) {
+      if (response.status === 201) {
         localStorage.setItem(
           "SITE_DATA_AUTH",
           JSON.stringify({
-            token: jsonData.data.token,
+            token: data.token,
           })
         );
 
@@ -64,7 +46,7 @@ class AuthService {
           CoreUtils.call(
             "setCookie",
             "SITE_DATA_LOGIN_COOKIE",
-            jsonData.data.token,
+            data.token,
             "/",
             14
           );
@@ -72,12 +54,12 @@ class AuthService {
           CoreUtils.call(
             "setCookie",
             "SITE_DATA_LOGIN_COOKIE",
-            jsonData.data.token,
+            data.token,
             "/",
             "Session"
           );
         }
-        return jsonData;
+        return data;
       }
     } catch (error: any) {
       if (axios.isAxiosError(error)) {
@@ -104,13 +86,13 @@ class AuthService {
   ): Promise<RegisterResponse> {
     try {
       const response = await axios.post(apiUrls.USER_REGISTER, {
-        username,
-        email,
-        password,
-        name,
+        username: username,
+        email: email,
+        password: password,
+        name: name,
       });
       const { data } = response;
-      if (data.code === 200) {
+      if (response.status === 201) {
         return data;
       }
     } catch (error: any) {
@@ -122,21 +104,70 @@ class AuthService {
     }
     throw new Error("Registration failed.");
   }
+  /**
+   * Toggle 2FA function
+   * @param isTwoFAEnabled
+   */
+  async toggle2FA(isTwoFAEnabled: boolean): Promise<TwoFAResponse> {
+    try {
+      const response = await axios.put(apiUrls.USER_TOGGLE_2FA, {
+        isTwoFAEnabled: isTwoFAEnabled,
+      });
+      const { data } = response;
+      if (response.status === 204) {
+        return data;
+      }
+    } catch (error: any) {
+      if (axios.isAxiosError(error)) {
+        console.log(error.response?.status || error.message);
+      } else {
+        console.log(error.message);
+      }
+    }
+    throw new Error("2FA toggle failed.");
+  }
+
+  /**
+   * TwoFA authenticate functions
+   * @param code
+   */
+  async authenticateTwoFA(code: string): Promise<AxiosResponse> {
+    try {
+      const response = await axios.post(apiUrls.USER_AUTHENTICATE, {
+        code: code,
+      });
+      const { data } = response;
+      if (response.status === 200) {
+        return data;
+      }
+    } catch (error: any) {
+      if (axios.isAxiosError(error)) {
+        console.log(error.response?.status || error.message);
+      } else {
+        console.log(error.message);
+      }
+    }
+    throw new Error("2FA authentication failed.");
+  }
 
   /**
    * logout function
 
    */
-  async logout(): Promise<AxiosResponse | void> {
+  async logout(): Promise<AxiosResponse> {
     try {
       const response = await axios.post(apiUrls.USER_LOGOUT);
       localStorage.removeItem("SITE_DATA_AUTH");
       CoreUtils.call("delCookie", "SITE_DATA_LOGIN_COOKIE", "/");
       return response;
-    } catch (error) {
-      console.error(error);
-      throw error;
+    } catch (error: any) {
+      if (axios.isAxiosError(error)) {
+        console.log(error.response?.status || error.message);
+      } else {
+        console.log(error.message);
+      }
     }
+    throw new Error("logout failed.");
   }
 }
 

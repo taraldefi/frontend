@@ -1,4 +1,5 @@
 interface Config {
+  // authentication and user routes
   USER_LOGIN: string;
   USER_REGISTER: string;
   USER_ACTIVATE: string;
@@ -9,6 +10,10 @@ interface Config {
   REFRESH_TOKEN: string;
   USER_LOGOUT: string;
   USER_AUTHENTICATE: string;
+  USER_TOGGLE_2FA: string;
+
+  // Entity routes
+  ENTITY: string;
 }
 
 const config: Config = {
@@ -21,7 +26,9 @@ const config: Config = {
   USER_FORGOT_PASSWORD: `${process.env.BASE_URL}/auth/forgot-password`,
   REFRESH_TOKEN: `${process.env.BASE_URL}/auth/refresh`,
   USER_LOGOUT: `${process.env.BASE_URL}/auth/logout`,
-  USER_AUTHENTICATE: `${process.env.BASE_URL}/authenticate`,
+  USER_AUTHENTICATE: `${process.env.BASE_URL}/twofa/authenticate`,
+  USER_TOGGLE_2FA: `${process.env.BASE_URL}/twofa`,
+  ENTITY: `${process.env.BASE_URL}/v1/entities`,
 };
 
 const localConfig: Config = {
@@ -34,7 +41,9 @@ const localConfig: Config = {
   USER_FORGOT_PASSWORD: `${process.env.BASE_URL}/auth/forgot-password`,
   REFRESH_TOKEN: `${process.env.BASE_URL}/auth/refresh`,
   USER_LOGOUT: `${process.env.BASE_URL}/auth/logout`,
-  USER_AUTHENTICATE: `${process.env.BASE_URL}/authenticate`,
+  USER_AUTHENTICATE: `${process.env.BASE_URL}/twofa/authenticate`,
+  USER_TOGGLE_2FA: `${process.env.BASE_URL}/twofa`,
+  ENTITY: `${process.env.BASE_URL}/v1/entities`,
 };
 
 const urls = process.env.NODE_ENV === "production" ? config : localConfig;
