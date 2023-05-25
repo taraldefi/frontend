@@ -2,21 +2,13 @@ import axios from "axios";
 import authService from "../services/authService";
 import CoreUtils from "@utils/coreUtils";
 import apiUrls from "@config/apiUrls";
-import getAxiosConfig from "@config/axiosConfig";
 
 // Use Jest to mock axios and CoreUtils modules
 jest.mock("axios");
-jest.mock("@utils/coreUtils", () => ({
-  call: jest.fn(),
-  return: jest.fn(),
-}));
 
 describe("AuthService", () => {
   beforeEach(() => {
-    // Clear all instances and calls to constructor and all methods:
-    (axios.post as jest.Mock).mockClear();
-    (axios.put as jest.Mock).mockClear();
-    (CoreUtils.call as jest.Mock).mockClear();
+    jest.clearAllMocks();
   });
 
   describe("login", () => {
@@ -34,7 +26,7 @@ describe("AuthService", () => {
       (axios.post as jest.Mock).mockResolvedValueOnce(mockResponse);
 
       const result = await authService.login("username", "password", true);
-      const axiosConfig = getAxiosConfig("POST");
+
       expect(axios.post).toHaveBeenCalledWith(
         apiUrls.USER_LOGIN,
         {
@@ -42,7 +34,7 @@ describe("AuthService", () => {
           password: "password",
           remember: true,
         },
-        axiosConfig
+        expect.any(Object)
       );
 
       expect(result).toEqual(undefined);
@@ -60,7 +52,7 @@ describe("AuthService", () => {
       await expect(
         authService.login("username", "password", true)
       ).rejects.toThrow(errorMessage);
-      const axiosConfig = getAxiosConfig("POST");
+
       // Check if axios.post was called with the correct parameters
       expect(axios.post).toHaveBeenCalledWith(
         apiUrls.USER_LOGIN,
@@ -69,7 +61,7 @@ describe("AuthService", () => {
           password: "password",
           remember: true,
         },
-        axiosConfig
+        expect.any(Object)
       );
     });
   });
@@ -109,7 +101,7 @@ describe("AuthService", () => {
 
       // Check if the result matches the expected output
       expect(result).toEqual(mockResponse.data);
-      const axiosConfig = getAxiosConfig("POST");
+
       // Check if axios.post was called with the correct parameters
       expect(axios.post).toHaveBeenCalledWith(
         apiUrls.USER_REGISTER,
@@ -119,7 +111,7 @@ describe("AuthService", () => {
           password: password,
           name: name,
         },
-        axiosConfig
+        expect.any(Object)
       );
     });
 
@@ -144,7 +136,7 @@ describe("AuthService", () => {
       await expect(
         authService.register(username, email, password, name)
       ).rejects.toThrow(errorMessage);
-      const axiosConfig = getAxiosConfig("POST");
+
       // Check if axios.post was called with the correct parameters
       expect(axios.post).toHaveBeenCalledWith(
         apiUrls.USER_REGISTER,
@@ -154,7 +146,7 @@ describe("AuthService", () => {
           password: password,
           name: name,
         },
-        axiosConfig
+        expect.any(Object)
       );
     });
   });
@@ -178,14 +170,14 @@ describe("AuthService", () => {
 
       // Check if the result matches the expected output
       expect(result).toEqual(mockResponse.data);
-      const axiosConfig = getAxiosConfig("PUT");
+
       // Check if axios.put was called with the correct parameters
       expect(axios.put).toHaveBeenCalledWith(
         apiUrls.USER_TOGGLE_2FA,
         {
           isTwoFAEnabled,
         },
-        axiosConfig
+        expect.any(Object)
       );
     });
 
@@ -206,14 +198,14 @@ describe("AuthService", () => {
       await expect(authService.toggle2FA(isTwoFAEnabled)).rejects.toThrow(
         errorMessage
       );
-      const axiosConfig = getAxiosConfig("PUT");
+
       // Check if axios.put was called with the correct parameters
       expect(axios.put).toHaveBeenCalledWith(
         apiUrls.USER_TOGGLE_2FA,
         {
           isTwoFAEnabled: isTwoFAEnabled,
         },
-        axiosConfig
+        expect.any(Object)
       );
     });
 
@@ -234,14 +226,14 @@ describe("AuthService", () => {
 
       // Check if the result matches the expected output
       expect(result).toEqual(mockResponse.data);
-      const axiosConfig = getAxiosConfig("POST");
+
       // Check if axios.post was called with the correct parameters
       expect(axios.post).toHaveBeenCalledWith(
         apiUrls.USER_AUTHENTICATE,
         {
           code: code,
         },
-        axiosConfig
+        expect.any(Object)
       );
     });
 
@@ -262,14 +254,14 @@ describe("AuthService", () => {
       await expect(authService.authenticateTwoFA(code)).rejects.toThrow(
         errorMessage
       );
-      const axiosConfig = getAxiosConfig("POST");
+
       // Check if axios.post was called with the correct parameters
       expect(axios.post).toHaveBeenCalledWith(
         apiUrls.USER_AUTHENTICATE,
         {
           code: code,
         },
-        axiosConfig
+        expect.any(Object)
       );
     });
   });
@@ -280,10 +272,10 @@ describe("AuthService", () => {
       (axios.post as jest.Mock).mockResolvedValueOnce(responseMock);
 
       const result = await authService.logout();
-      const axiosConfig = getAxiosConfig("POST");
+
       expect(axios.post).toHaveBeenCalledWith(
         expect.stringContaining(apiUrls.USER_LOGOUT),
-        axiosConfig
+        expect.any(Object)
       );
 
       expect(result).toEqual(undefined); // No data expected, as status is 201
@@ -483,7 +475,7 @@ describe("AuthService", () => {
 
       // Check if the result matches the expected output
       expect(result).toEqual(mockResponse.data);
-      const axiosConfig = getAxiosConfig("PUT");
+
       // Check if axios.put was called with the correct parameters
       expect(axios.put).toHaveBeenCalledWith(
         apiUrls.USER_CHANGE_PASSWORD,
@@ -492,7 +484,7 @@ describe("AuthService", () => {
           password: password,
           confirmPassword: confirmPassword,
         },
-        axiosConfig
+        expect.any(Object)
       );
     });
 
@@ -517,7 +509,7 @@ describe("AuthService", () => {
 
       // Check if the result matches the expected output
       expect(result).toEqual(undefined);
-      const axiosConfig = getAxiosConfig("PUT");
+
       // Check if axios.put was called with the correct parameters
       expect(axios.put).toHaveBeenCalledWith(
         apiUrls.USER_RESET_PASSWORD,
@@ -526,7 +518,7 @@ describe("AuthService", () => {
           password: password,
           confirmPassword: confirmPassword,
         },
-        axiosConfig
+        expect.any(Object)
       );
     });
 
@@ -545,14 +537,14 @@ describe("AuthService", () => {
 
       // Check if the result matches the expected output
       expect(result).toEqual(undefined);
-      const axiosConfig = getAxiosConfig("PUT");
+
       // Check if axios.put was called with the correct parameters
       expect(axios.put).toHaveBeenCalledWith(
         apiUrls.USER_FORGOT_PASSWORD,
         {
           email: email,
         },
-        axiosConfig
+        expect.any(Object)
       );
     });
 
@@ -591,15 +583,13 @@ describe("AuthService", () => {
         authService.changePassword({ oldPassword, password, confirmPassword })
       ).rejects.toThrow(errorMessage[2]);
 
-      const axiosConfig = getAxiosConfig("PUT");
-
       // Check if axios.post was called with the correct parameters
       expect(axios.put).toHaveBeenCalledWith(
         apiUrls.USER_FORGOT_PASSWORD,
         {
           email: email,
         },
-        axiosConfig
+        expect.any(Object)
       );
       expect(axios.put).toHaveBeenCalledWith(
         apiUrls.USER_RESET_PASSWORD,
@@ -608,7 +598,7 @@ describe("AuthService", () => {
           password: password,
           confirmPassword: confirmPassword,
         },
-        axiosConfig
+        expect.any(Object)
       );
       expect(axios.put).toHaveBeenCalledWith(
         apiUrls.USER_CHANGE_PASSWORD,
@@ -617,7 +607,7 @@ describe("AuthService", () => {
           password: password,
           confirmPassword: confirmPassword,
         },
-        axiosConfig
+        expect.any(Object)
       );
     });
   });

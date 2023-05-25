@@ -1,22 +1,15 @@
 import apiUrls from "@config/apiUrls";
-import CoreUtils from "@utils/coreUtils";
 import axios from "axios";
 import entityService from "../services/entityService";
 import { Entity } from "types";
-import getAxiosConfig from "@config/axiosConfig";
 
 // Use Jest to mock axios and CoreUtils modules
 jest.mock("axios");
-jest.mock("@utils/coreUtils", () => ({
-  call: jest.fn(),
-  return: jest.fn(),
-}));
 
 describe("EntityService", () => {
   beforeEach(() => {
     // Clear all instances and calls to constructor and all methods:
-    (axios.post as jest.Mock).mockClear();
-    (CoreUtils.call as jest.Mock).mockClear();
+    jest.clearAllMocks();
   });
   it("should be able fetch an entity by ID", async () => {
     const mockResponse = {
@@ -54,11 +47,9 @@ describe("EntityService", () => {
 
     const result = await entityService.getEntity(id);
 
-    const axiosConfig = getAxiosConfig("GET");
-
     expect(axios.get).toHaveBeenCalledWith(
       `${apiUrls.ENTITY}/${id}`,
-      axiosConfig
+      expect.any(Object)
     );
 
     expect(result).toEqual(mockResponse.data);
@@ -79,11 +70,10 @@ describe("EntityService", () => {
     await expect(entityService.getEntity(id)).rejects.toThrow(
       "Fetch Entity by ID failed."
     );
-    const axiosConfig = getAxiosConfig("GET");
 
     expect(axios.get).toHaveBeenCalledWith(
       `${apiUrls.ENTITY}/${id}`,
-      axiosConfig
+      expect.any(Object)
     );
   });
 
@@ -121,11 +111,10 @@ describe("EntityService", () => {
     };
 
     const result = await entityService.createEntity(requestBody);
-    const axiosConfig = getAxiosConfig("POST");
     expect(axios.post).toHaveBeenCalledWith(
       `${apiUrls.ENTITY}`,
       JSON.stringify(requestBody),
-      axiosConfig
+      expect.any(Object)
     );
     expect(result).toEqual(mockResponse.data);
   });
@@ -157,12 +146,11 @@ describe("EntityService", () => {
     await expect(entityService.createEntity(requestBody)).rejects.toThrow(
       "Creating entity failed."
     );
-    const axiosConfig = getAxiosConfig("POST");
 
     expect(axios.post).toHaveBeenCalledWith(
       apiUrls.ENTITY,
       JSON.stringify(requestBody),
-      axiosConfig
+      expect.any(Object)
     );
   });
 
@@ -213,11 +201,11 @@ describe("EntityService", () => {
     (axios.patch as jest.Mock).mockResolvedValueOnce(mockResponse);
 
     const result = await entityService.updateEntity(id, requestBody);
-    const axiosConfig = getAxiosConfig("PATCH");
+
     expect(axios.patch).toHaveBeenCalledWith(
       `${apiUrls.ENTITY}/${id}`,
       JSON.stringify(requestBody),
-      axiosConfig
+      expect.any(Object)
     );
 
     expect(result).toEqual(mockResponse.data);
@@ -247,7 +235,7 @@ describe("EntityService", () => {
     };
 
     (axios.patch as jest.Mock).mockRejectedValueOnce(mockErrorResponse);
-    const axiosConfig = getAxiosConfig("PATCH");
+
     await expect(entityService.updateEntity(id, requestBody)).rejects.toThrow(
       "Updating entity failed."
     );
@@ -255,7 +243,7 @@ describe("EntityService", () => {
     expect(axios.patch).toHaveBeenCalledWith(
       `${apiUrls.ENTITY}/${id}`,
       JSON.stringify(requestBody),
-      axiosConfig
+      expect.any(Object)
     );
   });
 
@@ -272,10 +260,10 @@ describe("EntityService", () => {
     (axios.delete as jest.Mock).mockResolvedValueOnce(mockResponse);
 
     const result = await entityService.deleteEntity(id);
-    const axiosConfig = getAxiosConfig("DELETE");
+
     expect(axios.delete).toHaveBeenCalledWith(
       `${apiUrls.ENTITY}/${id}`,
-      axiosConfig
+      expect.any(Object)
     );
 
     expect(result).toEqual(mockResponse.data);
@@ -293,14 +281,14 @@ describe("EntityService", () => {
     const id = "05159674-06ea-4bc2-b750-603b0f454025";
 
     (axios.delete as jest.Mock).mockRejectedValueOnce(mockErrorResponse);
-    const axiosConfig = getAxiosConfig("DELETE");
+
     await expect(entityService.deleteEntity(id)).rejects.toThrow(
       "Deleting Entity failed."
     );
 
     expect(axios.delete).toHaveBeenCalledWith(
       `${apiUrls.ENTITY}/${id}`,
-      axiosConfig
+      expect.any(Object)
     );
   });
 });

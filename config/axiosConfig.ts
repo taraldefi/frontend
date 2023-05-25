@@ -12,7 +12,7 @@ export default function getAxiosConfig(method: string, contentType?: string) {
     headers: {
       method: method,
       "Content-Type": contentType ? contentType : "application/json",
-      authHeader,
+      Authorization: authHeader.Authorization,
     },
   };
 
