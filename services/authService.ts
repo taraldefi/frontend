@@ -1,7 +1,14 @@
 import apiUrls from "@config/apiUrls";
+import getAxiosConfig from "@config/axiosConfig";
 import CoreUtils from "@utils/coreUtils";
-import axios, { AxiosResponse } from "axios";
-import { LoginResponse, RegisterResponse, TwoFAResponse } from "types";
+import axios from "axios";
+import {
+  RegisterResponse,
+  TwoFAResponse,
+  changePasswordProps,
+  resetPasswordProps,
+  userProfile,
+} from "types";
 
 class AuthService {
   /**
@@ -14,8 +21,9 @@ class AuthService {
     username: string,
     password: string,
     remember: boolean
-  ): Promise<LoginResponse> {
+  ): Promise<void> {
     let url = apiUrls.USER_LOGIN;
+    const axiosConfig = getAxiosConfig("POST");
 
     // if (process.env.NODE_ENV !== "production") {
     //   url += "?";
@@ -27,18 +35,25 @@ class AuthService {
     // }
 
     try {
-      const response = await axios.post<LoginResponse>(url, {
-        username: username,
-        password: password,
-        remember: remember,
-      });
-      const { data } = response;
+      const response = await axios.post(
+        url,
+        {
+          username: username,
+          password: password,
+          remember: remember,
+        },
+        axiosConfig
+      );
+      const cookieName = "Authentication";
+      const cookie = (response.headers["set-cookie"] as string[])
+        .find((cookie) => cookie.includes(cookieName))
+        ?.match(new RegExp(`^${cookieName}=(.+?);`))?.[1];
 
-      if (response.status === 201) {
+      if (response.status === 204) {
         localStorage.setItem(
           "SITE_DATA_AUTH",
           JSON.stringify({
-            token: data.token,
+            token: cookie,
           })
         );
 
@@ -46,7 +61,7 @@ class AuthService {
           CoreUtils.call(
             "setCookie",
             "SITE_DATA_LOGIN_COOKIE",
-            data.token,
+            cookie,
             "/",
             14
           );
@@ -54,12 +69,12 @@ class AuthService {
           CoreUtils.call(
             "setCookie",
             "SITE_DATA_LOGIN_COOKIE",
-            data.token,
+            cookie,
             "/",
             "Session"
           );
         }
-        return data;
+        return;
       }
     } catch (error: any) {
       if (axios.isAxiosError(error)) {
@@ -84,13 +99,18 @@ class AuthService {
     password: string,
     name: string
   ): Promise<RegisterResponse> {
+    const axiosConfig = getAxiosConfig("POST");
     try {
-      const response = await axios.post(apiUrls.USER_REGISTER, {
-        username: username,
-        email: email,
-        password: password,
-        name: name,
-      });
+      const response = await axios.post(
+        apiUrls.USER_REGISTER,
+        {
+          username: username,
+          email: email,
+          password: password,
+          name: name,
+        },
+        axiosConfig
+      );
       const { data } = response;
       if (response.status === 201) {
         return data;
@@ -109,10 +129,15 @@ class AuthService {
    * @param isTwoFAEnabled
    */
   async toggle2FA(isTwoFAEnabled: boolean): Promise<TwoFAResponse> {
+    const axiosConfig = getAxiosConfig("PUT");
     try {
-      const response = await axios.put(apiUrls.USER_TOGGLE_2FA, {
-        isTwoFAEnabled: isTwoFAEnabled,
-      });
+      const response = await axios.put(
+        apiUrls.USER_TOGGLE_2FA,
+        {
+          isTwoFAEnabled: isTwoFAEnabled,
+        },
+        axiosConfig
+      );
       const { data } = response;
       if (response.status === 204) {
         return data;
@@ -131,11 +156,16 @@ class AuthService {
    * TwoFA authenticate functions
    * @param code
    */
-  async authenticateTwoFA(code: string): Promise<AxiosResponse> {
+  async authenticateTwoFA(code: string): Promise<any> {
+    const axiosConfig = getAxiosConfig("POST");
     try {
-      const response = await axios.post(apiUrls.USER_AUTHENTICATE, {
-        code: code,
-      });
+      const response = await axios.post(
+        apiUrls.USER_AUTHENTICATE,
+        {
+          code: code,
+        },
+        axiosConfig
+      );
       const { data } = response;
       if (response.status === 200) {
         return data;
@@ -149,17 +179,21 @@ class AuthService {
     }
     throw new Error("2FA authentication failed.");
   }
-
   /**
-   * logout function
-
+   * activate account function
+   * @param token
+   * @returns
    */
-  async logout(): Promise<AxiosResponse> {
+  async activateAccount(token: string): Promise<void> {
+    const axiosConfig = getAxiosConfig("GET");
     try {
-      const response = await axios.post(apiUrls.USER_LOGOUT);
-      localStorage.removeItem("SITE_DATA_AUTH");
-      CoreUtils.call("delCookie", "SITE_DATA_LOGIN_COOKIE", "/");
-      return response;
+      const response = await axios.get(
+        `${apiUrls.USER_ACTIVATE}?token=${token}`,
+        axiosConfig
+      );
+      if (response.status == 204) {
+        return;
+      }
     } catch (error: any) {
       if (axios.isAxiosError(error)) {
         console.log(error.response?.status || error.message);
@@ -167,7 +201,177 @@ class AuthService {
         console.log(error.message);
       }
     }
+    throw new Error("Failed to activate account.");
+  }
+
+  /**
+   * logout function
+
+   */
+  async logout(): Promise<void> {
+    const axiosConfig = getAxiosConfig("POST");
+    try {
+      const response = await axios.post(apiUrls.USER_LOGOUT, axiosConfig);
+      if (response.status == 201) {
+        localStorage.removeItem("SITE_DATA_AUTH");
+        CoreUtils.call("delCookie", "SITE_DATA_LOGIN_COOKIE", "/");
+        return;
+      }
+    } catch (error: any) {
+      if (axios.isAxiosError(error)) {
+        console.log(error.response?.status || error.message);
+      } else {
+        throw new Error(error.message);
+      }
+    }
     throw new Error("logout failed.");
+  }
+
+  // password service functions
+
+  /**
+   * forgot password function
+   * @param email
+   * @returns
+   */
+  async forgotPassword(email: string): Promise<void> {
+    const axiosConfig = getAxiosConfig("PUT");
+    try {
+      const response = await axios.put(
+        apiUrls.USER_FORGOT_PASSWORD,
+        {
+          email: email,
+        },
+        axiosConfig
+      );
+      if (response.status == 204) {
+        return;
+      }
+    } catch (error: any) {
+      if (axios.isAxiosError(error)) {
+        console.log(error.response?.status || error.message);
+      } else {
+        throw new error.message();
+      }
+    }
+    throw new Error("forgot password function failed!");
+  }
+  /**
+   * reset password function
+   * @param token
+   * @param password
+   * @param confirmPassword
+   * @returns
+   */
+  async resetPassword({
+    token,
+    password,
+    confirmPassword,
+  }: resetPasswordProps): Promise<void> {
+    const axiosConfig = getAxiosConfig("PUT");
+    try {
+      const response = await axios.put(
+        apiUrls.USER_RESET_PASSWORD,
+        {
+          token: token,
+          password: password,
+          confirmPassword: confirmPassword,
+        },
+        axiosConfig
+      );
+
+      if (response.status == 204) {
+        return;
+      }
+    } catch (error: any) {
+      if (axios.isAxiosError(error)) {
+        console.log(error.response?.status || error.message);
+      } else {
+        console.log(error.message);
+      }
+    }
+    throw new Error("reset password function failed!");
+  }
+  /**
+   * change password function
+   * @param oldPassword
+   * @param password
+   * @param confirmPassword
+   * @returns
+   */
+  async changePassword({
+    oldPassword,
+    password,
+    confirmPassword,
+  }: changePasswordProps): Promise<void> {
+    const axiosConfig = getAxiosConfig("PUT");
+    try {
+      const response = await axios.put(
+        apiUrls.USER_CHANGE_PASSWORD,
+        {
+          oldPassword: oldPassword,
+          password: password,
+          confirmPassword: confirmPassword,
+        },
+        axiosConfig
+      );
+      const { data } = response;
+      if (response.status == 200) {
+        return data;
+      }
+    } catch (error: any) {
+      if (axios.isAxiosError(error)) {
+        console.log(error.response?.status || error.message);
+      } else {
+        console.log(error.message);
+      }
+    }
+    throw new Error("change password function failed!");
+  }
+
+  // profile functions
+  /**
+   * function to fetch the profile of the user
+   * @returns
+   */
+  async getProfile(): Promise<RegisterResponse> {
+    const axiosConfig = getAxiosConfig("GET");
+    try {
+      const response = await axios.get(apiUrls.USER_PROFILE, axiosConfig);
+      const { data } = response;
+      if (response.status == 200) {
+        return data;
+      }
+    } catch (error: any) {
+      if (axios.isAxiosError(error)) {
+        console.log(error.response?.status || error.message);
+      } else {
+        throw new Error(error.message);
+      }
+    }
+    throw new Error("Failed to fetch profile");
+  }
+
+  async updateProfile(userInfo: userProfile): Promise<RegisterResponse> {
+    const axiosConfig = getAxiosConfig("PUT");
+    try {
+      const response = await axios.put(
+        apiUrls.USER_PROFILE,
+        JSON.stringify(userInfo),
+        axiosConfig
+      );
+      const { data } = response;
+      if (response.status == 200) {
+        return data;
+      }
+    } catch (error: any) {
+      if (axios.isAxiosError(error)) {
+        console.log(error.response?.status || error.message);
+      } else {
+        throw new Error(error.message);
+      }
+    }
+    throw new Error("updating profile failed!");
   }
 }
 

@@ -1,18 +1,26 @@
 import apiUrls from "@config/apiUrls";
 import getAxiosConfig from "@config/axiosConfig";
-import axios, { AxiosResponse } from "axios";
-import { Entity, EntityResponse } from "types";
+import axios from "axios";
+import { IcreateUser, IupdateUser, RegisterResponse } from "types";
 
-class EntityService {
+class UserService {
   /**
-   * function to get an entity by ID
-   * @param id
+   * get user function
+   * @param keywords
+   * @param limit
+   * @param page
    */
-
-  async getEntity(id: string): Promise<EntityResponse> {
+  async getAllUsers(
+    keywords: string,
+    limit: number,
+    page: number
+  ): Promise<RegisterResponse[]> {
     const axiosConfig = getAxiosConfig("GET");
     try {
-      const response = await axios.get(`${apiUrls.ENTITY}/${id}`, axiosConfig);
+      const response = await axios.get(
+        `${apiUrls.USER}?keywords=${keywords}&limit=${limit}&page=${page}`,
+        axiosConfig
+      );
       const { data } = response;
 
       if (response.status === 200) {
@@ -25,19 +33,20 @@ class EntityService {
         console.log(error.message);
       }
     }
-    throw new Error("Fetch Entity by ID failed.");
+    throw new Error("Failed to fetch users.");
   }
 
   /**
-   * Create Entity Function
-   * @param entity
+   * Function for creating a user
+   * @param userInfo
+   * @returns
    */
-  async createEntity(entity: Entity): Promise<EntityResponse> {
+  async createUser(userInfo: IcreateUser): Promise<RegisterResponse> {
     const axiosConfig = getAxiosConfig("POST");
     try {
       const response = await axios.post(
-        apiUrls.ENTITY,
-        JSON.stringify(entity),
+        `${apiUrls.USER}`,
+        JSON.stringify(userInfo),
         axiosConfig
       );
       const { data } = response;
@@ -52,20 +61,18 @@ class EntityService {
         console.log(error.message);
       }
     }
-    throw new Error("Creating entity failed.");
+    throw new Error("Failed to create user.");
   }
 
   /**
-   * Delete Entity Function
+   * get a user by ID
    * @param id
+   * @returns
    */
-  async deleteEntity(id: string): Promise<void> {
-    const axiosConfig = getAxiosConfig("DELETE");
+  async getUserById(id: string): Promise<RegisterResponse> {
+    const axiosConfig = getAxiosConfig("GET");
     try {
-      const response = await axios.delete(
-        `${apiUrls.ENTITY}/${id}`,
-        axiosConfig
-      );
+      const response = await axios.get(`${apiUrls.USER}/${id}`, axiosConfig);
       const { data } = response;
 
       if (response.status === 200) {
@@ -78,24 +85,28 @@ class EntityService {
         console.log(error.message);
       }
     }
-    throw new Error("Deleting Entity failed.");
+    throw new Error("Failed to fetch user by ID.");
   }
+
   /**
-   * Update Entity Function
+   * update user by ID
    * @param id
-   * @param entity
+   * @param userInfo
+   * @returns
    */
-  async updateEntity(id: string, entity: Entity): Promise<EntityResponse> {
-    const axiosConfig = getAxiosConfig("PATCH");
+  async updateUser(
+    id: string,
+    userInfo: IupdateUser
+  ): Promise<RegisterResponse> {
+    const axiosConfig = getAxiosConfig("PUT");
     try {
-      const response = await axios.patch(
-        `${apiUrls.ENTITY}/${id}`,
-        JSON.stringify(entity),
+      const response = await axios.put(
+        `${apiUrls.USER}/${id}`,
+        JSON.stringify(userInfo),
         axiosConfig
       );
       const { data } = response;
-
-      if (response.status === 200) {
+      if (response.status == 200) {
         return data;
       }
     } catch (error: any) {
@@ -105,10 +116,10 @@ class EntityService {
         console.log(error.message);
       }
     }
-    throw new Error("Updating entity failed.");
+    throw new Error("Failed to update user by ID.");
   }
 }
 
-const entityService = new EntityService();
+const userService = new UserService();
 
-export default entityService;
+export default userService;
