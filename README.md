@@ -377,3 +377,62 @@ try {
   console.error(error);
 }
 ```
+
+---
+
+### `deleteEntity(id: string): Promise<void>`
+
+This function deletes an entity by its ID.
+
+**Parameters:**
+
+- `id` (string): The ID of the entity to delete.
+
+**Returns:**  
+A Promise that resolves to `void` (no return value).
+
+**Example usage:**
+
+```javascript
+const entityId = "123456";
+
+try {
+  await entityService.deleteEntity(entityId);
+  console.log("Entity deleted successfully.");
+} catch (error) {
+  console.error(error);
+}
+```
+
+---
+
+### `updateEntity(id: string, entity: Entity): Promise<EntityResponse>`
+
+This function updates an entity's information.
+
+**Parameters:**
+
+- `id` (string): The ID of the entity to update.
+- `entity` (Entity): An object containing the updated entity information.
+
+**Returns:**  
+A Promise that resolves to an `EntityResponse` object representing the updated entity.
+
+**Example usage:**
+
+```javascript
+const entityId = "123456";
+const updatedEntity = {
+  name: "Updated Entity",
+  description: "This entity has been updated.",
+};
+
+try {
+  const updated = await entityService.updateEntity(entityId, updatedEntity);
+  console.log(updated);
+} catch (error) {
+  console.error(error);
+}
+```
+
+---
