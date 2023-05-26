@@ -1,4 +1,4 @@
-export const TaskData = [
+const TaskData = [
   {
     assignee: {
       user: "/assets/images/1.png",
@@ -96,3 +96,5 @@ export const TaskData = [
     date: "19.10.2019",
   },
 ];
+
+export default TaskData;

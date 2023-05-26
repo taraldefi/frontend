@@ -1,6 +1,6 @@
 import { PortalIcons } from "@components/icons";
 import { useAtom } from "jotai";
-import React, { useRef, useState } from "react";
+import React from "react";
 import { itemExpanded } from "store/sideBarStore";
 
 interface menuItemProps {

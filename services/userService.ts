@@ -23,7 +23,7 @@ class UserService {
       );
       const { data } = response;
 
-      if (response.status === 200) {
+      if (response.statusCode === 200) {
         return data;
       }
     } catch (error: any) {
@@ -51,7 +51,7 @@ class UserService {
       );
       const { data } = response;
 
-      if (response.status === 201) {
+      if (response.statusCode === 201) {
         return data;
       }
     } catch (error: any) {
@@ -75,7 +75,7 @@ class UserService {
       const response = await axios.get(`${apiUrls.USER}/${id}`, axiosConfig);
       const { data } = response;
 
-      if (response.status === 200) {
+      if (response.statusCode === 200) {
         return data;
       }
     } catch (error: any) {
@@ -106,7 +106,7 @@ class UserService {
         axiosConfig
       );
       const { data } = response;
-      if (response.status == 200) {
+      if (response.statusCode == 200) {
         return data;
       }
     } catch (error: any) {

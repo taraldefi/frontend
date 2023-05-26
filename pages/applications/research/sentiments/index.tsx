@@ -1,11 +1,10 @@
-import React, { useState } from "react";
-import DashBoardLayout from "@components/layouts/dashboard_layout";
+import { PortalIcons } from "@components/icons";
 import ResearchLayout from "@components/layouts/rs_layout";
 import { Button, ScreeningTable } from "@taraldefi/tariala-component-library";
-import { TableData } from "./data";
-import { tableFormScreening, tableFormSentiments } from "types/form";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { PortalIcons } from "@components/icons";
+import { tableFormScreening } from "types/form";
+import TableData from "./data";
 function Research() {
   var x: number = Object.keys(TableData).length;
 

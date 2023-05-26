@@ -1,3 +1,5 @@
+import { AxiosResponse } from "axios";
+
 interface LoginResponse {
   token: string;
 }
@@ -146,6 +148,7 @@ interface IfileResponse {
   id: string;
   signedHash: string;
 }
+
 export {
   LoginResponse,
   RegisterResponse,

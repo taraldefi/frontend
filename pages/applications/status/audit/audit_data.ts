@@ -1,4 +1,4 @@
-export const TableData = [
+const TableData = [
   {
     action: "Application review",
     user: {
@@ -30,3 +30,5 @@ export const TableData = [
     date: "19.10.2019",
   },
 ];
+
+export default TableData;

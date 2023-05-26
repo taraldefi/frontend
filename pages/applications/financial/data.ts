@@ -1,4 +1,4 @@
-export const SortbarData = [
+const SortbarData = [
   {
     id: 1,
     title: "Profit & Loss",
@@ -15,3 +15,5 @@ export const SortbarData = [
     path: "/applications/financial/cash",
   },
 ];
+
+export default SortbarData;

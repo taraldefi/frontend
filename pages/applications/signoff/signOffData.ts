@@ -1,4 +1,4 @@
-export const SignoffTableData = [
+const SignoffTableData = [
   {
     name: "Cameron Williamson",
     image: "/assets/images/1.png",
@@ -40,3 +40,5 @@ export const SignoffTableData = [
     statusSigned: true,
   },
 ];
+
+export default SignoffTableData;

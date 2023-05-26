@@ -2,7 +2,7 @@ import EntityView from "@components/entity/entityView";
 import Layout from "@components/layouts/layout";
 import { EntityTable } from "@taraldefi/tariala-component-library";
 import React from "react";
-import { TableData } from "./data";
+import TableData from "./data";
 
 function index() {
   return (

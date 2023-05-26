@@ -18,7 +18,7 @@ class FileService {
       );
       const { data } = response;
 
-      if (response.status === 201) {
+      if (response.statusCode === 201) {
         return data;
       }
     } catch (error: any) {
@@ -46,7 +46,7 @@ class FileService {
       );
       const { data } = response;
 
-      if (response.status === 201) {
+      if (response.statusCode === 201) {
         return data;
       }
     } catch (error: any) {
@@ -73,7 +73,7 @@ class FileService {
       );
       const { data } = response;
 
-      if (response.status === 201) {
+      if (response.statusCode === 201) {
         return data;
       }
     } catch (error: any) {

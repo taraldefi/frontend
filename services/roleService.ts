@@ -24,7 +24,7 @@ class RoleService {
       );
       const { data } = response;
 
-      if (response.status === 200) {
+      if (response.statusCode === 200) {
         return data;
       }
     } catch (error: any) {
@@ -48,7 +48,7 @@ class RoleService {
       const response = await axios.get(`${apiUrls.ROLES}/${id}`, axiosConfig);
       const { data } = response;
 
-      if (response.status === 200) {
+      if (response.statusCode === 200) {
         return data;
       }
     } catch (error: any) {
@@ -77,7 +77,7 @@ class RoleService {
       );
       const { data } = response;
 
-      if (response.status === 201) {
+      if (response.statusCode === 201) {
         return data;
       }
     } catch (error: any) {
@@ -103,7 +103,7 @@ class RoleService {
         axiosConfig
       );
 
-      if (response.status === 204) {
+      if (response.statusCode === 204) {
         return;
       }
     } catch (error: any) {
@@ -130,7 +130,7 @@ class RoleService {
       );
       const { data } = response;
 
-      if (response.status === 200) {
+      if (response.statusCode === 200) {
         return data;
       }
     } catch (error: any) {

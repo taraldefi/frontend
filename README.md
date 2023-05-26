@@ -2,6 +2,20 @@
 
 This repository contains the frontend code for the Tariala project.
 
+## Get a production build
+
+To get a production build of the frontend, run the following command:
+
+`GITHUB_TOKEN` is used to install the private package `@taraldefi/tariala-component-library`.
+
+```bash
+$ cp .env.example .env.production
+
+$ docker build --build-arg GITHUB_TOKEN=$(cat .env.production | grep GITHUB_TOKEN | cut -d '=' -f2) -t frontend .
+
+$ docker run -p 4200:4200 frontend
+```
+
 ## Services
 
 - authService

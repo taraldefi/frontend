@@ -16,7 +16,7 @@ describe("UserService", () => {
       const expectedData = {
         message: "OK",
       };
-      const responseMock = { data: expectedData, status: 200 };
+      const responseMock = { data: expectedData, statusCode: 200 };
       (axios.get as jest.Mock).mockResolvedValueOnce(responseMock);
 
       const keywords = "example";
@@ -55,7 +55,7 @@ describe("UserService", () => {
       const expectedData = {
         /* expected response data */
       };
-      const responseMock = { data: expectedData, status: 201 };
+      const responseMock = { data: expectedData, statusCode: 201 };
       (axios.post as jest.Mock).mockResolvedValueOnce(responseMock);
 
       const userInfo: IcreateUser = {
@@ -100,7 +100,7 @@ describe("UserService", () => {
       const expectedData = {
         /* expected response data */
       };
-      const responseMock = { data: expectedData, status: 200 };
+      const responseMock = { data: expectedData, statusCode: 200 };
       (axios.get as jest.Mock).mockResolvedValueOnce(responseMock);
 
       const id = "12345";
@@ -132,7 +132,7 @@ describe("UserService", () => {
       const expectedData = {
         /* expected response data */
       };
-      const responseMock = { data: expectedData, status: 200 };
+      const responseMock = { data: expectedData, statusCode: 200 };
       (axios.put as jest.Mock).mockResolvedValueOnce(responseMock);
 
       const id = "12345";

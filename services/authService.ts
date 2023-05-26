@@ -49,7 +49,7 @@ class AuthService {
         .find((cookie) => cookie.includes(cookieName))
         ?.match(new RegExp(`^${cookieName}=(.+?);`))?.[1];
 
-      if (response.status === 204) {
+      if (response.statusCode === 204) {
         localStorage.setItem(
           "SITE_DATA_AUTH",
           JSON.stringify({
@@ -112,7 +112,7 @@ class AuthService {
         axiosConfig
       );
       const { data } = response;
-      if (response.status === 201) {
+      if (response.statusCode === 201) {
         return data;
       }
     } catch (error: any) {
@@ -139,7 +139,7 @@ class AuthService {
         axiosConfig
       );
       const { data } = response;
-      if (response.status === 204) {
+      if (response.statusCode === 204) {
         return data;
       }
     } catch (error: any) {
@@ -167,7 +167,7 @@ class AuthService {
         axiosConfig
       );
       const { data } = response;
-      if (response.status === 200) {
+      if (response.statusCode === 200) {
         return data;
       }
     } catch (error: any) {
@@ -191,7 +191,7 @@ class AuthService {
         `${apiUrls.USER_ACTIVATE}?token=${token}`,
         axiosConfig
       );
-      if (response.status == 204) {
+      if (response.statusCode == 204) {
         return;
       }
     } catch (error: any) {
@@ -212,7 +212,7 @@ class AuthService {
     const axiosConfig = getAxiosConfig("POST");
     try {
       const response = await axios.post(apiUrls.USER_LOGOUT, axiosConfig);
-      if (response.status == 201) {
+      if (response.statusCode == 201) {
         localStorage.removeItem("SITE_DATA_AUTH");
         CoreUtils.call("delCookie", "SITE_DATA_LOGIN_COOKIE", "/");
         return;
@@ -244,7 +244,7 @@ class AuthService {
         },
         axiosConfig
       );
-      if (response.status == 204) {
+      if (response.statusCode == 204) {
         return;
       }
     } catch (error: any) {
@@ -280,7 +280,7 @@ class AuthService {
         axiosConfig
       );
 
-      if (response.status == 204) {
+      if (response.statusCode == 204) {
         return;
       }
     } catch (error: any) {
@@ -316,7 +316,7 @@ class AuthService {
         axiosConfig
       );
       const { data } = response;
-      if (response.status == 200) {
+      if (response.statusCode == 200) {
         return data;
       }
     } catch (error: any) {
@@ -339,7 +339,7 @@ class AuthService {
     try {
       const response = await axios.get(apiUrls.USER_PROFILE, axiosConfig);
       const { data } = response;
-      if (response.status == 200) {
+      if (response.statusCode == 200) {
         return data;
       }
     } catch (error: any) {
@@ -361,7 +361,7 @@ class AuthService {
         axiosConfig
       );
       const { data } = response;
-      if (response.status == 200) {
+      if (response.statusCode == 200) {
         return data;
       }
     } catch (error: any) {

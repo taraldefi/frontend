@@ -15,7 +15,7 @@ describe("FileService", () => {
       const mockFile = new File(["file content"], "filename");
       const axiosConfig = getAxiosConfig("POST", "multipart/ form-data");
       const mockResponse = {
-        status: 201,
+        statusCode: 201,
         data: [
           // Provide mock file response data
         ],
@@ -39,7 +39,7 @@ describe("FileService", () => {
       const axiosConfig = getAxiosConfig("POST", "multipart/ form-data");
       const mockErrorResponse = {
         response: {
-          status: 500,
+          statusCode: 500,
           data: {
             // Provide mock error response data
           },
@@ -66,7 +66,7 @@ describe("FileService", () => {
       const externalId = 123;
 
       const mockResponse = {
-        status: 201,
+        statusCode: 201,
         data: {
           // Provide mock updated file data
         },
@@ -91,7 +91,7 @@ describe("FileService", () => {
       const axiosConfig = getAxiosConfig("POST", "multipart/ form-data");
       const mockErrorResponse = {
         response: {
-          status: 500,
+          statusCode: 500,
           data: {
             // Provide mock error response data
           },
@@ -116,7 +116,7 @@ describe("FileService", () => {
       const externalId = 123;
       const axiosConfig = getAxiosConfig("POST");
       const mockResponse = {
-        status: 201,
+        statusCode: 201,
         data: {
           // Provide mock file data
         },
@@ -140,7 +140,7 @@ describe("FileService", () => {
       const axiosConfig = getAxiosConfig("POST");
       const mockErrorResponse = {
         response: {
-          status: 500,
+          statusCode: 500,
           data: {
             // Provide mock error response data
           },

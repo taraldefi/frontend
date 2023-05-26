@@ -1,4 +1,4 @@
-export const SortbarData = [
+const SortbarData = [
   {
     id: 1,
     title: "Approvals",
@@ -10,3 +10,5 @@ export const SortbarData = [
     path: "/applications/cover/shared",
   },
 ];
+
+export default SortbarData;

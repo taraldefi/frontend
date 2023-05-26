@@ -13,7 +13,7 @@ describe("EntityService", () => {
   });
   it("should be able fetch an entity by ID", async () => {
     const mockResponse = {
-      status: 200,
+      statusCode: 200,
       data: {
         id: "05159674-06ea-4bc2-b750-603b0f454025",
         logo: "05159674-06ea-4bc2-b750-603b0f454025.png",
@@ -58,7 +58,7 @@ describe("EntityService", () => {
   it("should throw an error when fetching entity fails", async () => {
     const mockErrorResponse = {
       response: {
-        status: 500,
+        statusCode: 500,
         data: {
           // Provide mock error response data
         },
@@ -79,7 +79,7 @@ describe("EntityService", () => {
 
   it("should be able to create an entity", async () => {
     const mockResponse = {
-      status: 201,
+      statusCode: 201,
       data: {
         id: "05159674-06ea-4bc2-b750-603b0f454025",
         logo: "05159674-06ea-4bc2-b750-603b0f454025.png",
@@ -122,7 +122,7 @@ describe("EntityService", () => {
   it("should throw an error when creating entity fails", async () => {
     const mockErrorResponse = {
       response: {
-        status: 500,
+        statusCode: 500,
         data: {
           // Provide mock error response data
         },
@@ -156,7 +156,7 @@ describe("EntityService", () => {
 
   it("should be able update an entity by ID", async () => {
     const mockResponse = {
-      status: 200,
+      statusCode: 200,
       data: {
         id: "05159674-06ea-4bc2-b750-603b0f454025",
         logo: "05159674-06ea-4bc2-b750-603b0f454025.png",
@@ -214,7 +214,7 @@ describe("EntityService", () => {
   it("should throw an error when updating entity fails", async () => {
     const mockErrorResponse = {
       response: {
-        status: 500,
+        statusCode: 500,
         data: {
           // Provide mock error response data
         },
@@ -249,7 +249,7 @@ describe("EntityService", () => {
 
   it("should be able delete an entity by ID", async () => {
     const mockResponse = {
-      status: 200,
+      statusCode: 200,
       data: {
         message: "OK",
       },
@@ -272,7 +272,7 @@ describe("EntityService", () => {
   it("should throw an error when deleting entity fails", async () => {
     const mockErrorResponse = {
       response: {
-        status: 500,
+        statusCode: 500,
         data: {
           // Provide mock error response data
         },

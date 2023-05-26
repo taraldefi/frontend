@@ -1,4 +1,4 @@
-export const TableData = [
+const TableData = [
   {
     process: "Application review",
     users: [
@@ -78,3 +78,5 @@ export const TableData = [
     date: "19.10.2019",
   },
 ];
+
+export default TableData;

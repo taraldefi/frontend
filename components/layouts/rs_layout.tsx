@@ -1,5 +1,5 @@
 import React from "react";
-import { SortbarData } from "@pages/applications/research/data";
+import SortbarData from "@pages/applications/research/data";
 import DashBoardPageLayout from "@components/layouts/dashboard_page_layout";
 
 interface researchLayoutProps {

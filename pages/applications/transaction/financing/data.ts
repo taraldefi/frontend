@@ -1,4 +1,4 @@
-export const TableData = {
+const TableData = {
   orderentity: {
     downpayment: 100000,
     principalrepayment: 0,
@@ -48,3 +48,5 @@ export const TableData = {
     total: 36523,
   },
 };
+
+export default TableData;

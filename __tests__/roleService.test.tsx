@@ -18,7 +18,7 @@ describe("Role Service", () => {
   describe("getAllRoles", () => {
     it("should fetch all roles successfully", async () => {
       const mockResponse = {
-        status: 200,
+        statusCode: 200,
         data: [
           // Provide mock role data
         ],
@@ -39,7 +39,7 @@ describe("Role Service", () => {
     it("should throw an error when fetching roles fails", async () => {
       const mockErrorResponse = {
         response: {
-          status: 500,
+          statusCode: 500,
           data: {
             // Provide mock error response data
           },
@@ -62,7 +62,7 @@ describe("Role Service", () => {
     it("should fetch a role by ID successfully", async () => {
       const roleId = "123";
       const mockResponse = {
-        status: 200,
+        statusCode: 200,
         data: {
           // Provide mock role data
         },
@@ -84,7 +84,7 @@ describe("Role Service", () => {
       const roleId = "123";
       const mockErrorResponse = {
         response: {
-          status: 500,
+          statusCode: 500,
           data: {
             // Provide mock error response data
           },
@@ -112,7 +112,7 @@ describe("Role Service", () => {
       };
 
       const mockResponse = {
-        status: 201,
+        statusCode: 201,
         data: {
           // Provide mock created permission data
         },
@@ -140,7 +140,7 @@ describe("Role Service", () => {
 
       const mockErrorResponse = {
         response: {
-          status: 500,
+          statusCode: 500,
           data: {
             // Provide mock error response data
           },
@@ -165,7 +165,7 @@ describe("Role Service", () => {
       const roleId = "123";
 
       const mockResponse = {
-        status: 204,
+        statusCode: 204,
         // Provide other response properties as needed
       };
 
@@ -184,7 +184,7 @@ describe("Role Service", () => {
 
       const mockErrorResponse = {
         response: {
-          status: 500,
+          statusCode: 500,
           data: {
             // Provide mock error response data
           },
@@ -213,7 +213,7 @@ describe("Role Service", () => {
       };
 
       const mockResponse = {
-        status: 200,
+        statusCode: 200,
         data: {
           // Provide mock updated permission data
         },
@@ -242,7 +242,7 @@ describe("Role Service", () => {
 
       const mockErrorResponse = {
         response: {
-          status: 500,
+          statusCode: 500,
           data: {
             // Provide mock error response data
           },

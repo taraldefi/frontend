@@ -1,6 +1,6 @@
 import NewLayoutNM from "@components/layouts/testLayoutNoMenue";
 import { ApplicationTable } from "@taraldefi/tariala-component-library";
-import { TableData } from "./data";
+import TableData from "./data";
 function Index() {
   return (
     <NewLayoutNM>

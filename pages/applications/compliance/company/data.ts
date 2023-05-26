@@ -1,4 +1,4 @@
-export const TableData = [
+const TableData = [
   {
     persons: "Business Name",
     details: "Business Name",
@@ -48,3 +48,5 @@ export const TableData = [
     status: false,
   },
 ];
+
+export default TableData;

@@ -1,6 +1,6 @@
 import ReportLayout from "@components/layouts/cover_layout";
 import FileUpload from "@components/widgets/FileUpload";
-import { SortbarData } from "../data";
+import SortbarData from "../data";
 import FileList from "@components/widgets/FileList";
 import React from "react";
 export default function Approval() {

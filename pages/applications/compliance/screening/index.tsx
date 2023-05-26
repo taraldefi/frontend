@@ -1,11 +1,10 @@
-import React, { useState } from "react";
-import DashBoardLayout from "@components/layouts/dashboard_layout";
-import ComplianceLayout from "@components/layouts/compliance_layout";
-import { TableData } from "./data";
-import { Button, ScreeningTable } from "@taraldefi/tariala-component-library";
-import { tableFormScreening } from "types/form";
-import { useForm } from "react-hook-form";
 import { PortalIcons } from "@components/icons";
+import ComplianceLayout from "@components/layouts/compliance_layout";
+import { Button, ScreeningTable } from "@taraldefi/tariala-component-library";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { tableFormScreening } from "types/form";
+import TableData from "./data";
 function Company() {
   var x: number = Object.keys(TableData).length;
   const [fields, setFields] = useState<tableFormScreening[]>(TableData);
