@@ -1,12 +1,10 @@
-import React, { useState } from "react";
-import DashBoardLayout from "@components/layouts/dashboard_layout";
+import { PortalIcons } from "@components/icons";
 import ResearchLayout from "@components/layouts/rs_layout";
-import { TableData } from "@pages/applications/research/research/data";
-import { ResearchTable } from "@taraldefi/tariala-component-library";
+import TableData from "@pages/applications/research/research/data";
+import { Button, ResearchTable } from "@taraldefi/tariala-component-library";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { tableFormResearch } from "types/form";
-import { Button } from "@taraldefi/tariala-component-library";
-import { PortalIcons } from "@components/icons";
 function Research() {
   var x: number = Object.keys(TableData).length;
   const [fields, setFields] = useState<tableFormResearch[]>(TableData);

@@ -1,4 +1,4 @@
-export const TableData = [
+const TableData = [
   {
     factor: "Current Ratio",
     value: "Metric Info/Value",
@@ -30,3 +30,5 @@ export const TableData = [
     metric: 49,
   },
 ];
+
+export default TableData;

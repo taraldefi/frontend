@@ -1,4 +1,4 @@
-export const TableData = [
+const TableData = [
   {
     applicationId: 262116,
     product: "Product Title",
@@ -108,3 +108,5 @@ export const TableData = [
     status: "Reviewing",
   },
 ];
+
+export default TableData;

@@ -1,4 +1,4 @@
-export const TeamData = [
+const TeamData = [
   {
     member: {
       user: "/assets/images/1.png",
@@ -81,3 +81,5 @@ export const TeamData = [
     dateOfAction: "20.10.2019",
   },
 ];
+
+export default TeamData;

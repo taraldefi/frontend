@@ -1,7 +1,7 @@
 import React from "react";
 import DashBoardLayout from "@components/layouts/dashboard_layout";
 import SortBarNav from "@components/sortBar";
-import { SortbarData } from "@pages/applications/transaction/data";
+import SortbarData from "@pages/applications/transaction/data";
 export default function Transaction() {
   return (
     <DashBoardLayout>

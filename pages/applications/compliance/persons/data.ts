@@ -1,5 +1,5 @@
 import { tableFormPerson } from "types/form";
-export const TableData: tableFormPerson[] = [
+const TableData: tableFormPerson[] = [
   {
     name: "Cameron Williamson",
     image: "/assets/images/1.png",
@@ -33,3 +33,5 @@ export const TableData: tableFormPerson[] = [
     isDone: true,
   },
 ];
+
+export default TableData;

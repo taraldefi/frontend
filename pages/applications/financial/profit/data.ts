@@ -1,4 +1,4 @@
-export const TableData = {
+const TableData = {
   "2017": {
     revenue: 14234678,
     cogs: 9252541,
@@ -56,3 +56,5 @@ export const TableData = {
     file: "file",
   },
 };
+
+export default TableData;
