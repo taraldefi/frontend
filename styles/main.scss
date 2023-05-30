@@ -180,7 +180,7 @@
 
 .leftMenu {
   padding: 40px 0px 44px 40px;
-  height: max-content !important;
+  height: 100vh;
 }
 
 .items {
@@ -205,12 +205,14 @@
 
 .sortBackground {
   z-index: 99;
+  padding: 10px;
   align-items: center;
   position: fixed;
   display: flex;
   top: 124px;
-  width: 100%;
+  justify-content: end;
   height: 100px;
+  width: 80vw;
   left: 290px;
   background-color: #f8fafc;
 }
@@ -296,7 +298,7 @@
   padding-left: 40px;
   display: flex;
   position: relative;
-  left: 250px;
+  left: 260px;
   top: 132px;
   flex-direction: column;
   width: 1250px;
