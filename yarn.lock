@@ -272,7 +272,14 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.20.2"
 
-"@babel/runtime@^7.12.0", "@babel/runtime@^7.12.5", "@babel/runtime@^7.18.3", "@babel/runtime@^7.20.7", "@babel/runtime@^7.5.5", "@babel/runtime@^7.8.7", "@babel/runtime@^7.9.2":
+"@babel/runtime@^7.12.0", "@babel/runtime@^7.18.3", "@babel/runtime@^7.5.5", "@babel/runtime@^7.8.7":
+  version "7.22.3"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.22.3.tgz#0a7fce51d43adbf0f7b517a71f4c3aaca92ebcbb"
+  integrity sha512-XsDuspWKLUsxwCp6r7EhsExHtYfbe5oAGQ19kqngTdCPUoPQzOPdUbD/pB9PJiwb2ptYKQDjSJT3R6dC+EPqfQ==
+  dependencies:
+    regenerator-runtime "^0.13.11"
+
+"@babel/runtime@^7.12.5", "@babel/runtime@^7.20.7", "@babel/runtime@^7.9.2":
   version "7.21.5"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.21.5.tgz#8492dddda9644ae3bda3b45eabe87382caee7200"
   integrity sha512-8jI69toZqqcsnqGGqwGS4Qb1VwLOEp4hz+CXPywcvjs60u3B4Pom/U/7rm4W8tMOYEB+E9wgD0mW1l3r8qlI9Q==
@@ -612,9 +619,9 @@
   integrity sha512-EvYTiXet5XqweYGClEmpu3BoxmsQ4hkj3QaYA6qEnigCWffTP3vNRwBReTdrwDwo7OoJ3wM8Uoe9Uk4n+d4hfg==
 
 "@floating-ui/dom@^1.0.1":
-  version "1.2.8"
-  resolved "https://registry.yarnpkg.com/@floating-ui/dom/-/dom-1.2.8.tgz#aee0f6ccc0787ab8fe741487a6e5e95b7b125375"
-  integrity sha512-XLwhYV90MxiHDq6S0rzFZj00fnDM+A1R9jhSioZoMsa7G0Q0i+Q4x40ajR8FHSdYDE1bgjG45mIWe6jtv9UPmg==
+  version "1.2.9"
+  resolved "https://registry.yarnpkg.com/@floating-ui/dom/-/dom-1.2.9.tgz#b9ed1c15d30963419a6736f1b7feb350dd49c603"
+  integrity sha512-sosQxsqgxMNkV3C+3UqTS6LxP7isRLwX8WMepp843Rb3/b0Wz8+MdUkxJksByip3C2WwLugLHN1b4ibn//zKwQ==
   dependencies:
     "@floating-ui/core" "^1.2.6"
 
@@ -1257,10 +1264,10 @@
   dependencies:
     tslib "^2.4.0"
 
-"@taraldefi/tariala-component-library@^1.2.3":
-  version "1.2.3"
-  resolved "https://npm.pkg.github.com/download/@taraldefi/tariala-component-library/1.2.3/16f9043b5b9d7adf1d002aa3a48002370b946098#16f9043b5b9d7adf1d002aa3a48002370b946098"
-  integrity sha512-L7LBxo4YBrXws80ihS/xY9NFf037nHTA8IuYwsSGW6HSXpR3iq6ErFEsNx9sEs5F5pjKMotCse4tgFFaoGXXNQ==
+"@taraldefi/tariala-component-library@^1.3.0":
+  version "1.3.0"
+  resolved "https://npm.pkg.github.com/download/@taraldefi/tariala-component-library/1.3.0/299847f7c089c5350b82ef501bc99b532e1a1ec6#299847f7c089c5350b82ef501bc99b532e1a1ec6"
+  integrity sha512-sdCQ5q+YYvkfxMKGd5vvcB5IZMlWYvhcib+6mEee5SrFd/S93gRRiizNWb0PvU3vLxPhUfNrLw5X3xNhcitzQg==
   dependencies:
     "@storybook/addon-knobs" "^7.0.2"
     react-feather "^2.0.10"
