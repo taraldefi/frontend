@@ -51,6 +51,12 @@ export const TopbarNewDataEx = [
     name: "applications",
     path: "/users/exporter/applications",
   },
+  {
+    id: 5,
+    title: "Repayments",
+    name: "repayments",
+    path: "/users/exporter/repayment",
+  },
 ];
 export const TopbarNewDataIm = [
   {
@@ -76,5 +82,11 @@ export const TopbarNewDataIm = [
     title: "Applications",
     name: "applications",
     path: "/users/importer/applications",
+  },
+  {
+    id: 5,
+    title: "Repayment",
+    name: "repayment",
+    path: "/users/importer/repayment",
   },
 ];

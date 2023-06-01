@@ -1,8 +1,22 @@
 import EntityView from "@components/entity/entityView";
 import Layout from "@components/layouts/layout";
-import { EntityTable } from "@taraldefi/tariala-component-library";
+import {
+  Button,
+  EntityTable,
+  LargeLoanCard,
+  SmallLoanCard,
+} from "@taraldefi/tariala-component-library";
 import React from "react";
 import TableData from "./data";
+
+export enum LoanCardTypes {
+  INTEREST_RATE = "INTEREST_RATE",
+  INTEREST_ACCRUED = "INTEREST_ACCRUED",
+  TOTAL_REPAYMENT = "TOTAL_REPAYMENT",
+  DUE_DATE = "DUE_DATE",
+  LOAN_AMT = "LOAN_AMT",
+  OUTSTANDING_AMT = "OUTSTANDING_AMT",
+}
 
 function index() {
   return (
