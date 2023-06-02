@@ -1,6 +1,7 @@
 import NewLayoutNM from "@components/layouts/testLayoutNoMenue";
 import {
   ApplicationTable,
+  PaymentSuccessCard,
   ReceiptTable,
 } from "@taraldefi/tariala-component-library";
 import { ArrowLeft } from "react-feather";
@@ -16,38 +17,26 @@ function Index() {
       style={{
         position: "fixed",
         display: "flex",
-        alignItems: "start",
+        alignItems: "center",
         flexDirection: "column",
+        height: "100vh",
         width: "100%",
       }}
     >
       <Topbar></Topbar>
 
-      <div
-        onClick={() => {
-          router.back();
-        }}
-        style={{
-          display: "flex",
-          alignItems: "center",
-          padding: "3% 10%",
-          gap: "10px",
-          cursor: "pointer",
-        }}
-      >
-        <ArrowLeft size={"40px"} color="#65768D"></ArrowLeft>
-        <h1>Receipts</h1>
-      </div>
-
-      <div
-        style={{
-          width: "100%",
-          padding: "1% 10%",
-          overflow: "auto",
-          maxHeight: "600px",
-        }}
-      >
-        <ReceiptTable receiptTableData={ReceiptTableData} />
+      <div className="paymentSuccessContainer">
+        <PaymentSuccessCard
+          onPrint={() => {}}
+          onBack={() => {
+            router.back();
+          }}
+          paymentDetails={{
+            date: "March 19, 2023",
+            method: "USD-Stablecoin",
+            amount: 2000,
+          }}
+        />
       </div>
     </div>
   );

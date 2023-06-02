@@ -1264,10 +1264,10 @@
   dependencies:
     tslib "^2.4.0"
 
-"@taraldefi/tariala-component-library@^1.4.0":
-  version "1.4.0"
-  resolved "https://npm.pkg.github.com/download/@taraldefi/tariala-component-library/1.4.0/d0fc38bb75467302680c678eef421694e4adabbf#d0fc38bb75467302680c678eef421694e4adabbf"
-  integrity sha512-AmQ7WSrS+FOzAnzq0cjTYDyjqA+5gQCAjB8AJtTs8d0gsMsI0KURWFKadvxgRDcFIhvGacABeF9Y5vr2F4NgVw==
+"@taraldefi/tariala-component-library@^1.5.0":
+  version "1.5.0"
+  resolved "https://npm.pkg.github.com/download/@taraldefi/tariala-component-library/1.5.0/209f7c808a9827db6bb87ff3550b38f9f35ba4c3#209f7c808a9827db6bb87ff3550b38f9f35ba4c3"
+  integrity sha512-1PQPE5IeuqaqaW/Se6OuWGn8tzSYFfykA3TFMRQ+PlwK2SgRliXA5bpDwHsGJae549kbx2bptvGS8qt3sjfvxg==
   dependencies:
     "@storybook/addon-knobs" "^7.0.2"
     react-feather "^2.0.10"

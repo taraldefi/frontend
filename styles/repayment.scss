@@ -164,3 +164,19 @@
     font-weight: 600 !important;
   }
 }
+
+.paymentSuccessContainer {
+  width: 70%;
+  padding: 1% 10%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .button--secondary {
+    font-size: 14px;
+    color: #1d4ed8;
+    justify-content: center;
+    border: 2px solid #1d4ed8;
+    background-color: rgba(255, 255, 255, 0);
+  }
+}

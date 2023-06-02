@@ -2,7 +2,11 @@ import { Button } from "@taraldefi/tariala-component-library";
 import React, { useState } from "react";
 import { DollarSign, LogOut } from "react-feather";
 
-const RepaymentCard = () => {
+interface repaymentCardProp {
+  onAuthorize: () => void;
+}
+
+const RepaymentCard = ({ onAuthorize }: repaymentCardProp) => {
   const [selectedId, setSelectedId] = React.useState<number>(0);
   function handleSelect(index: number) {
     setSelectedId(index);
@@ -57,6 +61,9 @@ const RepaymentCard = () => {
 
       <div>
         <Button
+          onClick={() => {
+            onAuthorize();
+          }}
           label={"AUTHORIZE REPAYMENT"}
           primary={true}
           backgroundColor="#1AB98B"

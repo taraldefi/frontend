@@ -40,7 +40,11 @@ function Index() {
               ></RepaymentTable>
             </div>
             <div className="cardContainer">
-              <RepaymentCard></RepaymentCard>
+              <RepaymentCard
+                onAuthorize={() => {
+                  router.push("/users/importer/repayment/successful");
+                }}
+              ></RepaymentCard>
             </div>
           </div>
         </div>
