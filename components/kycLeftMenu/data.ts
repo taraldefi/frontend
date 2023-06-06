@@ -1,4 +1,4 @@
-export const SidebarData = [
+const SidebarData = [
   {
     id: 1,
     title: "General Info",
@@ -48,3 +48,5 @@ export const SidebarData = [
     path: "/users/exporter/kyc/attachments",
   },
 ];
+
+export default SidebarData;

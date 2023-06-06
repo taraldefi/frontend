@@ -1,6 +1,6 @@
 import TxLayout from "@components/layouts/tx_layout";
 import { TxFinanceTable } from "@components/widgets/table/txFinanceTable";
-import { TableData } from "./data";
+import TableData from "./data";
 export default function Transactionfinancing() {
   return (
     <TxLayout>

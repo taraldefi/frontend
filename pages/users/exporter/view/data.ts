@@ -1,4 +1,4 @@
-export const TableData = [
+const TableData = [
   {
     productTitle: "Product Title",
     issuanceDate: "13.10.2021",
@@ -36,3 +36,5 @@ export const TableData = [
     facilityAmount: 956,
   },
 ];
+
+export default TableData;

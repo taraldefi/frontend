@@ -1,7 +1,7 @@
 import React from "react";
 
 import DashBoardPageLayout from "@components/layouts/dashboard_page_layout";
-import { SortbarData } from "@pages/applications/financial/data";
+import SortbarData from "@pages/applications/financial/data";
 
 interface FinancialsLayoutProps {
   children: React.ReactNode;

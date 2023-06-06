@@ -1,7 +1,7 @@
 import React from "react";
 import { PortalIcons } from "../icons";
 import { useRouter } from "next/router";
-import { SidebarData } from "./data";
+import SidebarData from "./data";
 
 export default function LeftMenu() {
   const router = useRouter();

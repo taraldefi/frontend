@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { SortBarItem } from "types/";
+import { SortBarItem } from "types";
 
 interface Prop {
   data: Array<SortBarItem>;

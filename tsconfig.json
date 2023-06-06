@@ -19,8 +19,10 @@
       "@components/*": ["components/*"],
       "@styles/*": ["styles/*"],
       "@pages/*": ["pages/*"],
-      "@hooks/*": ["hooks/*"],
-      "@public/*": ["public/*"]
+      "@hooks/*": ["utils/hooks/*"],
+      "@public/*": ["public/*"],
+      "@config/*": ["config/*"],
+      "@utils/*": ["utils/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

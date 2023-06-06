@@ -1,5 +1,4 @@
-import Activity from "@components/activity/activity";
-import { ActivityData } from "@components/activity/data";
+import { Activity } from "@taraldefi/tariala-component-library";
 import StatusLayout from "@components/layouts/status_layout";
 export default function CustomerComms() {
   return (
@@ -23,7 +22,14 @@ export default function CustomerComms() {
       <br />
       <ButtonIcon icon="add" title="Add" onClick={() => {}}></ButtonIcon> <br />
       <ButtonIcon icon="upload" title="Upload" onClick={() => {}}></ButtonIcon> */}
-      <Activity ActivityData={ActivityData} />
+      <br />
+      <br />
+      <Activity
+        user="Joergen Hoffman"
+        activity="opened Exportfinanzierung mit HandEX"
+        date="Oct 28th 2019 at 12:00 PM GMT +1"
+        status={true}
+      />
     </StatusLayout>
   );
 }

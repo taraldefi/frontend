@@ -1,11 +1,9 @@
-import React, { useContext } from "react";
-import { SidebarDataEx, SidebarDataIm } from "./data";
-import { PortalIcons } from "../icons";
-import { useRouter } from "next/router";
 import { useAtom } from "jotai";
+import { useRouter } from "next/router";
 import { pageIndexAtom } from "store/PageIndexStore";
+import { PortalIcons } from "../icons";
 import MenuItem from "./MenuItem";
-import { itemExpanded } from "store/sideBarStore";
+import { SidebarDataEx, SidebarDataIm } from "./data";
 
 export default function ApplicationLeftMenu() {
   const router = useRouter();

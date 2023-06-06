@@ -1,11 +1,16 @@
 import NewLayoutNM from "@components/layouts/testLayoutNoMenue";
-import { ApplicaitonTable } from "@components/widgets/table/applicationTable";
-import { TableData } from "./data";
+import { ApplicationTable } from "@taraldefi/tariala-component-library";
+import TableData from "./data";
+import Layout from "@components/layouts/layout";
 function Index() {
   return (
-    <NewLayoutNM>
-      <ApplicaitonTable TableData={TableData}></ApplicaitonTable>
-    </NewLayoutNM>
+    <Layout>
+      <div className="viewbody">
+        <div style={{ padding: "10%", width: "100%" }}>
+          <ApplicationTable applicationTableData={TableData}></ApplicationTable>
+        </div>
+      </div>
+    </Layout>
   );
 }
 

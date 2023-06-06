@@ -1,8 +1,8 @@
 import React from "react";
 import CRSLayout from "@components/layouts/crs_layout";
-import { SortbarData } from "../data";
+import SortbarData from "../data";
 import { QuantitativeTable } from "@components/widgets/table/quantitativeTable";
-import { TableData } from "./data";
+import TableData from "./data";
 
 function Qualitative() {
   return (

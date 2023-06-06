@@ -1,19 +1,18 @@
-import LeftMenu from "@components/kycLeftMenu";
 import React from "react";
 
-import Topbar from "../topBar";
-import TopBarNav from "../topBarNavigation";
-import { useModal } from "@hooks/useModal";
+import FormEditModal from "@components/modal/entityEditFormModal";
+import FormModal from "@components/modal/entityFormModal";
+import NewApplicationModal from "@components/modal/newApplicationModal";
+import { DeleteModal } from "@taraldefi/tariala-component-library";
+import { useModal } from "@utils/hooks";
 import {
   ApplicationModalAtom,
   DeleteModalAtom,
   EditFormModalAtom,
   FormModalAtom,
 } from "store/ModalStore";
-import { DeleteModal } from "@taraldefi/tariala-component-library";
-import FormModal from "@components/modal/entityFormModal";
-import FormEditModal from "@components/modal/entityEditFormModal";
-import NewApplicationModal from "@components/modal/newApplicationModal";
+import Topbar from "../topBar";
+import TopBarNav from "../topBarNavigation";
 interface LayoutProps {
   children: React.ReactNode;
 }

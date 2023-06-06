@@ -1,7 +1,7 @@
 import { PortalIcons } from "@components/icons";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useModal } from "@hooks/useModal";
+import { useModal } from "@utils/hooks";
 import { YieldModalAtom } from "store/ModalStore";
 
 type Props = {

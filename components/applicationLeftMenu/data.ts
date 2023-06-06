@@ -1,4 +1,4 @@
-export const SidebarData = [
+const SidebarData = [
   {
     id: 1,
     title: "Exporter Info",
@@ -106,3 +106,5 @@ export const SidebarDataIm = [
     path: "/users/importer/quick/security",
   },
 ];
+
+export default SidebarData;

@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { useAtom } from "jotai";
 import { pageIndexAtom } from "store/PageIndexStore";
-import { useModal } from "@hooks/useModal";
+import { useModal } from "@utils/hooks";
 import { ApplicationModalAtom, FormModalAtom } from "store/ModalStore";
 
 function TopBarNav() {

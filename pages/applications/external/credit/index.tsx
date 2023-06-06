@@ -2,7 +2,7 @@ import ReportLayout from "@components/layouts/cover_layout";
 import FileUpload from "@components/widgets/FileUpload";
 import FileList from "@components/widgets/FileList";
 import React from "react";
-import { SortbarData } from "../data";
+import SortbarData from "../data";
 export default function Credit() {
   const [files, setFiles] = React.useState([]);
 
