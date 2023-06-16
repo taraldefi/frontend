@@ -1,8 +1,51 @@
-import React from "react";
 import CRSLayout from "@components/layouts/crs_layout";
-import SortbarData from "../data";
 import { QuantitativeTable } from "@components/widgets/table/quantitativeTable";
-import TableData from "./data";
+
+const TableData = [
+  {
+    factor: "Current Ratio",
+    value: "Metric Info/Value",
+    status: false,
+    metric: 40,
+  },
+  {
+    factor: "Leverage Ratio",
+    value: "Metric Info/Value",
+    status: true,
+    metric: 66,
+  },
+  {
+    factor: "Net Withdrawal/Infusion",
+    value: "Metric Info/Value",
+    status: true,
+    metric: 68,
+  },
+  {
+    factor: "Divident Payout Ratio",
+    value: "Metric Info/Value",
+    status: true,
+    metric: 75,
+  },
+  {
+    factor: "Total Networth",
+    value: "Metric Info/Value",
+    status: false,
+    metric: 49,
+  },
+];
+
+const SortbarData = [
+  {
+    id: 1,
+    title: "Quantitative",
+    path: "/applications/rating/quantitative",
+  },
+  {
+    id: 2,
+    title: "Qualitative",
+    path: "/applications/rating/qualitative",
+  },
+];
 
 function Qualitative() {
   return (

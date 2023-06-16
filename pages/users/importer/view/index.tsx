@@ -1,8 +1,45 @@
 import EntityView from "@components/entity/entityView";
 import Layout from "@components/layouts/layout";
 import { EntityTable } from "@taraldefi/tariala-component-library";
-import React from "react";
-import TableData from "./data";
+
+const TableData = [
+  {
+    productTitle: "Product Title",
+    issuanceDate: "13.10.2021",
+    maturityDate: "13.10.2021",
+    facilityAmount: 956,
+  },
+  {
+    productTitle: "Product Title",
+    issuanceDate: "13.10.2021",
+    maturityDate: "13.10.2021",
+    facilityAmount: 956,
+  },
+  {
+    productTitle: "Product Title",
+    issuanceDate: "13.10.2021",
+    maturityDate: "13.10.2021",
+    facilityAmount: 956,
+  },
+  {
+    productTitle: "Product Title",
+    issuanceDate: "13.10.2021",
+    maturityDate: "13.10.2021",
+    facilityAmount: 956,
+  },
+  {
+    productTitle: "Product Title",
+    issuanceDate: "13.10.2021",
+    maturityDate: "13.10.2021",
+    facilityAmount: 956,
+  },
+  {
+    productTitle: "Product Title",
+    issuanceDate: "13.10.2021",
+    maturityDate: "13.10.2021",
+    facilityAmount: 956,
+  },
+];
 
 function index() {
   return (

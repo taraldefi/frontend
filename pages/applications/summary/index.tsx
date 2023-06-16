@@ -1,7 +1,5 @@
-import React from "react";
-import DashBoardLayout from "@components/layouts/dashboard_layout";
-import { PortalIcons } from "@components/icons";
 import Select from "@components/Select/Select";
+import { PortalIcons } from "@components/icons";
 import DashBoardPageLayout from "@components/layouts/dashboard_page_layout";
 function Summary() {
   return (

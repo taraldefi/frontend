@@ -1,8 +1,19 @@
-import { PortalIcons } from "@components/icons";
 import CRSLayout from "@components/layouts/crs_layout";
-import TxLayout from "@components/layouts/tx_layout";
 import React from "react";
-import SortbarData from "../data";
+
+const SortbarData = [
+  {
+    id: 1,
+    title: "Quantitative",
+    path: "/applications/rating/quantitative",
+  },
+  {
+    id: 2,
+    title: "Qualitative",
+    path: "/applications/rating/qualitative",
+  },
+];
+
 export default function QunatitativePage() {
   const [toggle, setToggle] = React.useState(true);
 

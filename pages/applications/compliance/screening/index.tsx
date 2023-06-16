@@ -4,7 +4,35 @@ import { Button, ScreeningTable } from "@taraldefi/tariala-component-library";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { tableFormScreening } from "types/form";
-import TableData from "./data";
+
+const TableData: tableFormScreening[] = [
+  {
+    persons: "Watch List",
+    Hit: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    Source: "http://www.google.com",
+  },
+  {
+    persons: "Adverse Media",
+    Hit: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    Source: "http://www.google.com",
+  },
+  {
+    persons: "Watch List",
+    Hit: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    Source: "http://www.google.com",
+  },
+  {
+    persons: "Adverse Media",
+    Hit: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    Source: "http://www.google.com",
+  },
+  {
+    persons: "Adverse Media",
+    Hit: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    Source: "http://www.google.com",
+  },
+];
+
 function Company() {
   var x: number = Object.keys(TableData).length;
   const [fields, setFields] = useState<tableFormScreening[]>(TableData);

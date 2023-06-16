@@ -1,7 +1,23 @@
 import React from "react";
-
 import DashBoardPageLayout from "@components/layouts/dashboard_page_layout";
-import SortbarData from "@pages/applications/financial/data";
+
+const SortbarData = [
+  {
+    id: 1,
+    title: "Profit & Loss",
+    path: "/applications/financial/profit",
+  },
+  {
+    id: 2,
+    title: "Balance Sheet",
+    path: "/applications/financial/balance",
+  },
+  {
+    id: 3,
+    title: "Cash Flow",
+    path: "/applications/financial/cash",
+  },
+];
 
 interface FinancialsLayoutProps {
   children: React.ReactNode;

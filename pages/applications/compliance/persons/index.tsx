@@ -1,12 +1,44 @@
 import React, { useState } from "react";
 import ComplianceLayout from "@components/layouts/compliance_layout";
 import { Button, PersonsTable } from "@taraldefi/tariala-component-library";
-import TableData from "./data";
-
-import { tableFormPerson } from "types/form";
 import { useForm } from "react-hook-form";
 import { PortalIcons } from "@components/icons";
+import { tableFormPerson } from "types/form";
 
+const TableData: tableFormPerson[] = [
+  {
+    name: "Cameron Williamson",
+    image: "/assets/images/1.png",
+    email: "Email@company.com",
+    position: "Marketing Specialist",
+    isSent: false,
+    isDone: true,
+  },
+  {
+    name: "Cameron Williamson",
+    image: "/assets/images/2.png",
+    email: "Email@company.com",
+    position: "Public Representative",
+    isSent: true,
+    isDone: true,
+  },
+  {
+    name: "Cameron Williamson",
+    image: "/assets/images/3.png",
+    email: "Email@company.com",
+    position: "Public Representative",
+    isSent: true,
+    isDone: false,
+  },
+  {
+    name: "Cameron Williamson",
+    image: "/assets/images/4.png",
+    email: "Email@company.com",
+    position: "Marketing Specialist",
+    isSent: false,
+    isDone: true,
+  },
+];
 function Company() {
   var x: number = Object.keys(TableData).length;
   const [fields, setFields] = useState<tableFormPerson[]>(TableData);

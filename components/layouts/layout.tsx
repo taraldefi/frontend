@@ -23,15 +23,15 @@ const Layout = ({ children }: LayoutProps) => {
   const applicationModal = useModal(ApplicationModalAtom);
   const newEntityModal = useModal(FormModalAtom);
   return (
-    <>
-      <div className="tabs">
-        <div className="topbarFix">
-          <Topbar />
-          <TopBarNav />
-        </div>
-        <div className="mainBody">{children}</div>
-        {/* {<BottomBar></BottomBar>} */}
+    <div>
+      <div className="topbarFix">
+        <Topbar />
+        <TopBarNav />
       </div>
+
+      {/* {<BottomBar></BottomBar>} */}
+
+      <div className="mainBody">{children}</div>
       <DeleteModal
         title="Delete Entity"
         onDelete={() => {}}
@@ -50,7 +50,7 @@ const Layout = ({ children }: LayoutProps) => {
         isOpen={applicationModal.isOpen}
         onClose={() => applicationModal.close()}
       ></NewApplicationModal>
-    </>
+    </div>
   );
 };
 
