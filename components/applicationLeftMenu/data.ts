@@ -67,6 +67,12 @@ export const SidebarDataEx = [
     name: "security",
     path: "/users/exporter/quick/security",
   },
+  {
+    id: 5,
+    title: "Transaction Docs",
+    name: "Transaction Docs",
+    path: "/users/exporter/quick/transactionDocs",
+  },
 ];
 export const SidebarDataIm = [
   {
@@ -89,21 +95,21 @@ export const SidebarDataIm = [
   },
   {
     id: 3,
-    title: "Order Details",
-    name: "Order Details",
-    path: "/users/importer/quick/orderDetails",
-  },
-  {
-    id: 4,
     title: "Payment Terms",
     name: "Payment Terms",
     path: "/users/importer/quick/paymentTerms",
   },
   {
-    id: 5,
+    id: 4,
     title: "Security",
     name: "Security",
     path: "/users/importer/quick/security",
+  },
+  {
+    id: 5,
+    title: "Transaction Docs",
+    name: "Transaction Docs",
+    path: "/users/importer/quick/transactionDocs",
   },
 ];
 

@@ -7,7 +7,13 @@ import { pageIndexAtom } from "store/PageIndexStore";
 function BottomBar() {
   const router = useRouter();
   const [index, setIndex] = useAtom(pageIndexAtom);
-  const paths = ["exporterInfo", "importerInfo", "paymentTerms", "security"];
+  const paths = [
+    "exporterInfo",
+    "importerInfo",
+    "paymentTerms",
+    "security",
+    "transactionDocs",
+  ];
   return (
     <div className="botomBar">
       <div className="bbBackground">
@@ -24,12 +30,16 @@ function BottomBar() {
             onClick={() => {
               console.log(index);
               if (index > paths.length - 1) {
-                router.push(`/users/exporter/applications`);
+                router.push(
+                  `/users/${router.asPath.split("/")[2]}/applications`
+                );
                 setIndex(0);
                 return;
               }
               setIndex(index + 1);
-              router.push(`/users/exporter/quick/${paths[index]}`);
+              router.push(
+                `/users/${router.asPath.split("/")[2]}/quick/${paths[index]}`
+              );
             }}
           ></Button>
         </div>
