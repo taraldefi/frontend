@@ -6,18 +6,7 @@ import SidebarData from "./data";
 export default function LeftMenu() {
   const router = useRouter();
   function checkActive(item: any) {
-    const result = router.asPath.split("/").map((element) => element.trim());
-    const match = result.find((element) => {
-      if (element == item.name.toLowerCase()) {
-        return true;
-      }
-    });
-
-    if (item.path == router.asPath) {
-      return true;
-    } else if (item.name == "summary" && router.asPath == "/") {
-      return true;
-    } else if (match) {
+    if (router.asPath.includes(item.path)) {
       return true;
     } else {
       return false;
@@ -31,7 +20,9 @@ export default function LeftMenu() {
             <div
               onClick={(e) => {
                 e.preventDefault();
-                router.push(item.path);
+                router.push(
+                  `/users/${router.asPath.split("/")[2]}/${item.path}`
+                );
               }}
               key={index}
               className="item"

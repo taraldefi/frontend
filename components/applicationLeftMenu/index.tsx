@@ -31,12 +31,16 @@ export default function ApplicationLeftMenu() {
             <p
               onClick={(e) => {
                 router.push(
-                  `/users/exporter/newApplication/financials-p&l/profit&loss`
+                  `/users/${
+                    router.asPath.split("/")[2]
+                  }/newApplication/financials-p&l/profit&loss`
                 );
               }}
               className={
                 router.asPath ==
-                "/users/exporter/newApplication/financials-p&l/profit&loss"
+                `/users/${
+                  router.asPath.split("/")[2]
+                }/newApplication/financials-p&l/profit&loss`
                   ? "selectedSub"
                   : ""
               }
@@ -46,12 +50,16 @@ export default function ApplicationLeftMenu() {
             <p
               onClick={(e) => {
                 router.push(
-                  "/users/exporter/newApplication/financials-p&l/balanceSheet"
+                  `/users/${
+                    router.asPath.split("/")[2]
+                  }/newApplication/financials-p&l/balanceSheet`
                 );
               }}
               className={
                 router.asPath ==
-                "/users/exporter/newApplication/financials-p&l/balanceSheet"
+                `/users/${
+                  router.asPath.split("/")[2]
+                }/newApplication/financials-p&l/balanceSheet`
                   ? "selectedSub"
                   : ""
               }
@@ -62,12 +70,16 @@ export default function ApplicationLeftMenu() {
               onClick={(e) => {
                 console.log(router.asPath);
                 router.push(
-                  "/users/exporter/newApplication/financials-p&l/cashFlow"
+                  `/users/${
+                    router.asPath.split("/")[2]
+                  }/newApplication/financials-p&l/cashFlow`
                 );
               }}
               className={
                 router.asPath ==
-                "/users/exporter/newApplication/financials-p&l/cashFlow"
+                `/users/${
+                  router.asPath.split("/")[2]
+                }/newApplication/financials-p&l/cashFlow`
                   ? "selectedSub"
                   : ""
               }
@@ -85,12 +97,16 @@ export default function ApplicationLeftMenu() {
               onClick={(e) => {
                 e.preventDefault();
                 router.push(
-                  "/users/exporter/newApplication/transactionDetails/projectDetails"
+                  `/users/${
+                    router.asPath.split("/")[2]
+                  }/newApplication/transactionDetails/projectDetails`
                 );
               }}
               className={
                 router.asPath ==
-                "/users/exporter/newApplication/transactionDetails/projectDetails"
+                `/users/${
+                  router.asPath.split("/")[2]
+                }/newApplication/transactionDetails/projectDetails`
                   ? "selectedSub"
                   : ""
               }
@@ -101,12 +117,16 @@ export default function ApplicationLeftMenu() {
               onClick={(e) => {
                 e.preventDefault();
                 router.push(
-                  "/users/exporter/newApplication/transactionDetails/contactAndDelivery"
+                  `/users/${
+                    router.asPath.split("/")[2]
+                  }/newApplication/transactionDetails/contactAndDelivery`
                 );
               }}
               className={
                 router.asPath ==
-                "/users/exporter/newApplication/transactionDetails/contactAndDelivery"
+                `/users/${
+                  router.asPath.split("/")[2]
+                }/newApplication/transactionDetails/contactAndDelivery`
                   ? "selectedSub"
                   : ""
               }
@@ -117,12 +137,16 @@ export default function ApplicationLeftMenu() {
               onClick={(e) => {
                 e.preventDefault();
                 router.push(
-                  "/users/exporter/newApplication/transactionDetails/additionalInfo"
+                  `/users/${
+                    router.asPath.split("/")[2]
+                  }/newApplication/transactionDetails/additionalInfo`
                 );
               }}
               className={
                 router.asPath ==
-                "/users/exporter/newApplication/transactionDetails/additionalInfo"
+                `/users/${
+                  router.asPath.split("/")[2]
+                }/newApplication/transactionDetails/additionalInfo`
                   ? "selectedSub"
                   : ""
               }
@@ -136,12 +160,16 @@ export default function ApplicationLeftMenu() {
               onClick={(e) => {
                 e.preventDefault();
                 router.push(
-                  "/users/exporter/newApplication/importerInfo/information"
+                  `/users/${
+                    router.asPath.split("/")[2]
+                  }/newApplication/importerInfo/information`
                 );
               }}
               className={
                 router.asPath ==
-                "/users/exporter/newApplication/importerInfo/information"
+                `/users/${
+                  router.asPath.split("/")[2]
+                }/newApplication/importerInfo/information`
                   ? "selectedSub"
                   : ""
               }
@@ -152,12 +180,16 @@ export default function ApplicationLeftMenu() {
               onClick={(e) => {
                 e.preventDefault();
                 router.push(
-                  "/users/exporter/newApplication/importerInfo/business"
+                  `/users/${
+                    router.asPath.split("/")[2]
+                  }/newApplication/importerInfo/business`
                 );
               }}
               className={
                 router.asPath ==
-                "/users/exporter/newApplication/importerInfo/business"
+                `/users/${
+                  router.asPath.split("/")[2]
+                }/newApplication/importerInfo/business`
                   ? "selectedSub"
                   : ""
               }
@@ -168,12 +200,16 @@ export default function ApplicationLeftMenu() {
               onClick={(e) => {
                 e.preventDefault();
                 router.push(
-                  "/users/exporter/newApplication/importerInfo/relationship"
+                  `/users/${
+                    router.asPath.split("/")[2]
+                  }/newApplication/importerInfo/relationship`
                 );
               }}
               className={
                 router.asPath ==
-                "/users/exporter/newApplication/importerInfo/relationship"
+                `/users/${
+                  router.asPath.split("/")[2]
+                }/newApplication/importerInfo/relationship`
                   ? "selectedSub"
                   : ""
               }
@@ -184,12 +220,16 @@ export default function ApplicationLeftMenu() {
               onClick={(e) => {
                 e.preventDefault();
                 router.push(
-                  "/users/exporter/newApplication/importerInfo/attachments"
+                  `/users/${
+                    router.asPath.split("/")[2]
+                  }/newApplication/importerInfo/attachments`
                 );
               }}
               className={
                 router.asPath ==
-                "/users/exporter/newApplication/importerInfo/attachments"
+                `/users/${
+                  router.asPath.split("/")[2]
+                }/newApplication/importerInfo/attachments`
                   ? "selectedSub"
                   : ""
               }
@@ -203,12 +243,16 @@ export default function ApplicationLeftMenu() {
               onClick={(e) => {
                 e.preventDefault();
                 router.push(
-                  "/users/exporter/newApplication/paymentTerms/details"
+                  `/users/${
+                    router.asPath.split("/")[2]
+                  }/newApplication/paymentTerms/details`
                 );
               }}
               className={
                 router.asPath ==
-                "/users/exporter/newApplication/paymentTerms/details"
+                `/users/${
+                  router.asPath.split("/")[2]
+                }/newApplication/paymentTerms/details`
                   ? "selectedSub"
                   : ""
               }
@@ -219,12 +263,16 @@ export default function ApplicationLeftMenu() {
               onClick={(e) => {
                 e.preventDefault();
                 router.push(
-                  "/users/exporter/newApplication/paymentTerms/paymentType"
+                  `/users/${
+                    router.asPath.split("/")[2]
+                  }/newApplication/paymentTerms/paymentType`
                 );
               }}
               className={
                 router.asPath ==
-                "/users/exporter/newApplication/paymentTerms/paymentType"
+                `/users/${
+                  router.asPath.split("/")[2]
+                }/newApplication/paymentTerms/paymentType`
                   ? "selectedSub"
                   : ""
               }

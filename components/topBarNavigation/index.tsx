@@ -16,7 +16,7 @@ function TopBarNav() {
   const newApplicationModal = useModal(ApplicationModalAtom);
   const handleClick1 = (e: any) => {
     setIndex(0);
-    router.push("/users/exporter");
+    router.push(`/users/${router.asPath.split("/")[2]}`);
   };
   const router = useRouter();
 
