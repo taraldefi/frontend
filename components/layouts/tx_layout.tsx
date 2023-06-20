@@ -1,6 +1,28 @@
 import React from "react";
-import SortbarData from "@pages/applications/transaction/data";
 import DashBoardPageLayout from "@components/layouts/dashboard_page_layout";
+
+const SortbarData = [
+  {
+    id: 1,
+    title: "Supplier",
+    path: "/applications/transaction/supplier",
+  },
+  {
+    id: 2,
+    title: "Buyer",
+    path: "/applications/transaction/buyer",
+  },
+  {
+    id: 3,
+    title: "Transactions",
+    path: "/applications/transaction/transactions",
+  },
+  {
+    id: 4,
+    title: "Financing",
+    path: "/applications/transaction/financing",
+  },
+];
 
 interface StatusLayoutProps {
   children: React.ReactNode;

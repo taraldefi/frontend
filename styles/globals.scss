@@ -30,6 +30,7 @@
 @import "newLayout.scss";
 @import "auth.scss";
 @import "repayment.scss";
+@import "transactionDocs.scss";
 
 body {
   user-select: none;
@@ -51,9 +52,9 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-end;
+  bottom: 0px;
   position: fixed;
-  top: 675px;
+
   .bbBackground {
     background-color: #fff;
     width: 100%;

@@ -62,7 +62,11 @@ function NewApplicationModal({ isOpen, onClose }: Props) {
                 <button
                   className="btn"
                   onClick={() => {
-                    router.push("/users/exporter/newApplication/exporterInfo");
+                    router.push(
+                      `/users/${
+                        router.asPath.split("/")[2]
+                      }/newApplication/exporterInfo`
+                    );
                     onClose();
                   }}
                 >

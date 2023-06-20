@@ -1,10 +1,38 @@
 import { PortalIcons } from "@components/icons";
 import ResearchLayout from "@components/layouts/rs_layout";
-import TableData from "@pages/applications/research/research/data";
 import { Button, ResearchTable } from "@taraldefi/tariala-component-library";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { tableFormResearch } from "types/form";
+
+const TableData: tableFormResearch[] = [
+  {
+    name: "Watch List",
+    Hit: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    Source: "http://www.google.com",
+  },
+  {
+    name: "Watch List",
+    Hit: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    Source: "http://www.google.com",
+  },
+  {
+    name: "Watch List",
+    Hit: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    Source: "http://www.google.com",
+  },
+  {
+    name: "Watch List",
+    Hit: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    Source: "http://www.google.com",
+  },
+  {
+    name: "Watch List",
+    Hit: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    Source: "http://www.google.com",
+  },
+];
+
 function Research() {
   var x: number = Object.keys(TableData).length;
   const [fields, setFields] = useState<tableFormResearch[]>(TableData);
