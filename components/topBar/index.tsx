@@ -1,12 +1,8 @@
-import React from "react";
-import { PortalIcons } from "../icons";
-import { TopbarIconsData } from "./data";
 import Image from "next/image";
+import { useRouter } from "next/router";
+import { PortalIcons } from "../icons";
 const Topbar = () => {
-  const [selectedId, setSelectedId] = React.useState<number>();
-  function handleSelect(index: number) {
-    setSelectedId(index);
-  }
+  const router = useRouter();
   return (
     <>
       <div className="tab">
@@ -22,21 +18,22 @@ const Topbar = () => {
             <span className="header">Tariala</span>
           </div>
           <div className="icons">
-            {TopbarIconsData.map((item, index) => {
-              return (
-                <div
-                  onClick={() => {
-                    handleSelect(item.id);
-                  }}
-                  key={index}
-                >
-                  <PortalIcons
-                    icon={item.icon}
-                    selected={selectedId === item.id}
-                  ></PortalIcons>
-                </div>
-              );
-            })}
+            <div
+              onClick={() => {
+                router.push("/profile");
+              }}
+            >
+              <PortalIcons
+                icon={"user"}
+                selected={router.asPath === "/profile"}
+              ></PortalIcons>
+            </div>
+            <div onClick={() => {}}>
+              <PortalIcons icon={"bell"} selected={false}></PortalIcons>
+            </div>
+            <div onClick={() => {}}>
+              <PortalIcons icon={"settings"} selected={false}></PortalIcons>
+            </div>
           </div>
         </div>
       </div>
