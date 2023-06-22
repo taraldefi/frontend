@@ -77,7 +77,7 @@ function Index() {
                 <input
                   type="text"
                   className="inputs"
-                  placeholder="Empoyees count..."
+                  placeholder="Employees count..."
                 />
               </div>
             </div>
@@ -158,7 +158,7 @@ function Index() {
               <input type="date" className="inputs" id="calendar" />
             </div>
             <div>
-              <span>Total revenue last fiscal year? (SR)(SR)</span>
+              <span>Total revenue last fiscal year? (USD)</span>
               <input
                 type="text"
                 className="inputs"
@@ -175,7 +175,7 @@ function Index() {
               />
             </div>
             <div>
-              <span>Export value in SR in thousand last two years</span>
+              <span>Export value in USD in thousand last two years</span>
               <input
                 type="text"
                 className="inputs"

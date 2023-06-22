@@ -158,7 +158,7 @@ function Index() {
               <input type="date" className="inputs" id="calendar" />
             </div>
             <div>
-              <span>Total revenue last fiscal year? (SR)(SR)</span>
+              <span>Total revenue last fiscal year? (USD)</span>
               <input
                 type="text"
                 className="inputs"
