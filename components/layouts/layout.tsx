@@ -1,17 +1,21 @@
-import React from "react";
-import Topbar from "../topBar";
-import TopBarNav from "../topBarNavigation";
+import FormEditModal from "@components/modal/entityEditFormModal";
+import FormModal from "@components/modal/entityFormModal";
+import NewApplicationModal from "@components/modal/newApplicationModal";
+import { DeleteModal } from "@taraldefi/tariala-component-library";
 import { useModal } from "@utils/hooks";
+import React from "react";
 import {
   ApplicationModalAtom,
   DeleteModalAtom,
   EditFormModalAtom,
   FormModalAtom,
+  NotificationModalAtom,
+  SettingsModalAtom,
 } from "store/ModalStore";
-import { DeleteModal } from "@taraldefi/tariala-component-library";
-import FormModal from "@components/modal/entityFormModal";
-import FormEditModal from "@components/modal/entityEditFormModal";
-import NewApplicationModal from "@components/modal/newApplicationModal";
+import Topbar from "../topBar";
+import TopBarNav from "../topBarNavigation";
+import SettingsModal from "@components/modal/settingsModal";
+import NotificationModal from "@components/modal/notificationModal";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -22,6 +26,9 @@ const Layout = ({ children }: LayoutProps) => {
   const editModal = useModal(EditFormModalAtom);
   const applicationModal = useModal(ApplicationModalAtom);
   const newEntityModal = useModal(FormModalAtom);
+  const settingsModal = useModal(SettingsModalAtom);
+  const notificationModal = useModal(NotificationModalAtom);
+
   return (
     <div>
       <div className="topbarFix">
@@ -50,6 +57,14 @@ const Layout = ({ children }: LayoutProps) => {
         isOpen={applicationModal.isOpen}
         onClose={() => applicationModal.close()}
       ></NewApplicationModal>
+      <SettingsModal
+        isOpen={settingsModal.isOpen}
+        onClose={() => settingsModal.close()}
+      ></SettingsModal>
+      <NotificationModal
+        isOpen={notificationModal.isOpen}
+        onClose={() => notificationModal.close()}
+      ></NotificationModal>
     </div>
   );
 };

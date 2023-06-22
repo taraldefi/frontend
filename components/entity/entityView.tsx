@@ -66,7 +66,6 @@ function EntityView({ infoData }: Props) {
             <div className="infoItem">
               <div className="leftInfo">
                 <span>Beneficial Owner</span>
-                <FontAwesomeIcon icon={faCircleExclamation} />
               </div>
               <div className="rightInfo">
                 <span>{infoData.BeneficialOwner}</span>

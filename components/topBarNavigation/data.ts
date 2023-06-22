@@ -33,12 +33,12 @@ export const TopbarNewDataEx = [
     name: "view",
     path: "/users/exporter/view",
   },
-  {
-    id: 2,
-    title: "Profile",
-    name: "profile",
-    path: "/users/exporter/profile",
-  },
+  // {
+  //   id: 2,
+  //   title: "Profile",
+  //   name: "profile",
+  //   path: "/users/exporter/profile",
+  // },
   {
     id: 3,
     title: "KYC",
@@ -65,12 +65,12 @@ export const TopbarNewDataIm = [
     name: "view",
     path: "/users/importer/view",
   },
-  {
-    id: 2,
-    title: "Profile",
-    name: "profile",
-    path: "/users/importer/profile",
-  },
+  // {
+  //   id: 2,
+  //   title: "Profile",
+  //   name: "profile",
+  //   path: "/users/importer/profile",
+  // },
   {
     id: 3,
     title: "KYC",

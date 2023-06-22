@@ -24,7 +24,7 @@ export default function ApplicationLeftMenu() {
             }}
             id={0}
             icon={"Exporter Info"}
-            title="ExporterInfo"
+            title="Exporter Info"
           ></MenuItem>
 
           <MenuItem id={1} icon={"Financials - P&L"} title="Financials - P&L">

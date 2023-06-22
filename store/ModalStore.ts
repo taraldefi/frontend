@@ -9,3 +9,5 @@ export const ApplicationModalAtom = atom<boolean>(false);
 export const LockSuccessModalAtom = atom<boolean>(false);
 export const YieldModalAtom = atom<boolean>(false);
 export const StakeSuccessModalAtom = atom<boolean>(false);
+export const SettingsModalAtom = atom<boolean>(false);
+export const NotificationModalAtom = atom<boolean>(false);
