@@ -1,5 +1,3 @@
-import React from "react";
-import DashBoardLayout from "@components/layouts/dashboard_layout";
 import ComplianceLayout from "@components/layouts/compliance_layout";
 import { CompanyTable } from "@taraldefi/tariala-component-library";
 

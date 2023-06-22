@@ -22,21 +22,11 @@ const SortbarData = [
 ];
 
 export default function Other() {
-  const [files, setFiles] = React.useState([]);
-
-  const removeFile = (filename: string) => {
-    setFiles(files.filter((file: any) => file.name !== filename));
-  };
   return (
-    <ReportLayout documentCount={files.length} sortbarData={SortbarData}>
+    <ReportLayout documentCount={1} sortbarData={SortbarData}>
       <div className="main_container">
         <div className="upload_container">
-          <FileList files={files} removeFile={removeFile} />
-          <FileUpload
-            files={files}
-            setFiles={setFiles}
-            removeFile={removeFile}
-          />
+          <FileUpload />
         </div>
       </div>
     </ReportLayout>
