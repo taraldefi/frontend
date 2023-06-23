@@ -26,6 +26,7 @@ const Modal: React.FC<ModalProps> = ({
   setShown,
 }) => {
   const zoomPluginInstance = zoomPlugin();
+
   const { CurrentScale, ZoomIn, ZoomOut } = zoomPluginInstance;
   const modalBody = () => (
     <div className="pdfviewer_header">
@@ -69,10 +70,15 @@ const Modal: React.FC<ModalProps> = ({
           </div>
         </div>
         <div>
-          <Button label={"Close"} onClick={() => setShown(false)} />
+          <Button
+            backgroundColor="#1AB98B"
+            primary
+            label={"Close"}
+            onClick={() => setShown(false)}
+          />
         </div>
       </div>
-      <Worker workerUrl="https://unpkg.com/pdfjs-dist@2.14.305/build/pdf.worker.min.js">
+      <Worker workerUrl="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.js">
         <Viewer
           plugins={[zoomPluginInstance]}
           defaultScale={1}
