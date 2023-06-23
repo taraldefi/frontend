@@ -1,4 +1,4 @@
-FROM node:16.13.0-alpine
+FROM node:16.13.0 as build
 
 #set working directory
 WORKDIR /app
@@ -13,11 +13,16 @@ ARG GITHUB_TOKEN
 # install and cache app dependencies
 RUN echo //npm.pkg.github.com/:_authToken=$GITHUB_TOKEN >> ~/.npmrc
 RUN echo @taraldefi:registry=https://npm.pkg.github.com >> ~/.npmrc
-RUN yarn install
+RUN yarn install --frozen-lockfile
 
 # Removing the github token from npmrc file in below line
 RUN echo > ~/.npmrc
 
 COPY . ./
+RUN yarn build
 
-CMD ["yarn", "dev"]
+# production enivronment
+FROM nginx:stable-alpine
+COPY --from=build /app/.next /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
