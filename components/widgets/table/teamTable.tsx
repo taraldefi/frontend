@@ -40,8 +40,8 @@ export const TeamTable = ({ TableData, value }: Props) => {
                   src={item.member.user}
                   key={index}
                   alt=""
-                  width="35%"
-                  height="35%"
+                  width={30}
+                  height={30}
                 ></Image>
                 <div className="nameContainer">
                   <span>{item.member.name}</span>

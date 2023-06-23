@@ -11,8 +11,8 @@ const AuthLayout = ({ children }: LayoutProps) => {
           <Image
             src="/assets/images/logo1.png"
             alt="Logo"
-            width="100px"
-            height="100px"
+            width={100}
+            height={100}
           />
         </div>
       </div>

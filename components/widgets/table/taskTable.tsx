@@ -39,8 +39,8 @@ export const TaskTable = ({ TableData, value }: Props) => {
                   src={item.assignee.user}
                   key={index}
                   alt=""
-                  width="35%"
-                  height="35%"
+                  width={30}
+                  height={30}
                 ></Image>
                 <div className="nameContainer">
                   <span>{item.assignee.name}</span>
@@ -56,8 +56,8 @@ export const TaskTable = ({ TableData, value }: Props) => {
                   src={item.assignor.user}
                   key={index}
                   alt=""
-                  width="35%"
-                  height="35%"
+                  width={30}
+                  height={30}
                 ></Image>
                 <div className="nameContainer">
                   <span>{item.assignor.name}</span>

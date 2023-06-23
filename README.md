@@ -2,30 +2,18 @@
 
 This repository contains the frontend code for the Tariala project.
 
-## Development
+## Docker Setup
 
 To get a docker container running, run the following command:
 
 `GITHUB_TOKEN` is used to install the private package `@taraldefi/tariala-component-library`.
 
 ```bash
-$ cp .env.example .env.development
-
-$ docker build --build-arg GITHUB_TOKEN=$(cat .env.development | grep GITHUB_TOKEN | cut -d '=' -f2) -t frontend:dev .
-
-$ docker run -it --rm -v ${PWD}:/app -v /app/node_modules -p 4200:4200 -e CHOKIDAR_USEPOLLING=true frontend:dev
-
-```
-
-## Get a production build
-
-```bash
 $ cp .env.example .env.production
 
-$ docker build -f Dockerfile.prod --build-arg GITHUB_TOKEN=$(cat .env.production | grep GITHUB_TOKEN | cut -d '=' -f2) -t frontend:prod .
+$ COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 docker-compose build --build-arg GITHUB_TOKEN=$(cat .env.production | grep GITHUB_TOKEN | cut -d '=' -f2)
 
-$ docker run -it --rm -p 4200:80 frontend:prod
-
+$ docker-compose up
 ```
 
 ## Services

@@ -34,8 +34,8 @@ export const OverviewTable = ({ TableData }: Props) => {
                     src={item}
                     key={index}
                     alt=""
-                    width="32%"
-                    height="32%"
+                    width={30}
+                    height={30}
                   ></Image>
                 );
               })}
