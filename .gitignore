@@ -2,7 +2,7 @@
 
 # dependencies
 !node_modules/@taraldefi/tariala-component-library/
-/node_modules
+node_modules/*
 /.pnp
 .pnp.js
 
