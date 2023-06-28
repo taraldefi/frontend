@@ -30,8 +30,8 @@ export const AuditTable = ({ TableData }: Props) => {
                 src={item.user.avatar}
                 key={index}
                 alt=""
-                width="35%"
-                height="35%"
+                width={30}
+                height={30}
               ></Image>
               <div className="nameContainer">
                 <span>{item.user.name}</span>

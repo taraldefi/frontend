@@ -29,8 +29,8 @@ const Topbar = () => {
               className="images"
               src="/assets/images/logo.png"
               alt=""
-              width="40%"
-              height="40%"
+              width={40}
+              height={40}
             ></Image>
             <span className="header">Tariala</span>
           </div>

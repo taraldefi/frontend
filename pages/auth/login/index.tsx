@@ -21,6 +21,7 @@ function Index() {
   const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
   type Inputs = {
     email: string;
+    phoneNo: string;
     password: string;
   };
   const {
@@ -30,6 +31,7 @@ function Index() {
   } = useForm<Inputs>({
     defaultValues: {
       email: "",
+      phoneNo: "",
       password: "",
     },
   });
@@ -59,6 +61,15 @@ function Index() {
                 className={errors.email ? "inputsRed" : "inputs"}
                 placeholder="Email address..."
                 {...register("email", { required: true })}
+              />
+            </div>
+            <div className="inputContainer">
+              <span>Phone Number</span>
+              <input
+                type="text"
+                className={errors.email ? "inputsRed" : "inputs"}
+                placeholder="Phone Number..."
+                {...register("phoneNo", { required: true })}
               />
             </div>
             <div className="inputContainer">

@@ -34,8 +34,8 @@ function EntityView({ infoData }: Props) {
                 className="images"
                 src="/assets/images/entity.png"
                 alt=""
-                width="140%"
-                height="140%"
+                width={200}
+                height={200}
               ></Image>
             </div>
             <div className="right">

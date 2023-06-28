@@ -26,8 +26,8 @@ function Profile() {
                 className="images"
                 src="/assets/images/avatar.png"
                 alt=""
-                width="100px"
-                height="100px"
+                width={100}
+                height={100}
               ></Image>
               <div className="flexBox">
                 <span>Profile Name</span>

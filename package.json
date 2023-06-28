@@ -23,8 +23,6 @@
     }
   },
   "dependencies": {
-    "@commitlint/cli": "^17.0.2",
-    "@commitlint/config-conventional": "^17.0.2",
     "@fortawesome/fontawesome-svg-core": "^6.1.2",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
@@ -37,9 +35,8 @@
     "cors": "^2.8.5",
     "express": "^4.18.1",
     "jotai": "^2.0.4",
-    "next": "12.1.6",
+    "next": "13.2.4",
     "pdfjs-dist": "^2.14.305",
-    "prettier": "^2.7.1",
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "react-feather": "^2.0.10",
@@ -48,11 +45,13 @@
     "react-pdf-thumbnail": "^0.1.0",
     "react-pro-sidebar": "^0.7.1",
     "react-router-dom": "^6.3.0",
-    "sass": "^1.52.2",
-    "styled-components": "^5.3.5",
-    "typescript": "^4.7.3"
+    "sass": "^1.52.2"
   },
   "devDependencies": {
+    "typescript": "^4.7.3",
+    "prettier": "^2.7.1",
+    "@commitlint/cli": "^17.0.2",
+    "@commitlint/config-conventional": "^17.0.2",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
     "@types/cors": "^2.8.12",
