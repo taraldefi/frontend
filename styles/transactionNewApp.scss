@@ -239,17 +239,13 @@
 
   .tsContContainer {
     display: flex;
-    width: 100%;
+    flex-direction: row;
 
     .contractContainer {
-      flex: 1;
-      width: 100%;
       display: flex;
       flex-direction: column;
-      gap: 6px;
-      color: #475569;
-      font-size: 14px;
-      font-weight: normal;
+      width: 33%;
+      height: 75vh;
 
       .maintitle {
         font-size: 14px;
@@ -257,68 +253,73 @@
         color: #64748b;
         padding-bottom: 11px;
       }
-
-      .inputContainer {
-        padding-top: 10px;
-        display: flex;
-        flex-direction: column !important;
-        gap: 6px !important;
-      }
-
-      .radioBack {
-        .hLine {
-          width: 100%;
-          height: 0.3px;
-          background-color: rgba(0, 0, 0, 0.1);
-          margin: 15px 0px 15px 0px;
+      .verticalContractContainer {
+        column-gap: 25px;
+        height: 20px;
+        overflow: scroll;
+        flex: 1;
+        width: 100%;
+        color: #475569;
+        font-size: 14px;
+        font-weight: normal;
+        .inputContainer {
+          padding-top: 10px;
+          display: flex;
+          flex-direction: column !important;
+          gap: 6px !important;
         }
 
-        .secondRadio {
+        .radioBack {
+          .hLine {
+            width: 100%;
+            height: 0.3px;
+            background-color: rgba(0, 0, 0, 0.1);
+            margin: 15px 0px 15px 0px;
+          }
+
+          .secondRadio {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+          }
+
+          margin-top: 10px;
+          padding: 16px 44px 16px 16px;
           display: flex;
+          background-color: #9797970f;
           flex-direction: column;
+          margin-bottom: 5px;
           gap: 10px;
-        }
 
-        margin-top: 10px;
-        padding: 16px 44px 16px 16px;
-        display: flex;
-        background-color: #9797970f;
-        flex-direction: column;
-        margin-bottom: 5px;
-        gap: 10px;
-
-        :nth-child(2) {
-          display: flex;
-          flex-direction: row;
-          gap: 30px;
-
-          :nth-child(n) {
+          :nth-child(2) {
             display: flex;
             flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            padding-bottom: 0px;
-            gap: 6px;
-          }
-        }
+            gap: 30px;
 
-        textarea {
-          height: max-content;
-          width: 110%;
-          padding-bottom: 10%;
+            :nth-child(n) {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              justify-content: center;
+              padding-bottom: 0px;
+              gap: 6px;
+            }
+          }
+
+          textarea {
+            height: max-content;
+            width: 110%;
+            padding-bottom: 10%;
+          }
         }
       }
     }
 
     .deliveryContainer {
-      flex: 1;
-      width: 100%;
-      color: #475569;
-      font-size: 14px;
-      font-weight: normal;
       display: flex;
       flex-direction: column;
-      gap: 6px;
+      width: 33%;
+      height: 75vh;
 
       .maintitle {
         font-size: 14px;
@@ -326,48 +327,53 @@
         color: #64748b;
         padding-bottom: 11px;
       }
-
-      .radioBack {
-        margin-top: 10px;
-        padding: 16px 44px 16px 16px;
-        display: flex;
-        background-color: #9797970f;
-        flex-direction: column;
-        margin-bottom: 5px;
-        gap: 10px;
-
-        :nth-child(2) {
+      .verticalDeliveryContainer {
+        column-gap: 25px;
+        height: 20px;
+        overflow: scroll;
+        flex: 1;
+        width: 100%;
+        color: #475569;
+        font-size: 14px;
+        font-weight: normal;
+        .radioBack {
+          margin-top: 10px;
+          padding: 16px 44px 16px 16px;
           display: flex;
-          flex-direction: row;
-          gap: 30px;
+          background-color: #9797970f;
+          flex-direction: column;
+          margin-bottom: 5px;
+          gap: 10px;
 
-          :nth-child(n) {
+          :nth-child(2) {
             display: flex;
             flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            padding-bottom: 0px;
-            gap: 6px;
-          }
-        }
+            gap: 30px;
 
-        textarea {
-          height: max-content;
-          width: 110%;
-          padding-bottom: 10%;
+            :nth-child(n) {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              justify-content: center;
+              padding-bottom: 0px;
+              gap: 6px;
+            }
+          }
+
+          textarea {
+            height: max-content;
+            width: 110%;
+            padding-bottom: 10%;
+          }
         }
       }
     }
 
     .deliveredContainer {
-      flex: 1;
-      width: 100%;
-      color: #475569;
-      font-size: 14px;
-      font-weight: normal;
       display: flex;
       flex-direction: column;
-      gap: 6px;
+      width: 33%;
+      height: 75vh;
 
       .maintitle {
         font-size: 14px;
@@ -375,35 +381,44 @@
         color: #64748b;
         padding-bottom: 11px;
       }
-
-      .radioBack {
-        margin-top: 10px;
-        padding: 16px 44px 16px 16px;
-        display: flex;
-        background-color: #9797970f;
-        flex-direction: column;
-        margin-bottom: 5px;
-        gap: 6px;
-
-        :nth-child(2) {
+      .verticalDeliveredContainer {
+        column-gap: 25px;
+        height: 20px;
+        overflow: scroll;
+        flex: 1;
+        width: 100%;
+        color: #475569;
+        font-size: 14px;
+        font-weight: normal;
+        .radioBack {
+          margin-top: 10px;
+          padding: 16px 44px 16px 16px;
           display: flex;
-          flex-direction: row;
-          gap: 30px;
+          background-color: #9797970f;
+          flex-direction: column;
+          margin-bottom: 5px;
+          gap: 6px;
 
-          :nth-child(n) {
+          :nth-child(2) {
             display: flex;
             flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            padding-bottom: 0px;
-            gap: 6px;
-          }
-        }
+            gap: 30px;
 
-        textarea {
-          height: max-content;
-          width: 110%;
-          padding-bottom: 10%;
+            :nth-child(n) {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              justify-content: center;
+              padding-bottom: 0px;
+              gap: 6px;
+            }
+          }
+
+          textarea {
+            height: max-content;
+            width: 110%;
+            padding-bottom: 10%;
+          }
         }
       }
     }
