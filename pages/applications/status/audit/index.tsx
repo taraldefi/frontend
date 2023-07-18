@@ -1,5 +1,5 @@
 import StatusLayout from "@components/layouts/status_layout";
-import { AuditTable } from "@components/widgets/table/auditTable";
+import { AuditTable } from "@taraldefi/tariala-component-library";
 
 const TableData = [
   {
@@ -37,7 +37,7 @@ const TableData = [
 export default function Audit() {
   return (
     <StatusLayout showexport={true}>
-      <AuditTable TableData={TableData} />
+      <AuditTable auditTableData={TableData} />
     </StatusLayout>
   );
 }

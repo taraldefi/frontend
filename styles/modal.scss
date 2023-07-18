@@ -10,6 +10,7 @@
   transition: all 0.5s ease;
 
   &.active {
+    height: 100vh;
     left: 65%;
     box-shadow: 3px 18px 36px 100vw rgba(93, 96, 99, 0.317);
     -webkit-box-shadow: 3px 18px 36px 100vw rgba(93, 96, 99, 0.317);
