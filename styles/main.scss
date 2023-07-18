@@ -207,12 +207,13 @@
 }
 
 .sortBackground {
+  background-color: #f8fafc;
   z-index: 99;
   padding: 10px;
   align-items: center;
   position: fixed;
   display: flex;
-  top: 124px;
+  top: 126px;
   justify-content: end;
   height: 100px;
   width: 80vw;
@@ -303,7 +304,7 @@
   left: 260px;
   top: 132px;
   flex-direction: column;
-  width: 1250px;
+  width: 80vw;
 
   .messageBox {
     width: 130px;

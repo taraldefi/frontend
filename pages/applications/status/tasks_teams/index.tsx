@@ -1,6 +1,6 @@
 import StatusLayout from "@components/layouts/status_layout";
-import { TaskTable } from "@components/widgets/table/taskTable";
-import { TeamTable } from "@components/widgets/table/teamTable";
+import { TaskTable } from "@taraldefi/tariala-component-library";
+import { TeamTable } from "@taraldefi/tariala-component-library";
 
 const TeamData = [
   {
@@ -189,8 +189,8 @@ export default function TaskTeam() {
   var y: number = Object.keys(TeamData).length;
   return (
     <StatusLayout showexport={true}>
-      <TaskTable TableData={TaskData} value={x} />
-      <TeamTable TableData={TeamData} value={y} />
+      <TaskTable taskTableData={TaskData} value={x} />
+      <TeamTable teamTableData={TeamData} value={y} />
     </StatusLayout>
   );
 }
