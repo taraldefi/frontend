@@ -67,7 +67,7 @@ function Index() {
               <span>Phone Number</span>
               <input
                 type="text"
-                className={errors.email ? "inputsRed" : "inputs"}
+                className={errors.phoneNo ? "inputsRed" : "inputs"}
                 placeholder="Phone Number..."
                 {...register("phoneNo", { required: true })}
               />
