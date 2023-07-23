@@ -30,7 +30,6 @@ function EntityView({ infoData }: Props) {
           <div className="card">
             <div className="cardImage">
               <Image
-                layout="fixed"
                 className="images"
                 src="/assets/images/entity.png"
                 alt=""

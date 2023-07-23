@@ -11,9 +11,9 @@
     position: relative;
     display: flex;
     flex-direction: row;
-    align-items: start;
+    align-items: flex-start;
     gap: 20px;
-    justify-content: start;
+    justify-content: flex-start;
     .tableContainer {
       .table {
         margin-top: 0px;
@@ -97,7 +97,7 @@
     .titleContainer {
       width: 100%;
 
-      justify-content: start;
+      justify-content: flex-start;
       gap: 30px;
 
       display: flex;
@@ -120,8 +120,8 @@
   display: flex;
   gap: 20px;
   flex-direction: column;
-  text-align: start;
-  justify-content: start;
+  text-align: flex-start;
+  justify-content: flex-start;
   padding: 6% 10%;
   .button--container {
     width: 100%;
