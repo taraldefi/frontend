@@ -2,18 +2,28 @@
 import { PortalIcons } from "@components/icons";
 import AuthLayout from "@components/layouts/auth_layout";
 import { Button } from "@taraldefi/tariala-component-library";
+import { useRouter } from "next/router";
 import React from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 
 function Index() {
-  const [selected, setSelected] = React.useState(false);
+  const router = useRouter();
   const onSubmit: SubmitHandler<Inputs> = (data) => {
     console.log(data);
+    router.push(
+      {
+        pathname: "/auth/otp",
+        query: { email: data.email },
+      },
+      "/auth/otp"
+    );
   };
   type Inputs = {
     firstName: string;
     middleName: string;
     lastName: string;
+    email: string;
+    phoneNo: string;
     nationality: string;
     gender: string;
     dob: string;
@@ -31,6 +41,8 @@ function Index() {
       firstName: "",
       middleName: "",
       lastName: "",
+      email: "",
+      phoneNo: "",
       nationality: "",
       gender: "",
       dob: "",
@@ -63,6 +75,24 @@ function Index() {
                 className={errors.firstName ? "inputsRed" : "inputs"}
                 placeholder="First name..."
                 {...register("firstName", { required: true })}
+              />
+            </div>
+            <div className="inputContainer">
+              <span>Email</span>
+              <input
+                type="email"
+                className={errors.email ? "inputsRed" : "inputs"}
+                placeholder="Email Address..."
+                {...register("email", { required: true })}
+              />
+            </div>
+            <div className="inputContainer">
+              <span>Phone Number</span>
+              <input
+                type="text"
+                className={errors.phoneNo ? "inputsRed" : "inputs"}
+                placeholder="Phone Number..."
+                {...register("phoneNo", { required: true })}
               />
             </div>
             <div className="splitBox">

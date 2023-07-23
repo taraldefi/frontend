@@ -233,3 +233,58 @@
     left: 300px;
   }
 }
+
+// OtpScreen.scss
+.otp-container {
+  .inputContainer {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: fit-content;
+    span {
+      font-size: 13.5px;
+      color: #475569;
+    }
+  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .otp-input-container {
+    display: flex;
+  }
+
+  .otp-input {
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    text-align: center;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+  }
+
+  .submit-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    margin-top: 20px;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+}
