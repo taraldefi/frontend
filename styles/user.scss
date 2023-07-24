@@ -1,161 +1,80 @@
-.entityContainer:hover {
-  box-shadow: 3px 18px 36px 1px rgba(100, 116, 139, 0.13);
-  -webkit-box-shadow: 3px 18px 36px 1px rgba(100, 116, 139, 0.13);
-  -moz-box-shadow: 3px 18px 36px 1px rgba(100, 116, 139, 0.13);
-}
-
 .entityContainer {
+  overflow: auto;
+  align-content: start;
+  justify-content: center;
   background-color: #fff;
-  width: 100%;
-  height: max-content;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+  grid-gap: 0.5rem;
   position: relative;
-  top: 126px;
-  padding-left: 140px;
-  padding-right: 140px;
-  padding-top: 40px;
+  padding-left: 150px;
+  padding-right: 150px;
+  padding-top: 150px;
+  .entity--wrapper:hover {
+    box-shadow: 1px 8px 20px rgb(165, 165, 165);
+    transition: box-shadow 0.4s ease-in;
+    -webkit-transition: box-shadow 0.4s ease-in;
+  }
+  .entity--wrapper {
+    padding: 20px 16px 20px 16px;
+    box-shadow: 0px 0px 0px rgb(190, 190, 190);
+    transition: box-shadow 0.4s ease-out;
+    -webkit-transition: box-shadow 0.4s ease-out;
+    box-shadow: 0.8px 0.9px 3px rgb(190, 190, 190);
+    width: 375px;
+    .entity--top--content {
+      .modalContainer {
+        position: absolute;
 
-  .entity {
-    :hover {
-      box-shadow: 3px 18px 36px 1px rgba(100, 116, 139, 0.135);
-      -webkit-box-shadow: 3px 18px 36px 1px rgba(100, 116, 139, 0.135);
-      -moz-box-shadow: 3px 18px 36px 1px rgba(100, 116, 139, 0.13);
-    }
-    display: grid;
-    grid-template-columns: auto auto auto;
-
-    .entityWrapper {
-      :hover {
-        box-shadow: initial;
-      }
-      display: flex;
-      flex-direction: column;
-      padding: 20px 0px 20px 16px;
-      width: fit-content;
-      height: fit-content;
-      border: 1px solid #e2e8f0;
-      border-radius: 16px;
-      margin-right: 24px;
-      margin-bottom: 24px;
-      .entityTopContent {
-        display: flex;
-        padding-bottom: 16px;
-        border-bottom: 1px solid #e2e8f0;
-        width: 300px;
-
-        .entityImageContainer {
-          width: 80px;
-          height: 80px;
-          contain: content;
-          border-radius: 16px;
-        }
-
-        .entityTitleBox {
-          gap: 5px;
-          padding: 16px 45px 16px 18px;
-          display: flex;
-          flex-direction: column;
-
-          :nth-child(1) {
-            font-style: Work Sans;
-            font-size: 24px;
-            color: #003c6e;
-            font-weight: bold;
-            width: max-content;
-          }
-
-          :nth-child(2) {
-            font-style: Work Sans;
-            font-size: 10px;
-            color: #64748b;
-            font-weight: bold;
-          }
-        }
-
-        .optionsContainer {
-          margin-left: auto;
-        }
-        .modalContainer {
+        &.active {
+          width: 148px;
+          height: 192px;
+          background-color: #fff;
           position: absolute;
-
-          &.active {
-            width: 148px;
-            height: 192px;
-            background-color: #fff;
-            position: absolute;
-            z-index: 99;
-            border-radius: 16px;
-            box-shadow: 3px 18px 36px 1px rgba(100, 116, 139, 0.13);
-            -webkit-box-shadow: 3px 18px 36px 1px rgba(100, 116, 139, 0.13);
-            -moz-box-shadow: 3px 18px 36px 1px rgba(100, 116, 139, 0.13);
-          }
-        }
-        .modal {
-          .iconEntityOption {
-            opacity: 0.7;
-            &.active {
-              opacity: 1;
-            }
-          }
-          .modalMenue {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            padding: 24px;
-            gap: 20px;
-
-            :nth-child(1) {
-              display: flex;
-              gap: 13px;
-              align-items: center;
-            }
-
-            :nth-child(2) {
-              display: flex;
-              gap: 16px;
-              align-items: center;
-            }
-
-            :nth-child(4) {
-              display: flex;
-              gap: 15px;
-              align-items: center;
-            }
-
-            :nth-child(3) {
-              width: 100%;
-              height: 1px;
-              background-color: rgba(13, 132, 137, 0.3);
-            }
-          }
+          z-index: 99;
+          border-radius: 16px;
+          box-shadow: 3px 18px 36px 1px rgba(100, 116, 139, 0.13);
+          -webkit-box-shadow: 3px 18px 36px 1px rgba(100, 116, 139, 0.13);
+          -moz-box-shadow: 3px 18px 36px 1px rgba(100, 116, 139, 0.13);
         }
       }
-
-      .bottomContent {
-        :nth-child(3) {
-          padding-right: 15px;
+      .modal {
+        .iconEntityOption {
+          opacity: 0.7;
+          &.active {
+            opacity: 1;
+          }
         }
-
-        display: flex;
-        flex-direction: row;
-
-        * {
+        .modalMenue {
           display: flex;
-          gap: 4px;
           flex-direction: column;
-          padding: 16px 40px 0px 0px;
+          justify-content: space-around;
+          padding: 24px;
+          gap: 20px;
 
           :nth-child(1) {
-            font-weight: 900;
-            color: #64748b;
-            font-size: 10px;
-            padding: 0px;
+            display: flex;
+            gap: 13px;
+            align-items: center;
           }
 
           :nth-child(2) {
-            font-weight: 900;
-            color: #003c6e;
-            font-size: 16px;
-            padding: 0px;
+            display: flex;
+            gap: 16px;
+            align-items: center;
+          }
+
+          :nth-child(4) {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+          }
+
+          :nth-child(3) {
+            width: 100%;
+            height: 1px;
+            background-color: rgba(13, 132, 137, 0.3);
           }
         }
       }

@@ -20,6 +20,7 @@ export enum LoanCardTypes {
 
 function Index() {
   const router = useRouter();
+  const entityID = router.query.entityId;
   return (
     <Layout>
       <div className="viewbody">
@@ -42,7 +43,11 @@ function Index() {
             <div className="cardContainer">
               <RepaymentCard
                 onAuthorize={() => {
-                  router.push("/users/importer/repayment/successful");
+                  router.push(
+                    `/users/${
+                      router.asPath.split("/")[2]
+                    }/entities/${entityID}/repayment/successful`
+                  );
                 }}
               ></RepaymentCard>
             </div>

@@ -17,6 +17,7 @@ export enum LoanCardTypes {
 
 function Index() {
   const router = useRouter();
+  const entityID = router.query.entityId;
   return (
     <Layout>
       <div className="repaymentContainer">
@@ -28,7 +29,11 @@ function Index() {
           <div>
             <Button
               onClick={() => {
-                router.push("/users/importer/repayment/receipts");
+                router.push(
+                  `/users/${
+                    router.asPath.split("/")[2]
+                  }/entities/${entityID}/repayment/receipts`
+                );
               }}
               label={"VIEW RECEIPTS"}
             ></Button>
@@ -49,7 +54,11 @@ function Index() {
             <span>Ready to pay?</span>
             <Button
               onClick={() => {
-                router.push("/users/importer/repayment/pay");
+                router.push(
+                  `/users/${
+                    router.asPath.split("/")[2]
+                  }/entities/${entityID}/repayment/pay`
+                );
               }}
               primary={true}
               backgroundColor="#1AB98B"

@@ -1,5 +1,3 @@
-import Tasks from "@pages/tasks";
-
 export const TopbarData = [
   {
     id: 1,
@@ -53,7 +51,7 @@ export const TopbarNewDataEx = [
   },
   {
     id: 5,
-    title: "Repayments",
+    title: "Repayment",
     name: "repayments",
     path: "/users/exporter/repayment",
   },
@@ -63,7 +61,7 @@ export const TopbarNewDataIm = [
     id: 1,
     title: "Overview",
     name: "view",
-    path: "/users/importer/view",
+    path: "/users/importer/entities/[entityId]/view",
   },
   // {
   //   id: 2,
@@ -75,18 +73,18 @@ export const TopbarNewDataIm = [
     id: 3,
     title: "KYC",
     name: "kyc",
-    path: "/users/importer/kyc/generalInfo",
+    path: "/users/importer/entities/[entityId]/kyc/generalInfo",
   },
   {
     id: 4,
     title: "Applications",
     name: "applications",
-    path: "/users/importer/applications",
+    path: "/users/importer/entities/[entityId]/applications",
   },
   {
     id: 5,
     title: "Repayment",
     name: "repayment",
-    path: "/users/importer/repayment",
+    path: "/users/importer/entities/[entityId]/repayment",
   },
 ];

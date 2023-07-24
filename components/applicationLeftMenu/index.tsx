@@ -3,15 +3,85 @@ import { useRouter } from "next/router";
 import { pageIndexAtom } from "store/PageIndexStore";
 import { PortalIcons } from "../icons";
 import MenuItem from "./MenuItem";
-import { SidebarDataEx, SidebarDataIm } from "./data";
 
 export default function ApplicationLeftMenu() {
   const router = useRouter();
   const [index, setIndex] = useAtom(pageIndexAtom);
+  const entityID = router.query.entityId;
+  const SidebarDataEx = [
+    {
+      id: 0,
+      title: "Exporter Info",
+      name: "exporterInfo",
+      path: `/users/exporter/entities/${entityID}/quick/exporterInfo`,
+    },
+    {
+      id: 1,
+      title: "Importer Info",
+      name: "importerInfo",
+      path: `/users/exporter/entities/${entityID}/quick/importerInfo`,
+    },
+    {
+      id: 2,
+      title: "payment terms",
+      name: "paymentTerms",
+      path: `/users/exporter/entities/${entityID}/quick/paymentTerms`,
+    },
+    {
+      id: 3,
+      title: "Security",
+      name: "security",
+      path: `/users/exporter/entities/${entityID}/quick/security`,
+    },
+    {
+      id: 5,
+      title: "Transaction Docs",
+      name: "Transaction Docs",
+      path: `/users/exporter/entities/${entityID}/quick/transactionDocs`,
+    },
+  ];
+  const SidebarDataIm = [
+    {
+      id: 0,
+      title: "Exporter Info",
+      name: "Your Info",
+      path: `/users/importer/entities/${entityID}/quick/exporterInfo`,
+    },
+    {
+      id: 1,
+      title: "Importer Info",
+      name: "Supplier Info",
+      path: `/users/importer/entities/${entityID}/quick/importerInfo`,
+    },
+    {
+      id: 2,
+      title: "Order Details",
+      name: "Order Details",
+      path: `/users/importer/entities/${entityID}/quick/orderDetails`,
+    },
+    {
+      id: 3,
+      title: "Payment Terms",
+      name: "Payment Terms",
+      path: `/users/importer/entities/${entityID}/quick/paymentTerms`,
+    },
+    {
+      id: 4,
+      title: "Security",
+      name: "Security",
+      path: `/users/importer/entities/${entityID}/quick/security`,
+    },
+    {
+      id: 5,
+      title: "Transaction Docs",
+      name: "Transaction Docs",
+      path: `/users/importer/entities/${entityID}/quick/transactionDocs`,
+    },
+  ];
 
   return (
     <div className="leftMenu">
-      {router.asPath.split("/")[3] == "newApplication" ? (
+      {router.asPath.split("/")[5] == "newApplication" ? (
         <div className="items">
           <MenuItem
             onClick={(e) => {
@@ -19,7 +89,7 @@ export default function ApplicationLeftMenu() {
               router.push(
                 `/users/${
                   router.asPath.split("/")[2]
-                }/newApplication/exporterInfo`
+                }/entities/${entityID}/newApplication/exporterInfo`
               );
             }}
             id={0}
@@ -33,14 +103,14 @@ export default function ApplicationLeftMenu() {
                 router.push(
                   `/users/${
                     router.asPath.split("/")[2]
-                  }/newApplication/financials-p&l/profit&loss`
+                  }/entities/${entityID}/newApplication/financials-p&l/profit&loss`
                 );
               }}
               className={
                 router.asPath ==
                 `/users/${
                   router.asPath.split("/")[2]
-                }/newApplication/financials-p&l/profit&loss`
+                }/entities/${entityID}/newApplication/financials-p&l/profit&loss`
                   ? "selectedSub"
                   : ""
               }
@@ -52,14 +122,14 @@ export default function ApplicationLeftMenu() {
                 router.push(
                   `/users/${
                     router.asPath.split("/")[2]
-                  }/newApplication/financials-p&l/balanceSheet`
+                  }/entities/${entityID}/newApplication/financials-p&l/balanceSheet`
                 );
               }}
               className={
                 router.asPath ==
                 `/users/${
                   router.asPath.split("/")[2]
-                }/newApplication/financials-p&l/balanceSheet`
+                }/entities/${entityID}/newApplication/financials-p&l/balanceSheet`
                   ? "selectedSub"
                   : ""
               }
@@ -72,14 +142,14 @@ export default function ApplicationLeftMenu() {
                 router.push(
                   `/users/${
                     router.asPath.split("/")[2]
-                  }/newApplication/financials-p&l/cashFlow`
+                  }/entities/${entityID}/newApplication/financials-p&l/cashFlow`
                 );
               }}
               className={
                 router.asPath ==
                 `/users/${
                   router.asPath.split("/")[2]
-                }/newApplication/financials-p&l/cashFlow`
+                }/entities/${entityID}/newApplication/financials-p&l/cashFlow`
                   ? "selectedSub"
                   : ""
               }
@@ -99,14 +169,14 @@ export default function ApplicationLeftMenu() {
                 router.push(
                   `/users/${
                     router.asPath.split("/")[2]
-                  }/newApplication/transactionDetails/projectDetails`
+                  }/entities/${entityID}/newApplication/transactionDetails/projectDetails`
                 );
               }}
               className={
                 router.asPath ==
                 `/users/${
                   router.asPath.split("/")[2]
-                }/newApplication/transactionDetails/projectDetails`
+                }/entities/${entityID}/newApplication/transactionDetails/projectDetails`
                   ? "selectedSub"
                   : ""
               }
@@ -119,14 +189,14 @@ export default function ApplicationLeftMenu() {
                 router.push(
                   `/users/${
                     router.asPath.split("/")[2]
-                  }/newApplication/transactionDetails/contactAndDelivery`
+                  }/entities/${entityID}/newApplication/transactionDetails/contactAndDelivery`
                 );
               }}
               className={
                 router.asPath ==
                 `/users/${
                   router.asPath.split("/")[2]
-                }/newApplication/transactionDetails/contactAndDelivery`
+                }/entities/${entityID}/newApplication/transactionDetails/contactAndDelivery`
                   ? "selectedSub"
                   : ""
               }
@@ -139,14 +209,14 @@ export default function ApplicationLeftMenu() {
                 router.push(
                   `/users/${
                     router.asPath.split("/")[2]
-                  }/newApplication/transactionDetails/additionalInfo`
+                  }/entities/${entityID}/newApplication/transactionDetails/additionalInfo`
                 );
               }}
               className={
                 router.asPath ==
                 `/users/${
                   router.asPath.split("/")[2]
-                }/newApplication/transactionDetails/additionalInfo`
+                }/entities/${entityID}/newApplication/transactionDetails/additionalInfo`
                   ? "selectedSub"
                   : ""
               }
@@ -162,14 +232,14 @@ export default function ApplicationLeftMenu() {
                 router.push(
                   `/users/${
                     router.asPath.split("/")[2]
-                  }/newApplication/importerInfo/information`
+                  }/entities/${entityID}/newApplication/importerInfo/information`
                 );
               }}
               className={
                 router.asPath ==
                 `/users/${
                   router.asPath.split("/")[2]
-                }/newApplication/importerInfo/information`
+                }/entities/${entityID}/newApplication/importerInfo/information`
                   ? "selectedSub"
                   : ""
               }
@@ -182,14 +252,14 @@ export default function ApplicationLeftMenu() {
                 router.push(
                   `/users/${
                     router.asPath.split("/")[2]
-                  }/newApplication/importerInfo/business`
+                  }/entities/${entityID}/newApplication/importerInfo/business`
                 );
               }}
               className={
                 router.asPath ==
                 `/users/${
                   router.asPath.split("/")[2]
-                }/newApplication/importerInfo/business`
+                }/entities/${entityID}/newApplication/importerInfo/business`
                   ? "selectedSub"
                   : ""
               }
@@ -202,14 +272,14 @@ export default function ApplicationLeftMenu() {
                 router.push(
                   `/users/${
                     router.asPath.split("/")[2]
-                  }/newApplication/importerInfo/relationship`
+                  }/entities/${entityID}/newApplication/importerInfo/relationship`
                 );
               }}
               className={
                 router.asPath ==
                 `/users/${
                   router.asPath.split("/")[2]
-                }/newApplication/importerInfo/relationship`
+                }/entities/${entityID}/newApplication/importerInfo/relationship`
                   ? "selectedSub"
                   : ""
               }
@@ -222,14 +292,14 @@ export default function ApplicationLeftMenu() {
                 router.push(
                   `/users/${
                     router.asPath.split("/")[2]
-                  }/newApplication/importerInfo/attachments`
+                  }/entities/${entityID}/newApplication/importerInfo/attachments`
                 );
               }}
               className={
                 router.asPath ==
                 `/users/${
                   router.asPath.split("/")[2]
-                }/newApplication/importerInfo/attachments`
+                }/entities/${entityID}/newApplication/importerInfo/attachments`
                   ? "selectedSub"
                   : ""
               }
@@ -245,14 +315,14 @@ export default function ApplicationLeftMenu() {
                 router.push(
                   `/users/${
                     router.asPath.split("/")[2]
-                  }/newApplication/paymentTerms/details`
+                  }/entities/${entityID}/newApplication/paymentTerms/details`
                 );
               }}
               className={
                 router.asPath ==
                 `/users/${
                   router.asPath.split("/")[2]
-                }/newApplication/paymentTerms/details`
+                }/entities/${entityID}/newApplication/paymentTerms/details`
                   ? "selectedSub"
                   : ""
               }
@@ -265,14 +335,14 @@ export default function ApplicationLeftMenu() {
                 router.push(
                   `/users/${
                     router.asPath.split("/")[2]
-                  }/newApplication/paymentTerms/paymentType`
+                  }/entities/${entityID}/newApplication/paymentTerms/paymentType`
                 );
               }}
               className={
                 router.asPath ==
                 `/users/${
                   router.asPath.split("/")[2]
-                }/newApplication/paymentTerms/paymentType`
+                }/entities/${entityID}/newApplication/paymentTerms/paymentType`
                   ? "selectedSub"
                   : ""
               }
@@ -284,7 +354,9 @@ export default function ApplicationLeftMenu() {
             onClick={(e) => {
               e.preventDefault();
               router.push(
-                `/users/${router.asPath.split("/")[2]}/newApplication/security`
+                `/users/${
+                  router.asPath.split("/")[2]
+                }/entities/${entityID}/newApplication/security`
               );
             }}
             id={5}
@@ -295,7 +367,9 @@ export default function ApplicationLeftMenu() {
             onClick={(e) => {
               e.preventDefault();
               router.push(
-                `/users/${router.asPath.split("/")[2]}/newApplication/closing`
+                `/users/${
+                  router.asPath.split("/")[2]
+                }/entities/${entityID}/newApplication/closing`
               );
             }}
             id={6}
@@ -304,7 +378,7 @@ export default function ApplicationLeftMenu() {
           ></MenuItem>
         </div>
       ) : router.asPath.split("/")[2] == "exporter" &&
-        router.asPath.split("/")[3] == "quick" ? (
+        router.asPath.split("/")[5] == "quick" ? (
         <div className="itemsNew">
           {SidebarDataEx.map((item, index) => {
             return (
@@ -333,7 +407,7 @@ export default function ApplicationLeftMenu() {
           })}
         </div>
       ) : router.asPath.split("/")[2] == "importer" &&
-        router.asPath.split("/")[3] == "quick" ? (
+        router.asPath.split("/")[5] == "quick" ? (
         <div className="itemsNew">
           {SidebarDataIm.map((item, index) => {
             return (
