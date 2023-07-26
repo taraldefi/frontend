@@ -1,23 +1,6 @@
 import React from "react";
 import DashBoardPageLayout from "@components/layouts/dashboard_page_layout";
-
-const SortbarData = [
-  {
-    id: 1,
-    title: "Profit & Loss",
-    path: "/applications/financial/profit",
-  },
-  {
-    id: 2,
-    title: "Balance Sheet",
-    path: "/applications/financial/balance",
-  },
-  {
-    id: 3,
-    title: "Cash Flow",
-    path: "/applications/financial/cash",
-  },
-];
+import { useRouter } from "next/router";
 
 interface FinancialsLayoutProps {
   children: React.ReactNode;
@@ -27,6 +10,25 @@ export default function FinancialsLayout({
   children,
   showexport,
 }: FinancialsLayoutProps) {
+  const router = useRouter();
+  const applicationID = router.query.applicationId;
+  const SortbarData = [
+    {
+      id: 1,
+      title: "Profit & Loss",
+      path: `/applications/${applicationID}/financial/profit`,
+    },
+    {
+      id: 2,
+      title: "Balance Sheet",
+      path: `/applications/${applicationID}/financial/balance`,
+    },
+    {
+      id: 3,
+      title: "Cash Flow",
+      path: `/applications/${applicationID}/financial/cash`,
+    },
+  ];
   return (
     <DashBoardPageLayout
       showexport={showexport}

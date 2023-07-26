@@ -71,7 +71,7 @@ const FileUpload = () => {
                   deleteFile(uploadedFile.name);
                 }}
               >
-                <PortalIcons selected={false} icon={"delete1"}></PortalIcons>
+                <PortalIcons selected={false} icon={"delete"}></PortalIcons>
               </div>
             )}
           </div>

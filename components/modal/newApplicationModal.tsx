@@ -9,12 +9,10 @@ type Props = {
 };
 function NewApplicationModal({ isOpen, onClose }: Props) {
   const router = useRouter();
-  const nextpath =
-    router.asPath.split("/")[2] == "exporter"
-      ? "/users/exporter/quick/exporterInfo"
-      : router.asPath.split("/")[2] == "importer"
-      ? "/users/importer/quick/exporterInfo"
-      : "";
+  const entityID = router.query.entityId;
+  const nextpath = `/users/${
+    router.asPath.split("/")[2]
+  }/entities/${entityID}/quick/exporterInfo`;
   return (
     <div className={"newApplicationModal " + (isOpen && "active")}>
       {isOpen && (
@@ -65,7 +63,7 @@ function NewApplicationModal({ isOpen, onClose }: Props) {
                     router.push(
                       `/users/${
                         router.asPath.split("/")[2]
-                      }/newApplication/exporterInfo`
+                      }/entities/${entityID}/newApplication/exporterInfo`
                     );
                     onClose();
                   }}

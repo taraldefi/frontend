@@ -1,6 +1,5 @@
 import React from "react";
 import { useRouter } from "next/router";
-import { TopbarData, TopbarNewDataEx, TopbarNewDataIm } from "./data";
 import { Button } from "@taraldefi/tariala-component-library";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
@@ -10,23 +9,118 @@ import { useModal } from "@utils/hooks";
 import { ApplicationModalAtom, FormModalAtom } from "store/ModalStore";
 
 function TopBarNav() {
-  const routesStrings = ["exporter", "newApplication", "quick", "applications"];
+  const router = useRouter();
   const [index, setIndex] = useAtom(pageIndexAtom);
   const formModal = useModal(FormModalAtom);
+  const entityID = router.query.entityId;
   const newApplicationModal = useModal(ApplicationModalAtom);
   const handleClick1 = (e: any) => {
     setIndex(0);
-    router.push(`/users/${router.asPath.split("/")[2]}`);
+    router.push(`/users/${router.asPath.split("/")[2]}/entities`);
   };
-  const router = useRouter();
+
+  console.log(router.asPath);
+
+  const TopbarData = [
+    {
+      id: 1,
+      title: "Applications",
+      name: "applications",
+      path: "/applications",
+    },
+    {
+      id: 2,
+      title: "Monitoring",
+      name: "monitoring",
+      path: "/monitoring",
+    },
+    {
+      id: 3,
+      title: "Closed",
+      name: "closed",
+      path: "/closed",
+    },
+    {
+      id: 4,
+      title: "My Tasks & Messages",
+      name: "Tasks",
+      path: "/tasks",
+    },
+  ];
+
+  const TopbarNewDataEx = [
+    {
+      id: 1,
+      title: "Overview",
+      name: "overview",
+      path: `/users/exporter/entities/${entityID}/overview`,
+    },
+    // {
+    //   id: 2,
+    //   title: "Profile",
+    //   name: "profile",
+    //   path: "/users/exporter/profile",
+    // },
+    {
+      id: 2,
+      title: "KYC",
+      name: "kyc",
+      path: `/users/exporter/entities/${entityID}/kyc/generalInfo`,
+    },
+    {
+      id: 3,
+      title: "Applications",
+      name: "applications",
+      path: `/users/exporter/entities/${entityID}/applications`,
+    },
+    {
+      id: 4,
+      title: "Repayment",
+      name: "repayment",
+      path: `/users/exporter/entities/${entityID}/repayment`,
+    },
+  ];
+
+  const TopbarNewDataIm = [
+    {
+      id: 1,
+      title: "Overview",
+      name: "overview",
+      path: `/users/importer/entities/${entityID}/overview`,
+    },
+    // {
+    //   id: 2,
+    //   title: "Profile",
+    //   name: "profile",
+    //   path: "/users/importer/profile",
+    // },
+    {
+      id: 2,
+      title: "KYC",
+      name: "kyc",
+      path: `/users/importer/entities/${entityID}/kyc/generalInfo`,
+    },
+    {
+      id: 3,
+      title: "Applications",
+      name: "applications",
+      path: `/users/importer/entities/${entityID}/applications`,
+    },
+    {
+      id: 4,
+      title: "Repayment",
+      name: "repayment",
+      path: `/users/importer/entities/${entityID}/repayment`,
+    },
+  ];
 
   const matchPath1 = (item: any) => {
-    const currentRoute = router.asPath.split("/")[3];
+    const currentRoute = router.asPath.split("/")[5];
     console.log(currentRoute);
 
     if (currentRoute === item.name.toLowerCase()) {
       return true;
-    } else if (item.name.toLowerCase() == "view" && router.asPath == "/") {
+    } else if (item.name.toLowerCase() == "overview" && router.asPath == "/") {
       return true;
     } else {
       return false;
@@ -49,7 +143,7 @@ function TopBarNav() {
   };
   console.log(router.asPath);
   const matchPathNewApp = () => {
-    const currentPath = router.asPath.split("/")[3];
+    const currentPath = router.asPath.split("/")[5];
     if (currentPath === "newApplication" || currentPath === "quick") {
       return true;
     }
@@ -76,8 +170,8 @@ function TopBarNav() {
         {
           //Overview,kyc etc top bar
           router.asPath.split("/")[1] == "users" &&
-          router.asPath.split("/")[3] != "newApplication" &&
-          router.asPath.split("/")[3] != "quick" ? (
+          router.asPath.split("/")[5] != "newApplication" &&
+          router.asPath.split("/")[5] != "quick" ? (
             <div className="userTabItems">
               <div className="contents">
                 {router.asPath.split("/")[2] == "exporter"
@@ -121,7 +215,7 @@ function TopBarNav() {
                     })}
               </div>
               <div className="entityContent">
-                {router.asPath == "/users/exporter" || "/users/importer" ? (
+                {router.asPath.split("/").pop() === "entities" ? (
                   <div className="entitySearch">
                     <input
                       type="text"
@@ -136,25 +230,27 @@ function TopBarNav() {
                     </select>
                   </div>
                 )}
-                <div>
-                  <Button
-                    primary={false}
-                    label={"New Entity"}
-                    onClick={() => {
-                      console.log("debug 1:", open);
-                      formModal.open();
-                    }}
-                  ></Button>
-                </div>
-
-                <div>
-                  <Button
-                    primary={true}
-                    backgroundColor="#1ab98b"
-                    label={"New Application"}
-                    onClick={() => newApplicationModal.open()}
-                  ></Button>
-                </div>
+                {router.asPath.split("/").pop() === "applications" ? (
+                  <div>
+                    <Button
+                      primary={true}
+                      backgroundColor="#1ab98b"
+                      label={"New Application"}
+                      onClick={() => newApplicationModal.open()}
+                    ></Button>
+                  </div>
+                ) : (
+                  <div>
+                    <Button
+                      primary={false}
+                      label={"New Entity"}
+                      onClick={() => {
+                        console.log("debug 1:", open);
+                        formModal.open();
+                      }}
+                    ></Button>
+                  </div>
+                )}
               </div>
             </div>
           ) : (

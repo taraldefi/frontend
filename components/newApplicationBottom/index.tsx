@@ -7,6 +7,7 @@ import { pageIndexAtom } from "store/PageIndexStore";
 function BottomBar() {
   const router = useRouter();
   const [index, setIndex] = useAtom(pageIndexAtom);
+  const entityID = router.query.entityId;
   const paths = [
     "exporterInfo",
     "importerInfo",
@@ -23,7 +24,7 @@ function BottomBar() {
             backgroundColor="#1ab98b"
             primary={true}
             label={
-              paths.indexOf(router.asPath.split("/")[4]) === paths.length - 1
+              paths.indexOf(router.asPath.split("/")[6]) === paths.length - 1
                 ? "Finish Application"
                 : "Next"
             }
@@ -31,14 +32,18 @@ function BottomBar() {
               console.log(index);
               if (index > paths.length - 1) {
                 router.push(
-                  `/users/${router.asPath.split("/")[2]}/applications`
+                  `/users/${
+                    router.asPath.split("/")[2]
+                  }/entities/${entityID}/applications`
                 );
                 setIndex(0);
                 return;
               }
               setIndex(index + 1);
               router.push(
-                `/users/${router.asPath.split("/")[2]}/quick/${paths[index]}`
+                `/users/${
+                  router.asPath.split("/")[2]
+                }/entities/${entityID}/quick/${paths[index]}`
               );
             }}
           ></Button>

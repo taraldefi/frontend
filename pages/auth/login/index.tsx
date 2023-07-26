@@ -3,11 +3,13 @@ import AuthLayout from "@components/layouts/auth_layout";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Button } from "@taraldefi/tariala-component-library";
+import { useRouter } from "next/router";
 import React from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 
 function Index() {
   const [visible, setVisisblity] = React.useState(false);
+  const router = useRouter();
   const Icon = (
     <FontAwesomeIcon
       icon={visible ? faEye : faEyeSlash}
@@ -92,12 +94,7 @@ function Index() {
               </div>
             )}
             <div className="inputContainer">
-              <Button
-                label={"Send OTP"}
-                icon={
-                  <PortalIcons selected={false} icon={"delete"}></PortalIcons>
-                }
-              ></Button>
+              <Button label={"Send OTP"}></Button>
             </div>
             <div className="fgP">
               <div className="inputContainer">
@@ -115,6 +112,9 @@ function Index() {
             <div className="inputContainer">
               <div className="buttonBox">
                 <Button
+                  onClick={() => {
+                    router.push("/users/importer/entities");
+                  }}
                   label={"Login"}
                   icon={
                     <PortalIcons

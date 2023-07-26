@@ -6,7 +6,11 @@ import router from "next/router";
 import React from "react";
 import { DeleteModalAtom, EditFormModalAtom } from "store/ModalStore";
 
-function Modal() {
+interface ModalProps {
+  entityID: Number;
+}
+
+function Modal({ entityID }: ModalProps) {
   const [modal, setModal] = React.useState(false);
   const editModal = useModal(EditFormModalAtom);
   const deleteModal = useModal(DeleteModalAtom);
@@ -26,7 +30,11 @@ function Modal() {
             <div
               className="modalViewButton"
               onClick={() => {
-                router.push("/users/exporter/view");
+                router.push(
+                  `/users/${
+                    router.asPath.split("/")[2]
+                  }/entities/${entityID}/overview`
+                );
               }}
             >
               <PortalIcons selected={false} icon={"eye"}></PortalIcons>
