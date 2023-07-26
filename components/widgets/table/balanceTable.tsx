@@ -1,5 +1,6 @@
 import { faEllipsis, faEuroSign } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Button } from "@taraldefi/tariala-component-library";
 import React from "react";
 import { balanceSheetTableType } from "types/widget_table";
 interface Props {
@@ -49,11 +50,16 @@ export const BalanceTable = ({ TableData }: Props) => {
                   {Object.keys(TableData[key]).map((item, index) => {
                     return (
                       <div className="items" key={index}>
-                        {TableData[key][`${item}`] == 0 ? (
-                          <FontAwesomeIcon
-                            icon={faEllipsis}
-                            className="iconx"
-                          />
+                        {TableData[key][`${item}`] == "file" ? (
+                          <div id="fileButton">
+                            {" "}
+                            <Button
+                              label={"Open File"}
+                              onClick={function (): void {
+                                throw new Error("Function not implemented.");
+                              }}
+                            />
+                          </div>
                         ) : (
                           <div id="euro">
                             {TableData[key][`${item}`]}
