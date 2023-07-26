@@ -28,7 +28,7 @@ function Index() {
                     value="Yes"
                     // onChange={}
                   />
-                  <label>Yes</label>
+                  <label>YES</label>
                 </div>
                 <div>
                   <input
@@ -37,7 +37,7 @@ function Index() {
                     value="No"
                     // onChange={}
                   />
-                  <label>No</label>
+                  <label>NO</label>
                 </div>
               </div>
             </div>
@@ -51,7 +51,7 @@ function Index() {
                     value="Yes"
                     // onChange={}
                   />
-                  <label>Yes</label>
+                  <label>YES</label>
                 </div>
                 <div>
                   <input
@@ -60,7 +60,7 @@ function Index() {
                     value="No"
                     // onChange={}
                   />
-                  <label>No</label>
+                  <label>NO</label>
                 </div>
               </div>
             </div>
@@ -70,8 +70,8 @@ function Index() {
             <div className="maintitle">INTEREST</div>
             <div className="radioBack">
               <span>
-                Are you charging your importer interest/have you agreed a
-                premium for extended payment terms?
+                Is your supplier charging you interest/have you agreed a premium
+                for extended payment terms?
               </span>
               <div>
                 <div>
@@ -81,7 +81,7 @@ function Index() {
                     value="Yes"
                     onChange={handleRadioClick}
                   />
-                  <label>YES</label>
+                  <label>Yes</label>
                 </div>
                 <div>
                   <input
@@ -90,7 +90,7 @@ function Index() {
                     value="No"
                     onChange={handleRadioClick}
                   />
-                  <label>NO</label>
+                  <label>No</label>
                 </div>
               </div>
               {selectedRadioBtn == "Yes" ? (
@@ -130,7 +130,7 @@ function Index() {
                     value="Yes"
                     onChange={handleRadioClick1}
                   />
-                  <label>YES</label>
+                  <label>Yes</label>
                 </div>
                 <div>
                   <input
@@ -139,7 +139,7 @@ function Index() {
                     value="No"
                     onChange={handleRadioClick1}
                   />
-                  <label>NO</label>
+                  <label>No</label>
                 </div>
               </div>
               {selectedRadioBtn1 == "Yes" ? (
@@ -184,7 +184,7 @@ function Index() {
                   <input
                     type="text"
                     className="inputs"
-                    placeholder="Description..."
+                    placeholder="Degressiv interest rate description"
                   />
                 </div>
               ) : (

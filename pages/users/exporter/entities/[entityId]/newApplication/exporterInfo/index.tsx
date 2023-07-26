@@ -77,7 +77,7 @@ function Index() {
                 <input
                   type="text"
                   className="inputs"
-                  placeholder="Empoyees count..."
+                  placeholder="Employees count..."
                 />
               </div>
             </div>
@@ -175,7 +175,7 @@ function Index() {
               />
             </div>
             <div>
-              <span>Export value in SR in thousand last two years</span>
+              <span>Export value in USD in thousand last two years</span>
               <input
                 type="text"
                 className="inputs"

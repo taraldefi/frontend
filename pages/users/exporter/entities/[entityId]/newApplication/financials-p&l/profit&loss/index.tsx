@@ -10,7 +10,7 @@ function index() {
           <div className="maintitle">ASSETS</div>
           <div className="assetsItems">
             <span>Revenue</span>
-            <span>COGS</span>
+            <span>Cogs</span>
             <div className="hLine"></div>
             <span>Gross</span>
             <span>Distribution</span>

@@ -72,18 +72,6 @@ function Index() {
                 placeholder="Post code..."
               />
             </div>
-            <div>
-              <span>Country of Registration</span>
-              <select name="" id="" className="inputs">
-                <option value="">Select country...</option>
-              </select>
-            </div>
-            <div>
-              <span>Year of Incorporation</span>
-              <select name="" id="" className="inputs">
-                <option value="">Select year......</option>
-              </select>
-            </div>
           </div>
           <div className="vLine"></div>
           <div className="taxAndRevenue">
@@ -97,22 +85,16 @@ function Index() {
               />
             </div>
             <div>
-              <span>Revenue Currency</span>
-              <select name="" className="inputs" id="">
-                <option value="">Revenue currency...</option>
-              </select>
-            </div>
-            <div>
               <span>What % of revenue was comprised by exports?</span>
               <input
                 type="text"
                 className="inputs"
-                id="percentage"
                 placeholder="Revenue percentage..."
+                id="percentage"
               />
             </div>
           </div>
-
+          <div className="vLine0"></div>
           <div className="otherInfo"></div>
         </div>
         <BottomBar></BottomBar>

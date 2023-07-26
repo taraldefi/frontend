@@ -33,7 +33,7 @@ function Index() {
           <div className="generalInfo">
             <div className="maintitle">GENERAL INFO</div>
             <div>
-              <span>Importer&apos;s company name</span>
+              <span>Supplier&apos;s company name</span>
               <input
                 type="text"
                 className="inputs"
@@ -76,11 +76,11 @@ function Index() {
           </div>
           <div className="vLine"></div>
           <div className="taxAndRevenue">
-            <div className="maintitle">RELATIONSHIP WITH IMPORTER</div>
+            <div className="maintitle">RELATIONSHIP WITH SUPPLIER</div>
 
             <div className="radioBack">
               <span>
-                Do you have previous payment experience with the Importer?
+                Do you have previous payment experience with the Supplier?
               </span>
               <div>
                 <div>

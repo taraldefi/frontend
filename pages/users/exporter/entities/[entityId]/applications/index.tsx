@@ -1,4 +1,4 @@
-import NewLayoutNM from "@components/layouts/testLayoutNoMenue";
+import Layout from "@components/layouts/layout";
 import { ApplicationTable } from "@taraldefi/tariala-component-library";
 
 const TableData = [
@@ -111,13 +111,16 @@ const TableData = [
     status: "Reviewing",
   },
 ];
-export default function Index() {
+function Index() {
   return (
-    <NewLayoutNM>
-      <div className="application--wrapper">
-        <ApplicationTable applicationTableData={TableData} />
+    <Layout>
+      <div className="viewbody">
+        <div style={{ padding: "10%", width: "100%" }}>
+          <ApplicationTable applicationTableData={TableData}></ApplicationTable>
+        </div>
       </div>
-      {/* <ApplicaitonTable TableData={TableData}></ApplicaitonTable> */}
-    </NewLayoutNM>
+    </Layout>
   );
 }
+
+export default Index;

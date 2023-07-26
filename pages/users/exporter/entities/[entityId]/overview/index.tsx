@@ -1,6 +1,5 @@
 import EntityView from "@components/entity/entityView";
 import Layout from "@components/layouts/layout";
-import React from "react";
 import { EntityTable } from "@taraldefi/tariala-component-library";
 
 const TableData = [
@@ -42,7 +41,7 @@ const TableData = [
   },
 ];
 
-function Index() {
+function index() {
   return (
     <Layout>
       <div className="viewbody">
@@ -69,4 +68,4 @@ function Index() {
   );
 }
 
-export default Index;
+export default index;

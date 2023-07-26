@@ -1,6 +1,5 @@
 import React from "react";
 import { useRouter } from "next/router";
-import { TopbarData, TopbarNewDataEx } from "./data";
 import { Button } from "@taraldefi/tariala-component-library";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
@@ -22,6 +21,66 @@ function TopBarNav() {
 
   console.log(router.asPath);
 
+  const TopbarData = [
+    {
+      id: 1,
+      title: "Applications",
+      name: "applications",
+      path: "/applications",
+    },
+    {
+      id: 2,
+      title: "Monitoring",
+      name: "monitoring",
+      path: "/monitoring",
+    },
+    {
+      id: 3,
+      title: "Closed",
+      name: "closed",
+      path: "/closed",
+    },
+    {
+      id: 4,
+      title: "My Tasks & Messages",
+      name: "Tasks",
+      path: "/tasks",
+    },
+  ];
+
+  const TopbarNewDataEx = [
+    {
+      id: 1,
+      title: "Overview",
+      name: "overview",
+      path: `/users/exporter/entities/${entityID}/overview`,
+    },
+    // {
+    //   id: 2,
+    //   title: "Profile",
+    //   name: "profile",
+    //   path: "/users/exporter/profile",
+    // },
+    {
+      id: 2,
+      title: "KYC",
+      name: "kyc",
+      path: `/users/exporter/entities/${entityID}/kyc/generalInfo`,
+    },
+    {
+      id: 3,
+      title: "Applications",
+      name: "applications",
+      path: `/users/exporter/entities/${entityID}/applications`,
+    },
+    {
+      id: 4,
+      title: "Repayment",
+      name: "repayment",
+      path: `/users/exporter/entities/${entityID}/repayment`,
+    },
+  ];
+
   const TopbarNewDataIm = [
     {
       id: 1,
@@ -36,19 +95,19 @@ function TopBarNav() {
     //   path: "/users/importer/profile",
     // },
     {
-      id: 3,
+      id: 2,
       title: "KYC",
       name: "kyc",
       path: `/users/importer/entities/${entityID}/kyc/generalInfo`,
     },
     {
-      id: 4,
+      id: 3,
       title: "Applications",
       name: "applications",
       path: `/users/importer/entities/${entityID}/applications`,
     },
     {
-      id: 5,
+      id: 4,
       title: "Repayment",
       name: "repayment",
       path: `/users/importer/entities/${entityID}/repayment`,
