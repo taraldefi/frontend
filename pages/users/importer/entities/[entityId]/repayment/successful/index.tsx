@@ -1,15 +1,7 @@
-import NewLayoutNM from "@components/layouts/testLayoutNoMenue";
-import {
-  ApplicationTable,
-  PaymentSuccessCard,
-  ReceiptTable,
-} from "@taraldefi/tariala-component-library";
-import { ArrowLeft } from "react-feather";
-
-import Layout from "@components/layouts/layout";
-import { ReceiptTableData } from "bin/mockData";
+import { PaymentSuccessCard } from "@taraldefi/tariala-component-library";
 import Topbar from "@components/topBar";
 import { useRouter } from "next/router";
+
 function Index() {
   const router = useRouter();
   return (

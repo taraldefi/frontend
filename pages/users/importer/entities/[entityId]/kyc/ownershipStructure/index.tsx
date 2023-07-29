@@ -1,8 +1,6 @@
 import { PortalIcons } from "@components/icons";
 import KYCLayout from "@components/layouts/kycLayout";
-import Layout from "@components/layouts/layout";
 import { Button } from "@taraldefi/tariala-component-library";
-import React from "react";
 
 function index() {
   return (

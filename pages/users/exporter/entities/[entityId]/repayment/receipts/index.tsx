@@ -1,14 +1,9 @@
-import NewLayoutNM from "@components/layouts/testLayoutNoMenue";
-import {
-  ApplicationTable,
-  ReceiptTable,
-} from "@taraldefi/tariala-component-library";
+import { ReceiptTable } from "@taraldefi/tariala-component-library";
 import { ArrowLeft } from "react-feather";
-
-import Layout from "@components/layouts/layout";
-import { ReceiptTableData } from "bin/mockData";
 import Topbar from "@components/topBar";
+import { ReceiptTableData } from "bin/mockData";
 import { useRouter } from "next/router";
+
 function Index() {
   const router = useRouter();
   return (

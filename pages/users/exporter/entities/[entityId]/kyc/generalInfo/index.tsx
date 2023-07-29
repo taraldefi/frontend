@@ -1,9 +1,8 @@
 import { PortalIcons } from "@components/icons";
 import KYCLayout from "@components/layouts/kycLayout";
-import Layout from "@components/layouts/layout";
-import { useForm, useFieldArray } from "react-hook-form";
 import { Button } from "@taraldefi/tariala-component-library";
 import React, { useEffect, useRef, useState } from "react";
+import { useFieldArray, useForm } from "react-hook-form";
 
 function Index() {
   const textareaRef = useRef<HTMLTextAreaElement | null>(null);

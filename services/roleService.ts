@@ -1,6 +1,6 @@
 import apiUrls from "@config/apiUrls";
 import getAxiosConfig from "@config/axiosConfig";
-import axios, { AxiosResponse } from "axios";
+import axios from "axios";
 import { IcreateRole, IroleResponse } from "types";
 
 class RoleService {

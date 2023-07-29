@@ -1,11 +1,9 @@
 import { PortalIcons } from "@components/icons";
 import TalModal from "@components/modal/talModal";
 import TopBar from "@components/topBar";
-import { useModal } from "@utils/hooks";
 import { Button } from "@taraldefi/tariala-component-library";
-import React, { useContext } from "react";
+import { useModal } from "@utils/hooks";
 import { TalModalAtom } from "store/ModalStore";
-import { globalState } from "types/global";
 
 function Index() {
   const talModal = useModal(TalModalAtom);

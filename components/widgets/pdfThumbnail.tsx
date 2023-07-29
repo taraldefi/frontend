@@ -1,5 +1,3 @@
-import React from "react";
-import { Worker } from "@react-pdf-viewer/core";
 interface Props {
   fileUrl: string;
   config: {

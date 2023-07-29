@@ -1,5 +1,5 @@
 import { Button } from "@taraldefi/tariala-component-library";
-import React, { useState } from "react";
+import React from "react";
 import { DollarSign, LogOut } from "react-feather";
 
 interface repaymentCardProp {

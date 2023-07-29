@@ -1,13 +1,8 @@
 import Layout from "@components/layouts/layout";
-import {
-  Button,
-  LargeLoanCard,
-  SmallLoanCard,
-  RepaymentTable,
-} from "@taraldefi/tariala-component-library";
-import { useRouter } from "next/router";
-import { RepaymentTableData } from "bin/mockData";
 import RepaymentCard from "@components/widgets/RepaymentCard";
+import { RepaymentTable } from "@taraldefi/tariala-component-library";
+import { RepaymentTableData } from "bin/mockData";
+import { useRouter } from "next/router";
 
 export enum LoanCardTypes {
   INTEREST_RATE = "INTEREST_RATE",

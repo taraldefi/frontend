@@ -1,5 +1,3 @@
-import { faExclamation } from "@fortawesome/free-solid-svg-icons";
-import React from "react";
 interface Props {
   selected: boolean;
   icon: string;

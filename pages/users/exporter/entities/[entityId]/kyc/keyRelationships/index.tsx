@@ -1,5 +1,4 @@
 import KYCLayout from "@components/layouts/kycLayout";
-import Layout from "@components/layouts/layout";
 import React, { useEffect, useRef, useState } from "react";
 
 function Index() {

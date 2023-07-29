@@ -1,6 +1,5 @@
 import Modal from "@components/modal/entityModal";
 import { Button, Entity } from "@taraldefi/tariala-component-library";
-
 import FormEditModal from "@components/modal/entityEditFormModal";
 import FormModal from "@components/modal/entityFormModal";
 import NewApplicationModal from "@components/modal/newApplicationModal";

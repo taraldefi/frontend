@@ -1,10 +1,9 @@
+import useModal from "@hooks/useModal";
+import { Button } from "@taraldefi/tariala-component-library";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { PortalIcons } from "../icons";
-import useModal from "@hooks/useModal";
 import { NotificationModalAtom, SettingsModalAtom } from "store/ModalStore";
-import SettingsModal from "@components/modal/settingsModal";
-import { Button } from "@taraldefi/tariala-component-library";
+import { PortalIcons } from "../icons";
 const Topbar = () => {
   const router = useRouter();
   const settingsModal = useModal(SettingsModalAtom);

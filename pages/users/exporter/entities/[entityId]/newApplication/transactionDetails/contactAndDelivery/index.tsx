@@ -1,5 +1,5 @@
 import ApplicationLayout from "@components/layouts/new_application_layout";
-import React, { ReactFragment } from "react";
+import React from "react";
 
 function Index() {
   const [selectedRadioBtn, setSelectedRadioBtn] = React.useState("No");

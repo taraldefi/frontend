@@ -3,14 +3,6 @@
   src: url(/assets/font/Inter.ttf);
 }
 
-.progress {
-  margin-top: 5px;
-  background-color: rgba(5, 17, 19, 0.2);
-  border-radius: 5px;
-  height: 10px;
-  width: 177px;
-}
-
 .pdfviewer_header {
   background-color: #ffffff;
   display: flex;
@@ -41,25 +33,6 @@
       padding-right: 20px;
     }
   }
-}
-
-.progress-done {
-  border-radius: 20px;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 0;
-  opacity: 0;
-  transition: 1s ease 0.3s;
-}
-
-.tabs {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  position: fixed;
 }
 
 .tab {

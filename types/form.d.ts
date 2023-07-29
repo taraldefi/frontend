@@ -6,11 +6,6 @@ export interface tableFormPerson {
   isSent: boolean;
   isDone: boolean;
 }
-export interface tableFormSentiments {
-  person: string;
-  hit: string;
-  source: string;
-}
 export interface tableFormResearch {
   name: string;
   image?: string;

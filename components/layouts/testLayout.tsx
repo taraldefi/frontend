@@ -8,11 +8,15 @@ import {
   DeleteModalAtom,
   EditFormModalAtom,
   FormModalAtom,
+  NotificationModalAtom,
+  SettingsModalAtom,
 } from "store/ModalStore";
 import { DeleteModal } from "@taraldefi/tariala-component-library";
 import FormModal from "@components/modal/entityFormModal";
 import FormEditModal from "@components/modal/entityEditFormModal";
 import NewApplicationModal from "@components/modal/newApplicationModal";
+import SettingsModal from "@components/modal/settingsModal";
+import NotificationModal from "@components/modal/notificationModal";
 interface LayoutProps {
   children: React.ReactNode;
 }
@@ -22,6 +26,8 @@ const NewLayout = ({ children }: LayoutProps) => {
   const editModal = useModal(EditFormModalAtom);
   const applicationModal = useModal(ApplicationModalAtom);
   const newEntityModal = useModal(FormModalAtom);
+  const settingsModal = useModal(SettingsModalAtom);
+  const notificationModal = useModal(NotificationModalAtom);
   return (
     <>
       <div className="bodyContainer">
@@ -52,6 +58,14 @@ const NewLayout = ({ children }: LayoutProps) => {
         isOpen={applicationModal.isOpen}
         onClose={() => applicationModal.close()}
       ></NewApplicationModal>
+      <SettingsModal
+        isOpen={settingsModal.isOpen}
+        onClose={() => settingsModal.close()}
+      ></SettingsModal>
+      <NotificationModal
+        isOpen={notificationModal.isOpen}
+        onClose={() => notificationModal.close()}
+      ></NotificationModal>
     </>
   );
 };
