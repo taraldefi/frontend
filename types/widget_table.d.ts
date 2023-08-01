@@ -1,19 +1,3 @@
-export interface quantitativeTableDataType {
-  factor: string;
-  value: string;
-  status: boolean;
-  metric: number;
-}
-
-export interface info {
-  [key: string];
-  downpayment: number;
-  principalrepayment: number;
-  interestpayment: number;
-}
-export interface tableVal {
-  [key: string]: info;
-}
 interface financialInfoProfitLoss {
   [key: string];
   revenue: number;

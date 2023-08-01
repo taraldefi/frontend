@@ -2,7 +2,7 @@ import FinancialsLayout from "@components/layouts/financials_layout";
 import { BalanceTable } from "@components/widgets/table/balanceTable";
 
 const TableData = {
-  "2017": {
+  2017: {
     currentAssets: 14234678,
     cash: 9252541,
     nonCurrentAssets: 0,
@@ -17,7 +17,7 @@ const TableData = {
     totalLiabilitiesEquity: 3904755,
     file: "file",
   },
-  "2018": {
+  2018: {
     currentAssets: 14234678,
     cash: 9252541,
     nonCurrentAssets: 0,
@@ -32,7 +32,7 @@ const TableData = {
     totalLiabilitiesEquity: 3904755,
     file: "file",
   },
-  "2019": {
+  2019: {
     currentAssets: 14234678,
     cash: 9252541,
     nonCurrentAssets: 0,
@@ -47,7 +47,7 @@ const TableData = {
     totalLiabilitiesEquity: 3904755,
     file: "file",
   },
-  "2020": {
+  2020: {
     currentAssets: 14234678,
     cash: 9252541,
     nonCurrentAssets: 0,
