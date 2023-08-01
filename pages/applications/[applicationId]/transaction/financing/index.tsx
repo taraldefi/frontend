@@ -1,5 +1,5 @@
 import TxLayout from "@components/layouts/tx_layout";
-import { TxFinanceTable } from "@components/widgets/table/txFinanceTable";
+import { TxFinanceTable } from "@taraldefi/tariala-component-library";
 
 const TableData = {
   orderentity: {
@@ -92,7 +92,7 @@ export default function Transactionfinancing() {
         <div className="tableContainer">
           <span>TIME LINE</span>
 
-          <TxFinanceTable TableData={TableData}></TxFinanceTable>
+          <TxFinanceTable txTableData={TableData}></TxFinanceTable>
         </div>
       </div>
     </TxLayout>

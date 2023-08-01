@@ -1,5 +1,5 @@
 import CRSLayout from "@components/layouts/crs_layout";
-import { QuantitativeTable } from "@components/widgets/table/quantitativeTable";
+import { QuantitativeTable } from "@taraldefi/tariala-component-library";
 import { useRouter } from "next/router";
 
 const TableData = [
@@ -52,7 +52,7 @@ function Qualitative() {
   ];
   return (
     <CRSLayout showexport={true} sortBarData={SortbarData}>
-      <QuantitativeTable TableData={TableData}></QuantitativeTable>
+      <QuantitativeTable quantitativeTableData={TableData}></QuantitativeTable>
     </CRSLayout>
   );
 }
