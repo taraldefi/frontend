@@ -1,17 +1,70 @@
 import ApplicationLayout from "@components/layouts/new_application_layout";
 import BottomBar from "@components/newApplicationBottom";
+import { useAtom } from "jotai";
+import { useRouter } from "next/router";
 import React from "react";
+import { useForm } from "react-hook-form";
+import { exporterQuickApplicationAtom } from "store/applicationStore";
+
+type FormValues = {
+  paymentTerms: {
+    isConcluded: string;
+    isPartial: string;
+    interest: {
+      currency: string;
+      rate: string;
+      fixedRate: string;
+      degressiveRate: string;
+    };
+    paymentType: string;
+    paymentDuration: string;
+  };
+};
 
 function Index() {
   const [selectedRadioBtn, setSelectedRadioBtn] = React.useState("No");
-  const handleRadioClick = (e: React.ChangeEvent<HTMLInputElement>): void =>
-    setSelectedRadioBtn(e.currentTarget.value);
   const [selectedRadioBtn1, setSelectedRadioBtn1] = React.useState("No");
-  const handleRadioClick1 = (e: React.ChangeEvent<HTMLInputElement>): void =>
-    setSelectedRadioBtn1(e.currentTarget.value);
   const [selectedRadioBtn2, setSelectedRadioBtn2] = React.useState("No");
-  const handleRadioClick2 = (e: React.ChangeEvent<HTMLInputElement>): void =>
+  const { register, handleSubmit, reset } = useForm<FormValues>();
+  const router = useRouter();
+  const entityID = router.query.entityId;
+  const [state, setState] = useAtom(exporterQuickApplicationAtom);
+
+  const handleRadioClick = (e: React.ChangeEvent<HTMLInputElement>): void => {
+    setSelectedRadioBtn(e.currentTarget.value);
+  };
+
+  const handleRadioClick1 = (e: React.ChangeEvent<HTMLInputElement>): void => {
+    setSelectedRadioBtn1(e.currentTarget.value);
+  };
+
+  const handleRadioClick2 = (e: React.ChangeEvent<HTMLInputElement>): void => {
     setSelectedRadioBtn2(e.currentTarget.value);
+  };
+
+  React.useEffect(() => {
+    // Check if there is data for previous payment terms in the `state` object
+    if (state.paymentTerms.interest?.currency !== "") {
+      setSelectedRadioBtn("Yes");
+    } else {
+      setSelectedRadioBtn("No");
+    }
+  }, [state.paymentTerms.interest]);
+
+  const updateAction = (payload: any) => {
+    setState((prev) => ({ ...prev, ...payload }));
+  };
+  console.log("state:", state);
+
+  const onSubmit = (data: any) => {
+    console.log("data:", data);
+    updateAction(data);
+    router.push(
+      `/users/${
+        router.asPath.split("/")[2]
+      }/entities/${entityID}/quick/security`
+    );
+  };
   return (
     <ApplicationLayout>
       <div className="ptContainer">
@@ -24,8 +77,11 @@ function Index() {
                 <div>
                   <input
                     type="radio"
-                    name="ptConcludeRadio"
                     value="Yes"
+                    defaultChecked={state.paymentTerms.isConcluded == "Yes"}
+                    {...register("paymentTerms.isConcluded", {
+                      required: true,
+                    })}
                     // onChange={}
                   />
                   <label>YES</label>
@@ -33,8 +89,11 @@ function Index() {
                 <div>
                   <input
                     type="radio"
-                    name="ptConcludeRadio"
                     value="No"
+                    defaultChecked={state.paymentTerms.isConcluded == "No"}
+                    {...register("paymentTerms.isConcluded", {
+                      required: true,
+                    })}
                     // onChange={}
                   />
                   <label>NO</label>
@@ -47,8 +106,9 @@ function Index() {
                 <div>
                   <input
                     type="radio"
-                    name="ptRefinancingRadio"
                     value="Yes"
+                    defaultChecked={state.paymentTerms.isPartial == "Yes"}
+                    {...register("paymentTerms.isPartial")}
                     // onChange={}
                   />
                   <label>YES</label>
@@ -56,8 +116,9 @@ function Index() {
                 <div>
                   <input
                     type="radio"
-                    name="ptRefinancingRadio"
                     value="No"
+                    defaultChecked={state.paymentTerms.isPartial == "No"}
+                    {...register("paymentTerms.isPartial")}
                     // onChange={}
                   />
                   <label>NO</label>
@@ -79,6 +140,7 @@ function Index() {
                     type="radio"
                     name="ptPremiumRadio"
                     value="Yes"
+                    checked={selectedRadioBtn === "Yes"}
                     onChange={handleRadioClick}
                   />
                   <label>Yes</label>
@@ -88,6 +150,7 @@ function Index() {
                     type="radio"
                     name="ptPremiumRadio"
                     value="No"
+                    checked={selectedRadioBtn === "No"}
                     onChange={handleRadioClick}
                   />
                   <label>No</label>
@@ -99,9 +162,14 @@ function Index() {
                     <span>
                       Which currency is the interest/premium charged in?
                     </span>
-                    <select name="" id="" className="inputs">
+                    <select
+                      defaultValue={state.paymentTerms.interest?.currency!}
+                      id=""
+                      className="inputs"
+                      {...register("paymentTerms.interest.currency")}
+                    >
                       <option value="">Select currency</option>
-                      <option value="">INR</option>
+                      <option value="INR">INR</option>
                     </select>
                   </div>
                   <div className="inputContainer">
@@ -113,6 +181,8 @@ function Index() {
                       id="percentage"
                       placeholder="Percentage..."
                       className="inputs"
+                      defaultValue={state.paymentTerms.interest?.rate!}
+                      {...register("paymentTerms.interest.rate")}
                     />
                   </div>
                 </>
@@ -150,6 +220,7 @@ function Index() {
                     className="inputs"
                     id="percentage"
                     placeholder="Percentage..."
+                    {...register("paymentTerms.interest.fixedRate")}
                   />
                 </div>
               ) : (
@@ -185,6 +256,7 @@ function Index() {
                     type="text"
                     className="inputs"
                     placeholder="Degressiv interest rate description"
+                    {...register("paymentTerms.interest.degressiveRate")}
                   />
                 </div>
               ) : (
@@ -203,8 +275,15 @@ function Index() {
               <div></div>
               <div className="inputContainer">
                 <span>Payment Type</span>
-                <select name="" className="inputs" id="">
+                <select
+                  className="inputs"
+                  id=""
+                  {...register("paymentTerms.paymentType")}
+                >
                   <option value="">Payment type...</option>
+                  <option value="Short">Short</option>
+                  <option value="Medium">Medium</option>
+                  <option value="Short Medium">Short Medium</option>
                 </select>
               </div>
             </div>
@@ -214,12 +293,13 @@ function Index() {
                 type="text"
                 className="inputs"
                 placeholder="Payment duration..."
+                {...register("paymentTerms.paymentDuration")}
               />
             </div>
           </div>
         </div>
       </div>
-      <BottomBar></BottomBar>
+      <BottomBar onSubmit={handleSubmit(onSubmit)}></BottomBar>
     </ApplicationLayout>
   );
 }

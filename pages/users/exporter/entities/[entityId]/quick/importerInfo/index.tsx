@@ -1,29 +1,97 @@
 import ApplicationLayout from "@components/layouts/new_application_layout";
 import BottomBar from "@components/newApplicationBottom";
+import { useAtom } from "jotai";
+import { useRouter } from "next/router";
 import React from "react";
+import { useForm } from "react-hook-form";
+import { exporterQuickApplicationAtom } from "store/applicationStore";
+
+type FormValues = {
+  importerInfo: {
+    companyName: string;
+    phoneNo: string;
+    address: string;
+    postalCode: string;
+    totalRevenue: string;
+    previousPaymentHistory: {
+      description: string;
+      lengthOfPaymentExperience: string;
+      noOfDeals: string;
+      avgVol: string;
+      paymentHistory: string;
+    };
+  };
+};
 
 function Index() {
-  const [selectedRadioBtn, setSelectedRadioBtn] = React.useState("Yes");
-  const isRadioSelected = (value: string): boolean =>
-    selectedRadioBtn === value;
-  const handleRadioClick = (e: React.ChangeEvent<HTMLInputElement>): void =>
+  const [selectedRadioBtn, setSelectedRadioBtn] = React.useState("");
+
+  const handleRadioClick = (e: React.ChangeEvent<HTMLInputElement>): void => {
     setSelectedRadioBtn(e.currentTarget.value);
-  const [selectedRadioBtn1, setSelectedRadioBtn1] = React.useState("No");
-  const isRadioSelected1 = (value: string): boolean =>
-    selectedRadioBtn1 === value;
-  const handleRadioClick1 = (e: React.ChangeEvent<HTMLInputElement>): void =>
-    setSelectedRadioBtn1(e.currentTarget.value);
-  const [valueSelect, setValueSelect] = React.useState("Select country...");
-  const handleSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setValueSelect(e.currentTarget.value);
   };
-  const [valueSelect1, setValueSelect1] = React.useState("Select country...");
-  const handleSelect1 = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setValueSelect1(e.currentTarget.value);
+
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm<FormValues>();
+  const router = useRouter();
+  const entityID = router.query.entityId;
+  const [state, setState] = useAtom(exporterQuickApplicationAtom);
+
+  const updateAction = (payload: any) => {
+    setState((prev) => ({ ...prev, ...payload }));
   };
-  const [valueSelect2, setValueSelect2] = React.useState("Select country...");
-  const handleSelect2 = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setValueSelect2(e.currentTarget.value);
+
+  const isNullish = (obj: any) =>
+    Object.values(obj).every((value) => {
+      console.log(Object.values(obj));
+      if (value === "") {
+        return true;
+      }
+      return false;
+    });
+
+  console.info("state:", state);
+  React.useEffect(() => {
+    // Check if there is data for previous payment terms in the `state` object
+    if (!isNullish(state.importerInfo.previousPaymentHistory)) {
+      setSelectedRadioBtn("Yes");
+    } else {
+      setSelectedRadioBtn("No");
+    }
+  }, [state.importerInfo.previousPaymentHistory]);
+
+  const onSubmit = (data: any) => {
+    console.info("data:", data);
+    if (selectedRadioBtn === "No") {
+      reset({
+        importerInfo: {
+          previousPaymentHistory: {
+            description: "",
+            lengthOfPaymentExperience: "",
+            noOfDeals: "",
+            avgVol: "",
+            paymentHistory: "",
+          },
+        },
+      });
+      data.importerInfo.previousPaymentHistory = {
+        description: "",
+        lengthOfPaymentExperience: "",
+        noOfDeals: "",
+        avgVol: "",
+        paymentHistory: "",
+      };
+    }
+    updateAction(data);
+
+    router.push(
+      `/users/${
+        router.asPath.split("/")[2]
+      }/entities/${entityID}/quick/contract`
+    );
   };
 
   return (
@@ -38,6 +106,8 @@ function Index() {
                 type="text"
                 className="inputs"
                 placeholder="Company name..."
+                defaultValue={state.importerInfo.companyName}
+                {...register("importerInfo.companyName", { required: true })}
               />
             </div>
             <div>
@@ -46,6 +116,8 @@ function Index() {
                 type="text"
                 className="inputs"
                 placeholder="Contact number..."
+                defaultValue={state.importerInfo.phoneNo}
+                {...register("importerInfo.phoneNo", { required: true })}
               />
             </div>
             <div>
@@ -54,6 +126,8 @@ function Index() {
                 type="text"
                 className="inputs"
                 placeholder="Address line 1..."
+                defaultValue={state.importerInfo.address}
+                {...register("importerInfo.address", { required: true })}
               />
             </div>
             <div>
@@ -70,6 +144,8 @@ function Index() {
                 type="text"
                 className="inputs"
                 placeholder="Post code..."
+                defaultValue={state.importerInfo.postalCode}
+                {...register("importerInfo.postalCode", { required: true })}
               />
             </div>
             <div></div>
@@ -88,7 +164,9 @@ function Index() {
                     type="radio"
                     id="Audited"
                     name="financials"
-                    value="Audited"
+                    value="Yes"
+                    checked={selectedRadioBtn === "Yes"}
+                    onChange={handleRadioClick}
                   />
                   <label htmlFor="Audited">YES</label>
                 </div>
@@ -97,55 +175,112 @@ function Index() {
                     type="radio"
                     id="In-house"
                     name="financials"
-                    value="In-house"
+                    value="No"
+                    checked={selectedRadioBtn === "No"}
+                    onChange={handleRadioClick}
                   />
                   <label htmlFor="In-house">NO</label>
                 </div>
               </div>
+              {selectedRadioBtn == "Yes" ? (
+                <>
+                  {" "}
+                  <div>
+                    <span>Describe your previous payment experience.</span>
+                    <input
+                      className="inputs"
+                      id="greyed"
+                      placeholder="Desciption..."
+                      defaultValue={
+                        state.importerInfo.previousPaymentHistory?.description!
+                      }
+                      {...register(
+                        "importerInfo.previousPaymentHistory.description",
+                        { required: selectedRadioBtn == "Yes" }
+                      )}
+                    />
+                  </div>
+                  <div>
+                    <span>Length of payment experience</span>
+                    <input
+                      className="inputs"
+                      id="greyed"
+                      placeholder="Payment length..."
+                      defaultValue={
+                        state.importerInfo.previousPaymentHistory
+                          ?.lengthOfPaymentExperience!
+                      }
+                      {...register(
+                        "importerInfo.previousPaymentHistory.lengthOfPaymentExperience",
+                        { required: selectedRadioBtn == "Yes" }
+                      )}
+                    />
+                  </div>
+                  <div>
+                    <span>Number of deals</span>
+                    <input
+                      className="inputs"
+                      id="greyed"
+                      placeholder="Number of deals..."
+                      defaultValue={
+                        state.importerInfo.previousPaymentHistory?.noOfDeals!
+                      }
+                      {...register(
+                        "importerInfo.previousPaymentHistory.noOfDeals",
+                        { required: selectedRadioBtn == "Yes" }
+                      )}
+                    />
+                  </div>
+                  <div>
+                    <span>Average volume of business with your customer</span>
+                    <input
+                      className="inputs"
+                      id="greyed"
+                      placeholder="Business volume..."
+                      defaultValue={
+                        state.importerInfo.previousPaymentHistory?.avgVol!
+                      }
+                      {...register(
+                        "importerInfo.previousPaymentHistory.avgVol",
+                        { required: selectedRadioBtn == "Yes" }
+                      )}
+                    />
+                  </div>
+                  <div>
+                    <span>Payment history with Supplier</span>
+                    <select
+                      className="inputs"
+                      id="greyed"
+                      defaultValue={
+                        state.importerInfo.previousPaymentHistory
+                          ?.paymentHistory!
+                      }
+                      {...register(
+                        "importerInfo.previousPaymentHistory.paymentHistory",
+                        { required: selectedRadioBtn == "Yes" }
+                      )}
+                    >
+                      <option value="">Select type...</option>
+                      <option value="Short">Short</option>
+                      <option value="Medium">Medium</option>
+                      <option value="Short Medium">Short Medium</option>
+                    </select>
+                  </div>
+                </>
+              ) : (
+                <></>
+              )}
             </div>
-            <div>
-              <span>Describe your previous payment experience.</span>
-              <input
-                className="inputs"
-                id="greyed"
-                placeholder="Desciption..."
-              />
-            </div>
-            <div>
-              <span>Length of payment experience</span>
-              <input
-                className="inputs"
-                id="greyed"
-                placeholder="Payment length..."
-              />
-            </div>
-            <div>
-              <span>Number of deals</span>
-              <input
-                className="inputs"
-                id="greyed"
-                placeholder="Number of deals..."
-              />
-            </div>
-            <div>
-              <span>Average volume of business with your customer</span>
-              <input
-                className="inputs"
-                id="greyed"
-                placeholder="Business volume..."
-              />
-            </div>
-            <div>
-              <span>Payment history with Supplier</span>
-              <select className="inputs" id="greyed">
-                <option value="">Select type...</option>
-              </select>
-            </div>
+            {Object.keys(errors).length != 0 && (
+              <span className="errorMessage">
+                Please fill all the required fields to continue
+              </span>
+            )}
           </div>
 
           <div className="otherInfo"></div>
         </div>
-        <BottomBar></BottomBar>
+        <BottomBar onSubmit={handleSubmit(onSubmit)}></BottomBar>
       </ApplicationLayout>
     </div>
   );

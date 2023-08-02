@@ -23,12 +23,18 @@ export default function ApplicationLeftMenu() {
     },
     {
       id: 2,
-      title: "payment terms",
+      title: "Contract",
+      name: "contract",
+      path: `/users/exporter/entities/${entityID}/quick/contract`,
+    },
+    {
+      id: 3,
+      title: "Payment terms",
       name: "paymentTerms",
       path: `/users/exporter/entities/${entityID}/quick/paymentTerms`,
     },
     {
-      id: 3,
+      id: 4,
       title: "Security",
       name: "security",
       path: `/users/exporter/entities/${entityID}/quick/security`,

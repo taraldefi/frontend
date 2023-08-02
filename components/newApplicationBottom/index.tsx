@@ -4,17 +4,36 @@ import { useRouter } from "next/router";
 import React from "react";
 import { pageIndexAtom } from "store/PageIndexStore";
 
-function BottomBar() {
+function BottomBar({ onSubmit }: any) {
   const router = useRouter();
   const [index, setIndex] = useAtom(pageIndexAtom);
   const entityID = router.query.entityId;
   const paths = [
     "exporterInfo",
     "importerInfo",
+    "contract",
     "paymentTerms",
     "security",
     "transactionDocs",
   ];
+  const handleNextClick = () => {
+    const nextIndex = index + 1;
+    if (nextIndex >= paths.length) {
+      router.push(
+        `/users/${
+          router.asPath.split("/")[2]
+        }/entities/${entityID}/applications`
+      );
+      setIndex(0);
+    } else {
+      router.push(
+        `/users/${router.asPath.split("/")[2]}/entities/${entityID}/quick/${
+          paths[nextIndex]
+        }`
+      );
+      setIndex(nextIndex);
+    }
+  };
   return (
     <div className="botomBar">
       <div className="bbBackground">
@@ -26,26 +45,11 @@ function BottomBar() {
             label={
               paths.indexOf(router.asPath.split("/")[6]) === paths.length - 1
                 ? "Finish Application"
+                : router.asPath.split("/")[6] === "contract"
+                ? "Agree & Continue"
                 : "Next"
             }
-            onClick={() => {
-              console.log(index);
-              if (index > paths.length - 1) {
-                router.push(
-                  `/users/${
-                    router.asPath.split("/")[2]
-                  }/entities/${entityID}/applications`
-                );
-                setIndex(0);
-                return;
-              }
-              setIndex(index + 1);
-              router.push(
-                `/users/${
-                  router.asPath.split("/")[2]
-                }/entities/${entityID}/quick/${paths[index]}`
-              );
-            }}
+            onClick={onSubmit}
           ></Button>
         </div>
       </div>

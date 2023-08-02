@@ -17,3 +17,5 @@ export interface tableFormScreening {
   Hit: string;
   Source: string;
 }
+
+export interface quickApplicationFormDataType {}

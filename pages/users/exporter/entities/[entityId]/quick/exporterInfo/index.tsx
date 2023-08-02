@@ -1,29 +1,44 @@
 import ApplicationLayout from "@components/layouts/new_application_layout";
 import BottomBar from "@components/newApplicationBottom";
-import React from "react";
+import { useAtom } from "jotai";
+import { useRouter } from "next/router";
+import { useForm } from "react-hook-form";
+import { exporterQuickApplicationAtom } from "store/applicationStore";
 
 function Index() {
-  const [selectedRadioBtn, setSelectedRadioBtn] = React.useState("Yes");
-  const isRadioSelected = (value: string): boolean =>
-    selectedRadioBtn === value;
-  const handleRadioClick = (e: React.ChangeEvent<HTMLInputElement>): void =>
-    setSelectedRadioBtn(e.currentTarget.value);
-  const [selectedRadioBtn1, setSelectedRadioBtn1] = React.useState("No");
-  const isRadioSelected1 = (value: string): boolean =>
-    selectedRadioBtn1 === value;
-  const handleRadioClick1 = (e: React.ChangeEvent<HTMLInputElement>): void =>
-    setSelectedRadioBtn1(e.currentTarget.value);
-  const [valueSelect, setValueSelect] = React.useState("Select country...");
-  const handleSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setValueSelect(e.currentTarget.value);
+  type FormValues = {
+    exporterInfo: {
+      companyName: string;
+      phoneNo: string;
+      address: string;
+      postalCode: string;
+      totalRevenue: string;
+      revenuePercentage: string;
+    };
   };
-  const [valueSelect1, setValueSelect1] = React.useState("Select country...");
-  const handleSelect1 = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setValueSelect1(e.currentTarget.value);
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<FormValues>();
+  const router = useRouter();
+  const entityID = router.query.entityId;
+  const [state, setState] = useAtom(exporterQuickApplicationAtom);
+
+  const updateAction = (payload: any) => {
+    setState((prev) => ({ ...prev, ...payload }));
   };
-  const [valueSelect2, setValueSelect2] = React.useState("Select country...");
-  const handleSelect2 = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setValueSelect2(e.currentTarget.value);
+
+  console.log("state:", state);
+
+  const onSubmit = (data: any) => {
+    console.log("data:", data);
+    updateAction(data);
+    router.push(
+      `/users/${
+        router.asPath.split("/")[2]
+      }/entities/${entityID}/quick/importerInfo`
+    );
   };
 
   return (
@@ -38,6 +53,8 @@ function Index() {
                 type="text"
                 className="inputs"
                 placeholder="Company name..."
+                defaultValue={state.exporterInfo.companyName}
+                {...register("exporterInfo.companyName", { required: true })}
               />
             </div>
             <div>
@@ -46,6 +63,8 @@ function Index() {
                 type="text"
                 className="inputs"
                 placeholder="Contact number..."
+                defaultValue={state.exporterInfo.phoneNo}
+                {...register("exporterInfo.phoneNo", { required: true })}
               />
             </div>
             <div>
@@ -54,6 +73,8 @@ function Index() {
                 type="text"
                 className="inputs"
                 placeholder="Address line 1..."
+                defaultValue={state.exporterInfo.address}
+                {...register("exporterInfo.address", { required: true })}
               />
             </div>
             <div>
@@ -70,6 +91,8 @@ function Index() {
                 type="text"
                 className="inputs"
                 placeholder="Post code..."
+                defaultValue={state.exporterInfo.postalCode}
+                {...register("exporterInfo.postalCode", { required: true })}
               />
             </div>
           </div>
@@ -82,6 +105,8 @@ function Index() {
                 type="text"
                 className="inputs"
                 placeholder="Revenue amount..."
+                defaultValue={state.exporterInfo.totalRevenue}
+                {...register("exporterInfo.totalRevenue", { required: true })}
               />
             </div>
             <div>
@@ -91,13 +116,22 @@ function Index() {
                 className="inputs"
                 placeholder="Revenue percentage..."
                 id="percentage"
+                defaultValue={state.exporterInfo.revenuePercentage}
+                {...register("exporterInfo.revenuePercentage", {
+                  required: true,
+                })}
               />
             </div>
+            {Object.keys(errors).length != 0 && (
+              <span className="errorMessage">
+                Please fill all the required fields to continue
+              </span>
+            )}
           </div>
           <div className="vLine0"></div>
           <div className="otherInfo"></div>
         </div>
-        <BottomBar></BottomBar>
+        <BottomBar onSubmit={handleSubmit(onSubmit)}></BottomBar>
       </ApplicationLayout>
     </div>
   );
