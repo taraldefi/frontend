@@ -1,5 +1,6 @@
 import { PortalIcons } from "@components/icons";
 import AuthLayout from "@components/layouts/auth_layout";
+import CustomInput from "@components/widgets/customPasswordField";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Button } from "@taraldefi/tariala-component-library";
@@ -76,15 +77,13 @@ function Index() {
             </div>
             <div className="inputContainer">
               <span>Password</span>
-              <input
-                type={InputType}
-                className={errors.password ? "inputsRed" : "inputs"}
-                placeholder="Enter password..."
+              <CustomInput
+                label="Password"
+                type="password"
+                className="inputs"
                 {...register("password", { required: true })}
+                // You can spread other props here if needed
               />
-              <div className="parent">
-                <div className="iconPassword">{Icon}</div>
-              </div>
             </div>
             {(errors.password || errors.email) && (
               <div className="inputContainer">
@@ -113,7 +112,7 @@ function Index() {
               <div className="buttonBox">
                 <Button
                   onClick={() => {
-                    router.push("/users/importer/entities");
+                    router.push("/users/exporter/entities");
                   }}
                   label={"Login"}
                   icon={

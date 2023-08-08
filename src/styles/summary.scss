@@ -1,291 +1,190 @@
-.summaryMain {
-  .background {
-    display: none;
-  }
+.summary {
+  display: flex;
+  margin-top: 40px;
+  justify-content: space-between;
 
-  .summaryBody {
-    padding-left: 30px;
-    padding-top: 50px;
-    position: relative;
-    top: -60px;
+  .businessSides {
+    color: #475569;
+    width: 225px;
+    height: fit-content;
+    gap: 10px;
+    display: flex;
+    margin-right: 20px;
+    flex-direction: column;
+    justify-content: space-between;
 
-    .titleBox {
-      span {
-        font-weight: bold;
-        font-size: 20px;
-      }
+    :nth-child(1) {
+      font-size: 14px;
+      font-weight: bold;
+      color: #64748b;
     }
 
-    .inputBox {
+    .inputs {
+      font-family: inter;
+      padding: 10px;
+      width: 225px;
+      height: 44px;
+      color: black;
+      border-radius: 4px;
+      border: 1.5px solid #cbd5e1;
+    }
+
+    ::placeholder {
+      /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: #94a3b8;
+      opacity: 1;
+      /* Firefox */
+    }
+
+    :-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      color: #94a3b8;
+    }
+
+    ::-ms-input-placeholder {
+      /* Microsoft Edge */
+      color: #94a3b8;
+    }
+
+    span {
+      font-family: inter;
+      color: #475569;
+      font-size: 14px;
+    }
+  }
+
+  .transactionDetails {
+    font-family: inter;
+
+    color: #475569;
+    width: 248px;
+    gap: 10px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    :nth-child(1) {
+      font-size: 14px;
+      font-weight: bold;
+      color: #64748b;
+    }
+
+    .inputs {
+      font-family: inter;
+      padding: 10px;
+      width: 225px;
+      height: 44px;
+      color: black;
+      border-radius: 4px;
+      border: 1.5px solid #cbd5e1;
+    }
+
+    ::placeholder {
+      /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: #94a3b8;
+      opacity: 1;
+      /* Firefox */
+    }
+
+    :-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      color: #94a3b8;
+    }
+
+    ::-ms-input-placeholder {
+      /* Microsoft Edge */
+      color: #94a3b8;
+    }
+
+    span {
+      font-family: inter;
+      color: #475569;
+      font-size: 14px;
+    }
+  }
+
+  .summaryInfo {
+    color: #475569;
+    width: 248px;
+    height: fit-content;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .header {
+      color: #000000;
       display: flex;
-      margin-top: 40px;
-      justify-content: space-between;
-      width: 1080px;
 
-      .transaction {
-        color: #475569;
-        width: 225px;
-        height: 436px;
-        display: flex;
-        margin-right: 20px;
-        flex-direction: column;
-        justify-content: space-between;
-
-        :nth-child(1) {
-          font-size: 14px;
-          font-weight: bold;
-          color: #64748b;
-        }
-
-        .inputs {
-          font-family: inter;
-          padding: 10px;
-          width: 225px;
-          height: 44px;
-          color: black;
-          border-radius: 4px;
-          border: 1.5px solid #cbd5e1;
-        }
-
-        ::placeholder {
-          /* Chrome, Firefox, Opera, Safari 10.1+ */
-          color: #94a3b8;
-          opacity: 1;
-          /* Firefox */
-        }
-
-        :-ms-input-placeholder {
-          /* Internet Explorer 10-11 */
-          color: #94a3b8;
-        }
-
-        ::-ms-input-placeholder {
-          /* Microsoft Edge */
-          color: #94a3b8;
-        }
-
-        span {
-          font-family: inter;
-          color: #475569;
-          font-size: 14px;
-        }
-
-        select {
-          font-family: inter;
-          padding: 10px;
-          width: 225px;
-          height: 44px;
-          color: black;
-          border-radius: 4px;
-          border: 1.5px solid #cbd5e1;
-        }
+      span {
+        margin-left: 10px;
+        font-size: 14px;
+        margin-top: 24px;
       }
 
-      .info {
-        color: #475569;
-        width: 225px;
-        height: 353px;
-        display: flex;
-        margin-right: 20px;
-        flex-direction: column;
-        justify-content: space-between;
-
-        :nth-child(1) {
-          font-size: 14px;
-          font-weight: bold;
-          color: #64748b;
-        }
-
-        .inputs {
-          font-family: inter;
-          padding: 10px;
-          width: 225px;
-          height: 44px;
-          color: black;
-          border-radius: 4px;
-          border: 1.5px solid #cbd5e1;
-        }
-
-        ::placeholder {
-          /* Chrome, Firefox, Opera, Safari 10.1+ */
-          color: #94a3b8;
-          opacity: 1;
-          /* Firefox */
-        }
-
-        :-ms-input-placeholder {
-          /* Internet Explorer 10-11 */
-          color: #94a3b8;
-        }
-
-        ::-ms-input-placeholder {
-          /* Microsoft Edge */
-          color: #94a3b8;
-        }
-
-        span {
-          font-family: inter;
-          color: #475569;
-          font-size: 14px;
-        }
-
-        select {
-          font-family: inter;
-          padding: 10px;
-          width: 225px;
-          height: 44px;
-          color: black;
-          border-radius: 4px;
-          border: 1.5px solid #cbd5e1;
-        }
-      }
-
-      .companyLocation {
-        color: #475569;
-        width: 248px;
-        height: 296px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
-        :nth-child(1) {
-          font-size: 14px;
-          font-weight: bold;
-          color: #64748b;
-        }
-
-        .inputs {
-          font-family: inter;
-          padding: 10px;
-          width: 225px;
-          height: 44px;
-          color: black;
-          border-radius: 4px;
-          border: 1.5px solid #cbd5e1;
-        }
-
-        ::placeholder {
-          /* Chrome, Firefox, Opera, Safari 10.1+ */
-          color: #94a3b8;
-          opacity: 1;
-          /* Firefox */
-        }
-
-        :-ms-input-placeholder {
-          /* Internet Explorer 10-11 */
-          color: #94a3b8;
-        }
-
-        ::-ms-input-placeholder {
-          /* Microsoft Edge */
-          color: #94a3b8;
-        }
-
-        span {
-          font-family: inter;
-          color: #475569;
-          font-size: 14px;
-        }
-      }
-
-      .business {
-        color: #475569;
-        width: 248px;
-        height: 184px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
-        .inputs {
-          font-family: inter;
-          padding: 10px;
-          width: 225px;
-          height: 44px;
-          color: black;
-          border-radius: 4px;
-          border: 1.5px solid #cbd5e1;
-        }
-
-        ::placeholder {
-          /* Chrome, Firefox, Opera, Safari 10.1+ */
-          color: #94a3b8;
-          opacity: 1;
-          /* Firefox */
-        }
-
-        :-ms-input-placeholder {
-          /* Internet Explorer 10-11 */
-          color: #94a3b8;
-        }
-
-        ::-ms-input-placeholder {
-          /* Microsoft Edge */
-          color: #94a3b8;
-        }
-
-        :nth-child(1) {
-          font-size: 14px;
-          font-weight: bold;
-          color: #64748b;
-        }
-
-        span {
-          font-family: inter;
-          color: #475569;
-          font-size: 14px;
-        }
-      }
-
-      .contract {
-        font-family: inter;
-        display: flex;
-        flex-direction: column;
-        width: 262px;
-        height: 75px;
-        border-radius: 3px;
-
-        :nth-child(1) {
-          font-size: 14px;
-          font-weight: bold;
-          color: #64748b;
-        }
-
-        .header {
-          color: #000000;
-          display: flex;
-
-          span {
-            margin-left: 10px;
-            font-size: 14px;
-            margin-top: 24px;
-          }
-
-          svg {
-            margin-top: 24px;
-          }
-        }
+      svg {
+        margin-top: 24px;
       }
     }
-  }
+    .inputs {
+      font-family: inter;
+      padding: 10px;
+      width: 225px;
+      height: 44px;
+      color: black;
+      border-radius: 4px;
+      border: 1.5px solid #cbd5e1;
+    }
 
-  #dollar {
-    background-image: url(/assets/svg/dollar.svg);
-    background-repeat: no-repeat;
-    background-position: 195px;
-  }
+    ::placeholder {
+      /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: #94a3b8;
+      opacity: 1;
+      /* Firefox */
+    }
 
-  #percentage {
-    background-image: url(/assets/svg/percentage.svg);
-    background-repeat: no-repeat;
-    background-position: 195px;
-  }
+    :-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      color: #94a3b8;
+    }
 
-  #calendar {
-    // z-index: 0;
-    background-image: url(/assets/svg/calendar.svg);
-    background-repeat: no-repeat;
-    background-position: 193px 10px;
+    ::-ms-input-placeholder {
+      /* Microsoft Edge */
+      color: #94a3b8;
+    }
+
+    :nth-child(1) {
+      font-size: 14px;
+      font-weight: bold;
+      color: #64748b;
+    }
+
+    span {
+      font-family: inter;
+      color: #475569;
+      font-size: 14px;
+    }
   }
+}
+
+#dollar {
+  background-image: url(/assets/svg/dollar.svg);
+  background-repeat: no-repeat;
+  background-position: 195px;
+}
+
+#percentage {
+  background-image: url(/assets/svg/percentage.svg);
+  background-repeat: no-repeat;
+  background-position: 195px;
+}
+
+#calendar {
+  // z-index: 0;
+  background-image: url(/assets/svg/calendar.svg);
+  background-repeat: no-repeat;
+  background-position: 193px 10px;
 }
 
 #star {

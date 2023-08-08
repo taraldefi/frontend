@@ -1,109 +1,95 @@
 import Select from "@components/Select/Select";
 import { PortalIcons } from "@components/icons";
 import DashBoardPageLayout from "@components/layouts/dashboard_page_layout";
-function Summary() {
+export default function summary() {
   return (
-    <div className="summaryMain">
-      <DashBoardPageLayout
-        sortBarData={[]}
-        showexport={true}
-        exporter={""}
-        importer={""}
-        date={""}
-      >
-        <div className="summaryBody">
-          <div className="inputBox">
-            <div className="business">
-              <span>BUSINESS SIDES</span>
-              <span>Exporter</span>
-              <input
-                className="inputs"
-                type="text"
-                placeholder="Exporter name..."
-              ></input>
-              <span>Importer</span>
-              <input
-                className="inputs"
-                type="text"
-                placeholder="importer name..."
-              ></input>
-            </div>
-            <div className="transaction">
-              <span>TRANSACTION DETAILS</span>
-              <span>Transaction</span>
-              <input
-                type="text"
-                id="dollar"
-                className="inputs"
-                placeholder="Transaction amount..."
-              ></input>
-              <span>Interest</span>
-
-              <input
-                id="percentage"
-                type="text"
-                className="inputs"
-                placeholder="Percentage..."
-              ></input>
-              <span>Downpayment</span>
-
-              <input
-                type="text"
-                id="dollar"
-                className="inputs"
-                placeholder="Deposit amount..."
-              ></input>
-              <span>Term</span>
-              <input
-                id="calendar"
-                type="date"
-                className="inputs"
-                placeholder="select date..."
-              ></input>
-              <span>Repayment Profile</span>
-              <Select category={"repayment"} />
-            </div>
-            <div className="info">
-              <span>INFO</span>
-              <span>Industry</span>
-              <Select category={"repayment"} />
-              <span>Goods</span>
-              <select>
-                <option value="" disabled selected hidden>
-                  Goods type...
-                </option>
-                <option>option</option>
-                <option>option</option>
-              </select>
-              <span>Delivery date</span>
-              <input
-                id="calendar"
-                type="date"
-                className="inputs"
-                placeholder="Select date..."
-              ></input>
-              <span>Country</span>
-              <select>
-                <option value="" disabled selected hidden>
-                  Select Country...
-                </option>
-                <option>option</option>
-                <option>option</option>
-              </select>
-            </div>
-
-            <div className="contract">
-              <span>CONTRACT STATUS</span>
-              <div className="header">
-                <PortalIcons icon="checkBox" selected={false} />
-                <span>Contract Signed</span>
-              </div>
-            </div>
+    <DashBoardPageLayout
+      showexport={true}
+      exporter={""}
+      importer={""}
+      date={""}
+    >
+      <div className="summary">
+        <div className="businessSides">
+          <span>BUSINESS SIDES</span>
+          <span>Exporter</span>
+          <input
+            type="text"
+            className="inputs"
+            placeholder="Exporter Name..."
+          ></input>
+          <span>Importer</span>
+          <input
+            type="text"
+            className="inputs"
+            placeholder="Importer Name..."
+          ></input>
+        </div>
+        <div className="transactionDetails">
+          <span>TRANSACTION DETAILS</span>
+          <span>Transaction</span>
+          <input
+            id="dollar"
+            type="text"
+            className="inputs"
+            placeholder="Transaction Amount..."
+          ></input>
+          <span>Interest</span>
+          <input
+            id="percentage"
+            type="text"
+            className="inputs"
+            placeholder="Percentage"
+          ></input>
+          <span>Down Payment</span>
+          <input
+            id="dollar"
+            type="text"
+            className="inputs"
+            placeholder="Deposit Amount..."
+          ></input>
+          <span>Term</span>
+          <input
+            id="calendar"
+            type="text"
+            className="inputs"
+            placeholder="Select Date"
+          ></input>
+          <span>Repayment Profile</span>
+          <select className="inputs" placeholder="">
+            <option value="select profile..."></option>
+          </select>
+        </div>
+        <div className="summaryInfo">
+          <span>INFO</span>
+          <span>Industry</span>
+          <select className="inputs" placeholder="">
+            <option value="select profile..."></option>
+          </select>
+          <span>Goods</span>
+          <select className="inputs" placeholder="">
+            <option value="select profile..."></option>
+          </select>
+          <span>Delivery date</span>
+          <input
+            id="calendar"
+            type="date"
+            className="inputs"
+            placeholder="Select date..."
+          ></input>
+          <span>Country</span>
+          <select className="inputs" placeholder="">
+            <option value="select profile..."></option>
+          </select>
+        </div>
+        <div className="summaryInfo">
+          <span>CONTRACT STATUS</span>
+          <div className="header">
+            <PortalIcons icon="checkBox" selected={false} />
+            <span>Contract Signed</span>
           </div>
         </div>
-      </DashBoardPageLayout>
-    </div>
+      </div>
+    </DashBoardPageLayout>
   );
 }
-
-export default Summary;

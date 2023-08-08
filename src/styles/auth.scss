@@ -101,6 +101,21 @@
       font-size: 13.5px;
       color: #475569;
     }
+    .custom-input {
+      margin-bottom: 16px;
+
+      .input-container {
+        position: relative;
+
+        .toggle-password {
+          position: absolute;
+          top: 50%;
+          right: 10px;
+          transform: translateY(-50%);
+          cursor: pointer;
+        }
+      }
+    }
   }
 
   .inputs {
